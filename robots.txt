@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agonmustafaj.com/sitemap.xml
