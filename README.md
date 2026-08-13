@@ -15,7 +15,7 @@ A premium, interactive personal portfolio built with vanilla HTML, CSS, and Java
 - **HTML5**, Semantic markup
 - **CSS3**, Custom design system with dark/light themes
 - **Vanilla JavaScript**, All interactions and dynamic content
-- **Netlify**, Static hosting
+- **GitHub Pages**, Static hosting on `agonmustafaj.com`
 
 No frameworks. No unnecessary dependencies.
 
@@ -43,7 +43,8 @@ No frameworks. No unnecessary dependencies.
 │   └── script.js           # Functionality
 ├── robots.txt
 ├── sitemap.xml
-└── netlify.toml
+├── CNAME                   # Custom domain for GitHub Pages
+└── .nojekyll               # Serve files as-is on GitHub Pages
 ```
 
 ## Editing Content
@@ -65,14 +66,26 @@ Update placeholders like `[ADD INFORMATION]` with real data as it becomes availa
 
 QR codes are generated locally with vanilla JavaScript in `js/qr.js`. No libraries and no external APIs.
 
-## Deployment (Netlify)
+## Deployment (GitHub Pages + agonmustafaj.com)
 
-1. Push this repository to GitHub
-2. Connect to [Netlify](https://www.netlify.com/)
-3. Deploy, no build command needed (static site)
-4. Set custom domain: `agonmustafaj.com`
+1. Push this repository to GitHub (`agonmustafaj/portfolio`)
+2. Repo **Settings → Pages**:
+   - Source: **Deploy from a branch**
+   - Branch: `main` / `/ (root)`
+3. Custom domain: `agonmustafaj.com` (also in the `CNAME` file)
+4. At your domain DNS provider, add:
 
-The `netlify.toml` includes security headers and a custom 404 page.
+| Type | Name | Value |
+|------|------|--------|
+| **A** | `@` | `185.199.108.153` |
+| **A** | `@` | `185.199.109.153` |
+| **A** | `@` | `185.199.110.153` |
+| **A** | `@` | `185.199.111.153` |
+| **CNAME** | `www` | `agonmustafaj.github.io` |
+
+5. In GitHub Pages, enable **Enforce HTTPS** once DNS is verified.
+
+No build step — the site is static HTML/CSS/JS.
 
 ## Contact Form
 
