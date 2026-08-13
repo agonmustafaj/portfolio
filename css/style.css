@@ -65,13 +65,6 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  background-image:
-    linear-gradient(rgba(10, 10, 11, 0.72), rgba(10, 10, 11, 0.78)),
-    url("/assets/images/spiderweb-bg.png");
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -79,7 +72,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-[data-theme="light"] body {
+/* Same constellation background on desktop + mobile (fixed attachment breaks on iOS) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--bg-primary);
+  background-image:
+    linear-gradient(rgba(10, 10, 11, 0.72), rgba(10, 10, 11, 0.78)),
+    url("/assets/images/spiderweb-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-theme="light"] body::before {
   background-image: none;
 }
 
