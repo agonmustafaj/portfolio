@@ -72,7 +72,7 @@
           '<div class="nav-links" role="menubar">' + links + '</div>' +
           '<div class="nav-actions">' +
             '<button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>' +
-            '<a href="/cv.html" class="btn btn-secondary btn-sm">Download CV</a>' +
+            '<a href="/cv/" class="btn btn-secondary btn-sm">Download CV</a>' +
             '<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">' +
               '<span></span><span></span><span></span>' +
             '</button>' +
@@ -81,7 +81,7 @@
       '</nav>' +
       '<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">' +
         mobileLinks +
-        '<a href="/cv.html" class="btn btn-primary" style="margin-top:1rem">Download CV</a>' +
+        '<a href="/cv/" class="btn btn-primary" style="margin-top:1rem">Download CV</a>' +
       '</div>';
 
     const themeBtn = header.querySelector('.theme-toggle');
@@ -140,18 +140,18 @@
             '</div>' +
             '<div class="footer-links">' +
               '<h4>Navigation</h4>' +
-              '<a href="/about.html">About</a>' +
-              '<a href="/projects.html">Projects</a>' +
-              '<a href="/skills.html">Skills</a>' +
-              '<a href="/contact.html">Contact</a>' +
+              '<a href="/about/">About</a>' +
+              '<a href="/projects/">Projects</a>' +
+              '<a href="/skills/">Skills</a>' +
+              '<a href="/contact/">Contact</a>' +
             '</div>' +
             '<div class="footer-links">' +
               '<h4>More</h4>' +
-              '<a href="/experience.html">Experience</a>' +
-              '<a href="/education.html">Education</a>' +
-              '<a href="/certifications.html">Certifications</a>' +
-              '<a href="/blog.html">Blog</a>' +
-              '<a href="/cv.html">Resume</a>' +
+              '<a href="/experience/">Experience</a>' +
+              '<a href="/education/">Education</a>' +
+              '<a href="/certifications/">Certifications</a>' +
+              '<a href="/blog/">Blog</a>' +
+              '<a href="/cv/">Resume</a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
@@ -436,7 +436,7 @@
         if (skill.project) {
           const proj = projects.find(function (p) { return p.title === skill.project; });
           if (proj) {
-            projectHTML = '<div class="skill-project">Related project: <a href="/projects/' + proj.slug + '.html">' + skill.project + '</a></div>';
+            projectHTML = '<div class="skill-project">Related project: <a href="/projects/' + proj.slug + '/">' + skill.project + '</a></div>';
           }
         }
 
@@ -655,8 +655,8 @@
             '</div>' +
             '<div class="wallet-actions">' +
               '<button class="btn btn-secondary btn-sm" data-share>Share Profile</button>' +
-              '<a href="/cv.html" class="btn btn-secondary btn-sm">Download CV</a>' +
-              '<a href="/contact.html" class="btn btn-primary btn-sm">Contact</a>' +
+              '<a href="/cv/" class="btn btn-secondary btn-sm">Download CV</a>' +
+              '<a href="/contact/" class="btn btn-primary btn-sm">Contact</a>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -772,7 +772,7 @@
           '<div class="project-tags">' + tags + '</div>' +
           '<div class="project-links">' +
             liveBtn +
-            '<a href="/projects/' + proj.slug + '.html" class="btn btn-secondary btn-sm">Case Study</a>' +
+            '<a href="/projects/' + proj.slug + '/" class="btn btn-secondary btn-sm">Case Study</a>' +
           '</div>' +
         '</div>' +
       '</div>';

@@ -24,15 +24,15 @@ No frameworks. No unnecessary dependencies.
 ```
 /
 ├── index.html              # Homepage
-├── about.html              # Biography
-├── projects.html           # Project showcase
-├── skills.html             # Technology stack
-├── education.html          # Education
-├── experience.html         # Work experience
-├── certifications.html     # Learning credentials
-├── articles.html           # Article architecture
-├── contact.html            # Contact form
-├── cv.html                 # Resume page
+├── about/index.html              # Biography
+├── projects/index.html           # Project showcase
+├── skills/index.html             # Technology stack
+├── education/index.html          # Education
+├── experience/index.html         # Work experience
+├── certifications/index.html     # Learning credentials
+├── articles/index.html           # Article architecture
+├── contact/index.html            # Contact form
+├── cv/index.html                 # Resume page
 ├── 404.html                # Custom 404
 ├── projects/               # Case studies
 ├── assets/                 # Images, icons, CV PDF

@@ -321,47 +321,47 @@ const pageSEO = {
   about: {
     title: 'About Agon Mustafaj | Computer Science & Web Development',
     description: 'Learn about Agon Mustafaj, Computer Science student at the University of Prishtina, Junior SEO at thenovalab, and technology enthusiast.',
-    path: '/about.html'
+    path: '/about/'
   },
   projects: {
     title: 'Projects | Agon Mustafaj',
     description: 'Real projects by Agon Mustafaj, web development, data analysis, and digital experiences.',
-    path: '/projects.html'
+    path: '/projects/'
   },
   skills: {
     title: 'Skills & Technology Stack | Agon Mustafaj',
     description: 'Explore the technology stack of Agon Mustafaj, web development, SEO, data analytics, AI, and design.',
-    path: '/skills.html'
+    path: '/skills/'
   },
   education: {
     title: 'Education | Agon Mustafaj',
     description: 'Education background of Agon Mustafaj, Computer Science at the University of Prishtina.',
-    path: '/education.html'
+    path: '/education/'
   },
   experience: {
     title: 'Experience | Agon Mustafaj',
     description: 'Professional experience of Agon Mustafaj, Junior SEO at thenovalab.',
-    path: '/experience.html'
+    path: '/experience/'
   },
   certifications: {
     title: 'Certifications | Agon Mustafaj',
     description: 'Certifications and continuous learning credentials of Agon Mustafaj.',
-    path: '/certifications.html'
+    path: '/certifications/'
   },
   articles: {
     title: 'Blog | Agon Mustafaj',
     description: 'Blog posts by Agon Mustafaj on artificial intelligence, technology, and modern web development.',
-    path: '/blog.html'
+    path: '/blog/'
   },
   contact: {
     title: 'Contact | Agon Mustafaj',
     description: 'Get in touch with Agon Mustafaj, let\'s build something together.',
-    path: '/contact.html'
+    path: '/contact/'
   },
   cv: {
     title: 'Resume | Agon Mustafaj',
     description: 'View and download the CV of Agon Mustafaj.',
-    path: '/cv.html'
+    path: '/cv/'
   },
   '404': {
     title: 'Page Not Found | Agon Mustafaj',
@@ -406,13 +406,13 @@ const devPipeline = [
 
 const navLinks = [
   { label: 'Home', href: '/', page: 'home' },
-  { label: 'About', href: '/about.html', page: 'about' },
-  { label: 'Projects', href: '/projects.html', page: 'projects' },
-  { label: 'Skills', href: '/skills.html', page: 'skills' },
-  { label: 'Experience', href: '/experience.html', page: 'experience' },
-  { label: 'Certifications', href: '/certifications.html', page: 'certifications' },
-  { label: 'Blog', href: '/blog.html', page: 'blog' },
-  { label: 'Contact', href: '/contact.html', page: 'contact' }
+  { label: 'About', href: '/about/', page: 'about' },
+  { label: 'Projects', href: '/projects/', page: 'projects' },
+  { label: 'Skills', href: '/skills/', page: 'skills' },
+  { label: 'Experience', href: '/experience/', page: 'experience' },
+  { label: 'Certifications', href: '/certifications/', page: 'certifications' },
+  { label: 'Blog', href: '/blog/', page: 'blog' },
+  { label: 'Contact', href: '/contact/', page: 'contact' }
 ];
 
 const CONTACT_ENDPOINT = '';
