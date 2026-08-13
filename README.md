@@ -85,7 +85,7 @@ QR codes are generated locally with vanilla JavaScript in `js/qr.js`. No librari
 
 5. In GitHub Pages, enable **Enforce HTTPS** once DNS is verified.
 
-No build step — the site is static HTML/CSS/JS.
+No build step - the site is static HTML/CSS/JS.
 
 ## Contact Form
 

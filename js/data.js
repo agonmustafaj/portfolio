@@ -315,52 +315,52 @@ const socialLinks = [
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | Computer Science, Web & SEO',
-    description: 'Official portfolio of Agon Mustafaj, a Computer Science student at the University of Prishtina and Junior SEO professional interested in web development, data analytics, AI and technology.',
+    description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.',
     path: '/'
   },
   about: {
-    title: 'About Agon Mustafaj | Computer Science & Web Development',
-    description: 'Learn about Agon Mustafaj, Computer Science student at the University of Prishtina, Junior SEO at thenovalab, and technology enthusiast.',
+    title: 'About Me | Agon Mustafaj',
+    description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina, Junior SEO at thenovalab, building with web, data and technology.',
     path: '/about/'
   },
   projects: {
     title: 'Projects | Agon Mustafaj',
-    description: 'Real projects by Agon Mustafaj, web development, data analysis, and digital experiences.',
+    description: 'Projects I\'ve built - web development, data analysis, and digital experiences.',
     path: '/projects/'
   },
   skills: {
     title: 'Skills & Technology Stack | Agon Mustafaj',
-    description: 'Explore the technology stack of Agon Mustafaj, web development, SEO, data analytics, AI, and design.',
+    description: 'The technology stack I work with - web development, SEO, data analytics, AI, and design.',
     path: '/skills/'
   },
   education: {
     title: 'Education | Agon Mustafaj',
-    description: 'Education background of Agon Mustafaj, Computer Science at the University of Prishtina.',
+    description: 'My education - Computer Science at the University of Prishtina.',
     path: '/education/'
   },
   experience: {
     title: 'Experience | Agon Mustafaj',
-    description: 'Professional experience of Agon Mustafaj, Junior SEO at thenovalab.',
+    description: 'My professional experience - Junior SEO at thenovalab.',
     path: '/experience/'
   },
   certifications: {
     title: 'Certifications | Agon Mustafaj',
-    description: 'Certifications and continuous learning credentials of Agon Mustafaj.',
+    description: 'Certifications and credentials from my continuous learning journey.',
     path: '/certifications/'
   },
   articles: {
     title: 'Blog | Agon Mustafaj',
-    description: 'Blog posts by Agon Mustafaj on artificial intelligence, technology, and modern web development.',
+    description: 'I write about artificial intelligence, technology, and modern web development.',
     path: '/blog/'
   },
   contact: {
     title: 'Contact | Agon Mustafaj',
-    description: 'Get in touch with Agon Mustafaj, let\'s build something together.',
+    description: 'Get in touch - let\'s build something together.',
     path: '/contact/'
   },
   cv: {
     title: 'Resume | Agon Mustafaj',
-    description: 'View and download the CV of Agon Mustafaj.',
+    description: 'View and download my CV.',
     path: '/cv/'
   },
   '404': {
