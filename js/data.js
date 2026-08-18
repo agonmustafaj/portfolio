@@ -109,13 +109,14 @@ const projects = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development', 'Responsive Design'],
     features: [
       'Hero section',
-      'Services showcase',
-      'Projects gallery',
-      'Before/after presentation',
+      'Multilingual interface',
+      'Trust and values section',
+      'Before/after project gallery',
       'Process overview',
       'Testimonials',
       'FAQ section',
       'Contact form',
+      'WhatsApp contact',
       'Responsive UX',
       'Conversion-oriented layout'
     ],
