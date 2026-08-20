@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AGON MUSTAFAJ — Portfolio OG</title>
+  <style>
+    @font-face {
+      font-family: "Satoshi";
+      src: url("fonts/satoshi-700.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Satoshi";
+      src: url("fonts/satoshi-900.woff2") format("woff2");
+      font-weight: 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Manrope";
+      src: url("fonts/manrope.woff2") format("woff2");
+      font-weight: 500 600;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0a0a0b;
+    }
+
+    .og {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      background: #0a0a0b;
+      color: #f3efe6;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .vguide {
+      position: absolute;
+      top: 36px;
+      bottom: 36px;
+      width: 1px;
+      background: rgba(243, 239, 230, 0.07);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .vguide.l { left: 48px; }
+    .vguide.m { left: 688px; }
+
+    .hguide {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      height: 1px;
+      background: rgba(243, 239, 230, 0.06);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hguide.t { top: 36px; }
+    .hguide.b { bottom: 36px; }
+
+    .mark {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      z-index: 8;
+    }
+    .mark::before,
+    .mark::after {
+      content: "";
+      position: absolute;
+      background: rgba(243, 239, 230, 0.4);
+    }
+    .mark::before { width: 14px; height: 1px; top: 7px; left: 0; }
+    .mark::after { width: 1px; height: 14px; top: 0; left: 7px; }
+    .mark.tl { top: 18px; left: 18px; }
+    .mark.tr { top: 18px; right: 18px; }
+    .mark.bl { bottom: 18px; left: 18px; }
+    .mark.br { bottom: 18px; right: 18px; }
+
+    .ghost {
+      position: absolute;
+      right: -48px;
+      bottom: -52px;
+      z-index: 1;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 900;
+      font-size: 280px;
+      line-height: 0.8;
+      letter-spacing: -0.07em;
+      color: rgba(243, 239, 230, 0.045);
+      text-transform: uppercase;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .portrait {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 520px;
+      height: 630px;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 8%;
+      transform: scale(1.72);
+      transform-origin: 52% 8%;
+      filter: grayscale(1) contrast(1.48) brightness(0.62);
+    }
+    .portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, #0a0a0b 0%, rgba(10,10,11,0.88) 18%, rgba(10,10,11,0.28) 46%, transparent 68%),
+        linear-gradient(180deg, #0a0a0b 0%, transparent 18%),
+        linear-gradient(0deg, #0a0a0b 0%, rgba(10,10,11,0.92) 10%, rgba(10,10,11,0.35) 28%, transparent 48%);
+    }
+    .portrait .frame {
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      bottom: 48px;
+      width: 1px;
+      background: rgba(243, 239, 230, 0.1);
+      z-index: 2;
+    }
+    .portrait .accent {
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      width: 36px;
+      height: 2px;
+      background: #2b59ff;
+      z-index: 3;
+    }
+
+    .top {
+      position: absolute;
+      top: 52px;
+      left: 56px;
+      width: 620px;
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(243, 239, 230, 0.55);
+    }
+    .top .rule {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -16px;
+      height: 1px;
+      background: rgba(243, 239, 230, 0.16);
+    }
+    .top .num {
+      color: #2b59ff;
+      letter-spacing: 0.18em;
+    }
+
+    .headline {
+      position: absolute;
+      left: 56px;
+      top: 96px;
+      z-index: 6;
+      width: 640px;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -0.054em;
+    }
+    .headline .name {
+      font-size: 90px;
+    }
+    .headline .pf {
+      margin-top: 10px;
+      font-size: 78px;
+      letter-spacing: -0.05em;
+      color: #f3efe6;
+    }
+
+    .dek {
+      position: absolute;
+      left: 56px;
+      top: 372px;
+      z-index: 6;
+      width: 460px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      color: rgba(243, 239, 230, 0.58);
+    }
+
+    .bottom {
+      position: absolute;
+      left: 56px;
+      width: 620px;
+      bottom: 44px;
+      z-index: 6;
+    }
+    .bottom .rule {
+      height: 1px;
+      background: rgba(243, 239, 230, 0.16);
+      margin-bottom: 18px;
+    }
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .cta {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: #f3efe6;
+    }
+    .url {
+      margin-top: 6px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      color: rgba(243, 239, 230, 0.48);
+    }
+    .seq {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(243, 239, 230, 0.32);
+      padding-bottom: 2px;
+    }
+    .seq .on { color: #2b59ff; }
+  </style>
+</head>
+<body>
+  <div class="og">
+    <div class="vguide l"></div>
+    <div class="vguide m"></div>
+    <div class="hguide t"></div>
+    <div class="hguide b"></div>
+    <div class="mark tl"></div>
+    <div class="mark tr"></div>
+    <div class="mark bl"></div>
+    <div class="mark br"></div>
+
+    <div class="ghost">01</div>
+
+    <div class="portrait">
+      <img src="../images/profile.jpg" alt="">
+      <span class="frame"></span>
+      <span class="accent"></span>
+    </div>
+
+    <header class="top">
+      <span class="rule"></span>
+      <span>Agon Mustafaj / Portfolio 01</span>
+      <span class="num">01</span>
+    </header>
+
+    <h1 class="headline">
+      <div class="name">AGON</div>
+      <div class="name">MUSTAFAJ</div>
+      <div class="pf">PORTFOLIO.</div>
+    </h1>
+
+    <p class="dek">Explore the work, experience &amp; ideas behind Agon Mustafaj.</p>
+
+    <footer class="bottom">
+      <div class="rule"></div>
+      <div class="bottom-row">
+        <div>
+          <div class="cta">Explore the work →</div>
+          <div class="url">agonmustafaj.com</div>
+        </div>
+        <div class="seq"><span class="on">01</span> / 02 / 03</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
