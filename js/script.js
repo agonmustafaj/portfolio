@@ -31,6 +31,14 @@
     return '<span class="wallet-qr-fallback" aria-label="' + label + '">QR</span>';
   }
 
+  function tx(key, fallback) {
+    if (typeof t === 'function') {
+      var val = t(key);
+      if (val) return val;
+    }
+    return fallback || '';
+  }
+
   /* --- Theme --- */
   function initTheme() {
     const saved = localStorage.getItem('theme');
@@ -58,30 +66,34 @@
     if (!header) return;
 
     const links = navLinks.map(function (link) {
-      return '<a href="' + link.href + '"' + (link.page === activePage ? ' class="active" aria-current="page"' : '') + '>' + link.label + '</a>';
+      return '<a href="' + link.href + '"' + (link.page === activePage ? ' class="active" aria-current="page"' : '') + '>' + tx('nav.' + link.page, link.label) + '</a>';
     }).join('');
 
     const mobileLinks = navLinks.map(function (link) {
-      return '<a href="' + link.href + '"' + (link.page === activePage ? ' class="active"' : '') + '>' + link.label + '</a>';
+      return '<a href="' + link.href + '"' + (link.page === activePage ? ' class="active"' : '') + '>' + tx('nav.' + link.page, link.label) + '</a>';
     }).join('');
 
+    var langSwitch = typeof I18N !== 'undefined' ? I18N.langSwitcherMarkup() : '';
+
     header.innerHTML =
-      '<nav class="navbar" role="navigation" aria-label="Main navigation">' +
+      '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
-          '<a href="/" class="nav-logo" aria-label="Agon Mustafaj Home"><span>AM</span></a>' +
+          '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '"><span>AM</span></a>' +
           '<div class="nav-links" role="menubar">' + links + '</div>' +
           '<div class="nav-actions">' +
-            '<button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>' +
-            '<a href="/cv/" class="btn btn-secondary btn-sm">Download CV</a>' +
-            '<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">' +
+            langSwitch +
+            '<button class="theme-toggle" aria-label="' + tx('nav.toggleTheme', 'Toggle theme') + '" title="' + tx('nav.toggleTheme', 'Toggle theme') + '"></button>' +
+            '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
+            '<button class="nav-hamburger" aria-label="' + tx('nav.openMenu', 'Open menu') + '" aria-expanded="false">' +
               '<span></span><span></span><span></span>' +
             '</button>' +
           '</div>' +
         '</div>' +
       '</nav>' +
-      '<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">' +
+      '<div class="mobile-menu" role="navigation" aria-label="' + tx('nav.mobileAria', 'Mobile navigation') + '">' +
         mobileLinks +
-        '<a href="/cv/" class="btn btn-primary" style="margin-top:1rem">Download CV</a>' +
+        langSwitch +
+        '<a href="/cv/" class="btn btn-primary" style="margin-top:1rem">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
       '</div>';
 
     const themeBtn = header.querySelector('.theme-toggle');
@@ -107,6 +119,7 @@
     }
 
     initNavbarScroll();
+    if (typeof I18N !== 'undefined') I18N.bindLangSwitcher(header);
   }
 
   function initNavbarScroll() {
@@ -135,23 +148,24 @@
           '<div class="footer-grid">' +
             '<div class="footer-brand">' +
               '<h3>' + profile.name + '</h3>' +
-              '<p>' + profile.headline + '</p>' +
-              '<p style="margin-top:0.75rem;font-style:italic">Building, learning and experimenting with technology.</p>' +
+              '<p>' + tx('profile.headline', profile.headline) + '</p>' +
+              '<p style="margin-top:0.75rem;font-style:italic">' + tx('footer.tagline', 'Building, learning and experimenting with technology.') + '</p>' +
             '</div>' +
             '<div class="footer-links">' +
-              '<h4>Navigation</h4>' +
-              '<a href="/about/">About</a>' +
-              '<a href="/projects/">Projects</a>' +
-              '<a href="/skills/">Skills</a>' +
-              '<a href="/contact/">Contact</a>' +
+              '<h4>' + tx('footer.navigation', 'Navigation') + '</h4>' +
+              '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
+              '<a href="/projects/">' + tx('nav.projects', 'Projects') + '</a>' +
+              '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
+              '<a href="/skills/">' + tx('nav.skills', 'Skills') + '</a>' +
+              '<a href="/contact/">' + tx('nav.contact', 'Contact') + '</a>' +
             '</div>' +
             '<div class="footer-links">' +
-              '<h4>More</h4>' +
-              '<a href="/experience/">Experience</a>' +
-              '<a href="/education/">Education</a>' +
-              '<a href="/certifications/">Certifications</a>' +
-              '<a href="/blog/">Blog</a>' +
-              '<a href="/cv/">Resume</a>' +
+              '<h4>' + tx('footer.more', 'More') + '</h4>' +
+              '<a href="/experience/">' + tx('nav.experience', 'Experience') + '</a>' +
+              '<a href="/education/">' + tx('nav.education', 'Education') + '</a>' +
+              '<a href="/certifications/">' + tx('nav.certifications', 'Certifications') + '</a>' +
+              '<a href="/blog/">' + tx('nav.blog', 'Blog') + '</a>' +
+              '<a href="/cv/">' + tx('footer.resume', 'Resume') + '</a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
@@ -234,16 +248,16 @@
       overlay.id = 'share-modal';
       overlay.className = 'modal-overlay';
       overlay.setAttribute('role', 'dialog');
-      overlay.setAttribute('aria-label', 'Share profile');
+      overlay.setAttribute('aria-label', tx('share.aria', 'Share profile'));
       overlay.innerHTML =
         '<div class="modal">' +
-          '<button class="modal-close" aria-label="Close">&times;</button>' +
-          '<h3>Share Profile</h3>' +
+          '<button class="modal-close" aria-label="' + tx('share.close', 'Close') + '">&times;</button>' +
+          '<h3>' + tx('share.title', 'Share Profile') + '</h3>' +
           '<div class="modal-actions">' +
-            '<button class="btn btn-secondary" data-copy-url>Copy Website URL</button>' +
-            '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Share on LinkedIn</a>' +
-            '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Share on Facebook</a>' +
-            '<a href="mailto:?subject=' + encodeURIComponent(profile.name + ' Portfolio') + '&body=' + encodeURIComponent(SITE_URL) + '" class="btn btn-secondary">Share via Email</a>' +
+            '<button class="btn btn-secondary" data-copy-url>' + tx('share.copy', 'Copy Website URL') + '</button>' +
+            '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">' + tx('share.linkedin', 'Share on LinkedIn') + '</a>' +
+            '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">' + tx('share.facebook', 'Share on Facebook') + '</a>' +
+            '<a href="mailto:?subject=' + encodeURIComponent(tx('share.mailSubject', profile.name + ' Portfolio')) + '&body=' + encodeURIComponent(SITE_URL) + '" class="btn btn-secondary">' + tx('share.email', 'Share via Email') + '</a>' +
           '</div>' +
         '</div>';
       document.body.appendChild(overlay);
@@ -273,7 +287,7 @@
     if (copyBtn) {
       copyBtn.addEventListener('click', function () {
         navigator.clipboard.writeText(SITE_URL).then(function () {
-          showToast('Link copied!');
+          showToast(tx('share.copied', 'Link copied!'));
         });
       });
     }
@@ -361,9 +375,9 @@
       { prompt: true, text: ' whoami' },
       { output: true, text: profile.name },
       { prompt: true, text: ' focus' },
-      { output: true, text: 'Computer Science\nWeb Development\nSEO\nData\nAI' },
+      { output: true, text: tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nData\nAI') },
       { prompt: true, text: ' status' },
-      { output: true, text: 'Building...\nLearning...\nExperimenting...' }
+      { output: true, text: tx('terminal.status', 'Building...\nLearning...\nExperimenting...') }
     ];
 
     let lineIndex = 0;
@@ -413,9 +427,9 @@
     return '<div class="terminal-line"><span class="terminal-prompt">$</span> whoami</div>' +
       '<div class="terminal-line terminal-output">' + profile.name + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> focus</div>' +
-      '<div class="terminal-line terminal-output">Computer Science<br>Web Development<br>SEO<br>Data<br>AI</div>' +
+      '<div class="terminal-line terminal-output">' + tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nData\nAI').replace(/\n/g, '<br>') + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> status</div>' +
-      '<div class="terminal-line terminal-output">Building...<br>Learning...<br>Experimenting...</div>';
+      '<div class="terminal-line terminal-output">' + tx('terminal.status', 'Building...\nLearning...\nExperimenting...').replace(/\n/g, '<br>') + '</div>';
   }
 
   /* --- Skills Interaction --- */
@@ -436,14 +450,14 @@
         if (skill.project) {
           const proj = projects.find(function (p) { return p.title === skill.project; });
           if (proj) {
-            projectHTML = '<div class="skill-project">Related project: <a href="/projects/' + proj.slug + '/">' + skill.project + '</a></div>';
+            projectHTML = '<div class="skill-project">' + tx('ui.relatedProject', 'Related project:') + ' <a href="/projects/' + proj.slug + '/">' + skill.project + '</a></div>';
           }
         }
 
         panel.innerHTML =
           '<div class="skill-name">' + skill.name + '</div>' +
-          '<div class="skill-cat">' + skill.category + '</div>' +
-          '<div class="skill-desc">' + skill.description + '</div>' +
+          '<div class="skill-cat">' + (tx('skillcat.' + skill.category, skill.category) || skill.category) + '</div>' +
+          '<div class="skill-desc">' + (tx('skill.' + skill.name, skill.description) || skill.description) + '</div>' +
           projectHTML;
       }
 
@@ -540,7 +554,7 @@
         valid = false;
         const error = email.parentElement.querySelector('.form-error');
         if (error) {
-          error.textContent = 'Please enter a valid email address.';
+          error.textContent = tx('contact.invalidEmail', 'Please enter a valid email address.');
           error.classList.add('visible');
         }
       }
@@ -601,13 +615,13 @@
         if (res.ok) {
           viewer.innerHTML = '<iframe src="' + profile.cvPath + '" title="Agon Mustafaj CV"></iframe>';
         } else {
-          viewer.innerHTML = '<div class="cv-placeholder">CV coming soon</div>';
+          viewer.innerHTML = '<div class="cv-placeholder">' + tx('cv.comingSoon', 'CV coming soon') + '</div>';
           if (viewBtn) { viewBtn.style.display = 'none'; }
           if (downloadBtn) { downloadBtn.style.display = 'none'; }
         }
       })
       .catch(function () {
-        viewer.innerHTML = '<div class="cv-placeholder">CV coming soon</div>';
+        viewer.innerHTML = '<div class="cv-placeholder">' + tx('cv.comingSoon', 'CV coming soon') + '</div>';
         if (viewBtn) { viewBtn.style.display = 'none'; }
         if (downloadBtn) { downloadBtn.style.display = 'none'; }
       });
@@ -627,7 +641,7 @@
 
     container.innerHTML =
       '<div class="wallet-container">' +
-        '<div class="wallet-card" role="img" aria-label="Digital identity card for ' + profile.name + '">' +
+        '<div class="wallet-card" role="img" aria-label="' + tx('wallet.aria', 'Digital identity card for ' + profile.name) + '">' +
           '<div class="wallet-card-inner">' +
             '<div class="wallet-top">' +
               '<div class="wallet-avatar" id="wallet-avatar">' +
@@ -635,18 +649,18 @@
               '</div>' +
               '<div class="wallet-qr-row">' +
                 '<div class="wallet-qr-item">' +
-                  qrMarkup(SITE_URL, 'QR code for website') +
-                  '<span>Website</span>' +
+                  qrMarkup(SITE_URL, tx('wallet.qrSite', 'QR code for website')) +
+                  '<span>' + tx('wallet.website', 'Website') + '</span>' +
                 '</div>' +
                 '<div class="wallet-qr-item">' +
-                  qrMarkup(profile.linkedin, 'QR code for LinkedIn') +
+                  qrMarkup(profile.linkedin, tx('wallet.qrLinkedin', 'QR code for LinkedIn')) +
                   '<span>LinkedIn</span>' +
                 '</div>' +
               '</div>' +
             '</div>' +
             '<div class="wallet-info">' +
               '<h3>' + profile.name + '</h3>' +
-              '<p>Computer Science Student<br>Junior SEO @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + profile.location + '</p>' +
+              '<p>' + tx('wallet.role', 'Computer Science Student') + '<br>Junior SEO @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="Facebook">' + icons.facebook + '</a>' +
@@ -654,9 +668,9 @@
               '</div>' +
             '</div>' +
             '<div class="wallet-actions">' +
-              '<button class="btn btn-secondary btn-sm" data-share>Share Profile</button>' +
-              '<a href="/cv/" class="btn btn-secondary btn-sm">Download CV</a>' +
-              '<a href="/contact/" class="btn btn-primary btn-sm">Contact</a>' +
+              '<button class="btn btn-secondary btn-sm" data-share>' + tx('wallet.share', 'Share Profile') + '</button>' +
+              '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
+              '<a href="/contact/" class="btn btn-primary btn-sm">' + tx('ui.contact', 'Contact') + '</a>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -696,17 +710,17 @@
               '<div class="cert-preview-inner">' +
                 '<span class="cert-preview-badge">' + cert.platform + '</span>' +
                 '<span class="cert-preview-title">' + titleDisplay + '</span>' +
-                '<span class="cert-preview-cta">Open PDF</span>' +
+                '<span class="cert-preview-cta">' + tx('ui.openPdf', 'Open PDF') + '</span>' +
               '</div>' +
             '</a>'
           : '');
 
       const buttons = [];
       if (cert.pdf) {
-        buttons.push('<a href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View Certificate</a>');
+        buttons.push('<a href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewCertificate', 'View Certificate') + '</a>');
       }
       if (cert.verificationUrl) {
-        buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Verification</a>');
+        buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">' + tx('ui.viewVerification', 'View Verification') + '</a>');
       }
 
       return '<article class="cert-card" data-platform="' + cert.platform + '">' +
@@ -728,7 +742,7 @@
     if (!container || typeof verificationLinks === 'undefined') return;
     container.innerHTML = verificationLinks.map(function (link, i) {
       return '<a class="btn btn-secondary btn-sm" href="' + link.url + '" target="_blank" rel="noopener noreferrer">' +
-        link.platform + ' Verification ' + (i + 1) +
+        tx('certs.verification', 'Coursera Verification') + ' ' + (i + 1) +
       '</a>';
     }).join('');
   }
@@ -746,33 +760,33 @@
       }).join('');
 
       const liveBtn = proj.url
-        ? '<a href="' + proj.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>'
+        ? '<a href="' + proj.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">' + tx('ui.liveDemo', 'Live Demo') + '</a>'
         : '';
 
       const previewContent = proj.image
         ? '<img src="' + proj.image + '" alt="Homepage preview of ' + proj.title + '" loading="lazy" width="1440" height="900">'
         : (proj.url
           ? '<div class="preview-placeholder">' + proj.title + '</div>'
-          : '<div class="preview-placeholder">Data Analysis</div>');
+          : '<div class="preview-placeholder">' + tx('ui.dataAnalysis', 'Data Analysis') + '</div>');
 
       return '<div class="project-showcase' + reverse + ' reveal">' +
         '<div class="browser-mockup" data-url="' + (proj.url || '') + '" tabindex="0" role="link" aria-label="View ' + proj.title + '">' +
           '<div class="browser-toolbar">' +
             '<div class="browser-dots"><span></span><span></span><span></span></div>' +
-            '<div class="browser-url">' + (proj.url || 'Local Project') + '</div>' +
+            '<div class="browser-url">' + (proj.url || tx('ui.localProject', 'Local Project')) + '</div>' +
           '</div>' +
           '<div class="browser-preview">' + previewContent +
             '<svg class="browser-cursor" viewBox="0 0 24 24" fill="white"><path d="M5.5 3.21l10.8 4.9c.48.22.48.94 0 1.16L5.5 14.16V3.21z"/></svg>' +
           '</div>' +
         '</div>' +
         '<div>' +
-          '<div class="project-number">PROJECT ' + proj.number + '</div>' +
+          '<div class="project-number">' + tx('ui.project', 'PROJECT') + ' ' + proj.number + '</div>' +
           '<h2>' + proj.title + '</h2>' +
-          '<p class="text-secondary" style="margin-top:0.75rem">' + proj.description + '</p>' +
+          '<p class="text-secondary" style="margin-top:0.75rem">' + (tx('projects.' + proj.slug, proj.description) || proj.description) + '</p>' +
           '<div class="project-tags">' + tags + '</div>' +
           '<div class="project-links">' +
             liveBtn +
-            '<a href="/projects/' + proj.slug + '/" class="btn btn-secondary btn-sm">Case Study</a>' +
+            '<a href="/projects/' + proj.slug + '/" class="btn btn-secondary btn-sm">' + tx('ui.caseStudy', 'Case Study') + '</a>' +
           '</div>' +
         '</div>' +
       '</div>';
@@ -825,6 +839,7 @@
 
   /* --- Init --- */
   document.addEventListener('DOMContentLoaded', function () {
+    if (typeof I18N !== 'undefined') I18N.applyI18n();
     initTheme();
 
     const page = document.body.dataset.page;

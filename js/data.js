@@ -354,6 +354,11 @@ const pageSEO = {
     description: 'I write about artificial intelligence, technology, and modern web development.',
     path: '/blog/'
   },
+  services: {
+    title: 'Website Creation for Businesses | Agon Mustafaj',
+    description: 'I design and build professional websites for businesses - clear presentation, mobile-ready, and easy for customers to contact you.',
+    path: '/services/'
+  },
   contact: {
     title: 'Contact | Agon Mustafaj',
     description: 'Get in touch - let\'s build something together.',
@@ -409,11 +414,42 @@ const navLinks = [
   { label: 'Home', href: '/', page: 'home' },
   { label: 'About', href: '/about/', page: 'about' },
   { label: 'Projects', href: '/projects/', page: 'projects' },
+  { label: 'Services', href: '/services/', page: 'services' },
   { label: 'Skills', href: '/skills/', page: 'skills' },
   { label: 'Experience', href: '/experience/', page: 'experience' },
   { label: 'Certifications', href: '/certifications/', page: 'certifications' },
   { label: 'Blog', href: '/blog/', page: 'blog' },
   { label: 'Contact', href: '/contact/', page: 'contact' }
+];
+
+const businessServices = [
+  {
+    title: 'Business Website',
+    description: 'A professional site that presents your company, services, and how customers can reach you.'
+  },
+  {
+    title: 'Mobile & Fast',
+    description: 'Responsive layouts that work on phones, with clean structure and solid performance.'
+  },
+  {
+    title: 'Inquiries That Convert',
+    description: 'Contact forms, WhatsApp, and clear calls to action that turn visitors into clients.'
+  },
+  {
+    title: 'Multilingual',
+    description: 'Sites that speak your customers\' language - useful for local and international businesses.'
+  },
+  {
+    title: 'Launch & Support',
+    description: 'From first brief to a live website, with a process you can follow at every step.'
+  }
+];
+
+const serviceProcess = [
+  { step: '01', title: 'Brief', description: 'We clarify what the business does, who it serves, and what the website needs to achieve.' },
+  { step: '02', title: 'Structure', description: 'Pages, content, and user paths are mapped before design starts.' },
+  { step: '03', title: 'Design & Build', description: 'A custom layout, not a generic template, built in clean HTML, CSS, and JavaScript.' },
+  { step: '04', title: 'Launch', description: 'Contact paths in place, and a live site your customers can use.' }
 ];
 
 const CONTACT_ENDPOINT = '';

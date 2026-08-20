@@ -8,21 +8,22 @@
   <meta name="description" content="I'm Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.">
   <link rel="canonical" href="https://agonmustafaj.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Agon Mustafaj">
   <meta property="og:title" content="Agon Mustafaj | Computer Science, Web &amp; SEO">
   <meta property="og:description" content="I'm Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.">
   <meta property="og:url" content="https://agonmustafaj.com/">
-  <meta property="og:site_name" content="Agon Mustafaj">
   <meta property="og:image" content="https://agonmustafaj.com/assets/images/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Agon Mustafaj Portfolio. Explore the work at agonmustafaj.com">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agon Mustafaj | Computer Science, Web &amp; SEO">
   <meta name="twitter:description" content="I'm Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.">
   <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/og.png">
   <meta name="twitter:image:alt" content="Agon Mustafaj Portfolio. Explore the work at agonmustafaj.com">
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
@@ -54,18 +55,18 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero" aria-label="Introduction">
+    <section class="hero" aria-labelledby="hero-name">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1 class="hero-name">AGON MUSTAFAJ</h1>
-          <p class="hero-identity">COMPUTER SCIENCE × SEO × WEB × DATA</p>
-          <p class="hero-statement">I build digital experiences that look good, work intelligently, and get discovered.</p>
-          <p class="hero-subtitle">Computer Science Student | Junior SEO | Web Development | Data Analytics | AI &amp; Technology</p>
+          <h1 class="hero-name" id="hero-name">AGON MUSTAFAJ</h1>
+          <p class="hero-identity" data-i18n="profile.identity">COMPUTER SCIENCE × SEO × WEB × DATA</p>
+          <p class="hero-statement" data-i18n="home.statement">I build digital experiences that look good, work intelligently, and get discovered.</p>
+          <p class="hero-subtitle" data-i18n="profile.headline">Computer Science Student | Junior SEO | Web Development | Data Analytics | AI &amp; Technology</p>
           <div class="btn-group">
-            <a href="/projects/" class="btn btn-primary">Explore My Projects</a>
-            <a href="/about/" class="btn btn-secondary">About Me</a>
-            <a href="/cv/" class="btn btn-secondary">Download CV</a>
-            <a href="/contact/" class="btn btn-ghost">Contact Me</a>
+            <a href="/projects/" class="btn btn-primary" data-i18n="home.exploreProjects">Explore My Projects</a>
+            <a href="/about/" class="btn btn-secondary" data-i18n="ui.aboutMe">About Me</a>
+            <a href="/cv/" class="btn btn-secondary" data-i18n="ui.downloadCv">Download CV</a>
+            <a href="/contact/" class="btn btn-ghost" data-i18n="ui.contactMe">Contact Me</a>
           </div>
         </div>
         <div id="wallet-card"></div>
@@ -76,36 +77,67 @@
     <section class="home-section" aria-labelledby="what-i-do-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">What I Do</span>
-          <h2 id="what-i-do-heading">Building Across Disciplines</h2>
-          <p>From code to content to data, I work at the intersection of technology and discovery.</p>
+          <span class="label" data-i18n="home.labelWhat">What I Do</span>
+          <h2 id="what-i-do-heading" data-i18n="home.whatTitle">Building Across Disciplines</h2>
+          <p data-i18n="home.whatLead">From code to content to data, I work at the intersection of technology and discovery.</p>
         </div>
         <div class="what-i-do-grid">
           <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M2 20h20M5 20V8l7-5 7 5v12"/></svg></div>
-            <h3>Build</h3>
-            <p>Websites and digital experiences.</p>
+            <div class="icon" data-icon="build" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-build" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-build)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="9" y="12" width="30" height="24" rx="5" fill="#0c1020"/><rect x="9" y="12" width="30" height="8" rx="5" fill="#1a2238"/><rect x="9" y="17" width="30" height="3" fill="#1a2238"/><circle cx="14" cy="16" r="1.35" fill="#fb7185"/><circle cx="18.2" cy="16" r="1.35" fill="#fbbf24"/><circle cx="22.4" cy="16" r="1.35" fill="#34d399"/><rect x="13" y="22.5" width="13" height="10" rx="2" fill="#3b82f6"/><rect x="28" y="22.5" width="8" height="4" rx="1.2" fill="#64748b"/><rect x="28" y="28" width="8" height="4.5" rx="1.2" fill="#a78bfa"/></g></svg></div>
+            <h3 data-i18n="home.build">Build</h3>
+            <p data-i18n="home.buildP">Websites and digital experiences.</p>
           </div>
           <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-            <h3>Optimize</h3>
-            <p>Technical SEO and website structure.</p>
+            <div class="icon" data-icon="optimize" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-opt" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-opt)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect class="i-bar" x="10" y="13" width="28" height="9" rx="3" fill="#f8fafc"/><circle cx="16.5" cy="17.5" r="2.4" fill="#22c55e"/><rect x="21" y="16" width="13" height="2.2" rx="1" fill="#94a3b8"/><rect x="10" y="24.5" width="22" height="6" rx="2" fill="#0c1020" opacity=".45"/><rect x="10" y="32.5" width="16" height="6" rx="2" fill="#0c1020" opacity=".28"/></g></svg></div>
+            <h3 data-i18n="home.optimize">Optimize</h3>
+            <p data-i18n="home.optimizeP">Technical SEO and website structure.</p>
           </div>
           <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <h3>Analyze</h3>
-            <p>Data using Python, Power BI and Excel.</p>
+            <div class="icon" data-icon="analyze" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-an" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-an)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><path d="M12 31l6.5-9 5.5 4 6.5-12 6 4" fill="none" stroke="#e2e8f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="31" r="2.1" fill="#93c5fd"/><circle cx="18.5" cy="22" r="2.1" fill="#93c5fd"/><circle cx="24" cy="26" r="2.1" fill="#c4b5fd"/><circle cx="30.5" cy="14" r="3.1" fill="#fbbf24"/><circle cx="36.5" cy="18" r="2.1" fill="#93c5fd"/></g></svg></div>
+            <h3 data-i18n="home.analyze">Analyze</h3>
+            <p data-i18n="home.analyzeP">Data using Python, Power BI and Excel.</p>
           </div>
           <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-            <h3>Explore</h3>
-            <p>AI and emerging technologies.</p>
+            <div class="icon" data-icon="explore" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-ex" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-ex)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-orb"><line x1="24" y1="24" x2="13" y2="14" stroke="#c7d2fe" stroke-width="1.6"/><line x1="24" y1="24" x2="37" y2="16" stroke="#c7d2fe" stroke-width="1.6"/><line x1="24" y1="24" x2="18" y2="36" stroke="#c7d2fe" stroke-width="1.6"/><circle cx="13" cy="14" r="3.2" fill="#93c5fd"/><circle cx="37" cy="16" r="2.6" fill="#c4b5fd"/><circle cx="18" cy="36" r="2.8" fill="#67e8f9"/><circle cx="24" cy="24" r="6.2" fill="#0c1020"/><circle cx="24" cy="24" r="3.4" fill="#f8fafc"/></g></svg></div>
+            <h3 data-i18n="home.explore">Explore</h3>
+            <p data-i18n="home.exploreP">AI and emerging technologies.</p>
           </div>
           <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
-            <h3>Design</h3>
-            <p>Modern responsive user experiences.</p>
+            <div class="icon" data-icon="design" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-de" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-de)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="11" y="13" width="22" height="16" rx="3" fill="#0c1020"/><rect x="14" y="16" width="12" height="3" rx="1" fill="#64748b"/><rect x="14" y="21" width="16" height="5" rx="1.2" fill="#3b82f6"/><rect x="22" y="21" width="13" height="18" rx="3.5" fill="#1e1b4b"/><rect x="25" y="25" width="7" height="2.2" rx="1" fill="#a78bfa"/><rect x="25" y="29" width="7" height="6" rx="1.2" fill="#f8fafc"/></g></svg></div>
+            <h3 data-i18n="home.design">Design</h3>
+            <p data-i18n="home.designP">Modern responsive user experiences.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="home-section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label" data-i18n="home.labelServices">Services</span>
+          <h2 id="services-heading" data-i18n="home.servicesTitle">Websites for Businesses</h2>
+          <p data-i18n="home.servicesLead">I build professional websites for companies that need to look credible and make it easy for customers to get in touch.</p>
+        </div>
+        <div class="what-i-do-grid">
+          <div class="what-i-do-card reveal">
+            <div class="icon" data-icon="site" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-site" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-site)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="10" y="12" width="28" height="24" rx="5" fill="#0c1020"/><rect x="13" y="15.5" width="8" height="3" rx="1.5" fill="#3b82f6"/><rect x="23" y="16" width="12" height="2" rx="1" fill="#475569"/><rect x="13" y="21" width="22" height="2.4" rx="1" fill="#e2e8f0"/><rect x="13" y="25" width="16" height="2" rx="1" fill="#64748b"/><rect x="13" y="29.5" width="11" height="4" rx="2" fill="#22c55e"/></g></svg></div>
+            <h3 data-i18n="home.svcSite">Business website</h3>
+            <p data-i18n="home.svcSiteP">Company, services, and contact - presented clearly.</p>
+          </div>
+          <div class="what-i-do-card reveal">
+            <div class="icon" data-icon="mobile" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-mob" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-mob)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="16" y="9" width="16" height="30" rx="4.5" fill="#0c1020"/><rect x="18.5" y="12" width="11" height="2" rx="1" fill="#3b82f6"/><rect x="18.5" y="16" width="11" height="8" rx="1.5" fill="#1e293b"/><rect x="18.5" y="26" width="11" height="2" rx="1" fill="#64748b"/><rect x="18.5" y="30" width="7" height="2.4" rx="1.2" fill="#22c55e"/><rect x="21.5" y="35.2" width="5" height="1.4" rx=".7" fill="#475569"/></g></svg></div>
+            <h3 data-i18n="home.svcMobile">Mobile &amp; fast</h3>
+            <p data-i18n="home.svcMobileP">Works on phones, with a clean and usable layout.</p>
+          </div>
+          <div class="what-i-do-card reveal">
+            <div class="icon" data-icon="chat" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-chat" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8ef7"/><stop offset="1" stop-color="#7c5cfc"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-chat)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="10" y="14" width="20" height="10" rx="4" fill="#0c1020"/><rect x="13" y="17.5" width="12" height="2" rx="1" fill="#64748b"/><path d="M18 24l-4 5 8-3z" fill="#0c1020"/><rect x="18" y="26" width="20" height="10" rx="4" fill="#22c55e"/><path d="M23.2 30.2l2.1 2.1 4.4-4.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
+            <h3 data-i18n="home.svcInquiries">More inquiries</h3>
+            <p data-i18n="home.svcInquiriesP">Forms, WhatsApp, and calls to action that convert.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem" class="reveal">
+          <a href="/services/" class="btn btn-primary" data-i18n="home.seeServices">See website services</a>
         </div>
       </div>
     </section>
@@ -114,13 +146,13 @@
     <section class="home-section" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">Selected Projects</span>
-          <h2 id="projects-heading">Things I've Built</h2>
-          <p>Real projects, not just concepts.</p>
+          <span class="label" data-i18n="home.labelProjects">Selected Projects</span>
+          <h2 id="projects-heading" data-i18n="home.projectsTitle">Things I've Built</h2>
+          <p data-i18n="home.projectsLead">Real projects, not just concepts.</p>
         </div>
         <div id="project-showcase"></div>
         <div style="text-align:center;margin-top:2rem" class="reveal">
-          <a href="/projects/" class="btn btn-secondary">View All Projects →</a>
+          <a href="/projects/" class="btn btn-secondary" data-i18n="ui.viewAllProjects">View All Projects →</a>
         </div>
       </div>
     </section>
@@ -143,13 +175,13 @@
     <section class="home-section" aria-labelledby="certs-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">Learning</span>
-          <h2 id="certs-heading">Continuous Learning</h2>
-          <p>Continuous learning is an important part of my development as a Computer Science student and technology professional.</p>
+          <span class="label" data-i18n="home.labelLearn">Learning</span>
+          <h2 id="certs-heading" data-i18n="home.learnTitle">Continuous Learning</h2>
+          <p data-i18n="home.learnLead">Continuous learning is an important part of my development as a Computer Science student and technology professional.</p>
         </div>
         <div class="cert-featured-grid reveal" id="cert-featured"></div>
         <div style="text-align:center;margin-top:1.5rem" class="reveal">
-          <a href="/certifications/" class="btn btn-secondary">View All Certifications →</a>
+          <a href="/certifications/" class="btn btn-secondary" data-i18n="home.viewCerts">View All Certifications →</a>
         </div>
       </div>
     </section>
@@ -158,8 +190,8 @@
     <section class="home-section" aria-labelledby="social-heading">
       <div class="container">
         <div class="section-header reveal" style="text-align:center">
-          <span class="label">Connect</span>
-          <h2 id="social-heading">Find Me Online</h2>
+          <span class="label" data-i18n="home.labelConnect">Connect</span>
+          <h2 id="social-heading" data-i18n="home.connectTitle">Find Me Online</h2>
         </div>
         <div class="social-grid reveal" style="justify-content:center">
           <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer" class="social-link">
@@ -178,29 +210,29 @@
     <section class="home-section" aria-labelledby="blog-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">Blog</span>
-          <h2 id="blog-heading">AI &amp; Technology</h2>
-          <p>Thoughts on artificial intelligence today and how technology is changing the way we build.</p>
+          <span class="label" data-i18n="home.labelBlog">Blog</span>
+          <h2 id="blog-heading" data-i18n="home.blogTitle">AI &amp; Technology</h2>
+          <p data-i18n="home.blogLead">Thoughts on artificial intelligence today and how technology is changing the way we build.</p>
         </div>
         <div class="articles-grid reveal">
           <article class="article-card">
-            <span class="label">AI</span>
-            <h3><a href="/blog/ai-today-what-matters/">AI Today: What Actually Matters Right Now</a></h3>
-            <p>A practical look at where artificial intelligence stands today.</p>
+            <span class="label" data-i18n="blog.catAi">AI</span>
+            <h3><a href="/blog/ai-today-what-matters/" data-i18n="blog.t1">AI Today: What Actually Matters Right Now</a></h3>
+            <p data-i18n="blog.short1">A practical look at where artificial intelligence stands today.</p>
           </article>
           <article class="article-card">
-            <span class="label">AI &amp; Web</span>
-            <h3><a href="/blog/ai-changing-web-development/">How AI Is Changing Web Development</a></h3>
-            <p>How AI is reshaping planning, coding, and modern website workflows.</p>
+            <span class="label" data-i18n="blog.catWeb">AI &amp; Web</span>
+            <h3><a href="/blog/ai-changing-web-development/" data-i18n="blog.t2">How AI Is Changing Web Development</a></h3>
+            <p data-i18n="blog.short2">How AI is reshaping planning, coding, and modern website workflows.</p>
           </article>
           <article class="article-card">
-            <span class="label">Technology</span>
-            <h3><a href="/blog/ai-and-technology-building/">AI and Technology: Building With Intelligence</a></h3>
-            <p>Why fundamentals plus AI tools create stronger digital products.</p>
+            <span class="label" data-i18n="blog.catTech">Technology</span>
+            <h3><a href="/blog/ai-and-technology-building/" data-i18n="blog.t3">AI and Technology: Building With Intelligence</a></h3>
+            <p data-i18n="blog.short3">Why fundamentals plus AI tools create stronger digital products.</p>
           </article>
         </div>
         <div style="text-align:center;margin-top:1.5rem" class="reveal">
-          <a href="/blog/" class="btn btn-secondary">View All Posts →</a>
+          <a href="/blog/" class="btn btn-secondary" data-i18n="home.viewPosts">View All Posts →</a>
         </div>
       </div>
     </section>
@@ -210,6 +242,7 @@
 
   <script src="/js/data.js"></script>
   <script src="/js/qr.js"></script>
+  <script src="/js/i18n.js"></script>
   <script src="/js/script.js"></script>
 </body>
 </html>
