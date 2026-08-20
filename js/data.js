@@ -63,9 +63,9 @@ const skills = [
   { name: 'Keyword Research', category: 'SEO', description: 'Identifying search intent and relevant keyword opportunities.', project: '' },
   { name: 'Website Structure', category: 'SEO', description: 'Information architecture and internal linking strategy.', project: '' },
   { name: 'SEO Auditing', category: 'SEO', description: 'Evaluating websites for search performance improvements.', project: '' },
-  { name: 'Python', category: 'Data Analytics', description: 'Data processing, analysis, and machine learning workflows.', project: 'Bank Marketing Data Analysis' },
-  { name: 'Pandas', category: 'Data Analytics', description: 'Data manipulation and analysis with Python.', project: 'Bank Marketing Data Analysis' },
-  { name: 'NumPy', category: 'Data Analytics', description: 'Numerical computing for data science projects.', project: 'Bank Marketing Data Analysis' },
+  { name: 'Python', category: 'Data Analytics', description: 'Data processing, analysis, and machine learning workflows.', project: '' },
+  { name: 'Pandas', category: 'Data Analytics', description: 'Data manipulation and analysis with Python.', project: '' },
+  { name: 'NumPy', category: 'Data Analytics', description: 'Numerical computing for data science projects.', project: '' },
   { name: 'Power BI', category: 'Data Analytics', description: 'Business intelligence dashboards and data visualization.', project: '' },
   { name: 'Excel', category: 'Data Analytics', description: 'Spreadsheet analysis and data organization.', project: '' },
   { name: 'DAX', category: 'Data Analytics', description: 'Data analysis expressions for Power BI models.', project: '' },
@@ -124,28 +124,6 @@ const projects = [
     featured: true,
     number: '02',
     image: '/assets/images/hoxha-handwerk.png'
-  },
-  {
-    id: 'proj-003',
-    title: 'Bank Marketing Data Analysis',
-    slug: 'bank-marketing',
-    url: '',
-    description: 'Data analysis and machine learning project exploring bank marketing campaign data.',
-    technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'Machine Learning'],
-    features: [
-      'Data preprocessing',
-      'Classification models',
-      'Random Forest',
-      'Logistic Regression',
-      'Decision Tree',
-      'K-Means clustering',
-      'PCA',
-      'Association Rule Mining',
-      'Apriori algorithm'
-    ],
-    role: 'Data Analyst',
-    featured: false,
-    number: '03'
   }
 ];
 
