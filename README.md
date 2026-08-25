@@ -39,7 +39,6 @@ No frameworks. No unnecessary dependencies.
 ├── css/style.css           # Design system
 ├── js/
 │   ├── data.js             # Editable content data
-│   ├── qr.js               # Vanilla QR code generator
 │   └── script.js           # Functionality
 ├── robots.txt
 ├── sitemap.xml
@@ -61,10 +60,6 @@ All editable information is centralized in `js/data.js`:
 - `CONTACT_ENDPOINT`, Form submission URL (empty = demo mode)
 
 Update placeholders like `[ADD INFORMATION]` with real data as it becomes available.
-
-## QR Codes
-
-QR codes are generated locally with vanilla JavaScript in `js/qr.js`. No libraries and no external APIs.
 
 ## Deployment (GitHub Pages + agonmustafaj.com)
 
