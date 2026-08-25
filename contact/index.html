@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Agon Mustafaj</title>
-  <meta name="description" content="Get in touch - let's build something together.">
+  <title>Contact Agon Mustafaj | Let's Connect</title>
+  <meta name="description" content="Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.">
+  <meta name="author" content="Agon Mustafaj">
   <link rel="canonical" href="https://agonmustafaj.com/contact/">
+  <link rel="author" href="https://agonmustafaj.com/about/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agon Mustafaj">
-  <meta property="og:title" content="Contact | Agon Mustafaj">
-  <meta property="og:description" content="Get in touch - let's build something together.">
+  <meta property="og:title" content="Contact Agon Mustafaj | Let's Connect">
+  <meta property="og:description" content="Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.">
   <meta property="og:url" content="https://agonmustafaj.com/contact/">
   <meta property="og:image" content="https://agonmustafaj.com/assets/images/og-v2.png">
   <meta property="og:image:width" content="1200">
@@ -17,9 +19,10 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="sq_AL">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Agon Mustafaj">
-  <meta name="twitter:description" content="Get in touch - let's build something together.">
+  <meta name="twitter:title" content="Contact Agon Mustafaj | Let's Connect">
+  <meta name="twitter:description" content="Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.">
   <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/og-v2.png">
   <meta name="twitter:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -28,12 +31,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": "https://agonmustafaj.com/contact/",
-    "url": "https://agonmustafaj.com/contact/",
-    "name": "Contact | Agon Mustafaj",
-    "isPartOf": { "@id": "https://agonmustafaj.com/#website" },
-    "mainEntity": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://agonmustafaj.com/contact/",
+        "url": "https://agonmustafaj.com/contact/",
+        "name": "Contact Agon Mustafaj | Let's Connect",
+        "description": "Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://agonmustafaj.com/#website" },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://agonmustafaj.com/#agon-mustafaj",
+          "name": "Agon Mustafaj",
+          "url": "https://agonmustafaj.com/",
+          "email": "agonmustafaj01@gmail.com",
+          "telephone": "+383 49 622 017",
+          "address": { "@type": "PostalAddress", "addressLocality": "Pristina", "addressCountry": "XK" },
+          "sameAs": [
+            "https://www.linkedin.com/in/agon-mustafaj/",
+            "https://www.facebook.com/agon.mustafaj.03/"
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://agonmustafaj.com/contact/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agonmustafaj.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://agonmustafaj.com/contact/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -46,7 +75,7 @@
       <div class="container">
         <span class="label" data-i18n="contact.label">Contact</span>
         <h1 data-i18n="contact.title">Let's Connect</h1>
-        <p data-i18n="contact.lead">Reach me directly by email or phone.</p>
+        <p data-i18n="contact.lead">Reach me directly by email or phone, or find me on LinkedIn. I'm based in Pristina, Kosovo.</p>
       </div>
     </header>
 

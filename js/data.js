@@ -12,10 +12,10 @@ const profile = {
   givenName: 'Agon',
   familyName: 'Mustafaj',
   initials: 'AM',
-  headline: 'Computer Science Student | Junior SEO | Web Development | Data Analytics | AI & Technology',
-  tagline: 'I build digital experiences that look good, work intelligently, and get discovered.',
-  identity: 'COMPUTER SCIENCE × SEO × WEB × DATA',
-  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and Junior SEO at thenovalab in Pristina, Kosovo, working in web development, technical SEO, data analytics, and emerging technology.',
+  headline: 'Computer Science Student | Web Development | Junior SEO | AI & Technology',
+  tagline: 'Computer Science student focused on web development, working as a Junior SEO, and exploring where AI fits into both.',
+  identity: 'COMPUTER SCIENCE × WEB × SEO × AI',
+  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and a Junior SEO at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
@@ -33,10 +33,16 @@ const profile = {
   telephone: '+38349622017',
   knowsAbout: [
     'Computer Science',
-    'SEO',
     'Web Development',
-    'Data Analytics',
-    'Artificial Intelligence'
+    'Search Engine Optimization',
+    'Technical SEO',
+    'Artificial Intelligence',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Python',
+    'Power BI',
+    'Data Analytics'
   ],
   cvPath: '/assets/Agon-Mustafaj-CV.pdf'
 };
@@ -49,7 +55,14 @@ const experience = [
     location: 'Pristina, Kosovo',
     startDate: 'July 1',
     endDate: 'Current',
-    responsibilities: ['Junior SEO'],
+    responsibilities: [
+      'Technical SEO: crawlability, indexing and site structure',
+      'On-page SEO: titles, meta descriptions, headings and content optimization',
+      'Internal linking and information architecture',
+      'Sitemap and indexing checks',
+      'SEO audits and website optimization',
+      'Keyword research and search visibility'
+    ],
     current: true
   }
 ];
@@ -60,9 +73,9 @@ const education = [
     degree: 'Computer Science',
     institution: 'University of Prishtina',
     location: 'Pristina, Kosovo',
-    startDate: '[ADD START DATE]',
+    startDate: '',
     endDate: 'Current',
-    details: ['[ADD INFORMATION]']
+    details: ['Undergraduate studies in Computer Science, the foundation for my work in web development and SEO.']
   }
 ];
 
@@ -72,21 +85,21 @@ const skills = [
   { name: 'JavaScript', category: 'Development', description: 'Interactive experiences and client-side functionality.', project: 'Banesë për Ty' },
   { name: 'Web Development', category: 'Development', description: 'Building complete websites from structure to deployment.', project: 'Hoxha Handwerk' },
   { name: 'Responsive Design', category: 'Development', description: 'Interfaces that work across devices and screen sizes.', project: '' },
-  { name: 'Technical SEO', category: 'SEO', description: 'Crawlability, site structure, and technical optimization.', project: '' },
-  { name: 'On-page SEO', category: 'SEO', description: 'Content optimization, metadata, and on-page best practices.', project: '' },
+  { name: 'Technical SEO', category: 'SEO', description: 'Crawlability, indexing, and site structure, applied in my Junior SEO role.', project: '' },
+  { name: 'On-page SEO', category: 'SEO', description: 'Titles, meta descriptions, headings, and content optimization.', project: '' },
   { name: 'Keyword Research', category: 'SEO', description: 'Identifying search intent and relevant keyword opportunities.', project: '' },
-  { name: 'Website Structure', category: 'SEO', description: 'Information architecture and internal linking strategy.', project: '' },
-  { name: 'SEO Auditing', category: 'SEO', description: 'Evaluating websites for search performance improvements.', project: '' },
-  { name: 'Python', category: 'Data Analytics', description: 'Data processing, analysis, and machine learning workflows.', project: '' },
-  { name: 'Pandas', category: 'Data Analytics', description: 'Data manipulation and analysis with Python.', project: '' },
-  { name: 'NumPy', category: 'Data Analytics', description: 'Numerical computing for data science projects.', project: '' },
-  { name: 'Power BI', category: 'Data Analytics', description: 'Business intelligence dashboards and data visualization.', project: '' },
-  { name: 'Excel', category: 'Data Analytics', description: 'Spreadsheet analysis and data organization.', project: '' },
-  { name: 'DAX', category: 'Data Analytics', description: 'Data analysis expressions for Power BI models.', project: '' },
-  { name: 'Data Modeling', category: 'Data Analytics', description: 'Structuring data for analysis and reporting.', project: '' },
-  { name: 'Artificial Intelligence', category: 'AI & Technology', description: 'Exploring AI concepts and practical applications.', project: '' },
+  { name: 'Website Structure', category: 'SEO', description: 'Information architecture and internal linking.', project: '' },
+  { name: 'SEO Auditing', category: 'SEO', description: 'Reviewing websites for technical and on-page improvements.', project: '' },
+  { name: 'Artificial Intelligence', category: 'AI & Technology', description: 'Exploring AI tools and AI-assisted development.', project: '' },
   { name: 'Programming', category: 'AI & Technology', description: 'Problem-solving through code across multiple languages.', project: '' },
   { name: 'Modern Web Technologies', category: 'AI & Technology', description: 'Staying current with evolving web standards and tools.', project: '' },
+  { name: 'Python', category: 'Data Analytics', description: 'Programming and data analysis fundamentals, studied through coursework.', project: '' },
+  { name: 'Pandas', category: 'Data Analytics', description: 'Working with datasets in Python, learned through coursework.', project: '' },
+  { name: 'NumPy', category: 'Data Analytics', description: 'Numerical computing in Python, learned through coursework.', project: '' },
+  { name: 'Power BI', category: 'Data Analytics', description: 'Power Query, data modeling, and visualization, studied through coursework.', project: '' },
+  { name: 'Excel', category: 'Data Analytics', description: 'Preparing and organizing data in spreadsheets, studied through coursework.', project: '' },
+  { name: 'DAX', category: 'Data Analytics', description: 'Expressions for Power BI models, studied through coursework.', project: '' },
+  { name: 'Data Modeling', category: 'Data Analytics', description: 'Structuring data for reporting, studied through coursework.', project: '' },
   { name: 'UI/UX', category: 'Design', description: 'User-centered design thinking and interface craft.', project: 'Banesë për Ty' },
   { name: 'Web Design', category: 'Design', description: 'Visual design for web experiences.', project: 'Hoxha Handwerk' },
   { name: 'Interaction Design', category: 'Design', description: 'Meaningful micro-interactions and user flows.', project: '' }
@@ -98,7 +111,7 @@ const projects = [
     title: 'Banesë për Ty',
     slug: 'banese-per-ty',
     url: 'https://banese-per-ty.netlify.app/',
-    description: 'A rental platform for property discovery, search, and tenant-landlord workflows.',
+    description: 'A rental platform concept where tenants search listings and landlords manage them, with digital contracts, signatures, and payment verification.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
     features: [
       'Property discovery',
@@ -119,7 +132,7 @@ const projects = [
     title: 'Hoxha Handwerk',
     slug: 'hoxha-handwerk',
     url: 'https://hoxhahandwerk.netlify.app/',
-    description: 'A professional business website with conversion-oriented layout and responsive UX.',
+    description: 'A multilingual website for a craft and trade business, built to present the work and make it easy for customers to get in touch.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development', 'Responsive Design'],
     features: [
       'Hero section',
@@ -293,7 +306,7 @@ const articles = [
     slug: 'learning-ai-as-cs-student',
     author: 'Agon Mustafaj',
     date: '2025-12-12',
-    description: 'How I approach AI learning alongside web development, data analytics, and SEO.',
+    description: 'How I fit learning about AI around web development, SEO work and my Computer Science coursework.',
     status: 'published',
     relatedProject: '',
     category: 'Learning'
@@ -317,58 +330,58 @@ function getProfileSameAs() {
 
 const pageSEO = {
   home: {
-    title: 'Agon Mustafaj | Computer Science, SEO & Web Development',
-    description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.',
+    title: 'Agon Mustafaj | Computer Science, Web Development & SEO',
+    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and a Junior SEO focused on web development, SEO and AI. Explore his projects, skills, certifications and experience.',
     path: '/'
   },
   about: {
-    title: 'About Agon Mustafaj | Computer Science & SEO',
-    description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina, Junior SEO at thenovalab, building with web, data and technology.',
+    title: 'About Agon Mustafaj | Computer Science & Web Development',
+    description: 'Computer Science student at the University of Prishtina and Junior SEO at thenovalab. How I work across web development, SEO and AI, and what I am currently learning.',
     path: '/about/'
   },
   projects: {
-    title: 'Projects | Agon Mustafaj',
-    description: 'Projects I\'ve built - web development, data analysis, and digital experiences.',
+    title: 'Projects | Agon Mustafaj — Web Development & Technology',
+    description: 'Web development projects I designed and built, including Banesë për Ty and Hoxha Handwerk, each with a case study covering my role, the technologies used and what I learned.',
     path: '/projects/'
   },
   skills: {
-    title: 'Skills & Technology Stack | Agon Mustafaj',
-    description: 'The technology stack I work with - web development, SEO, data analytics, AI, and design.',
+    title: 'Skills & Technologies | Agon Mustafaj',
+    description: 'The technologies I work with in web development and SEO, plus areas I have studied through coursework such as Python, Power BI, Excel and DAX.',
     path: '/skills/'
   },
   education: {
-    title: 'Education | Agon Mustafaj',
-    description: 'My education - Computer Science at the University of Prishtina.',
+    title: 'Education | Agon Mustafaj — Computer Science, University of Prishtina',
+    description: 'My academic background: Computer Science studies at the University of Prishtina in Pristina, Kosovo, and the foundation behind my web development and SEO work.',
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj',
-    description: 'My professional experience - Junior SEO at thenovalab.',
+    title: 'Experience | Agon Mustafaj — Junior SEO at thenovalab',
+    description: 'My professional experience as a Junior SEO at thenovalab in Pristina, working on technical SEO, on-page optimization, internal linking and website structure.',
     path: '/experience/'
   },
   certifications: {
-    title: 'Certifications | Agon Mustafaj',
-    description: 'Certifications and credentials from my continuous learning journey.',
+    title: 'Certifications | Agon Mustafaj — Python, Power BI, SEO & Networking',
+    description: 'Course certificates and learning credentials from Coursera, Credly and KREN, covering Python, Power BI, Excel, SEO, networking, DevOps and cybersecurity fundamentals.',
     path: '/certifications/'
   },
   articles: {
-    title: 'Blog | Agon Mustafaj',
-    description: 'I write about artificial intelligence, technology, and modern web development.',
+    title: 'Blog | Agon Mustafaj — AI, Web Development & Technology',
+    description: 'Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building.',
     path: '/blog/'
   },
   services: {
-    title: 'Website Creation for Businesses | Agon Mustafaj',
-    description: 'I design and build professional websites for businesses - clear presentation, mobile-ready, and easy for customers to contact you.',
+    title: 'Web Development & Websites for Businesses | Agon Mustafaj',
+    description: 'I design and build websites for businesses: clear presentation, mobile-ready layouts and simple contact paths, written in clean HTML, CSS and JavaScript.',
     path: '/services/'
   },
   contact: {
-    title: 'Contact | Agon Mustafaj',
-    description: 'Get in touch - let\'s build something together.',
+    title: 'Contact Agon Mustafaj | Let\'s Connect',
+    description: 'Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.',
     path: '/contact/'
   },
   cv: {
-    title: 'Resume | Agon Mustafaj',
-    description: 'View and download my CV.',
+    title: 'CV | Agon Mustafaj — Computer Science, Web Development & SEO',
+    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina, Junior SEO at thenovalab, with web development projects and course certificates.',
     path: '/cv/'
   },
   '404': {
@@ -379,18 +392,18 @@ const pageSEO = {
 };
 
 const whatIDo = [
-  { title: 'Build', description: 'Websites and digital experiences.', icon: 'build' },
-  { title: 'Optimize', description: 'Technical SEO and website structure.', icon: 'optimize' },
-  { title: 'Analyze', description: 'Data using Python, Power BI and Excel.', icon: 'analyze' },
-  { title: 'Explore', description: 'AI and emerging technologies.', icon: 'explore' },
-  { title: 'Design', description: 'Modern responsive user experiences.', icon: 'design' }
+  { title: 'Build', description: 'Responsive websites and web applications, from structure to deployment.', icon: 'build' },
+  { title: 'Optimize', description: 'Technical SEO, on-page optimization and website structure.', icon: 'optimize' },
+  { title: 'Explore', description: 'AI tools, AI-assisted development and emerging technology.', icon: 'explore' },
+  { title: 'Design', description: 'Modern, responsive interfaces built around usability.', icon: 'design' },
+  { title: 'Learn', description: 'Data analytics through coursework: Python, Power BI, Excel and DAX.', icon: 'analyze' }
 ];
 
 const journeySteps = [
   { title: 'University of Prishtina', subtitle: 'Computer Science', status: 'Current' },
   { title: 'Junior SEO', subtitle: 'thenovalab', status: 'Current' },
   { title: 'Web Projects', subtitle: 'Building real websites', status: 'Current' },
-  { title: 'Data Analytics', subtitle: 'Python, Power BI, Excel', status: 'Current' },
+  { title: 'Data Analytics', subtitle: 'Coursework and self-study', status: 'Learning' },
   { title: 'Continuous Learning', subtitle: 'Always growing', status: 'Current' }
 ];
 

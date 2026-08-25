@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Agon Mustafaj</title>
-  <meta name="description" content="I write about artificial intelligence, technology, and modern web development.">
+  <title>Blog | Agon Mustafaj — AI, Web Development &amp; Technology</title>
+  <meta name="description" content="Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building.">
+  <meta name="author" content="Agon Mustafaj">
   <link rel="canonical" href="https://agonmustafaj.com/blog/">
+  <link rel="author" href="https://agonmustafaj.com/about/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agon Mustafaj">
-  <meta property="og:title" content="Blog | Agon Mustafaj">
-  <meta property="og:description" content="I write about artificial intelligence, technology, and modern web development.">
+  <meta property="og:title" content="Blog | Agon Mustafaj — AI, Web Development &amp; Technology">
+  <meta property="og:description" content="Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building.">
   <meta property="og:url" content="https://agonmustafaj.com/blog/">
   <meta property="og:image" content="https://agonmustafaj.com/assets/images/og-v2.png">
   <meta property="og:image:width" content="1200">
@@ -17,9 +19,10 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="sq_AL">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Blog | Agon Mustafaj">
-  <meta name="twitter:description" content="I write about artificial intelligence, technology, and modern web development.">
+  <meta name="twitter:title" content="Blog | Agon Mustafaj — AI, Web Development &amp; Technology">
+  <meta name="twitter:description" content="Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building.">
   <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/og-v2.png">
   <meta name="twitter:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -28,10 +31,60 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agonmustafaj.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://agonmustafaj.com/blog/" }
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://agonmustafaj.com/blog/#blog",
+        "url": "https://agonmustafaj.com/blog/",
+        "name": "Blog | Agon Mustafaj",
+        "description": "Articles on artificial intelligence, web development, technology and learning by building.",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "@id": "https://agonmustafaj.com/#agon-mustafaj", "name": "Agon Mustafaj", "url": "https://agonmustafaj.com/" },
+        "publisher": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+        "isPartOf": { "@id": "https://agonmustafaj.com/#website" },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://agonmustafaj.com/blog/ai-today-what-matters/#article",
+            "headline": "AI Today: What Actually Matters Right Now",
+            "url": "https://agonmustafaj.com/blog/ai-today-what-matters/",
+            "datePublished": "2026-06-15",
+            "author": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://agonmustafaj.com/blog/ai-changing-web-development/#article",
+            "headline": "How AI Is Changing Web Development",
+            "url": "https://agonmustafaj.com/blog/ai-changing-web-development/",
+            "datePublished": "2026-04-22",
+            "author": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://agonmustafaj.com/blog/ai-and-technology-building/#article",
+            "headline": "AI and Technology: Building With Intelligence",
+            "url": "https://agonmustafaj.com/blog/ai-and-technology-building/",
+            "datePublished": "2026-02-18",
+            "author": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://agonmustafaj.com/blog/learning-ai-as-cs-student/#article",
+            "headline": "Learning AI as a Computer Science Student",
+            "url": "https://agonmustafaj.com/blog/learning-ai-as-cs-student/",
+            "datePublished": "2025-12-12",
+            "author": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://agonmustafaj.com/blog/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agonmustafaj.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://agonmustafaj.com/blog/" }
+        ]
+      }
     ]
   }
   </script>
@@ -73,7 +126,7 @@
           <article class="article-card reveal">
             <span class="label" data-i18n="blog.catLearn">Learning</span>
             <h3><a href="/blog/learning-ai-as-cs-student/" data-i18n="blog.t4">Learning AI as a Computer Science Student</a></h3>
-            <p data-i18n="blog.d4">How I approach AI learning alongside web development, data analytics, and SEO.</p>
+            <p data-i18n="blog.d4">How I fit learning about AI around web development, SEO work and my Computer Science coursework.</p>
             <p class="text-muted" style="margin-top:0.75rem;font-size:0.8rem" data-i18n="post.meta4">By Agon Mustafaj · December 12, 2025</p>
           </article>
         </div>

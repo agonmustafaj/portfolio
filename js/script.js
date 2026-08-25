@@ -79,7 +79,7 @@
       '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
           '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '"><span>AM</span></a>' +
-          '<div class="nav-links" role="menubar">' + links + '</div>' +
+          '<div class="nav-links">' + links + '</div>' +
           '<div class="nav-actions">' +
             langSwitch +
             '<button class="theme-toggle" aria-label="' + tx('nav.toggleTheme', 'Toggle theme') + '" title="' + tx('nav.toggleTheme', 'Toggle theme') + '"></button>' +
@@ -375,7 +375,7 @@
       { prompt: true, text: ' whoami' },
       { output: true, text: profile.name },
       { prompt: true, text: ' focus' },
-      { output: true, text: tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nData\nAI') },
+      { output: true, text: tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nAI') },
       { prompt: true, text: ' status' },
       { output: true, text: tx('terminal.status', 'Building...\nLearning...\nExperimenting...') }
     ];
@@ -427,7 +427,7 @@
     return '<div class="terminal-line"><span class="terminal-prompt">$</span> whoami</div>' +
       '<div class="terminal-line terminal-output">' + profile.name + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> focus</div>' +
-      '<div class="terminal-line terminal-output">' + tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nData\nAI').replace(/\n/g, '<br>') + '</div>' +
+      '<div class="terminal-line terminal-output">' + tx('terminal.focus', 'Computer Science\nWeb Development\nSEO\nAI').replace(/\n/g, '<br>') + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> status</div>' +
       '<div class="terminal-line terminal-output">' + tx('terminal.status', 'Building...\nLearning...\nExperimenting...').replace(/\n/g, '<br>') + '</div>';
   }
@@ -644,14 +644,14 @@
                 '<span>' + profile.initials + '</span>' +
               '</div>' +
               '<div class="wallet-qr-row">' +
-                '<div class="wallet-qr-item">' +
-                  qrMarkup(SITE_URL, tx('wallet.qrSite', 'QR code for website')) +
+                '<a class="wallet-qr-item" href="' + SITE_URL + '/" aria-label="' + tx('wallet.qrSite', 'QR code for website') + '">' +
+                  qrMarkup(SITE_URL + '/', tx('wallet.qrSite', 'QR code for website')) +
                   '<span>' + tx('wallet.website', 'Website') + '</span>' +
-                '</div>' +
-                '<div class="wallet-qr-item">' +
+                '</a>' +
+                '<a class="wallet-qr-item" href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="' + tx('wallet.qrLinkedin', 'QR code for LinkedIn') + '">' +
                   qrMarkup(profile.linkedin, tx('wallet.qrLinkedin', 'QR code for LinkedIn')) +
                   '<span>LinkedIn</span>' +
-                '</div>' +
+                '</a>' +
               '</div>' +
             '</div>' +
             '<div class="wallet-info">' +
@@ -676,7 +676,8 @@
     if (avatar) {
       const img = new Image();
       img.src = '/assets/images/profile.jpg';
-      img.alt = profile.name;
+      img.alt = 'Portrait of ' + profile.name;
+      img.decoding = 'async';
       img.onload = function () {
         avatar.innerHTML = '';
         avatar.appendChild(img);
@@ -699,7 +700,7 @@
       const previewLink = cert.pdf || cert.image || '#';
       const preview = cert.image
         ? '<a class="cert-preview" href="' + previewLink + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
-            '<img src="' + cert.image + '" alt="' + titleDisplay + ' certificate" loading="lazy" width="900" height="650">' +
+            '<img src="' + cert.image + '" alt="' + titleDisplay + ' certificate issued by ' + (cert.issuer || cert.platform) + '" loading="lazy" decoding="async" width="900" height="650">' +
           '</a>'
         : (cert.pdf
           ? '<a class="cert-preview cert-platform-' + (cert.platform || 'default').toLowerCase().replace(/\s+/g, '-') + '" href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
@@ -760,7 +761,7 @@
         : '';
 
       const previewContent = proj.image
-        ? '<img src="' + proj.image + '" alt="Homepage preview of ' + proj.title + '" loading="lazy" width="1440" height="900">'
+        ? '<img src="' + proj.image + '" alt="Homepage preview of the ' + proj.title + ' website" loading="lazy" decoding="async" width="1440" height="900">'
         : (proj.url
           ? '<div class="preview-placeholder">' + proj.title + '</div>'
           : '<div class="preview-placeholder">' + tx('ui.dataAnalysis', 'Data Analysis') + '</div>');
@@ -810,7 +811,7 @@
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Pristina',
-        addressCountry: 'Kosovo'
+        addressCountry: 'XK'
       },
       email: profile.email,
       telephone: profile.telephone,
