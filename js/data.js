@@ -302,16 +302,17 @@ const articles = [
 
 const socialLinks = [
   { name: 'LinkedIn', url: profile.linkedin, icon: 'linkedin', active: !!profile.linkedin },
-  { name: 'GitHub', url: profile.github, icon: 'github', active: !!profile.github },
-  { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: !!profile.facebook },
-  { name: 'Instagram', url: profile.instagram, icon: 'instagram', active: !!profile.instagram },
-  { name: 'YouTube', url: profile.youtube, icon: 'youtube', active: !!profile.youtube }
+  { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: !!profile.facebook }
 ];
 
 function getProfileSameAs() {
-  return socialLinks
-    .filter(function (s) { return s.active && s.url; })
-    .map(function (s) { return s.url; });
+  return [
+    profile.linkedin,
+    profile.github,
+    profile.facebook,
+    profile.instagram,
+    profile.youtube
+  ].filter(function (url) { return !!url; });
 }
 
 const pageSEO = {

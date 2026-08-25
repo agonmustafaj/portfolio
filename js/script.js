@@ -635,14 +635,6 @@
       ? '<a href="mailto:' + profile.email + '" aria-label="Email">' + icons.email + '</a>'
       : '';
 
-    const githubLink = profile.github
-      ? '<a href="' + profile.github + '" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">' + icons.github + '</a>'
-      : '';
-
-    const instagramLink = profile.instagram
-      ? '<a href="' + profile.instagram + '" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">' + icons.instagram + '</a>'
-      : '';
-
     container.innerHTML =
       '<div class="wallet-container">' +
         '<div class="wallet-card" role="img" aria-label="' + tx('wallet.aria', 'Digital identity card for ' + profile.name) + '">' +
@@ -668,7 +660,7 @@
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +
-                githubLink + instagramLink + emailLink +
+                emailLink +
               '</div>' +
             '</div>' +
             '<div class="wallet-actions">' +
