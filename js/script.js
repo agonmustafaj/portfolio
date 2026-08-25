@@ -139,7 +139,7 @@
     if (!footer) return;
 
     const socials = socialLinks.filter(function (s) { return s.active && s.url; }).map(function (s) {
-      return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer" aria-label="' + s.name + '">' + icons[s.icon] + '</a>';
+      return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer me" aria-label="' + s.name + '">' + icons[s.icon] + '</a>';
     }).join('');
 
     footer.innerHTML =
@@ -636,7 +636,11 @@
       : '';
 
     const githubLink = profile.github
-      ? '<a href="' + profile.github + '" target="_blank" rel="noopener noreferrer" aria-label="GitHub">' + icons.github + '</a>'
+      ? '<a href="' + profile.github + '" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">' + icons.github + '</a>'
+      : '';
+
+    const instagramLink = profile.instagram
+      ? '<a href="' + profile.instagram + '" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">' + icons.instagram + '</a>'
       : '';
 
     container.innerHTML =
@@ -662,9 +666,9 @@
               '<h3>' + profile.name + '</h3>' +
               '<p>' + tx('wallet.role', 'Computer Science Student') + '<br>Junior SEO @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
-                '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
-                '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer" aria-label="Facebook">' + icons.facebook + '</a>' +
-                githubLink + emailLink +
+                '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
+                '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +
+                githubLink + instagramLink + emailLink +
               '</div>' +
             '</div>' +
             '<div class="wallet-actions">' +
@@ -795,30 +799,51 @@
 
   /* --- JSON-LD Helper --- */
   window.generatePersonSchema = function () {
-    const sameAs = socialLinks
-      .filter(function (s) { return s.active && s.url; })
-      .map(function (s) { return s.url; });
-
-    return {
-      '@context': 'https://schema.org',
+    const person = {
       '@type': 'Person',
+      '@id': PERSON_ID,
       name: profile.name,
-      url: SITE_URL,
+      givenName: profile.givenName,
+      familyName: profile.familyName,
+      url: SITE_URL + '/',
+      image: profile.image,
+      description: profile.description,
       jobTitle: profile.role,
-      worksFor: { '@type': 'Organization', name: profile.company },
-      alumniOf: { '@type': 'CollegeOrUniversity', name: profile.university },
-      address: { '@type': 'PostalAddress', addressLocality: profile.location },
-      sameAs: sameAs
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: profile.university
+      },
+      knowsAbout: profile.knowsAbout.slice(),
+      sameAs: getProfileSameAs(),
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Pristina',
+        addressCountry: 'Kosovo'
+      },
+      email: profile.email,
+      telephone: profile.telephone,
+      mainEntityOfPage: { '@id': SITE_URL + '/about/' }
     };
+
+    if (profile.company) {
+      person.worksFor = {
+        '@type': 'Organization',
+        name: profile.company
+      };
+      if (profile.companyUrl) person.worksFor.url = profile.companyUrl;
+    }
+
+    return person;
   };
 
   window.generateWebsiteSchema = function () {
     return {
-      '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: profile.name + ' Portfolio',
-      url: SITE_URL,
-      author: { '@type': 'Person', name: profile.name }
+      '@id': WEBSITE_ID,
+      url: SITE_URL + '/',
+      name: profile.name,
+      inLanguage: ['en', 'sq'],
+      publisher: { '@id': PERSON_ID }
     };
   };
 

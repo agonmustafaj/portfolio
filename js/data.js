@@ -4,26 +4,40 @@
    ============================================ */
 
 const SITE_URL = 'https://agonmustafaj.com';
+const PERSON_ID = SITE_URL + '/#agon-mustafaj';
+const WEBSITE_ID = SITE_URL + '/#website';
 
 const profile = {
   name: 'Agon Mustafaj',
+  givenName: 'Agon',
+  familyName: 'Mustafaj',
   initials: 'AM',
   headline: 'Computer Science Student | Junior SEO | Web Development | Data Analytics | AI & Technology',
   tagline: 'I build digital experiences that look good, work intelligently, and get discovered.',
   identity: 'COMPUTER SCIENCE × SEO × WEB × DATA',
+  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and Junior SEO at thenovalab in Pristina, Kosovo, working in web development, technical SEO, data analytics, and emerging technology.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
   role: 'Junior SEO',
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
+  image: SITE_URL + '/assets/images/profile.jpg',
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
-  github: '',
-  instagram: '',
+  github: 'https://github.com/agonmustafaj/',
+  instagram: 'https://www.instagram.com/agonmustafaj_',
   youtube: '',
   email: 'agonmustafaj01@gmail.com',
   phone: '+383 49 622 017',
+  telephone: '+38349622017',
+  knowsAbout: [
+    'Computer Science',
+    'SEO',
+    'Web Development',
+    'Data Analytics',
+    'Artificial Intelligence'
+  ],
   cvPath: '/assets/Agon-Mustafaj-CV.pdf'
 };
 
@@ -287,18 +301,27 @@ const articles = [
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', url: profile.linkedin, icon: 'linkedin', active: true },
-  { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: true }
+  { name: 'LinkedIn', url: profile.linkedin, icon: 'linkedin', active: !!profile.linkedin },
+  { name: 'GitHub', url: profile.github, icon: 'github', active: !!profile.github },
+  { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: !!profile.facebook },
+  { name: 'Instagram', url: profile.instagram, icon: 'instagram', active: !!profile.instagram },
+  { name: 'YouTube', url: profile.youtube, icon: 'youtube', active: !!profile.youtube }
 ];
+
+function getProfileSameAs() {
+  return socialLinks
+    .filter(function (s) { return s.active && s.url; })
+    .map(function (s) { return s.url; });
+}
 
 const pageSEO = {
   home: {
-    title: 'Agon Mustafaj | Computer Science, Web & SEO',
+    title: 'Agon Mustafaj | Computer Science, SEO & Web Development',
     description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina and Junior SEO, building with web, data, AI and technology.',
     path: '/'
   },
   about: {
-    title: 'About Me | Agon Mustafaj',
+    title: 'About Agon Mustafaj | Computer Science & SEO',
     description: 'I\'m Agon Mustafaj, Computer Science student at the University of Prishtina, Junior SEO at thenovalab, building with web, data and technology.',
     path: '/about/'
   },
