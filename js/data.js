@@ -36,6 +36,10 @@ const profile = {
     'Web Development',
     'Search Engine Optimization',
     'Technical SEO',
+    'Digital Marketing',
+    'Content Marketing',
+    'Marketing Analytics',
+    'Competitive Analysis',
     'Artificial Intelligence',
     'HTML',
     'CSS',
@@ -90,6 +94,10 @@ const skills = [
   { name: 'Keyword Research', category: 'SEO', description: 'Identifying search intent and relevant keyword opportunities.', project: '' },
   { name: 'Website Structure', category: 'SEO', description: 'Information architecture and internal linking.', project: '' },
   { name: 'SEO Auditing', category: 'SEO', description: 'Reviewing websites for technical and on-page improvements.', project: '' },
+  { name: 'Content Marketing', category: 'SEO', description: 'Creating and structuring content that serves users and search, covered in the Ahrefs Marketing Platform Certification.', project: '' },
+  { name: 'Competitive Analysis', category: 'SEO', description: 'Researching competitors’ search visibility, content and backlink profiles with SEO tools.', project: '' },
+  { name: 'Digital Marketing', category: 'Marketing', description: 'Search, content and analytics work across a marketing platform, covered in the Ahrefs certification.', project: '' },
+  { name: 'Marketing Analytics', category: 'Marketing', description: 'Measuring search visibility and marketing performance with platform data and reports.', project: '' },
   { name: 'Artificial Intelligence', category: 'AI & Technology', description: 'Exploring AI tools and AI-assisted development.', project: '' },
   { name: 'Programming', category: 'AI & Technology', description: 'Problem-solving through code across multiple languages.', project: '' },
   { name: 'Modern Web Technologies', category: 'AI & Technology', description: 'Staying current with evolving web standards and tools.', project: '' },
@@ -155,6 +163,17 @@ const projects = [
 ];
 
 const certifications = [
+  {
+    id: 'cert-010',
+    platform: 'Ahrefs',
+    title: 'Ahrefs Marketing Platform Certification',
+    issuer: 'Ahrefs',
+    date: 'August 2026',
+    credentialId: 'ff3531083a3a4eaba3174a423614440a',
+    pdf: '/assets/certificates/ahrefs-marketing-platform.pdf',
+    image: '/assets/certificates/previews/ahrefs-marketing-platform.png',
+    verificationUrl: 'https://ahrefs.com/academy/certificate/ff3531083a3a4eaba3174a423614440a'
+  },
   {
     id: 'cert-001',
     platform: 'Coursera',
@@ -360,8 +379,8 @@ const pageSEO = {
     path: '/experience/'
   },
   certifications: {
-    title: 'Certifications | Agon Mustafaj — Python, Power BI, SEO & Networking',
-    description: 'Course certificates and learning credentials from Coursera, Credly and KREN, covering Python, Power BI, Excel, SEO, networking, DevOps and cybersecurity fundamentals.',
+    title: 'Certifications | Agon Mustafaj — Ahrefs, Python, Power BI, SEO & Networking',
+    description: 'Course certificates and learning credentials from Ahrefs, Coursera, Credly and KREN, covering SEO, Python, Power BI, Excel, networking, DevOps and cybersecurity fundamentals.',
     path: '/certifications/'
   },
   articles: {

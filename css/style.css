@@ -1370,6 +1370,18 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   border-color: rgba(34, 197, 94, 0.35);
 }
 
+.cert-platform-ahrefs {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 140, 0, 0.32), transparent 45%),
+    linear-gradient(145deg, #1a120c 0%, #12100e 100%);
+}
+
+.cert-platform-ahrefs .cert-preview-badge {
+  color: #fdba74;
+  background: rgba(255, 140, 0, 0.16);
+  border-color: rgba(255, 140, 0, 0.38);
+}
+
 .cert-preview embed,
 .cert-preview-fallback {
   display: none;
