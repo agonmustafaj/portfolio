@@ -178,12 +178,12 @@ const certifications = [
     id: 'cert-001',
     platform: 'Coursera',
     title: 'Python for Data Science, AI & Development',
-    issuer: 'Coursera',
+    issuer: 'IBM',
     date: '',
-    credentialId: '',
+    credentialId: 'DHJ8PUFMXBCR',
     pdf: '/assets/certificates/python-data-science.pdf',
     image: '/assets/certificates/previews/python-data-science.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/DHJ8PUFMXBCR'
   },
   {
     id: 'cert-002',
@@ -191,7 +191,7 @@ const certifications = [
     title: 'Palo Alto Networks Cybersecurity Foundation',
     issuer: 'Palo Alto Networks',
     date: '',
-    credentialId: '',
+    credentialId: 'WEKSDPR7Q473',
     pdf: '/assets/certificates/palo-alto-cybersecurity.pdf',
     image: '/assets/certificates/previews/palo-alto-cybersecurity.png',
     verificationUrl: 'https://www.credly.com/badges/d6fc2f38-10b6-455b-b180-63a346117070/linked_in_profile'
@@ -200,67 +200,67 @@ const certifications = [
     id: 'cert-003',
     platform: 'Coursera',
     title: 'Search Engine Optimization and Content',
-    issuer: 'Coursera',
+    issuer: 'IBM',
     date: '',
-    credentialId: '',
+    credentialId: 'G1X8E26TPLD1',
     pdf: '/assets/certificates/seo-content.pdf',
     image: '/assets/certificates/previews/seo-content.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/G1X8E26TPLD1'
   },
   {
     id: 'cert-004',
     platform: 'Coursera',
     title: 'Extract, Transform and Load Data in Power BI',
-    issuer: 'Coursera',
+    issuer: 'Microsoft',
     date: '',
-    credentialId: '',
+    credentialId: 'P46JI89DQH0G',
     pdf: '/assets/certificates/power-bi-etl.pdf',
     image: '/assets/certificates/previews/power-bi-etl.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/P46JI89DQH0G'
   },
   {
     id: 'cert-005',
     platform: 'Coursera',
     title: 'Preparing Data for Analysis with Microsoft Excel',
-    issuer: 'Coursera',
+    issuer: 'Microsoft',
     date: '',
-    credentialId: '',
+    credentialId: 'F89YPV04R699',
     pdf: '/assets/certificates/excel-data-analysis.pdf',
     image: '/assets/certificates/previews/excel-data-analysis.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/F89YPV04R699'
   },
   {
     id: 'cert-006',
     platform: 'Coursera',
     title: 'Networking Basics, Switching, Addressing, and Routing',
-    issuer: 'Coursera',
+    issuer: 'Logical Operations',
     date: '',
-    credentialId: '',
+    credentialId: 'OBAQU4EVUCZO',
     pdf: '/assets/certificates/networking-basics.pdf',
     image: '/assets/certificates/previews/networking-basics.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/OBAQU4EVUCZO'
   },
   {
     id: 'cert-007',
     platform: 'Coursera',
     title: 'Wireless Networking and IP Services',
-    issuer: 'Coursera',
+    issuer: 'Logical Operations',
     date: '',
-    credentialId: '',
+    credentialId: '77HGFUFSKXUZ',
     pdf: '/assets/certificates/wireless-networking.pdf',
     image: '/assets/certificates/previews/wireless-networking.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/77HGFUFSKXUZ'
   },
   {
     id: 'cert-008',
     platform: 'Coursera',
     title: 'DevOps Prerequisite Course',
-    issuer: 'Coursera',
+    issuer: 'KodeKloud',
     date: '',
-    credentialId: '',
+    credentialId: 'CJKIXKGKMLSR',
     pdf: '/assets/certificates/devops-prerequisite.pdf',
     image: '/assets/certificates/previews/devops-prerequisite.png',
-    verificationUrl: ''
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/CJKIXKGKMLSR'
   },
   {
     id: 'cert-009',
@@ -275,15 +275,7 @@ const certifications = [
   }
 ];
 
-/* Coursera verification links provided, not mapped to specific titles to avoid incorrect pairing */
-const verificationLinks = [
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/G1X8E26TPLD1' },
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/CJKIXKGKMLSR' },
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/WEKSDPR7Q473' },
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/OBAQU4EVUCZO' },
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/P46JI89DQH0G' },
-  { platform: 'Coursera', url: 'https://www.coursera.org/account/accomplishments/verify/F89YPV04R699' }
-];
+const verificationLinks = [];
 
 const articles = [
   {

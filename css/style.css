@@ -1551,13 +1551,49 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: var(--glow-blue);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 0.7rem;
   color: var(--accent-blue);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cert-platform-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.cert-platform-icon.cert-logo-ibm img,
+.cert-platform-icon.cert-logo-palo-alto img {
+  width: 34px;
+  height: 16px;
+}
+
+.cert-platform-icon.cert-logo-ahrefs {
+  background: #2B59FF;
+}
+
+.cert-platform-icon.cert-logo-ahrefs img {
+  width: 40px;
+  height: 40px;
+}
+
+.cert-platform-icon.cert-logo-logical-operations img,
+.cert-platform-icon.cert-logo-kodekloud img,
+.cert-platform-icon.cert-logo-microsoft img {
+  width: 26px;
+  height: 26px;
+}
+
+.cert-platform-icon.cert-logo-kren img {
+  width: 36px;
+  height: 22px;
 }
 
 .cert-card h3 {

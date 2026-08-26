@@ -671,14 +671,44 @@
   }
 
   /* --- Render Cert Cards --- */
+  function certBrand(cert) {
+    const issuer = cert.issuer || cert.platform || '';
+    const logos = {
+      'IBM': '/assets/icons/platforms/ibm.svg',
+      'Microsoft': '/assets/icons/platforms/microsoft.svg',
+      'Palo Alto Networks': '/assets/icons/platforms/paloaltonetworks.svg',
+      'Ahrefs': '/assets/icons/platforms/ahrefs.png',
+      'Logical Operations': '/assets/icons/platforms/logicaloperations.png',
+      'KodeKloud': '/assets/icons/platforms/kodekloud.svg',
+      'KREN': '/assets/icons/platforms/kren.png',
+      'Coursera': '/assets/icons/platforms/coursera.svg'
+    };
+    const slugs = {
+      'IBM': 'ibm',
+      'Microsoft': 'microsoft',
+      'Palo Alto Networks': 'palo-alto',
+      'Ahrefs': 'ahrefs',
+      'Logical Operations': 'logical-operations',
+      'KodeKloud': 'kodekloud',
+      'KREN': 'kren',
+      'Coursera': 'coursera'
+    };
+    return {
+      label: issuer,
+      logo: logos[issuer] || '',
+      slug: slugs[issuer] || issuer.toLowerCase().replace(/\s+/g, '-')
+    };
+  }
+
   function renderCertCards(container, limit) {
     if (!container) return;
     const certs = limit ? certifications.slice(0, limit) : certifications;
 
     container.innerHTML = certs.map(function (cert) {
       const titleDisplay = cert.title || 'Certificate';
+      const brand = certBrand(cert);
       const metaParts = [];
-      if (cert.issuer) metaParts.push(cert.issuer);
+      if (cert.platform && cert.platform !== brand.label) metaParts.push(cert.platform);
       if (cert.date) metaParts.push(cert.date);
       if (cert.credentialId) metaParts.push('ID: ' + cert.credentialId);
 
@@ -702,15 +732,21 @@
         buttons.push('<a href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewCertificate', 'View Certificate') + '</a>');
       }
       if (cert.verificationUrl) {
-        buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">' + tx('ui.viewVerification', 'View Verification') + '</a>');
+        buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewVerification', 'View Verification') + '</a>');
       }
+
+      const icon = brand.logo
+        ? '<div class="cert-platform-icon cert-logo-' + brand.slug + '">' +
+            '<img src="' + brand.logo + '" alt="' + brand.label + ' logo" width="40" height="40">' +
+          '</div>'
+        : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
       return '<article class="cert-card" data-platform="' + cert.platform + '">' +
         preview +
         '<div class="cert-card-body">' +
           '<div class="cert-platform">' +
-            '<div class="cert-platform-icon">' + cert.platform.substring(0, 2).toUpperCase() + '</div>' +
-            '<span class="text-secondary">' + cert.platform + '</span>' +
+            icon +
+            '<span class="text-secondary">' + brand.label + '</span>' +
           '</div>' +
           '<h3>' + titleDisplay + '</h3>' +
           (metaParts.length ? '<p class="cert-meta">' + metaParts.join(' · ') + '</p>' : '') +
