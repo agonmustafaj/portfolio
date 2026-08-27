@@ -737,7 +737,7 @@
 
       const icon = brand.logo
         ? '<div class="cert-platform-icon cert-logo-' + brand.slug + '">' +
-            '<img src="' + brand.logo + '" alt="' + brand.label + ' logo" width="40" height="40">' +
+            '<img src="' + brand.logo + '" alt="" width="72" height="36">' +
           '</div>'
         : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
@@ -746,7 +746,7 @@
         '<div class="cert-card-body">' +
           '<div class="cert-platform">' +
             icon +
-            '<span class="text-secondary">' + brand.label + '</span>' +
+            '<span class="cert-platform-name">' + brand.label + '</span>' +
           '</div>' +
           '<h3>' + titleDisplay + '</h3>' +
           (metaParts.length ? '<p class="cert-meta">' + metaParts.join(' · ') + '</p>' : '') +

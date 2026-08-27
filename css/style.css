@@ -1543,16 +1543,19 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .cert-platform {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 
 .cert-platform-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
+  height: 36px;
+  width: auto;
+  min-width: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
   background: #ffffff;
-  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
@@ -1560,40 +1563,89 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   color: var(--accent-blue);
   overflow: hidden;
   flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+[data-theme="light"] .cert-platform-icon {
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .cert-platform-icon img {
-  width: 28px;
-  height: 28px;
+  height: 18px;
+  width: auto;
+  max-width: 86px;
   object-fit: contain;
   display: block;
 }
 
-.cert-platform-icon.cert-logo-ibm img,
-.cert-platform-icon.cert-logo-palo-alto img {
-  width: 34px;
+.cert-platform-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+.cert-platform-icon.cert-logo-ibm {
+  padding: 0 11px;
+}
+
+.cert-platform-icon.cert-logo-ibm img {
   height: 16px;
+  max-width: 52px;
+}
+
+.cert-platform-icon.cert-logo-palo-alto {
+  padding: 0 10px;
+}
+
+.cert-platform-icon.cert-logo-palo-alto img {
+  height: 16px;
+  max-width: 96px;
+}
+
+.cert-platform-icon.cert-logo-microsoft,
+.cert-platform-icon.cert-logo-logical-operations {
+  width: 36px;
+  padding: 7px;
+}
+
+.cert-platform-icon.cert-logo-microsoft img,
+.cert-platform-icon.cert-logo-logical-operations img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.cert-platform-icon.cert-logo-kodekloud {
+  padding: 0 9px;
+}
+
+.cert-platform-icon.cert-logo-kodekloud img {
+  height: 18px;
+  max-width: 32px;
 }
 
 .cert-platform-icon.cert-logo-ahrefs {
+  width: 36px;
+  padding: 0;
   background: #2B59FF;
+  border-color: transparent;
 }
 
 .cert-platform-icon.cert-logo-ahrefs img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  max-width: none;
 }
 
-.cert-platform-icon.cert-logo-logical-operations img,
-.cert-platform-icon.cert-logo-kodekloud img,
-.cert-platform-icon.cert-logo-microsoft img {
-  width: 26px;
-  height: 26px;
+.cert-platform-icon.cert-logo-kren {
+  padding: 0 8px;
 }
 
 .cert-platform-icon.cert-logo-kren img {
-  width: 36px;
-  height: 22px;
+  height: 20px;
+  max-width: 78px;
 }
 
 .cert-card h3 {
