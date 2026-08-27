@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logical Operations">
+  <title>Logical Operations</title>
+  <rect width="64" height="64" rx="13" fill="#39A2E1"/>
+  <polyline fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="20,16 44,28 20,40"/>
+  <line x1="20" y1="49" x2="44" y2="49" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+</svg>

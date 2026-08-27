@@ -678,7 +678,7 @@
       'Microsoft': '/assets/icons/platforms/microsoft.svg',
       'Palo Alto Networks': '/assets/icons/platforms/paloaltonetworks.svg',
       'Ahrefs': '/assets/icons/platforms/ahrefs.png',
-      'Logical Operations': '/assets/icons/platforms/logicaloperations.png',
+      'Logical Operations': '/assets/icons/platforms/logicaloperations.svg',
       'KodeKloud': '/assets/icons/platforms/kodekloud.svg',
       'KREN': '/assets/icons/platforms/kren.png',
       'Coursera': '/assets/icons/platforms/coursera.svg'
@@ -735,9 +735,10 @@
         buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewVerification', 'View Verification') + '</a>');
       }
 
+      const lockup = brand.slug === 'kren';
       const icon = brand.logo
         ? '<div class="cert-platform-icon cert-logo-' + brand.slug + '">' +
-            '<img src="' + brand.logo + '" alt="" width="72" height="36">' +
+            '<img src="' + brand.logo + '" alt="' + (lockup ? brand.label : '') + '" width="40" height="40">' +
           '</div>'
         : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
@@ -746,7 +747,7 @@
         '<div class="cert-card-body">' +
           '<div class="cert-platform">' +
             icon +
-            '<span class="cert-platform-name">' + brand.label + '</span>' +
+            (lockup ? '' : '<span class="cert-platform-name">' + brand.label + '</span>') +
           '</div>' +
           '<h3>' + titleDisplay + '</h3>' +
           (metaParts.length ? '<p class="cert-meta">' + metaParts.join(' · ') + '</p>' : '') +
