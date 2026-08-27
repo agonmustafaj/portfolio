@@ -608,7 +608,15 @@
     fetch(profile.cvPath, { method: 'HEAD' })
       .then(function (res) {
         if (res.ok) {
-          viewer.innerHTML = '<iframe src="' + profile.cvPath + '" title="Agon Mustafaj CV"></iframe>';
+          viewer.innerHTML =
+            '<iframe src="' + profile.cvPath + '" title="Agon Mustafaj CV"></iframe>' +
+            '<div class="cv-mobile-open">' +
+              '<p>' + tx('cv.mobileHint', 'On a phone, open the PDF in a new tab for a clearer view.') + '</p>' +
+              '<div class="cv-actions" style="margin:0">' +
+                '<a href="' + profile.cvPath + '" class="btn btn-primary" target="_blank" rel="noopener noreferrer">' + tx('cv.openTab', 'Open PDF') + '</a>' +
+                '<a href="' + profile.cvPath + '" class="btn btn-secondary" download="Agon-Mustafaj-CV.pdf">' + tx('cv.download', 'Download CV') + '</a>' +
+              '</div>' +
+            '</div>';
         } else {
           viewer.innerHTML = '<div class="cv-placeholder">' + tx('cv.comingSoon', 'CV coming soon') + '</div>';
           if (viewBtn) { viewBtn.style.display = 'none'; }

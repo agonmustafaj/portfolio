@@ -2230,6 +2230,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   gap: 1rem;
   justify-content: center;
   margin: 2rem 0;
+  flex-wrap: wrap;
 }
 
 .cv-viewer {
@@ -2245,6 +2246,44 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   width: 100%;
   height: 80vh;
   border: none;
+}
+
+.cv-mobile-open {
+  display: none;
+}
+
+.cv-mobile-open p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cv-viewer {
+    min-height: 0;
+  }
+
+  .cv-viewer iframe,
+  .cv-viewer .cv-placeholder {
+    display: none;
+  }
+
+  .cv-mobile-open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.35rem 1.25rem;
+  }
+
+  .cv-actions .btn {
+    min-width: 0;
+  }
+
+  .cv-sheet a,
+  .cv-sheet p,
+  .company-link {
+    overflow-wrap: anywhere;
+  }
 }
 
 .cv-placeholder {
