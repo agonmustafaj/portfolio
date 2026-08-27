@@ -680,7 +680,7 @@
       'Ahrefs': '/assets/icons/platforms/ahrefs.png',
       'Logical Operations': '/assets/icons/platforms/logicaloperations.svg',
       'KodeKloud': '/assets/icons/platforms/kodekloud.svg',
-      'KREN': '/assets/icons/platforms/kren.png',
+      'KREN': '/assets/icons/platforms/kren.png?v=20260827e',
       'Coursera': '/assets/icons/platforms/coursera.svg'
     };
     const slugs = {

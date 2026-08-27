@@ -1632,8 +1632,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .cert-platform-icon.cert-logo-kren {
   height: 40px;
   padding: 0;
-  background: #000000;
-  border-color: transparent;
+  background: #ffffff;
 }
 
 .cert-platform-icon.cert-logo-kren img {
