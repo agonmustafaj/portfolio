@@ -738,7 +738,7 @@
       const lockup = brand.slug === 'kren';
       const icon = brand.logo
         ? '<div class="cert-platform-icon cert-logo-' + brand.slug + '">' +
-            '<img src="' + brand.logo + '" alt="' + (lockup ? brand.label : '') + '" width="40" height="40">' +
+            '<img src="' + brand.logo + '" alt="' + (lockup ? brand.label : '') + '" width="80" height="40">' +
           '</div>'
         : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
