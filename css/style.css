@@ -2252,12 +2252,6 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   display: none;
 }
 
-.cv-mobile-open p {
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.6;
-}
-
 @media (max-width: 768px) {
   .cv-viewer {
     min-height: 0;
@@ -2269,10 +2263,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   }
 
   .cv-mobile-open {
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    padding: 1.35rem 1.25rem;
+    display: block;
+    padding: 1rem 1.1rem;
   }
 
   .cv-actions .btn {
