@@ -383,7 +383,7 @@
 
       'contact.label': 'Kontakt',
       'contact.title': 'Të lidhemi',
-      'contact.lead': 'Më shkruaj drejtpërdrejt me email, më telefono ose më gjej në LinkedIn. Jam i vendosur në Prishtinë, Kosovë.',
+      'contact.lead': 'Më shkruaj drejtpërdrejt me email, më telefono ose më gjej në LinkedIn.',
       'contact.invalidEmail': 'Shkruaj një email të vlefshëm.',
 
       'projects.label': 'Portofol',
