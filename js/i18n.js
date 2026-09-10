@@ -146,8 +146,8 @@
       'meta.404.desc': 'The page you are looking for could not be found.',
       'kkz.title': 'Member of KKZ',
       'kkz.org': 'Central Election Commission',
-      'kkz.dates': '23 July 2026',
-      'kkz.meta': 'Pristina, Kosovo · 23 July 2026',
+      'kkz.dates': 'May 2026 – 23 July 2026',
+      'kkz.meta': 'Klina, Kosovo · May 2026 – 23 July 2026',
       'kkz.role': 'Member of the Central Election Commission of Kosovo (KKZ).',
       'about.completed': 'Completed'
     },
@@ -422,8 +422,8 @@
       'experience.r6': 'Kërkim fjalësh kyçe dhe dukshmëri në kërkim',
       'kkz.title': 'Anëtar i KKZ',
       'kkz.org': 'Komisioni Qendror i Zgjedhjeve',
-      'kkz.dates': '23 korrik 2026',
-      'kkz.meta': 'Prishtinë, Kosovë · 23 korrik 2026',
+      'kkz.dates': 'Maj 2026 – 23 korrik 2026',
+      'kkz.meta': 'Klinë, Kosovë · Maj 2026 – 23 korrik 2026',
       'kkz.role': 'Anëtar i Komisionit Qendror të Zgjedhjeve (KKZ).',
 
       'certs.label': 'Të mësuarit',
