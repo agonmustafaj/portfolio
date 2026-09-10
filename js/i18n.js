@@ -453,10 +453,14 @@
       'blog.short1': 'Një vështrim praktik se ku qëndron inteligjenca artificiale sot.',
       'blog.short2': 'Si po e ndryshon AI planifikimin, kodin dhe rrjedhën e punës në web.',
       'blog.short3': 'Pse themelet plus mjetet AI japin produkte dixhitale më të forta.',
+      'blog.t5': 'Mendo jashtë kornizave: adaptohu më shpejt, puno më zgjuar',
+      'blog.d5': 'Pse avantazhi më i madh në tregun e sotëm të punës u shkon atyre që adaptohen më shpejt — dhe si mund të punojë AI për ty, jo kundër teje.',
+      'blog.short5': 'Pse avantazhi më i madh u shkon atyre që adaptohen më shpejt.',
       'blog.catAi': 'AI',
       'blog.catWeb': 'AI dhe web',
       'blog.catTech': 'Teknologji',
       'blog.catLearn': 'Të mësuarit',
+      'blog.catCareer': 'Karriera dhe AI',
 
       'cv.label': 'CV',
       'cv.title': 'CV-ja ime',
@@ -573,7 +577,17 @@
       'post.a4p3': 'Zhvillimi web të mëson strukturën. Kurset për të dhëna të mësojnë evidencën. SEO të mëson zbulueshmërinë. AI bëhet më e dobishme kur qëndron mbi këto aftësi, jo kur i zëvendëson.',
       'post.a4h3': 'Vazhdo të ndërtosh',
       'post.a4p4': 'Mësoj më mirë duke eksperimentuar. Të lexosh për AI ndihmon. Ta përdorësh brenda projekteve reale është më mirë. Prandaj ky portofol është pjesë e të mësuarit: një vend për të praktikuar teknologjinë, për <a href="/projects/">ta treguar punën e ndërtuar</a> dhe për të vazhduar.',
-      'post.a4p5': 'AI është pjesë e peizazhit të sotëm teknologjik. Studentët që ecin përpara janë ata që mbeten kureshtarë, praktikë dhe që vazhdojnë të publikojnë punë.'
+      'post.a4p5': 'AI është pjesë e peizazhit të sotëm teknologjik. Studentët që ecin përpara janë ata që mbeten kureshtarë, praktikë dhe që vazhdojnë të publikojnë punë.',
+      'post.crumbBox': 'Mendo jashtë kornizave',
+      'post.meta5': 'Nga Agon Mustafaj · 10 shtator 2026',
+      'post.a5p1': 'Tregu i punës po ndryshon shumë shpejt. Konkurrenca po bëhet gjithnjë e më e fortë, dhe çdo ditë më shumë njerëz kërkojnë mënyra për t\'u dalluar.',
+      'post.a5p2': 'Por unë besoj se avantazhi më i madh nuk do t\'u shkojë gjithmonë atyre që dinë më shumë. Do t\'u shkojë atyre që adaptohen më shpejt.',
+      'post.a5h2': 'AI është mjet, jo vetëm kërcënim',
+      'post.a5p3': 'AI dhe automatizimi po ndryshojnë mënyrën si punojmë. Në vend që t\'i shohim vetëm si kërcënim, duhet të mësojmë si t\'i përdorim në avantazhin tonë.',
+      'post.a5p4': 'Më pak kohë në detyra të përsëritura. Më shumë kohë për kreativitet, analizë dhe zgjidhjen e problemeve reale.',
+      'post.a5p5': 'Ky ndryshim ka më shumë rëndësi sesa mendojnë njerëzit. Kur puna rutinore automatizohet, vlera kalon te aftësitë që makinat nuk i kanë: të bësh pyetjet e duhura, të kuptosh kontekstin dhe të marrësh vendime me gjykim.',
+      'post.a5h3': 'Të punosh më zgjuar',
+      'post.a5p6': 'Në fund të ditës, nuk bëhet fjalë gjithmonë të punosh më shumë se të gjithë të tjerët. Ndonjëherë, bëhet fjalë të gjesh një mënyrë më të zgjuar për të punuar.'
     }
   };
 
