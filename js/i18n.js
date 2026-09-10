@@ -143,7 +143,13 @@
       'meta.cv.title': 'CV | Agon Mustafaj — Computer Science, Web Development & SEO',
       'meta.cv.desc': 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina, Junior SEO at thenovalab, with web development projects and course certificates.',
       'meta.404.title': 'Page Not Found | Agon Mustafaj',
-      'meta.404.desc': 'The page you are looking for could not be found.'
+      'meta.404.desc': 'The page you are looking for could not be found.',
+      'kkz.title': 'Member of KKZ',
+      'kkz.org': 'Central Election Commission',
+      'kkz.dates': 'Completed 23 July 2026',
+      'kkz.meta': 'Pristina, Kosovo · Completed 23 July 2026',
+      'kkz.role': 'Member of the Central Election Commission of Kosovo (KKZ).',
+      'about.completed': 'Completed'
     },
     sq: {
       'nav.home': 'Kreu',
@@ -333,6 +339,7 @@
       'about.uni': 'Universiteti i Prishtinës',
       'about.cs': 'Shkenca kompjuterike',
       'about.current': 'Në vazhdim',
+      'about.completed': 'Përfunduar',
       'about.webProjects': 'Projekte webi',
       'about.webProjectsSub': 'Ndërtoj webfaqe reale',
       'about.learnAlways': 'Mësim i vazhdueshëm',
@@ -413,6 +420,11 @@
       'experience.r4': 'Kontrolle të sitemap-it dhe indeksimit',
       'experience.r5': 'Auditime SEO dhe optimizim i webfaqeve',
       'experience.r6': 'Kërkim fjalësh kyçe dhe dukshmëri në kërkim',
+      'kkz.title': 'Anëtar i KKZ',
+      'kkz.org': 'Komisioni Qendror i Zgjedhjeve',
+      'kkz.dates': 'Përfunduar më 23 korrik 2026',
+      'kkz.meta': 'Prishtinë, Kosovë · Përfunduar më 23 korrik 2026',
+      'kkz.role': 'Anëtar i Komisionit Qendror të Zgjedhjeve (KKZ).',
 
       'certs.label': 'Të mësuarit',
       'certs.title': 'Certifikata dhe mësim i vazhdueshëm',
