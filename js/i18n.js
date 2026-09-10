@@ -413,7 +413,7 @@
       'experience.title': 'Përvoja',
       'experience.lead': 'Rruga ime profesionale dhe roli aktual si Junior SEO.',
       'experience.meta': 'thenovalab · Prishtinë, Kosovë',
-      'experience.dates': '1 korrik – 23 korrik 2026',
+      'experience.dates': '1 korrik – Në vazhdim',
       'experience.r1': 'SEO teknik: crawlability, indeksim dhe strukturë e sajtit',
       'experience.r2': 'SEO on-page: tituj, meta përshkrime, headings dhe optimizim i përmbajtjes',
       'experience.r3': 'Lidhje të brendshme dhe arkitekturë informacioni',
@@ -480,7 +480,7 @@
       'cv.design': 'Dizajn:',
       'cv.certs': 'Certifikata',
       'cv.ahrefs': 'Verifiko certifikatën Ahrefs Marketing Platform',
-      'cv.metaLoc': 'Prishtinë, Kosovë · 1 korrik – 23 korrik 2026',
+      'cv.metaLoc': 'Prishtinë, Kosovë · 1 korrik – Në vazhdim',
       'cv.eduMeta': 'Prishtinë, Kosovë · Në vazhdim',
       'cv.sheetMeta': 'Prishtinë, Kosovë · ',
 
