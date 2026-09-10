@@ -58,7 +58,7 @@ const experience = [
     company: 'thenovalab',
     location: 'Pristina, Kosovo',
     startDate: 'July 1',
-    endDate: 'Current',
+    endDate: '23 July 2026',
     responsibilities: [
       'Technical SEO: crawlability, indexing and site structure',
       'On-page SEO: titles, meta descriptions, headings and content optimization',
@@ -67,7 +67,7 @@ const experience = [
       'SEO audits and website optimization',
       'Keyword research and search visibility'
     ],
-    current: true
+    current: false
   }
 ];
 
