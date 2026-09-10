@@ -48,7 +48,7 @@ const profile = {
     'Power BI',
     'Data Analytics'
   ],
-  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260910d'
+  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260910e'
 };
 
 const experience = [
