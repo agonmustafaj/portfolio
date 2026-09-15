@@ -1,6 +1,6 @@
 # Agon Mustafaj, Personal Portfolio
 
-Official portfolio website for **Agon Mustafaj**, Computer Science student, Junior SEO professional, web developer, and technology enthusiast.
+Official portfolio website for **Agon Mustafaj**, Computer Science student, SEO Expert professional, web developer, and technology enthusiast.
 
 **Live site:** [https://agonmustafaj.com/](https://agonmustafaj.com/)
 

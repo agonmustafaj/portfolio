@@ -648,7 +648,7 @@
             '</div>' +
             '<div class="wallet-info">' +
               '<h3>' + profile.name + '</h3>' +
-              '<p>' + tx('wallet.role', 'Computer Science Student') + '<br>Junior SEO @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + tx('profile.location', profile.location) + '</p>' +
+              '<p>' + tx('wallet.role', 'Computer Science Student') + '<br>SEO Expert @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +

@@ -12,14 +12,14 @@ const profile = {
   givenName: 'Agon',
   familyName: 'Mustafaj',
   initials: 'AM',
-  headline: 'Computer Science Student | Web Development | Junior SEO | AI & Technology',
-  tagline: 'Computer Science student focused on web development, working as a Junior SEO, and exploring where AI fits into both.',
+  headline: 'Computer Science Student | Web Development | SEO Expert | AI & Technology',
+  tagline: 'Computer Science student focused on web development, working as an SEO Expert, and exploring where AI fits into both.',
   identity: 'COMPUTER SCIENCE × WEB × SEO × AI',
-  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and a Junior SEO at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.',
+  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
-  role: 'Junior SEO',
+  role: 'SEO Expert',
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
   image: SITE_URL + '/assets/images/profile.jpg',
@@ -48,17 +48,17 @@ const profile = {
     'Power BI',
     'Data Analytics'
   ],
-  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260910e'
+  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260915a'
 };
 
 const experience = [
   {
     id: 'exp-001',
-    title: 'Junior SEO',
+    title: 'SEO Expert',
     company: 'thenovalab',
     location: 'Pristina, Kosovo',
-    startDate: 'July 1',
-    endDate: 'Current',
+    startDate: 'July',
+    endDate: 'Present',
     responsibilities: [
       'Technical SEO: crawlability, indexing and site structure',
       'On-page SEO: titles, meta descriptions, headings and content optimization',
@@ -68,6 +68,19 @@ const experience = [
       'Keyword research and search visibility'
     ],
     current: true
+  },
+  {
+    id: 'exp-002',
+    title: 'Junior SEO — Intern',
+    company: 'thenovalab',
+    location: 'Pristina, Kosovo',
+    startDate: 'July',
+    endDate: 'September',
+    responsibilities: [
+      'Supported technical and on-page SEO work',
+      'Assisted with audits, keyword research and site structure tasks'
+    ],
+    current: false
   }
 ];
 
@@ -89,7 +102,7 @@ const skills = [
   { name: 'JavaScript', category: 'Development', description: 'Interactive experiences and client-side functionality.', project: 'Banesë për Ty' },
   { name: 'Web Development', category: 'Development', description: 'Building complete websites from structure to deployment.', project: 'Hoxha Handwerk' },
   { name: 'Responsive Design', category: 'Development', description: 'Interfaces that work across devices and screen sizes.', project: '' },
-  { name: 'Technical SEO', category: 'SEO', description: 'Crawlability, indexing, and site structure, applied in my Junior SEO role.', project: '' },
+  { name: 'Technical SEO', category: 'SEO', description: 'Crawlability, indexing, and site structure, applied in my SEO Expert role.', project: '' },
   { name: 'On-page SEO', category: 'SEO', description: 'Titles, meta descriptions, headings, and content optimization.', project: '' },
   { name: 'Keyword Research', category: 'SEO', description: 'Identifying search intent and relevant keyword opportunities.', project: '' },
   { name: 'Website Structure', category: 'SEO', description: 'Information architecture and internal linking.', project: '' },
@@ -342,12 +355,12 @@ function getProfileSameAs() {
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | Computer Science, Web Development & SEO',
-    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and a Junior SEO focused on web development, SEO and AI. Explore his projects, skills, certifications and experience.',
+    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert focused on web development, SEO and AI. Explore his projects, skills, certifications and experience.',
     path: '/'
   },
   about: {
     title: 'About Agon Mustafaj | Computer Science & Web Development',
-    description: 'Computer Science student at the University of Prishtina and Junior SEO at thenovalab. How I work across web development, SEO and AI, and what I am currently learning.',
+    description: 'Computer Science student at the University of Prishtina and SEO Expert at thenovalab. How I work across web development, SEO and AI, and what I am currently learning.',
     path: '/about/'
   },
   projects: {
@@ -366,8 +379,8 @@ const pageSEO = {
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj — Junior SEO at thenovalab',
-    description: 'My professional experience as a Junior SEO at thenovalab in Pristina, working on technical SEO, on-page optimization, internal linking and website structure.',
+    title: 'Experience | Agon Mustafaj — SEO Expert at thenovalab',
+    description: 'My professional experience as an SEO Expert at thenovalab in Pristina, working on technical SEO, on-page optimization, internal linking and website structure.',
     path: '/experience/'
   },
   certifications: {
@@ -392,7 +405,7 @@ const pageSEO = {
   },
   cv: {
     title: 'CV | Agon Mustafaj — Computer Science, Web Development & SEO',
-    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina, Junior SEO at thenovalab, with web development projects and course certificates.',
+    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina, SEO Expert at thenovalab, with web development projects and course certificates.',
     path: '/cv/'
   },
   '404': {
@@ -412,7 +425,7 @@ const whatIDo = [
 
 const journeySteps = [
   { title: 'University of Prishtina', subtitle: 'Computer Science', status: 'Current' },
-  { title: 'Junior SEO', subtitle: 'thenovalab', status: 'Current' },
+  { title: 'SEO Expert', subtitle: 'thenovalab', status: 'Current' },
   { title: 'Web Projects', subtitle: 'Building real websites', status: 'Current' },
   { title: 'Data Analytics', subtitle: 'Coursework and self-study', status: 'Learning' },
   { title: 'Continuous Learning', subtitle: 'Always growing', status: 'Current' }
