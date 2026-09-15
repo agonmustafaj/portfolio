@@ -29,6 +29,8 @@ const profile = {
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
   github: 'https://github.com/agonmustafaj/',
   peerlist: 'https://peerlist.io/agonmustafaj',
+  calameo: 'https://www.calameo.com/read/0082998447b64bec24a2e',
+  startupbase: 'https://startupbase.io/@agonmustafaj',
   instagram: 'https://www.instagram.com/agonmustafaj_/',
   youtube: '',
   email: 'agonmustafaj01@gmail.com',
@@ -352,6 +354,8 @@ function getProfileSameAs() {
     profile.instagram,
     profile.github,
     profile.peerlist,
+    profile.calameo,
+    profile.startupbase,
     profile.youtube
   ].filter(function (url) { return !!url; });
 }
