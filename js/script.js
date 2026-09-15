@@ -825,10 +825,11 @@
       '@type': 'Person',
       '@id': PERSON_ID,
       name: profile.name,
+      alternateName: (profile.alternateName || []).slice(),
       givenName: profile.givenName,
       familyName: profile.familyName,
       url: SITE_URL + '/',
-      image: profile.image,
+      image: { '@id': profile.imageId || (SITE_URL + '/#agon-mustafaj-image') },
       description: profile.description,
       jobTitle: profile.role,
       alumniOf: {

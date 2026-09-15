@@ -45,16 +45,18 @@
         "name": "About Agon Mustafaj",
         "isPartOf": { "@id": "https://agonmustafaj.com/#website" },
         "about": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
-        "mainEntity": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+        "mainEntity": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+        "primaryImageOfPage": { "@id": "https://agonmustafaj.com/#agon-mustafaj-image" }
       },
       {
         "@type": "Person",
         "@id": "https://agonmustafaj.com/#agon-mustafaj",
         "name": "Agon Mustafaj",
+        "alternateName": ["Agon B. Mustafaj"],
         "givenName": "Agon",
         "familyName": "Mustafaj",
         "url": "https://agonmustafaj.com/",
-        "image": "https://agonmustafaj.com/assets/images/agon-mustafaj.jpg",
+        "image": { "@id": "https://agonmustafaj.com/#agon-mustafaj-image" },
         "description": "Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.",
         "jobTitle": "SEO Expert",
         "hasOccupation": {
@@ -93,9 +95,9 @@
         "knowsLanguage": ["en", "sq"],
         "sameAs": [
           "https://www.linkedin.com/in/agon-mustafaj/",
-          "https://github.com/agonmustafaj/",
           "https://www.facebook.com/agon.mustafaj.03/",
-          "https://www.instagram.com/agonmustafaj_"
+          "https://www.instagram.com/agonmustafaj_/",
+          "https://github.com/agonmustafaj/"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -107,12 +109,26 @@
         "mainEntityOfPage": { "@id": "https://agonmustafaj.com/about/" }
       },
       {
+        "@type": "ImageObject",
+        "@id": "https://agonmustafaj.com/#agon-mustafaj-image",
+        "url": "https://agonmustafaj.com/assets/images/agon-mustafaj.jpg",
+        "contentUrl": "https://agonmustafaj.com/assets/images/agon-mustafaj.jpg",
+        "name": "Agon Mustafaj",
+        "caption": "Agon Mustafaj",
+        "creditText": "Agon Mustafaj",
+        "creator": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+        "copyrightHolder": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+        "representativeOfPage": true
+      },
+      {
         "@type": "WebSite",
         "@id": "https://agonmustafaj.com/#website",
         "url": "https://agonmustafaj.com/",
         "name": "Agon Mustafaj",
+        "alternateName": "Agon Mustafaj Portfolio",
         "inLanguage": ["en", "sq"],
-        "publisher": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+        "publisher": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+        "about": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
       },
       {
         "@type": "BreadcrumbList",

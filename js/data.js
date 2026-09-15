@@ -23,10 +23,12 @@ const profile = {
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
   image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
+  imageId: SITE_URL + '/#agon-mustafaj-image',
+  alternateName: ['Agon B. Mustafaj'],
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
   github: 'https://github.com/agonmustafaj/',
-  instagram: 'https://www.instagram.com/agonmustafaj_',
+  instagram: 'https://www.instagram.com/agonmustafaj_/',
   youtube: '',
   email: 'agonmustafaj01@gmail.com',
   phone: '+383 49 622 017',
@@ -345,9 +347,9 @@ const socialLinks = [
 function getProfileSameAs() {
   return [
     profile.linkedin,
-    profile.github,
     profile.facebook,
     profile.instagram,
+    profile.github,
     profile.youtube
   ].filter(function (url) { return !!url; });
 }
