@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    AGON MUSTAFAJ, Portfolio Data Architecture
    Edit this file to update site content easily.
    ============================================ */
@@ -22,7 +22,7 @@ const profile = {
   role: 'SEO Expert',
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
-  image: SITE_URL + '/assets/images/profile.jpg',
+  image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
   github: 'https://github.com/agonmustafaj/',

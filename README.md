@@ -1,4 +1,4 @@
-# Agon Mustafaj, Personal Portfolio
+﻿# Agon Mustafaj, Personal Portfolio
 
 Official portfolio website for **Agon Mustafaj**, Computer Science student, SEO Expert professional, web developer, and technology enthusiast.
 
@@ -104,7 +104,7 @@ If the file is missing, the CV page displays "CV coming soon."
 Place your profile photo at:
 
 ```
-assets/images/profile.jpg
+assets/images/agon-mustafaj.jpg
 ```
 
 If missing, the wallet card displays "AM" initials as fallback.

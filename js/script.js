@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    AGON MUSTAFAJ, Portfolio Scripts
    ============================================ */
 
@@ -667,8 +667,8 @@
     const avatar = document.getElementById('wallet-avatar');
     if (avatar) {
       const img = new Image();
-      img.src = '/assets/images/profile.jpg';
-      img.alt = 'Portrait of ' + profile.name;
+      img.src = '/assets/images/agon-mustafaj.jpg';
+      img.alt = profile.name;
       img.decoding = 'async';
       img.onload = function () {
         avatar.innerHTML = '';
