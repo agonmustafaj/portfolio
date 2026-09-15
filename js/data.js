@@ -28,6 +28,7 @@ const profile = {
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
   github: 'https://github.com/agonmustafaj/',
+  peerlist: 'https://peerlist.io/agonmustafaj',
   instagram: 'https://www.instagram.com/agonmustafaj_/',
   youtube: '',
   email: 'agonmustafaj01@gmail.com',
@@ -350,6 +351,7 @@ function getProfileSameAs() {
     profile.facebook,
     profile.instagram,
     profile.github,
+    profile.peerlist,
     profile.youtube
   ].filter(function (url) { return !!url; });
 }
