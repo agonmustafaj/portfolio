@@ -62,7 +62,7 @@ const experience = [
     title: 'SEO Expert',
     company: 'thenovalab',
     location: 'Pristina, Kosovo',
-    startDate: 'July',
+    startDate: 'September',
     endDate: 'Present',
     responsibilities: [
       'Technical SEO: crawlability, indexing and site structure',
