@@ -53,7 +53,7 @@ const profile = {
     'Power BI',
     'Data Analytics'
   ],
-  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260928c'
+  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260928d'
 };
 
 const experience = [
@@ -219,10 +219,10 @@ const certifications = [
     issuer: 'Semrush',
     date: '25 September 2026',
     validUntil: '25 September 2027',
-    credentialId: '6f720a81b0',
+    credentialId: '66f139a89b',
     pdf: '/assets/certificates/on-page-seo-ai-search-semrush.pdf',
     image: '/assets/certificates/previews/on-page-seo-ai-search-semrush.png',
-    verificationUrl: ''
+    verificationUrl: 'https://static.semrush.com/academy/certificates/66f139a89b/agon-mustafaj_25.pdf'
   },
   {
     id: 'cert-013',
@@ -231,10 +231,10 @@ const certifications = [
     issuer: 'Semrush',
     date: '25 September 2026',
     validUntil: '25 September 2027',
-    credentialId: '9fba000e67',
+    credentialId: '5fbd360e57',
     pdf: '/assets/certificates/seo-toolkit-crash-course.pdf',
     image: '/assets/certificates/previews/seo-toolkit-crash-course.png',
-    verificationUrl: ''
+    verificationUrl: 'https://static.semrush.com/academy/certificates/5fbd360e57/agon-mustafaj_25.pdf'
   },
   {
     id: 'cert-012',
@@ -243,10 +243,10 @@ const certifications = [
     issuer: 'Semrush',
     date: '25 September 2026',
     validUntil: '25 September 2027',
-    credentialId: '57f018a6b0',
+    credentialId: '571513bdb0',
     pdf: '/assets/certificates/ai-search-operating-system.pdf',
     image: '/assets/certificates/previews/ai-search-operating-system.png',
-    verificationUrl: ''
+    verificationUrl: 'https://static.semrush.com/academy/certificates/571513bdb0/agon-mustafaj_37.pdf'
   },
   {
     id: 'cert-011',
@@ -255,10 +255,10 @@ const certifications = [
     issuer: 'Semrush',
     date: '25 September 2026',
     validUntil: '25 September 2027',
-    credentialId: '3fa328ce27',
+    credentialId: '384351bc27',
     pdf: '/assets/certificates/seo-essentials-semrush.pdf',
     image: '/assets/certificates/previews/seo-essentials-semrush.png',
-    verificationUrl: ''
+    verificationUrl: 'https://static.semrush.com/academy/certificates/384351bc27/agon-mustafaj_25.pdf'
   },
   {
     id: 'cert-010',
