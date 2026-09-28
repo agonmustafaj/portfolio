@@ -719,6 +719,7 @@
       const metaParts = [];
       if (cert.platform && cert.platform !== brand.label) metaParts.push(cert.platform);
       if (cert.date) metaParts.push(cert.date);
+      if (cert.validUntil) metaParts.push('Valid until ' + cert.validUntil);
       if (cert.credentialId) metaParts.push('ID: ' + cert.credentialId);
 
       const previewLink = cert.pdf || cert.image || '#';

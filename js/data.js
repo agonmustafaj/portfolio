@@ -53,7 +53,7 @@ const profile = {
     'Power BI',
     'Data Analytics'
   ],
-  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260915a'
+  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260928c'
 };
 
 const experience = [
@@ -218,6 +218,7 @@ const certifications = [
     title: 'On-Page SEO and AI Search Essentials with Semrush',
     issuer: 'Semrush',
     date: '25 September 2026',
+    validUntil: '25 September 2027',
     credentialId: '6f720a81b0',
     pdf: '/assets/certificates/on-page-seo-ai-search-semrush.pdf',
     image: '/assets/certificates/previews/on-page-seo-ai-search-semrush.png',
@@ -229,6 +230,7 @@ const certifications = [
     title: 'SEO Toolkit Crash Course',
     issuer: 'Semrush',
     date: '25 September 2026',
+    validUntil: '25 September 2027',
     credentialId: '9fba000e67',
     pdf: '/assets/certificates/seo-toolkit-crash-course.pdf',
     image: '/assets/certificates/previews/seo-toolkit-crash-course.png',
@@ -240,6 +242,7 @@ const certifications = [
     title: 'AI Search Operating System',
     issuer: 'Semrush',
     date: '25 September 2026',
+    validUntil: '25 September 2027',
     credentialId: '57f018a6b0',
     pdf: '/assets/certificates/ai-search-operating-system.pdf',
     image: '/assets/certificates/previews/ai-search-operating-system.png',
@@ -251,6 +254,7 @@ const certifications = [
     title: 'SEO Essentials with Semrush',
     issuer: 'Semrush',
     date: '25 September 2026',
+    validUntil: '25 September 2027',
     credentialId: '3fa328ce27',
     pdf: '/assets/certificates/seo-essentials-semrush.pdf',
     image: '/assets/certificates/previews/seo-essentials-semrush.png',
