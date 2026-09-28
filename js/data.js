@@ -217,10 +217,10 @@ const certifications = [
     platform: 'Semrush',
     title: 'On-Page SEO and AI Search Essentials with Semrush',
     issuer: 'Semrush',
-    date: 'September 2026',
-    credentialId: '',
+    date: '25 September 2026',
+    credentialId: '6f720a81b0',
     pdf: '/assets/certificates/on-page-seo-ai-search-semrush.pdf',
-    image: '',
+    image: '/assets/certificates/previews/on-page-seo-ai-search-semrush.png',
     verificationUrl: ''
   },
   {
@@ -228,10 +228,10 @@ const certifications = [
     platform: 'Semrush',
     title: 'SEO Toolkit Crash Course',
     issuer: 'Semrush',
-    date: 'September 2026',
-    credentialId: '',
+    date: '25 September 2026',
+    credentialId: '9fba000e67',
     pdf: '/assets/certificates/seo-toolkit-crash-course.pdf',
-    image: '',
+    image: '/assets/certificates/previews/seo-toolkit-crash-course.png',
     verificationUrl: ''
   },
   {
@@ -239,10 +239,10 @@ const certifications = [
     platform: 'Semrush',
     title: 'AI Search Operating System',
     issuer: 'Semrush',
-    date: 'September 2026',
-    credentialId: '',
+    date: '25 September 2026',
+    credentialId: '57f018a6b0',
     pdf: '/assets/certificates/ai-search-operating-system.pdf',
-    image: '',
+    image: '/assets/certificates/previews/ai-search-operating-system.png',
     verificationUrl: ''
   },
   {
@@ -250,10 +250,10 @@ const certifications = [
     platform: 'Semrush',
     title: 'SEO Essentials with Semrush',
     issuer: 'Semrush',
-    date: 'September 2026',
-    credentialId: '',
+    date: '25 September 2026',
+    credentialId: '3fa328ce27',
     pdf: '/assets/certificates/seo-essentials-semrush.pdf',
-    image: '',
+    image: '/assets/certificates/previews/seo-essentials-semrush.png',
     verificationUrl: ''
   },
   {
