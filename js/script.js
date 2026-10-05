@@ -689,7 +689,9 @@
       'Logical Operations': '/assets/icons/platforms/logicaloperations.svg',
       'KodeKloud': '/assets/icons/platforms/kodekloud.svg',
       'KREN': '/assets/icons/platforms/kren.png?v=20260827e',
-      'Coursera': '/assets/icons/platforms/coursera.svg'
+      'Coursera': '/assets/icons/platforms/coursera.svg',
+      'HubSpot Academy': '/assets/icons/platforms/hubspot.svg',
+      'BrightLocal': '/assets/icons/platforms/brightlocal.svg'
     };
     const slugs = {
       'IBM': 'ibm',
@@ -700,7 +702,9 @@
       'Logical Operations': 'logical-operations',
       'KodeKloud': 'kodekloud',
       'KREN': 'kren',
-      'Coursera': 'coursera'
+      'Coursera': 'coursera',
+      'HubSpot Academy': 'hubspot',
+      'BrightLocal': 'brightlocal'
     };
     return {
       label: issuer,

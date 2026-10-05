@@ -213,6 +213,42 @@ const projects = [
 
 const certifications = [
   {
+    id: 'cert-017',
+    platform: 'Semrush',
+    title: 'Technical SEO and AI Search Essentials with Semrush',
+    issuer: 'Semrush',
+    date: '29 September 2026',
+    validUntil: '29 September 2027',
+    credentialId: '5f752fb9b9',
+    pdf: '/assets/certificates/technical-seo-ai-search-semrush.pdf',
+    image: '/assets/certificates/previews/technical-seo-ai-search-semrush.png',
+    verificationUrl: 'https://static.semrush.com/academy/certificates/5f752fb9b9/agon-mustafaj_25.pdf'
+  },
+  {
+    id: 'cert-016',
+    platform: 'HubSpot',
+    title: 'AEO Fundamentals',
+    issuer: 'HubSpot Academy',
+    date: '28 September 2026',
+    validUntil: '27 October 2028',
+    credentialId: 'b8b30649120c4e779d2f7874e70639f4',
+    pdf: '',
+    image: '/assets/certificates/previews/aeo-fundamentals.png',
+    verificationUrl: 'https://app.hubspot.com/academy/achievements/b8b30649120c4e779d2f7874e70639f4'
+  },
+  {
+    id: 'cert-015',
+    platform: 'BrightLocal',
+    title: "A Beginner's Guide to Local SEO",
+    issuer: 'BrightLocal',
+    date: '28 September 2026',
+    validUntil: '',
+    credentialId: '',
+    pdf: '/assets/certificates/local-seo-brightlocal.pdf',
+    image: '/assets/certificates/previews/local-seo-brightlocal.png',
+    verificationUrl: ''
+  },
+  {
     id: 'cert-014',
     platform: 'Semrush',
     title: 'On-Page SEO and AI Search Essentials with Semrush',
@@ -272,11 +308,33 @@ const certifications = [
     verificationUrl: 'https://ahrefs.com/academy/certificate/ff3531083a3a4eaba3174a423614440a'
   },
   {
+    id: 'cert-003',
+    platform: 'Coursera',
+    title: 'Search Engine Optimization and Content Marketing',
+    issuer: 'IBM',
+    date: '8 July 2026',
+    credentialId: 'G1X8E26TPLD1',
+    pdf: '/assets/certificates/seo-content.pdf',
+    image: '/assets/certificates/previews/seo-content.png',
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/G1X8E26TPLD1'
+  },
+  {
+    id: 'cert-008',
+    platform: 'Coursera',
+    title: 'DevOps Prerequisite Course',
+    issuer: 'KodeKloud',
+    date: '1 July 2026',
+    credentialId: 'CJKIXKGKMLSR',
+    pdf: '/assets/certificates/devops-prerequisite.pdf',
+    image: '/assets/certificates/previews/devops-prerequisite.png',
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/CJKIXKGKMLSR'
+  },
+  {
     id: 'cert-001',
     platform: 'Coursera',
     title: 'Python for Data Science, AI & Development',
     issuer: 'IBM',
-    date: '',
+    date: '30 June 2026',
     credentialId: 'DHJ8PUFMXBCR',
     pdf: '/assets/certificates/python-data-science.pdf',
     image: '/assets/certificates/previews/python-data-science.png',
@@ -284,32 +342,54 @@ const certifications = [
   },
   {
     id: 'cert-002',
-    platform: 'Credly',
+    platform: 'Coursera',
     title: 'Palo Alto Networks Cybersecurity Foundation',
     issuer: 'Palo Alto Networks',
-    date: '',
+    date: '30 June 2026',
     credentialId: 'WEKSDPR7Q473',
     pdf: '/assets/certificates/palo-alto-cybersecurity.pdf',
     image: '/assets/certificates/previews/palo-alto-cybersecurity.png',
-    verificationUrl: 'https://www.credly.com/badges/d6fc2f38-10b6-455b-b180-63a346117070/linked_in_profile'
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/WEKSDPR7Q473'
   },
   {
-    id: 'cert-003',
+    id: 'cert-006',
     platform: 'Coursera',
-    title: 'Search Engine Optimization and Content',
-    issuer: 'IBM',
-    date: '',
-    credentialId: 'G1X8E26TPLD1',
-    pdf: '/assets/certificates/seo-content.pdf',
-    image: '/assets/certificates/previews/seo-content.png',
-    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/G1X8E26TPLD1'
+    title: 'CCNA: Networking Basics, Switching, Addressing, and Routing',
+    issuer: 'Logical Operations',
+    date: '30 June 2026',
+    credentialId: 'OBAQU4EVUCZO',
+    pdf: '/assets/certificates/networking-basics.pdf',
+    image: '/assets/certificates/previews/networking-basics.png',
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/OBAQU4EVUCZO'
+  },
+  {
+    id: 'cert-007',
+    platform: 'Coursera',
+    title: 'CCNA: Wireless Networking and IP Services',
+    issuer: 'Logical Operations',
+    date: '30 June 2026',
+    credentialId: '77HGFUFSKXUZ',
+    pdf: '/assets/certificates/wireless-networking.pdf',
+    image: '/assets/certificates/previews/wireless-networking.png',
+    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/77HGFUFSKXUZ'
+  },
+  {
+    id: 'cert-009',
+    platform: 'KREN',
+    title: 'Data Analytics and Artificial Intelligence',
+    issuer: 'KREN',
+    date: '30 June 2026',
+    credentialId: '',
+    pdf: '/assets/certificates/kren-world-bank.pdf',
+    image: '/assets/certificates/previews/kren-world-bank.png',
+    verificationUrl: ''
   },
   {
     id: 'cert-004',
     platform: 'Coursera',
     title: 'Extract, Transform and Load Data in Power BI',
     issuer: 'Microsoft',
-    date: '',
+    date: '1 May 2026',
     credentialId: 'P46JI89DQH0G',
     pdf: '/assets/certificates/power-bi-etl.pdf',
     image: '/assets/certificates/previews/power-bi-etl.png',
@@ -320,55 +400,11 @@ const certifications = [
     platform: 'Coursera',
     title: 'Preparing Data for Analysis with Microsoft Excel',
     issuer: 'Microsoft',
-    date: '',
+    date: '1 May 2026',
     credentialId: 'F89YPV04R699',
     pdf: '/assets/certificates/excel-data-analysis.pdf',
     image: '/assets/certificates/previews/excel-data-analysis.png',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/F89YPV04R699'
-  },
-  {
-    id: 'cert-006',
-    platform: 'Coursera',
-    title: 'Networking Basics, Switching, Addressing, and Routing',
-    issuer: 'Logical Operations',
-    date: '',
-    credentialId: 'OBAQU4EVUCZO',
-    pdf: '/assets/certificates/networking-basics.pdf',
-    image: '/assets/certificates/previews/networking-basics.png',
-    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/OBAQU4EVUCZO'
-  },
-  {
-    id: 'cert-007',
-    platform: 'Coursera',
-    title: 'Wireless Networking and IP Services',
-    issuer: 'Logical Operations',
-    date: '',
-    credentialId: '77HGFUFSKXUZ',
-    pdf: '/assets/certificates/wireless-networking.pdf',
-    image: '/assets/certificates/previews/wireless-networking.png',
-    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/77HGFUFSKXUZ'
-  },
-  {
-    id: 'cert-008',
-    platform: 'Coursera',
-    title: 'DevOps Prerequisite Course',
-    issuer: 'KodeKloud',
-    date: '',
-    credentialId: 'CJKIXKGKMLSR',
-    pdf: '/assets/certificates/devops-prerequisite.pdf',
-    image: '/assets/certificates/previews/devops-prerequisite.png',
-    verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/CJKIXKGKMLSR'
-  },
-  {
-    id: 'cert-009',
-    platform: 'KREN',
-    title: 'KREN & World Bank',
-    issuer: 'KREN',
-    date: '',
-    credentialId: '',
-    pdf: '/assets/certificates/kren-world-bank.pdf',
-    image: '/assets/certificates/previews/kren-world-bank.png',
-    verificationUrl: ''
   }
 ];
 
@@ -471,8 +507,8 @@ const pageSEO = {
     path: '/experience/'
   },
   certifications: {
-    title: 'Certifications | Agon Mustafaj — Semrush, Ahrefs, Python, Power BI & SEO',
-    description: 'Course certificates and learning credentials from Semrush, Ahrefs, Coursera, Credly and KREN, covering SEO, AI search, Python, Power BI, Excel, networking, DevOps and cybersecurity fundamentals.',
+    title: 'Certifications | Agon Mustafaj — Semrush, HubSpot, Ahrefs, Python & SEO',
+    description: 'Course certificates and learning credentials from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel, networking, DevOps and cybersecurity fundamentals.',
     path: '/certifications/'
   },
   articles: {
