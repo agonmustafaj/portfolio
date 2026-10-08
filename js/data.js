@@ -52,8 +52,7 @@ const profile = {
     'Python',
     'Power BI',
     'Data Analytics'
-  ],
-  cvPath: '/assets/Agon-Mustafaj-CV.pdf?v=20260928d'
+  ]
 };
 
 const experience = [

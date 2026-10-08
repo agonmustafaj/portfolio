@@ -91,13 +91,7 @@ The contact form is frontend-only by default. To enable submissions:
 
 ## CV
 
-Place your CV PDF at:
-
-```
-assets/Agon-Mustafaj-CV.pdf
-```
-
-If the file is missing, the CV page displays "CV coming soon."
+The CV page at `/cv/` shows an on-page overview. The full CV is not published as a PDF. Visitors request it by email from that page.
 
 ## Profile Image
 

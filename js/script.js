@@ -78,7 +78,7 @@
           '<div class="nav-actions">' +
             langSwitch +
             '<button class="theme-toggle" aria-label="' + tx('nav.toggleTheme', 'Toggle theme') + '" title="' + tx('nav.toggleTheme', 'Toggle theme') + '"></button>' +
-            '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
+            '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Resume') + '</a>' +
             '<button class="nav-hamburger" aria-label="' + tx('nav.openMenu', 'Open menu') + '" aria-expanded="false">' +
               '<span></span><span></span><span></span>' +
             '</button>' +
@@ -88,7 +88,7 @@
       '<div class="mobile-menu" role="navigation" aria-label="' + tx('nav.mobileAria', 'Mobile navigation') + '">' +
         mobileLinks +
         langSwitch +
-        '<a href="/cv/" class="btn btn-primary" style="margin-top:1rem">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
+        '<a href="/cv/" class="btn btn-primary" style="margin-top:1rem">' + tx('ui.downloadCv', 'Resume') + '</a>' +
       '</div>';
 
     const themeBtn = header.querySelector('.theme-toggle');
@@ -597,38 +597,6 @@
     });
   }
 
-  /* --- CV Check --- */
-  function initCV() {
-    const viewer = document.getElementById('cv-viewer');
-    if (!viewer) return;
-
-    const viewBtn = document.getElementById('cv-view-btn');
-    const downloadBtn = document.getElementById('cv-download-btn');
-
-    fetch(profile.cvPath, { method: 'HEAD' })
-      .then(function (res) {
-        if (res.ok) {
-          viewer.innerHTML =
-            '<iframe src="' + profile.cvPath + '" title="Agon Mustafaj CV"></iframe>' +
-            '<div class="cv-mobile-open">' +
-              '<div class="cv-actions" style="margin:0">' +
-                '<a href="' + profile.cvPath + '" class="btn btn-primary" target="_blank" rel="noopener noreferrer">' + tx('cv.openTab', 'Open PDF') + '</a>' +
-                '<a href="' + profile.cvPath + '" class="btn btn-secondary" download="Agon-Mustafaj-CV.pdf">' + tx('cv.download', 'Download CV') + '</a>' +
-              '</div>' +
-            '</div>';
-        } else {
-          viewer.innerHTML = '<div class="cv-placeholder">' + tx('cv.comingSoon', 'CV coming soon') + '</div>';
-          if (viewBtn) { viewBtn.style.display = 'none'; }
-          if (downloadBtn) { downloadBtn.style.display = 'none'; }
-        }
-      })
-      .catch(function () {
-        viewer.innerHTML = '<div class="cv-placeholder">' + tx('cv.comingSoon', 'CV coming soon') + '</div>';
-        if (viewBtn) { viewBtn.style.display = 'none'; }
-        if (downloadBtn) { downloadBtn.style.display = 'none'; }
-      });
-  }
-
   /* --- Render Wallet Card --- */
   function renderWalletCard(container) {
     if (!container) return;
@@ -657,7 +625,7 @@
             '</div>' +
             '<div class="wallet-actions">' +
               '<button class="btn btn-secondary btn-sm" data-share>' + tx('wallet.share', 'Share Profile') + '</button>' +
-              '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Download CV') + '</a>' +
+              '<a href="/cv/" class="btn btn-secondary btn-sm">' + tx('ui.downloadCv', 'Resume') + '</a>' +
               '<a href="/contact/" class="btn btn-primary btn-sm">' + tx('ui.contact', 'Contact') + '</a>' +
             '</div>' +
           '</div>' +
@@ -920,6 +888,5 @@
     initCertFilter();
     initContactForm();
     initBrowserMockups();
-    initCV();
   });
 })();

@@ -2261,40 +2261,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   flex-wrap: wrap;
 }
 
-.cv-viewer {
-  margin-top: 2rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  min-height: 600px;
-  background: var(--bg-secondary);
-}
-
-.cv-viewer iframe {
-  width: 100%;
-  height: 80vh;
-  border: none;
-}
-
-.cv-mobile-open {
-  display: none;
-}
-
 @media (max-width: 768px) {
-  .cv-viewer {
-    min-height: 0;
-  }
-
-  .cv-viewer iframe,
-  .cv-viewer .cv-placeholder {
-    display: none;
-  }
-
-  .cv-mobile-open {
-    display: block;
-    padding: 1rem 1.1rem;
-  }
-
   .cv-actions .btn {
     min-width: 0;
   }
@@ -2304,15 +2271,6 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   .company-link {
     overflow-wrap: anywhere;
   }
-}
-
-.cv-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  color: var(--text-muted);
-  font-size: 1.25rem;
 }
 
 /* --- 404 --- */
