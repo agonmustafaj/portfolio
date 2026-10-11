@@ -70,14 +70,31 @@
   }
 
   function bodyToHtml(text) {
-    return String(text).replace(/\r\n/g, '\n').trim().split(/\n{2,}/).map(function (block) {
-      var lines = block.split('\n').map(function (line) { return line.trim(); }).filter(Boolean);
-      if (!lines.length) return '';
-      if (lines.length === 1 && lines[0].indexOf('## ') === 0) {
-        return '<h2>' + esc(lines[0].slice(3)) + '</h2>';
+    var html = [];
+    var paragraph = [];
+
+    function flushParagraph() {
+      if (!paragraph.length) return;
+      html.push('<p>' + paragraph.map(esc).join(' ') + '</p>');
+      paragraph = [];
+    }
+
+    String(text).replace(/\r\n/g, '\n').split('\n').forEach(function (line) {
+      var trimmed = line.trim();
+      if (!trimmed) {
+        flushParagraph();
+        return;
       }
-      return '<p>' + lines.map(esc).join('<br>') + '</p>';
-    }).filter(Boolean).join('\n          ');
+      if (trimmed.indexOf('##') === 0) {
+        flushParagraph();
+        var heading = trimmed.replace(/^##\s*/, '');
+        if (heading) html.push('<h2>' + esc(heading) + '</h2>');
+        return;
+      }
+      paragraph.push(trimmed);
+    });
+    flushParagraph();
+    return html.join('\n          ');
   }
 
   function formatDate(iso) {
