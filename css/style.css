@@ -877,7 +877,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   overflow: hidden;
   border: 1px solid var(--border-color);
   background: var(--bg-secondary);
-  transition: box-shadow var(--transition);
+  transition: transform 0.45s ease, box-shadow var(--transition);
   cursor: pointer;
   transform: rotate(-1.4deg);
   animation: mockup-float 7s ease-in-out infinite;
@@ -889,7 +889,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 
 .browser-mockup:hover,
-.browser-mockup.reveal.visible:hover {
+.browser-mockup.reveal.visible:hover,
+.project-showcase.reverse .browser-mockup:hover {
   animation: none;
   transform: rotate(0deg) scale(1.02);
   box-shadow: var(--shadow-lg);
