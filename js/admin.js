@@ -9,7 +9,7 @@
   var postForm = document.getElementById('post-form');
   var statusEl = document.getElementById('admin-status');
   var tokenInput = document.getElementById('github-token');
-  var titleInput = document.getElementById('post-title');
+  var titleInput = document.getElementById('post-title-en');
   var slugInput = document.getElementById('post-slug');
   var slugTouched = false;
 
@@ -103,6 +103,30 @@
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   }
 
+  function formatDateSq(iso) {
+    var months = ['janar', 'shkurt', 'mars', 'prill', 'maj', 'qershor', 'korrik', 'gusht', 'shtator', 'tetor', 'nëntor', 'dhjetor'];
+    var parts = iso.split('-');
+    return Number(parts[2]) + ' ' + months[Number(parts[1]) - 1] + ' ' + parts[0];
+  }
+
+  function jsString(value) {
+    return "'" + String(value)
+      .replace(/\\/g, '\\\\')
+      .replace(/'/g, "\\'")
+      .replace(/\r/g, '')
+      .replace(/\n/g, '\\n')
+      .replace(/<\/script/gi, '<\\/script') + "'";
+  }
+
+  function insertI18n(source, marker, entries) {
+    var token = '/* ' + marker + ' */';
+    if (source.indexOf(token) === -1) throw new Error('Mungon pika e përkthimit te i18n.js.');
+    var block = Object.keys(entries).map(function (key) {
+      return "      '" + key + "': " + jsString(entries[key]);
+    }).join(',\n');
+    return source.replace(token, ',\n' + block + ',\n      ' + token);
+  }
+
   function todayIso() {
     var now = new Date();
     var month = String(now.getMonth() + 1).padStart(2, '0');
@@ -126,7 +150,7 @@
           description: post.description,
           url: url,
           image: 'https://agonmustafaj.com/assets/images/og-v2.png',
-          inLanguage: post.lang,
+          inLanguage: 'en',
           articleSection: post.category,
           isPartOf: { '@id': 'https://agonmustafaj.com/blog/#blog' },
           mainEntityOfPage: { '@id': url }
@@ -143,13 +167,14 @@
       ]
     };
 
+    var key = 'dyn.' + post.slug;
     return '<!DOCTYPE html>\n' +
-      '<html lang="' + esc(post.lang) + '">\n' +
+      '<html lang="en">\n' +
       '<head>\n' +
       '  <meta charset="UTF-8">\n' +
       '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-      '  <title>' + esc(post.title) + ' | Agon Mustafaj</title>\n' +
-      '  <meta name="description" content="' + esc(post.description) + '">\n' +
+      '  <title data-i18n="' + key + '.pageTitle">' + esc(post.title) + ' | Agon Mustafaj</title>\n' +
+      '  <meta name="description" data-i18n-content="' + key + '.desc" content="' + esc(post.description) + '">\n' +
       '  <link rel="canonical" href="' + url + '">\n' +
       '  <link rel="author" href="https://agonmustafaj.com/about/">\n' +
       '  <meta property="og:type" content="article">\n' +
@@ -162,7 +187,8 @@
       '  <meta property="og:image:height" content="630">\n' +
       '  <meta property="og:image:type" content="image/png">\n' +
       '  <meta property="og:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">\n' +
-      '  <meta property="og:locale" content="' + (post.lang === 'sq' ? 'sq_AL' : 'en_US') + '">\n' +
+      '  <meta property="og:locale" content="en_US">\n' +
+      '  <meta property="og:locale:alternate" content="sq_AL">\n' +
       '  <meta property="article:published_time" content="' + esc(post.date) + '">\n' +
       '  <meta property="article:section" content="' + esc(post.category) + '">\n' +
       '  <meta name="twitter:card" content="summary_large_image">\n' +
@@ -183,21 +209,21 @@
       '    <article class="blog-post">\n' +
       '      <div class="container" style="max-width:760px">\n' +
       '        <nav class="breadcrumb" aria-label="Breadcrumb">\n' +
-      '          <a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>' + esc(post.title) + '</span>\n' +
+      '          <a href="/" data-i18n="ui.home">Home</a> / <a href="/blog/" data-i18n="ui.blog">Blog</a> / <span data-i18n="' + key + '.crumb">' + esc(post.crumb) + '</span>\n' +
       '        </nav>\n' +
-      '        <span class="label">' + esc(post.category) + '</span>\n' +
-      '        <h1>' + esc(post.title) + '</h1>\n' +
-      '        <p class="blog-meta">By Agon Mustafaj · ' + esc(formatDate(post.date)) + '</p>\n' +
-      '        <div class="blog-content">\n          ' +
+      '        <span class="label" data-i18n="' + key + '.cat">' + esc(post.category) + '</span>\n' +
+      '        <h1 data-i18n="' + key + '.title">' + esc(post.title) + '</h1>\n' +
+      '        <p class="blog-meta" data-i18n="' + key + '.meta">By Agon Mustafaj · ' + esc(formatDate(post.date)) + '</p>\n' +
+      '        <div class="blog-content" data-i18n-html="' + key + '.body">\n          ' +
       bodyToHtml(post.body) +
       '\n        </div>\n' +
-      '        <p style="margin-top:2.5rem"><a href="/blog/" class="btn btn-secondary">← Back to Blog</a></p>\n' +
+      '        <p style="margin-top:2.5rem"><a href="/blog/" class="btn btn-secondary" data-i18n="ui.backBlog">← Back to Blog</a></p>\n' +
       '      </div>\n' +
       '    </article>\n' +
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
       '  <script src="/js/data.js?v=20261008a"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261008a"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261011j"></script>\n' +
       '  <script src="/js/script.js?v=20261011d"></script>\n' +
       '</body>\n' +
       '</html>\n';
@@ -248,18 +274,19 @@
   }
 
   function publish(post, token) {
+    var key = 'dyn.' + post.slug;
     var listingCard =
       '          <article class="article-card reveal">\n' +
-      '            <span class="label">' + esc(post.category) + '</span>\n' +
-      '            <h3><a href="/blog/' + post.slug + '/">' + esc(post.title) + '</a></h3>\n' +
-      '            <p>' + esc(post.description) + '</p>\n' +
-      '            <p class="text-muted" style="margin-top:0.75rem;font-size:0.8rem">By Agon Mustafaj · ' + esc(formatDate(post.date)) + '</p>\n' +
+      '            <span class="label" data-i18n="' + key + '.cat">' + esc(post.category) + '</span>\n' +
+      '            <h3><a href="/blog/' + post.slug + '/" data-i18n="' + key + '.title">' + esc(post.title) + '</a></h3>\n' +
+      '            <p data-i18n="' + key + '.desc">' + esc(post.description) + '</p>\n' +
+      '            <p class="text-muted" style="margin-top:0.75rem;font-size:0.8rem" data-i18n="' + key + '.meta">By Agon Mustafaj · ' + esc(formatDate(post.date)) + '</p>\n' +
       '          </article>';
     var homeCard =
       '          <article class="article-card">\n' +
-      '            <span class="label">' + esc(post.category) + '</span>\n' +
-      '            <h3><a href="/blog/' + post.slug + '/">' + esc(post.title) + '</a></h3>\n' +
-      '            <p>' + esc(post.shortText) + '</p>\n' +
+      '            <span class="label" data-i18n="' + key + '.cat">' + esc(post.category) + '</span>\n' +
+      '            <h3><a href="/blog/' + post.slug + '/" data-i18n="' + key + '.title">' + esc(post.title) + '</a></h3>\n' +
+      '            <p data-i18n="' + key + '.short">' + esc(post.shortText) + '</p>\n' +
       '          </article>';
     var sitemapBlock =
       '  <url>\n' +
@@ -283,26 +310,55 @@
         readRepoFile(token, 'blog/index.html'),
         readRepoFile(token, 'index.html'),
         readRepoFile(token, 'sitemap.xml'),
+        readRepoFile(token, 'js/i18n.js'),
         gh(token, 'GET', '/repos/' + REPO + '/git/ref/heads/main')
       ]);
     }).then(function (parts) {
       var blogIndex = parts[0];
       var home = parts[1];
       var sitemap = parts[2];
-      var ref = parts[3];
+      var i18n = parts[3];
+      var ref = parts[4];
       var parent = ref.object.sha;
       var needle = '"blogPost": [';
       if (!blogIndex || blogIndex.indexOf(needle) === -1) throw new Error('Lista e blogut nuk u gjet.');
       blogIndex = blogIndex.replace(needle, needle + '\n          ' + schemaItem + ',');
+      var prefix = 'dyn.' + post.slug;
+      var enPack = {};
+      var sqPack = {};
+      enPack[prefix + '.title'] = post.title;
+      sqPack[prefix + '.title'] = post.titleSq;
+      enPack[prefix + '.pageTitle'] = post.title + ' | Agon Mustafaj';
+      sqPack[prefix + '.pageTitle'] = post.titleSq + ' | Agon Mustafaj';
+      enPack[prefix + '.cat'] = post.category;
+      sqPack[prefix + '.cat'] = post.categorySq;
+      enPack[prefix + '.desc'] = post.description;
+      sqPack[prefix + '.desc'] = post.descriptionSq;
+      enPack[prefix + '.short'] = post.shortText;
+      sqPack[prefix + '.short'] = post.shortSq;
+      enPack[prefix + '.meta'] = 'By Agon Mustafaj · ' + formatDate(post.date);
+      sqPack[prefix + '.meta'] = 'Nga Agon Mustafaj · ' + formatDateSq(post.date);
+      enPack[prefix + '.crumb'] = post.crumb;
+      sqPack[prefix + '.crumb'] = post.crumbSq;
+      enPack[prefix + '.body'] = bodyToHtml(post.body).replace(/\n\s+/g, '');
+      sqPack[prefix + '.body'] = bodyToHtml(post.bodySq).replace(/\n\s+/g, '');
+      i18n = insertI18n(i18n, 'managed-post-i18n:en', enPack);
+      i18n = insertI18n(i18n, 'managed-post-i18n:sq', sqPack);
+      var i18nVersion = 'i18n.js?v=' + Date.now().toString(36);
+      function bust(html) {
+        return html.replace(/i18n\.js\?v=[^"']+/g, i18nVersion);
+      }
       return gh(token, 'GET', '/repos/' + REPO + '/git/commits/' + parent).then(function (commit) {
-        return { blogIndex: blogIndex, home: home, sitemap: sitemap, parent: parent, tree: commit.tree.sha };
+        return { blogIndex: bust(blogIndex), home: bust(home), sitemap: sitemap, i18n: i18n, parent: parent, tree: commit.tree.sha, i18nVersion: i18nVersion };
       });
     }).then(function (state) {
+      var postHtml = buildPostHtml(post).replace(/i18n\.js\?v=[^"']+/g, state.i18nVersion);
       var files = [
-        { path: 'blog/' + post.slug + '/index.html', content: buildPostHtml(post) },
+        { path: 'blog/' + post.slug + '/index.html', content: postHtml },
         { path: 'blog/index.html', content: insertAtMark(state.blogIndex, listingCard) },
         { path: 'index.html', content: insertAtMark(state.home, homeCard) },
-        { path: 'sitemap.xml', content: insertAtMark(state.sitemap, sitemapBlock) }
+        { path: 'sitemap.xml', content: insertAtMark(state.sitemap, sitemapBlock) },
+        { path: 'js/i18n.js', content: state.i18n }
       ];
       return Promise.all(files.map(function (file) {
         return gh(token, 'POST', '/repos/' + REPO + '/git/blobs', {
@@ -383,33 +439,40 @@
     event.preventDefault();
     var token = (tokenInput.value || '').trim();
     var title = titleInput.value.trim();
+    var titleSq = document.getElementById('post-title-sq').value.trim();
     var slug = slugify(slugInput.value);
-    var body = document.getElementById('post-body').value.trim();
-    var category = document.getElementById('post-category').value.trim() || 'Blog';
-    var description = document.getElementById('post-description').value.trim();
-    var lang = document.getElementById('post-lang').value;
+    var body = document.getElementById('post-body-en').value.trim();
+    var bodySq = document.getElementById('post-body-sq').value.trim();
+    var category = document.getElementById('post-category-en').value.trim() || 'Blog';
+    var categorySq = document.getElementById('post-category-sq').value.trim() || category;
+    var description = document.getElementById('post-description-en').value.trim();
+    var descriptionSq = document.getElementById('post-description-sq').value.trim();
 
     if (!token) {
       setStatus('Vendos tokenin e GitHub-it. Pa të, faqja statike nuk mund të publikojë.', true);
       return;
     }
-    if (!title || !slug || !body) {
-      setStatus('Titulli, slug-u dhe teksti janë të nevojshëm.', true);
+    if (!title || !titleSq || !slug || !body || !bodySq) {
+      setStatus('Duhen titulli dhe teksti në anglisht dhe në shqip.', true);
       return;
     }
-    if (!description) {
-      var plain = body.replace(/^## /gm, '').replace(/\s+/g, ' ').trim();
-      description = plain.slice(0, 155);
-    }
+    if (!description) description = body.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
+    if (!descriptionSq) descriptionSq = bodySq.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
 
     var post = {
       title: title,
+      titleSq: titleSq,
       slug: slug,
       body: body,
+      bodySq: bodySq,
       category: category,
+      categorySq: categorySq,
       description: description,
+      descriptionSq: descriptionSq,
       shortText: description.slice(0, 110),
-      lang: lang,
+      shortSq: descriptionSq.slice(0, 110),
+      crumb: title.length > 42 ? title.slice(0, 42).trim() : title,
+      crumbSq: titleSq.length > 42 ? titleSq.slice(0, 42).trim() : titleSq,
       date: todayIso()
     };
 

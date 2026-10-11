@@ -45,31 +45,43 @@
           </div>
           <form id="post-form">
             <div class="form-group">
-              <label for="post-title">Titulli</label>
-              <input id="post-title" required>
-            </div>
-            <div class="form-group">
               <label for="post-slug">Slug</label>
-              <input id="post-slug" required placeholder="titulli-i-postimit">
+              <input id="post-slug" required placeholder="three-things-before-publishing">
+            </div>
+            <p class="admin-note">Shkruaj të dyja gjuhët. Butoni EN/SQ i faqes i ndërron vetëm kur ekzistojnë të dyja.</p>
+            <h2 style="font-size:1.4rem;margin:1.5rem 0 1rem">English</h2>
+            <div class="form-group">
+              <label for="post-title-en">Titulli</label>
+              <input id="post-title-en" required>
             </div>
             <div class="form-group">
-              <label for="post-category">Kategoria</label>
-              <input id="post-category" value="Blog">
+              <label for="post-category-en">Kategoria</label>
+              <input id="post-category-en" value="Blog">
             </div>
             <div class="form-group">
-              <label for="post-lang">Gjuha</label>
-              <select id="post-lang">
-                <option value="sq" selected>Shqip</option>
-                <option value="en">English</option>
-              </select>
+              <label for="post-description-en">Përshkrimi i shkurtër</label>
+              <input id="post-description-en" maxlength="160">
             </div>
             <div class="form-group">
-              <label for="post-description">Përshkrimi i shkurtër</label>
-              <input id="post-description" maxlength="160" placeholder="Një fjali për Google dhe listën e blogut">
+              <label for="post-body-en">Teksti</label>
+              <textarea id="post-body-en" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull."></textarea>
+            </div>
+            <h2 style="font-size:1.4rem;margin:1.5rem 0 1rem">Shqip</h2>
+            <div class="form-group">
+              <label for="post-title-sq">Titulli</label>
+              <input id="post-title-sq" required>
             </div>
             <div class="form-group">
-              <label for="post-body">Teksti</label>
-              <textarea id="post-body" required style="min-height:280px" placeholder="Një rresht që nis me ## bëhet titull. Rreshtat e tjerë bëhen paragraf."></textarea>
+              <label for="post-category-sq">Kategoria</label>
+              <input id="post-category-sq" value="Blog">
+            </div>
+            <div class="form-group">
+              <label for="post-description-sq">Përshkrimi i shkurtër</label>
+              <input id="post-description-sq" maxlength="160">
+            </div>
+            <div class="form-group">
+              <label for="post-body-sq">Teksti</label>
+              <textarea id="post-body-sq" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull."></textarea>
             </div>
             <div class="admin-actions">
               <button class="btn btn-primary" id="publish-post" type="submit">Publiko</button>
@@ -83,9 +95,9 @@
   </main>
   <div id="site-footer"></div>
   <script src="/js/data.js?v=20261008a"></script>
-  <script src="/js/i18n.js?v=20261008a"></script>
+  <script src="/js/i18n.js?v=20261011j"></script>
   <script src="/js/script.js?v=20261011d"></script>
   <script src="/js/admin-gate.js?v=20261011h"></script>
-  <script src="/js/admin.js?v=20261011i"></script>
+  <script src="/js/admin.js?v=20261011k"></script>
 </body>
 </html>
