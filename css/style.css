@@ -1859,7 +1859,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 0.85rem 1rem;
   background: var(--bg-secondary);
@@ -1872,7 +1873,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 3px var(--glow-blue);
@@ -2522,3 +2524,19 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   }
   .wallet-card::before { display: none; }
 }
+
+/* --- Blog admin --- */
+.admin-page { padding: 3rem 0 5rem; }
+.admin-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+.admin-card h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.4rem 0 0.75rem; }
+.admin-note { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.admin-status { margin-top: 1rem; color: var(--text-secondary); }
+.admin-status.error { color: #f0b4b4; }
+.admin-token { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }

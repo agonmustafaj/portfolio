@@ -66,6 +66,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- managed-post -->
   <url>
     <loc>https://agonmustafaj.com/blog/think-outside-the-box/</loc>
     <lastmod>2026-09-15</lastmod>
