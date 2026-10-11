@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /articles/
 Disallow: /assets/brand/
+Disallow: /dashboard/
 Disallow: /post-new-blog/
 
 Sitemap: https://agonmustafaj.com/sitemap.xml

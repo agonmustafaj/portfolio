@@ -4,7 +4,11 @@
   var SESSION_KEY = 'agon-blog-session';
 
   var loginPanel = document.getElementById('admin-login');
+  var appPanel = document.getElementById('admin-app');
+  var chooserPanel = document.getElementById('admin-chooser');
   var editorPanel = document.getElementById('admin-editor');
+  var deletePanel = document.getElementById('admin-delete');
+  var deleteList = document.getElementById('delete-list');
   var loginForm = document.getElementById('login-form');
   var postForm = document.getElementById('post-form');
   var statusEl = document.getElementById('admin-status');
@@ -384,10 +388,222 @@
     });
   }
 
-  function showEditor() {
+  function splitTopObjects(text) {
+    var objects = [];
+    var depth = 0;
+    var start = -1;
+    var inString = false;
+    var escaped = false;
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (ch === '\\') escaped = true;
+        else if (ch === '"') inString = false;
+        continue;
+      }
+      if (ch === '"') {
+        inString = true;
+        continue;
+      }
+      if (ch === '{') {
+        if (depth === 0) start = i;
+        depth++;
+      } else if (ch === '}') {
+        depth--;
+        if (depth === 0 && start !== -1) {
+          objects.push(text.slice(start, i + 1));
+          start = -1;
+        }
+      }
+    }
+    return objects;
+  }
+
+  function removeArticleCard(html, slug) {
+    var needle = '/blog/' + slug + '/';
+    return html.replace(/<article class="article-card[\s\S]*?<\/article>\n?/g, function (block) {
+      return block.indexOf(needle) !== -1 ? '' : block;
+    }).replace(/\n{3,}/g, '\n\n');
+  }
+
+  function removeSitemapUrl(xml, slug) {
+    var loc = 'https://agonmustafaj.com/blog/' + slug + '/';
+    return xml.replace(/[ \t]*<url>[\s\S]*?<\/url>\n?/g, function (block) {
+      return block.indexOf(loc) !== -1 ? '' : block;
+    });
+  }
+
+  function removeBlogPostSchema(html, slug) {
+    var marker = '"blogPost": [';
+    var start = html.indexOf(marker);
+    if (start === -1) return html;
+    var from = start + marker.length;
+    var i = from;
+    var depth = 1;
+    var inString = false;
+    var escaped = false;
+    while (i < html.length && depth > 0) {
+      var ch = html.charAt(i);
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (ch === '\\') escaped = true;
+        else if (ch === '"') inString = false;
+      } else if (ch === '"') inString = true;
+      else if (ch === '[') depth++;
+      else if (ch === ']') depth--;
+      i++;
+    }
+    var kept = splitTopObjects(html.slice(from, i - 1)).filter(function (obj) {
+      return obj.indexOf('/blog/' + slug + '/') === -1;
+    });
+    var next = kept.length ? '\n          ' + kept.join(',\n          ') + '\n        ' : '';
+    return html.slice(0, start) + marker + next + html.slice(i - 1);
+  }
+
+  function removeI18nKeys(source, slug) {
+    var prefix = "'dyn." + slug + ".";
+    return source.split('\n').map(function (line) {
+      if (line.indexOf(prefix) === -1) return line;
+      var marker = line.match(/\/\* managed-post-i18n:(?:en|sq) \*\//);
+      return marker ? '      ' + marker[0] : null;
+    }).filter(function (line) { return line !== null; }).join('\n');
+  }
+
+  function listPosts(html) {
+    var posts = [];
+    var re = /<article class="article-card[\s\S]*?<\/article>/g;
+    var match;
+    while ((match = re.exec(html))) {
+      var href = match[0].match(/href="\/blog\/([a-z0-9-]+)\//);
+      var title = match[0].match(/<h3><a[^>]*>([^<]*)<\/a>/);
+      if (!href) continue;
+      posts.push({
+        slug: href[1],
+        title: title ? title[1].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"') : href[1]
+      });
+    }
+    return posts;
+  }
+
+  function renderDeleteList(posts) {
+    deleteList.innerHTML = '';
+    if (!posts.length) {
+      deleteList.innerHTML = '<li>Nuk ka postime.</li>';
+      return;
+    }
+    posts.forEach(function (post, index) {
+      var item = document.createElement('li');
+      var label = document.createElement('label');
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'post-to-delete';
+      input.value = post.slug;
+      if (index === 0) input.checked = true;
+      var text = document.createElement('span');
+      text.textContent = post.title;
+      label.appendChild(input);
+      label.appendChild(text);
+      item.appendChild(label);
+      deleteList.appendChild(item);
+    });
+  }
+
+  function loadDeleteList(token) {
+    setStatus('Po ngarkohet lista…');
+    return readRepoFile(token, 'blog/index.html').then(function (html) {
+      if (!html) throw new Error('Lista e blogut nuk u gjet.');
+      renderDeleteList(listPosts(html));
+      setStatus('');
+    });
+  }
+
+  function removePost(slug, title, token) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      return Promise.reject(new Error('Slug i pavlefshëm.'));
+    }
+    return Promise.all([
+      readRepoFile(token, 'blog/' + slug + '/index.html'),
+      readRepoFile(token, 'blog/index.html'),
+      readRepoFile(token, 'index.html'),
+      readRepoFile(token, 'sitemap.xml'),
+      readRepoFile(token, 'js/i18n.js'),
+      gh(token, 'GET', '/repos/' + REPO + '/git/ref/heads/main')
+    ]).then(function (parts) {
+      var postFile = parts[0];
+      var blogIndex = parts[1];
+      var home = parts[2];
+      var sitemap = parts[3];
+      var i18n = parts[4];
+      var parent = parts[5].object.sha;
+      if (!postFile && (!blogIndex || blogIndex.indexOf('/blog/' + slug + '/') === -1)) {
+        throw new Error('Ky postim nuk u gjet.');
+      }
+      blogIndex = removeBlogPostSchema(removeArticleCard(blogIndex, slug), slug);
+      home = removeArticleCard(home, slug);
+      sitemap = removeSitemapUrl(sitemap, slug);
+      i18n = removeI18nKeys(i18n, slug);
+      var i18nVersion = 'i18n.js?v=' + Date.now().toString(36);
+      function bust(html) {
+        return html.replace(/i18n\.js\?v=[^"']+/g, i18nVersion);
+      }
+      return gh(token, 'GET', '/repos/' + REPO + '/git/commits/' + parent).then(function (commit) {
+        return {
+          postExists: !!postFile,
+          blogIndex: bust(blogIndex),
+          home: bust(home),
+          sitemap: sitemap,
+          i18n: i18n,
+          parent: parent,
+          tree: commit.tree.sha,
+          title: title
+        };
+      });
+    }).then(function (state) {
+      var files = [
+        { path: 'blog/index.html', content: state.blogIndex },
+        { path: 'index.html', content: state.home },
+        { path: 'sitemap.xml', content: state.sitemap },
+        { path: 'js/i18n.js', content: state.i18n }
+      ];
+      return Promise.all(files.map(function (file) {
+        return gh(token, 'POST', '/repos/' + REPO + '/git/blobs', {
+          content: file.content,
+          encoding: 'utf-8'
+        }).then(function (blob) {
+          return { path: file.path, mode: '100644', type: 'blob', sha: blob.sha };
+        });
+      })).then(function (tree) {
+        if (state.postExists) {
+          tree.push({ path: 'blog/' + slug + '/index.html', mode: '100644', type: 'blob', sha: null });
+        }
+        return gh(token, 'POST', '/repos/' + REPO + '/git/trees', {
+          base_tree: state.tree,
+          tree: tree
+        }).then(function (created) {
+          return gh(token, 'POST', '/repos/' + REPO + '/git/commits', {
+            message: 'Remove blog post: ' + state.title,
+            tree: created.sha,
+            parents: [state.parent]
+          });
+        });
+      }).then(function (commit) {
+        return gh(token, 'PATCH', '/repos/' + REPO + '/git/refs/heads/main', { sha: commit.sha });
+      });
+    });
+  }
+
+  function showMode(mode) {
+    chooserPanel.hidden = mode !== 'choose';
+    editorPanel.hidden = mode !== 'post';
+    deletePanel.hidden = mode !== 'delete';
+  }
+
+  function showApp() {
     loginPanel.hidden = true;
-    editorPanel.hidden = false;
+    appPanel.hidden = false;
     tokenInput.value = localStorage.getItem(TOKEN_KEY) || '';
+    showMode('choose');
   }
 
   loginForm.addEventListener('submit', function (event) {
@@ -403,7 +619,7 @@
       sessionStorage.setItem(SESSION_KEY, '1');
       document.getElementById('password').value = '';
       setStatus('');
-      showEditor();
+      showApp();
     }).catch(function () {
       setStatus('Hyrja nuk u krye.', true);
     });
@@ -430,9 +646,66 @@
 
   document.getElementById('admin-logout').addEventListener('click', function () {
     sessionStorage.removeItem(SESSION_KEY);
-    editorPanel.hidden = true;
+    appPanel.hidden = true;
     loginPanel.hidden = false;
+    showMode('choose');
     setStatus('');
+  });
+
+  document.getElementById('choose-post').addEventListener('click', function () {
+    setStatus('');
+    showMode('post');
+  });
+
+  document.getElementById('back-from-editor').addEventListener('click', function () {
+    setStatus('');
+    showMode('choose');
+  });
+
+  document.getElementById('choose-delete').addEventListener('click', function () {
+    var token = (tokenInput.value || '').trim();
+    if (!token) {
+      setStatus('Vendos tokenin e GitHub-it. Pa të, lista nuk lexohet.', true);
+      return;
+    }
+    localStorage.setItem(TOKEN_KEY, token);
+    showMode('delete');
+    loadDeleteList(token).catch(function (error) {
+      setStatus(error.message || 'Lista nuk u ngarkua.', true);
+    });
+  });
+
+  document.getElementById('back-from-delete').addEventListener('click', function () {
+    setStatus('');
+    showMode('choose');
+  });
+
+  document.getElementById('delete-post').addEventListener('click', function () {
+    var token = (tokenInput.value || '').trim();
+    var selected = deleteList.querySelector('input[name="post-to-delete"]:checked');
+    if (!token) {
+      setStatus('Vendos tokenin e GitHub-it.', true);
+      return;
+    }
+    if (!selected) {
+      setStatus('Zgjidh një postim nga lista.', true);
+      return;
+    }
+    var slug = selected.value;
+    var title = selected.parentNode.querySelector('span').textContent;
+    if (!window.confirm('Të fshihet "' + title + '"? Kjo e heq nga faqja, nga blogu dhe nga adresa e vet.')) return;
+    var button = document.getElementById('delete-post');
+    button.disabled = true;
+    setStatus('Po fshihet… GitHub Pages mund të dojë një minutë pasi të përfundojë.');
+    localStorage.setItem(TOKEN_KEY, token);
+    removePost(slug, title, token).then(function () {
+      setStatus('U fshi: ' + title);
+      return loadDeleteList(token);
+    }).catch(function (error) {
+      setStatus(error.message || 'Fshirja dështoi.', true);
+    }).then(function () {
+      button.disabled = false;
+    });
   });
 
   postForm.addEventListener('submit', function (event) {
@@ -492,5 +765,5 @@
     });
   });
 
-  if (sessionStorage.getItem(SESSION_KEY) === '1') showEditor();
+  if (sessionStorage.getItem(SESSION_KEY) === '1') showApp();
 })();
