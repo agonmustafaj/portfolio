@@ -181,14 +181,7 @@
       'kkz.meta': 'Klina, Kosovo · May 2026 – 23 July 2026',
       'kkz.role': 'Member of the Central Election Commission of Kosovo (KKZ).',
       'about.completed': 'Completed',
-      'dyn.three-things-i-check-before-i-publish-a-site.title': 'Three things I check before I publish a site',
-      'dyn.three-things-i-check-before-i-publish-a-site.pageTitle': 'Three things I check before I publish a site | Agon Mustafaj',
-      'dyn.three-things-i-check-before-i-publish-a-site.cat': 'Blog',
-      'dyn.three-things-i-check-before-i-publish-a-site.desc': 'Before a site goes live, I check the title, how it reads on a phone, and how easily a visitor can get in touch.',
-      'dyn.three-things-i-check-before-i-publish-a-site.short': 'Before a site goes live, I check the title, the phone, and how easily a visitor can get in touch.',
-      'dyn.three-things-i-check-before-i-publish-a-site.meta': 'By Agon Mustafaj · October 11, 2026',
-      'dyn.three-things-i-check-before-i-publish-a-site.crumb': 'Three things before publishing',
-      'dyn.three-things-i-check-before-i-publish-a-site.body': '<p>A site can look finished on my computer and still not be ready for a visitor. Before I publish it, I run through three short checks. They do not take long, and they have saved me from mistakes that show up immediately.</p><h2>The title should say what the site is</h2><p>The browser title is the first line someone sees in Google. If it is only a business name, the visitor cannot tell whether they will find the service they need. I write it so it reads clearly: who you are and what you offer.</p><h2>It has to be readable on a phone without zooming</h2><p>I open the site on a narrow screen. If the text is cut off, a button slips under the menu, or a photo covers the call to action, I fix that before publishing. Most visitors arrive on a phone.</p><h2>Contact should be one step, not a search</h2><p>At the end I ask myself: if I wanted to call or write today, would I find the way immediately? The form, WhatsApp, or phone number needs to be visible. A good-looking site that never leads to contact leaves the visitor halfway there.</p><p>These three points are my short list. The design can change. These checks stay.</p>' /* managed-post-i18n:en */
+      /* managed-post-i18n:en */
     },
     sq: {
       'nav.home': 'Kreu',
@@ -666,14 +659,7 @@
       'post.a5p5': 'Ky ndryshim ka më shumë rëndësi sesa mendojnë njerëzit. Kur puna rutinore automatizohet, vlera kalon te aftësitë që makinat nuk i kanë: të bësh pyetjet e duhura, të kuptosh kontekstin dhe të marrësh vendime me gjykim.',
       'post.a5h3': 'Të punosh më zgjuar',
       'post.a5p6': 'Në fund të ditës, nuk bëhet fjalë gjithmonë të punosh më shumë se të gjithë të tjerët. Ndonjëherë, bëhet fjalë të gjesh një mënyrë më të zgjuar për të punuar.',
-      'dyn.three-things-i-check-before-i-publish-a-site.title': 'Tri gjëra që i kontrolloj para se ta publikoj një faqe',
-      'dyn.three-things-i-check-before-i-publish-a-site.pageTitle': 'Tri gjëra që i kontrolloj para se ta publikoj një faqe | Agon Mustafaj',
-      'dyn.three-things-i-check-before-i-publish-a-site.cat': 'Blog',
-      'dyn.three-things-i-check-before-i-publish-a-site.desc': 'Para se një faqe të dalë live, kontrolloj titullin, si lexohet në telefon dhe sa lehtë të kontakton vizitori.',
-      'dyn.three-things-i-check-before-i-publish-a-site.short': 'Para se një faqe të dalë live, kontrolloj titullin, telefonin dhe kontaktin.',
-      'dyn.three-things-i-check-before-i-publish-a-site.meta': 'Nga Agon Mustafaj · 11 tetor 2026',
-      'dyn.three-things-i-check-before-i-publish-a-site.crumb': 'Tri gjëra para publikimit',
-      'dyn.three-things-i-check-before-i-publish-a-site.body': '<p>Një faqe mund të duket gati në kompjuter dhe prapë të mos jetë gati për vizitorin. Para se ta publikoj, kaloj në tre kontrolle të shkurtra. Nuk zgjasin shumë dhe më kanë kursyer gabime që duken menjëherë.</p><h2>Titulli duhet të tregojë për çfarë është faqja</h2><p>Titulli në shfletues është fjalia e parë që e sheh dikush në Google. Nëse thotë vetëm emrin e biznesit, vizitori nuk e di nëse gjen shërbimin që kërkon. E shkruaj që të lexohet qartë: kush je dhe çfarë ofron.</p><h2>Në telefon duhet të lexohet pa e zmadhuar</h2><p>E hap faqen në një ekran të ngushtë. Nëse teksti del i prerë, butoni humbet poshtë menusë, ose fotografia e mbulon thirrjen për veprim, e rregulloj para publikimit. Shumica e vizitorëve vijnë nga telefoni.</p><h2>Kontakti duhet të jetë një hap, jo një kërkim</h2><p>Në fund pyes veten: nëse doja të telefonoja ose të shkruaja sot, a e gjej rrugën menjëherë? Forma, WhatsApp-i ose numri duhet të jenë të dukshëm. Një faqe e bukur që nuk të çon te kontakti e lë vizitorin në mes të rrugës.</p><p>Këto tri pika janë lista ime e shkurtër. Dizajni mund të ndryshojë. Këto kontrolle mbeten.</p>' /* managed-post-i18n:sq */
+      /* managed-post-i18n:sq */
     }
   };
 
