@@ -173,6 +173,7 @@
 
   /* --- Custom Cursor --- */
   function initCustomCursor() {
+    return;
     if (prefersReducedMotion || isTouchDevice || isMobile) return;
 
     document.body.classList.add('custom-cursor');

@@ -7,3 +7,7 @@ _pdftmp/
 *.log
 .vscode/
 .idea/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
