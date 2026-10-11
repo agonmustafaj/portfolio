@@ -877,18 +877,40 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   overflow: hidden;
   border: 1px solid var(--border-color);
   background: var(--bg-secondary);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: box-shadow var(--transition);
   cursor: pointer;
   transform: rotate(-1.4deg);
+  animation: mockup-float 7s ease-in-out infinite;
 }
 
 .project-showcase.reverse .browser-mockup {
   transform: rotate(1.4deg);
+  animation-name: mockup-float-reverse;
 }
 
-.browser-mockup:hover {
+.browser-mockup:hover,
+.browser-mockup.reveal.visible:hover {
+  animation: none;
   transform: rotate(0deg) scale(1.02);
   box-shadow: var(--shadow-lg);
+}
+
+.browser-mockup.reveal {
+  transform: translateY(30px) rotate(-1.4deg);
+}
+
+.browser-mockup.reveal.visible {
+  transform: translateY(0) rotate(-1.4deg);
+}
+
+@keyframes mockup-float {
+  0%, 100% { transform: rotate(-1.4deg) translateY(0); }
+  50% { transform: rotate(-1.4deg) translateY(-12px); }
+}
+
+@keyframes mockup-float-reverse {
+  0%, 100% { transform: rotate(1.4deg) translateY(0); }
+  50% { transform: rotate(1.4deg) translateY(-12px); }
 }
 
 .browser-toolbar {
