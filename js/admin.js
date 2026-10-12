@@ -205,7 +205,7 @@
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261011h">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261012d">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -230,8 +230,8 @@
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
       '  <script src="/js/data.js?v=20261008a"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261011j"></script>\n' +
-      '  <script src="/js/script.js?v=20261011d"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261012d"></script>\n' +
+      '  <script src="/js/script.js?v=20261012c"></script>\n' +
       '</body>\n' +
       '</html>\n';
   }
@@ -747,8 +747,8 @@
       descriptionSq: descriptionSq,
       shortText: description.slice(0, 110),
       shortSq: descriptionSq.slice(0, 110),
-      crumb: title.length > 42 ? title.slice(0, 42).trim() : title,
-      crumbSq: titleSq.length > 42 ? titleSq.slice(0, 42).trim() : titleSq,
+      crumb: title,
+      crumbSq: titleSq,
       date: todayIso()
     };
 

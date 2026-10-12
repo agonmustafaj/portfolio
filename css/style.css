@@ -2263,11 +2263,17 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 
 .breadcrumb {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
+}
+
+.breadcrumb span {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .breadcrumb a { color: var(--text-secondary); transition: color var(--transition); }
