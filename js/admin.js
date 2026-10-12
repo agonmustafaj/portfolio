@@ -124,11 +124,14 @@
 
   function insertI18n(source, marker, entries) {
     var token = '/* ' + marker + ' */';
-    if (source.indexOf(token) === -1) throw new Error('Mungon pika e përkthimit te i18n.js.');
+    var at = source.indexOf(token);
+    if (at === -1) throw new Error('Mungon pika e përkthimit te i18n.js.');
     var block = Object.keys(entries).map(function (key) {
       return "      '" + key + "': " + jsString(entries[key]);
     }).join(',\n');
-    return source.replace(token, ',\n' + block + ',\n      ' + token);
+    var before = source.slice(0, at);
+    var comma = /,\s*$/.test(before) ? '' : ',';
+    return before + comma + '\n' + block + ',\n      ' + token + source.slice(at + token.length);
   }
 
   function todayIso() {
