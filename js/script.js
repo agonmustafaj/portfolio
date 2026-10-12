@@ -73,7 +73,10 @@
     header.innerHTML =
       '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
-          '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '"><span>AM</span></a>' +
+          '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '">' +
+            '<img class="logo-dark" src="/assets/images/logo-nav-dark.png" alt="" width="536" height="116">' +
+            '<img class="logo-light" src="/assets/images/logo-nav-light.png" alt="" width="536" height="116">' +
+          '</a>' +
           '<div class="nav-links">' + links + '</div>' +
           '<div class="nav-actions">' +
             langSwitch +
