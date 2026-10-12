@@ -459,6 +459,18 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   gap: 0.75rem;
 }
 
+.home-banner {
+  width: min(960px, calc(100% - 2.5rem));
+  margin: 0 auto 4.5rem;
+}
+
+.home-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border-color);
+}
+
 /* --- Hero --- */
 .hero {
   min-height: 100vh;

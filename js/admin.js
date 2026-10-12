@@ -156,7 +156,7 @@
           dateModified: post.date,
           description: post.description,
           url: url,
-          image: 'https://agonmustafaj.com/assets/images/og-v3.png',
+          image: 'https://agonmustafaj.com/assets/images/banner.png',
           inLanguage: 'en',
           articleSection: post.category,
           isPartOf: { '@id': 'https://agonmustafaj.com/blog/#blog' },
@@ -189,7 +189,7 @@
       '  <meta property="og:title" content="' + esc(post.title) + '">\n' +
       '  <meta property="og:description" content="' + esc(post.description) + '">\n' +
       '  <meta property="og:url" content="' + url + '">\n' +
-      '  <meta property="og:image" content="https://agonmustafaj.com/assets/images/og-v3.png">\n' +
+      '  <meta property="og:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
       '  <meta property="og:image:width" content="1200">\n' +
       '  <meta property="og:image:height" content="630">\n' +
       '  <meta property="og:image:type" content="image/png">\n' +
@@ -201,11 +201,11 @@
       '  <meta name="twitter:card" content="summary_large_image">\n' +
       '  <meta name="twitter:title" content="' + esc(post.title) + '">\n' +
       '  <meta name="twitter:description" content="' + esc(post.description) + '">\n' +
-      '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/og-v3.png">\n' +
+      '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261012d">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261012e">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
