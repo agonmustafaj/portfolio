@@ -247,6 +247,33 @@
       padding-bottom: 2px;
     }
     .seq .on { color: #2b59ff; }
+
+    .lockup {
+      position: absolute;
+      right: 58px;
+      bottom: 44px;
+      z-index: 7;
+      width: 188px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .lockup img {
+      width: 132px;
+      height: auto;
+      display: block;
+    }
+    .lockup-name {
+      font-family: "Satoshi", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #f3efe6;
+      line-height: 1;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -280,6 +307,11 @@
     </h1>
 
     <p class="dek">Explore the work, experience &amp; ideas behind Agon Mustafaj.</p>
+
+    <div class="lockup">
+      <img src="logo-mark.png" alt="">
+      <div class="lockup-name">Agon Mustafaj</div>
+    </div>
 
     <footer class="bottom">
       <div class="rule"></div>
