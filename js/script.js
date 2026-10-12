@@ -318,7 +318,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal, .timeline-item').forEach(function (el) {
       observer.observe(el);
@@ -725,7 +725,7 @@
           '</div>'
         : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
-      return '<article class="cert-card" data-platform="' + cert.platform + '">' +
+      return '<article class="cert-card reveal" data-platform="' + cert.platform + '">' +
         preview +
         '<div class="cert-card-body">' +
           '<div class="cert-platform">' +
