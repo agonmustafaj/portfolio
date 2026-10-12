@@ -230,7 +230,7 @@
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
       '  <script src="/js/data.js?v=20261008a"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261012d"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261012f"></script>\n' +
       '  <script src="/js/script.js?v=20261012c"></script>\n' +
       '</body>\n' +
       '</html>\n';

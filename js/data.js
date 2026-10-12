@@ -416,7 +416,7 @@ const articles = [
     slug: 'ai-today-what-matters',
     author: 'Agon Mustafaj',
     date: '2026-06-15',
-    description: 'A practical look at where artificial intelligence stands today and which skills matter for students and builders.',
+    description: 'A practical look at where artificial intelligence stands today, which skills matter for students and builders, and what is worth learning before tools change.',
     status: 'published',
     relatedProject: '',
     category: 'AI'
@@ -427,7 +427,7 @@ const articles = [
     slug: 'ai-changing-web-development',
     author: 'Agon Mustafaj',
     date: '2026-04-22',
-    description: 'From writing code faster to improving UX research, AI is reshaping how modern websites are planned and built.',
+    description: 'From writing code faster to improving UX research, AI is reshaping how modern websites are planned, built, tested and published by small product teams.',
     status: 'published',
     relatedProject: '',
     category: 'AI & Web'
@@ -438,7 +438,7 @@ const articles = [
     slug: 'ai-and-technology-building',
     author: 'Agon Mustafaj',
     date: '2026-02-18',
-    description: 'Why combining computer science fundamentals with AI tools creates stronger digital products.',
+    description: 'Why combining computer science fundamentals with AI tools creates stronger digital products, clearer build decisions and websites that are easier to maintain.',
     status: 'published',
     relatedProject: '',
     category: 'Technology'
@@ -449,7 +449,7 @@ const articles = [
     slug: 'learning-ai-as-cs-student',
     author: 'Agon Mustafaj',
     date: '2025-12-12',
-    description: 'How I fit learning about AI around web development, SEO work and my Computer Science coursework.',
+    description: 'How I fit learning about AI around web development, SEO work and my Computer Science coursework, and why connecting the fields beats studying them apart.',
     status: 'published',
     relatedProject: '',
     category: 'Learning'
@@ -477,22 +477,22 @@ function getProfileSameAs() {
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | Computer Science, Web Development & SEO',
-    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert focused on web development, SEO and AI. Explore his projects, skills, certifications and experience.',
+    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert focused on web development, SEO and AI. See his projects.',
     path: '/'
   },
   about: {
     title: 'About Agon Mustafaj | Computer Science & Web Development',
-    description: 'Computer Science student at the University of Prishtina and SEO Expert at thenovalab. How I work across web development, SEO and AI, and what I am currently learning.',
+    description: 'Computer Science student at the University of Prishtina and SEO Expert at thenovalab. How I work across web development, SEO and AI, and what I am learning.',
     path: '/about/'
   },
   projects: {
     title: 'Projects | Agon Mustafaj — Web Development & Technology',
-    description: 'Web development projects I designed and built, including Banesë për Ty and Hoxha Handwerk, each with a case study covering my role, the technologies used and what I learned.',
+    description: 'Web development projects I designed and built, including Banesë për Ty and Hoxha Handwerk, each with a case study on my role, the tools and what I learned.',
     path: '/projects/'
   },
   skills: {
     title: 'Skills & Technologies | Agon Mustafaj',
-    description: 'The technologies I work with in web development and SEO, plus areas I have studied through coursework such as Python, Power BI, Excel and DAX.',
+    description: 'The technologies I work with in web development and SEO, plus areas I have studied through coursework such as Python, Power BI, Excel, DAX and data work.',
     path: '/skills/'
   },
   education: {
@@ -502,17 +502,17 @@ const pageSEO = {
   },
   experience: {
     title: 'Experience | Agon Mustafaj — SEO Expert at thenovalab',
-    description: 'My professional experience as an SEO Expert at thenovalab in Pristina, working on technical SEO, on-page optimization, internal linking and website structure.',
+    description: 'My professional experience as an SEO Expert at thenovalab in Pristina, covering technical SEO, on-page optimization, internal linking and website structure.',
     path: '/experience/'
   },
   certifications: {
     title: 'Certifications | Agon Mustafaj — Semrush, HubSpot, Ahrefs, Python & SEO',
-    description: 'Course certificates and learning credentials from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel, networking, DevOps and cybersecurity fundamentals.',
+    description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel, networking and security.',
     path: '/certifications/'
   },
   articles: {
     title: 'Blog | Agon Mustafaj — AI, Web Development & Technology',
-    description: 'Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building.',
+    description: 'Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building sites.',
     path: '/blog/'
   },
   services: {
@@ -522,17 +522,17 @@ const pageSEO = {
   },
   contact: {
     title: 'Contact Agon Mustafaj | Let\'s Connect',
-    description: 'Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo.',
+    description: 'Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo, and working across web development, SEO and AI projects.',
     path: '/contact/'
   },
   cv: {
     title: 'CV | Agon Mustafaj — Computer Science, Web Development & SEO',
-    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina, SEO Expert at thenovalab, with web development projects and course certificates.',
+    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina and SEO Expert at thenovalab, with web projects, skills and certificates.',
     path: '/cv/'
   },
   '404': {
     title: 'Page Not Found | Agon Mustafaj',
-    description: 'The page you are looking for could not be found.',
+    description: 'The page you are looking for could not be found. Go back to the Agon Mustafaj homepage to browse projects, services, the blog, skills and contact details.',
     path: '/404.html'
   }
 };
