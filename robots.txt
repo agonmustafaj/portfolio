@@ -1,7 +1,52 @@
-User-agent: *
+# Allow major search engines
+User-Agent: Googlebot
 Allow: /
-Disallow: /articles/
-Disallow: /assets/brand/
 Disallow: /dashboard/
 
+User-Agent: Bingbot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: DuckDuckBot
+Allow: /
+Disallow: /dashboard/
+
+# Allow major LLM and AI crawlers
+User-Agent: GPTBot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: OAI-SearchBot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: PerplexityBot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: YouBot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: AndiBot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: Anthropic-Bot
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: Claude-Web
+Allow: /
+Disallow: /dashboard/
+
+User-Agent: CCBot
+Allow: /
+Disallow: /dashboard/
+
+# General rules for all other bots
+User-Agent: *
+Disallow: /dashboard/
+
+# Sitemap location
 Sitemap: https://agonmustafaj.com/sitemap.xml
