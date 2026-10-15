@@ -561,9 +561,15 @@
       if (!valid) return;
 
       if (!CONTACT_ENDPOINT) {
+        var subject = tx('agodev.mailSubject', 'AgoDev project inquiry');
+        var body = tx('agodev.formName', 'Name') + ': ' + name.value.trim() + '\n'
+          + tx('agodev.formEmail', 'Email') + ': ' + email.value.trim() + '\n\n'
+          + message.value.trim();
+        window.location.href = 'mailto:' + (profile.email || '')
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
         const demo = form.querySelector('.form-demo');
         if (demo) demo.classList.add('visible');
-        form.reset();
         return;
       }
 
@@ -620,7 +626,7 @@
             '</div>' +
             '<div class="wallet-info">' +
               '<h3>' + profile.name + '</h3>' +
-              '<p>' + tx('wallet.role', 'Freelance Web Developer') + '<br>SEO Expert @ <a class="company-link" href="' + (profile.companyUrl || '#') + '" target="_blank" rel="noopener noreferrer">' + profile.company + '</a><br>' + tx('profile.location', profile.location) + '</p>' +
+              '<p>' + tx('wallet.role', 'Freelance Web Developer') + '<br><a class="company-link" href="/agodev/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +

@@ -15,11 +15,11 @@ const profile = {
   headline: 'Freelance Web Developer | Websites & SEO for businesses',
   tagline: 'I design and build websites for businesses. AgoDev is where that work lives: the services I offer and the projects I have shipped.',
   identity: 'FREELANCE WEB × SEO',
-  description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.',
+  description: 'Agon Mustafaj is a freelance web developer in Pristina, Kosovo. Through AgoDev he designs and builds websites for businesses, with technical SEO included. He also studies Computer Science at the University of Prishtina and works as an SEO Expert at thenovalab.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
-  role: 'SEO Expert',
+  role: 'Freelance Web Developer',
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
   image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
@@ -486,8 +486,8 @@ const pageSEO = {
     path: '/agodev/'
   },
   about: {
-    title: 'About Agon Mustafaj | Computer Science & Web Development',
-    description: 'Computer Science student at the University of Prishtina and SEO Expert at thenovalab. How I work across web development, SEO and AI, and what I am learning.',
+    title: 'About Agon Mustafaj | Freelance Web Developer',
+    description: 'Freelance web developer in Pristina. AgoDev is where Agon Mustafaj builds websites for businesses. He also studies Computer Science and works in SEO.',
     path: '/about/'
   },
   projects: {
@@ -497,17 +497,17 @@ const pageSEO = {
   },
   skills: {
     title: 'Skills & Technologies | Agon Mustafaj',
-    description: 'The technologies I work with in web development and SEO, plus areas I have studied through coursework such as Python, Power BI, Excel, DAX and data work.',
+    description: 'The technologies Agon Mustafaj uses to build client websites through AgoDev, plus SEO and areas studied through coursework such as Python, Power BI and Excel.',
     path: '/skills/'
   },
   education: {
     title: 'Education | Agon Mustafaj — Computer Science, University of Prishtina',
-    description: 'My academic background: Computer Science studies at the University of Prishtina in Pristina, Kosovo, and the foundation behind my web development and SEO work.',
+    description: 'Computer Science studies at the University of Prishtina in Pristina, Kosovo, the academic foundation behind AgoDev and the websites Agon Mustafaj builds.',
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj — SEO Expert at thenovalab',
-    description: 'My professional experience as an SEO Expert at thenovalab in Pristina, covering technical SEO, on-page optimization, internal linking and website structure.',
+    title: 'Experience | Agon Mustafaj — AgoDev & SEO',
+    description: 'Freelance web development through AgoDev, plus SEO work at thenovalab in Pristina: technical SEO, on-page optimization, internal linking and site structure.',
     path: '/experience/'
   },
   certifications: {
@@ -517,7 +517,7 @@ const pageSEO = {
   },
   articles: {
     title: 'Blog | Agon Mustafaj — AI, Web Development & Technology',
-    description: 'Articles on artificial intelligence, web development and technology, written from the perspective of a Computer Science student who learns by building sites.',
+    description: 'Articles on artificial intelligence, web development and technology, written by Agon Mustafaj, a freelance web developer who learns by building sites.',
     path: '/blog/'
   },
   services: {
@@ -527,17 +527,17 @@ const pageSEO = {
   },
   contact: {
     title: 'Contact Agon Mustafaj | Let\'s Connect',
-    description: 'Get in touch with Agon Mustafaj by email, phone, LinkedIn or Facebook. Based in Pristina, Kosovo, and working across web development, SEO and AI projects.',
+    description: 'Contact Agon Mustafaj about a website. AgoDev is his freelance studio in Pristina. Reach him by the form, email, phone, LinkedIn or Facebook.',
     path: '/contact/'
   },
   cv: {
-    title: 'CV | Agon Mustafaj — Computer Science, Web Development & SEO',
-    description: 'The CV of Agon Mustafaj: Computer Science student at the University of Prishtina and SEO Expert at thenovalab, with web projects, skills and certificates.',
+    title: 'CV | Agon Mustafaj — Freelance Web Developer',
+    description: 'The CV of Agon Mustafaj, freelance web developer behind AgoDev, with client websites, SEO work at thenovalab, studies and certificates.',
     path: '/cv/'
   },
   '404': {
     title: 'Page Not Found | Agon Mustafaj',
-    description: 'The page you are looking for could not be found. Go back to the Agon Mustafaj homepage to browse projects, services, the blog, skills and contact details.',
+    description: 'The page you are looking for could not be found. Go back to the Agon Mustafaj homepage, or open AgoDev for freelance services, projects and contact.',
     path: '/404.html'
   }
 };
