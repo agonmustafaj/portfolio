@@ -416,7 +416,7 @@ const articles = [
     slug: 'ai-today-what-matters',
     author: 'Agon Mustafaj',
     date: '2026-06-15',
-    description: 'A practical look at where artificial intelligence stands today, which skills matter for students and builders, and what is worth learning before tools change.',
+    description: 'A practical look at where artificial intelligence stands today, which skills matter for students and builders, and what is worth learning now.',
     status: 'published',
     relatedProject: '',
     category: 'AI'
@@ -427,7 +427,7 @@ const articles = [
     slug: 'ai-changing-web-development',
     author: 'Agon Mustafaj',
     date: '2026-04-22',
-    description: 'From writing code faster to improving UX research, AI is reshaping how modern websites are planned, built, tested and published by small product teams.',
+    description: 'How AI is changing the way websites are planned, built, tested and published, from faster code to clearer research for small product teams.',
     status: 'published',
     relatedProject: '',
     category: 'AI & Web'
@@ -438,7 +438,7 @@ const articles = [
     slug: 'ai-and-technology-building',
     author: 'Agon Mustafaj',
     date: '2026-02-18',
-    description: 'Why combining computer science fundamentals with AI tools creates stronger digital products, clearer build decisions and websites that are easier to maintain.',
+    description: 'Why pairing computer science fundamentals with AI tools leads to stronger digital products, clearer build decisions and sites that are easier to keep.',
     status: 'published',
     relatedProject: '',
     category: 'Technology'
@@ -449,7 +449,7 @@ const articles = [
     slug: 'learning-ai-as-cs-student',
     author: 'Agon Mustafaj',
     date: '2025-12-12',
-    description: 'How I fit learning about AI around web development, SEO work and my Computer Science coursework, and why connecting the fields beats studying them apart.',
+    description: 'How learning about AI fits around web development, SEO work and Computer Science coursework, and why linking the fields beats studying them apart.',
     status: 'published',
     relatedProject: '',
     category: 'Learning'
@@ -476,68 +476,68 @@ function getProfileSameAs() {
 
 const pageSEO = {
   home: {
-    title: 'Agon Mustafaj | Freelance Web Developer',
-    description: 'Freelance web developer in Pristina. AgoDev is where Agon Mustafaj designs and builds websites for businesses, with SEO included and client projects on the same page.',
+    title: 'Agon Mustafaj | A Freelance Web Developer',
+    description: 'Freelance web developer in Pristina. AgoDev is where websites for businesses are designed and built, with SEO included and client projects shown.',
     path: '/'
   },
   agodev: {
-    title: 'AgoDev | Freelance Websites, SEO & Projects',
-    description: 'AgoDev is the freelance studio of Agon Mustafaj: websites for businesses, a clear build process, and the projects already live.',
+    title: 'AgoDev | Freelance Websites, SEO and Projects',
+    description: 'AgoDev is the freelance studio for business websites: a clear build process, search-ready structure, and the client projects already live.',
     path: '/agodev/'
   },
   about: {
-    title: 'About Agon Mustafaj | Freelance Web Developer',
-    description: 'Freelance web developer in Pristina. AgoDev is where Agon Mustafaj builds websites for businesses. He also studies Computer Science and works in SEO.',
+    title: 'About Agon Mustafaj | Web Developer in Pristina',
+    description: 'Freelance web developer in Pristina. AgoDev is the studio for client websites, with Computer Science studies and SEO work at thenovalab behind it.',
     path: '/about/'
   },
   projects: {
-    title: 'Projects | Agon Mustafaj - Web Development & Technology',
-    description: 'Web development projects I designed and built, including Banesë për Ty and Hoxha Handwerk, each with a case study on my role, the tools and what I learned.',
+    title: 'Projects | Agon Mustafaj Website Portfolio',
+    description: 'Websites designed and built for real use, including Banesë për Ty and Hoxha Handwerk, each with a case study on the role, tools and result.',
     path: '/projects/'
   },
   skills: {
-    title: 'Skills & Technologies | Agon Mustafaj',
-    description: 'The technologies Agon Mustafaj uses to build client websites through AgoDev, plus SEO and areas studied through coursework such as Python, Power BI and Excel.',
+    title: 'Web Skills and Technologies | Agon Mustafaj',
+    description: 'Technologies used to build client websites through AgoDev, plus technical SEO and coursework in Python, Power BI, Excel and data work.',
     path: '/skills/'
   },
   education: {
-    title: 'Education | Agon Mustafaj - Computer Science, University of Prishtina',
-    description: 'Computer Science studies at the University of Prishtina in Pristina, Kosovo, the academic foundation behind AgoDev and the websites Agon Mustafaj builds.',
+    title: 'Education | Agon Mustafaj, Computer Science',
+    description: 'Computer Science studies at the University of Prishtina in Kosovo, the academic base behind AgoDev and the websites built for client businesses.',
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj - AgoDev & SEO',
-    description: 'Freelance web development through AgoDev, plus SEO work at thenovalab in Pristina: technical SEO, on-page optimization, internal linking and site structure.',
+    title: 'Experience | Agon Mustafaj, AgoDev and SEO',
+    description: 'Freelance web development through AgoDev, plus SEO work at thenovalab in Pristina: technical SEO, on-page work, internal links and site structure.',
     path: '/experience/'
   },
   certifications: {
-    title: 'Certifications | Agon Mustafaj - Semrush, HubSpot, Ahrefs, Python & SEO',
-    description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel, networking and security.',
+    title: 'Certifications | Agon Mustafaj SEO Courses',
+    description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel and security.',
     path: '/certifications/'
   },
   articles: {
-    title: 'Blog | Agon Mustafaj - AI, Web Development & Technology',
-    description: 'Articles on artificial intelligence, web development and technology, written by Agon Mustafaj, a freelance web developer who learns by building sites.',
+    title: 'Blog Posts | Agon Mustafaj on AI and Web',
+    description: 'Articles on artificial intelligence, web development and technology, written while building client websites and learning what holds up in practice.',
     path: '/blog/'
   },
   services: {
-    title: 'Web Development & Websites for Businesses | Agon Mustafaj',
-    description: 'I design and build websites for businesses: clear presentation, mobile-ready layouts and simple contact paths, written in clean HTML, CSS and JavaScript.',
+    title: 'Websites for Local Businesses | Agon Mustafaj',
+    description: 'Websites for businesses, with a clear company presentation, mobile-ready layouts and simple contact paths, built in clean HTML, CSS and JavaScript.',
     path: '/services/'
   },
   contact: {
-    title: 'Contact Agon Mustafaj | Let\'s Connect',
-    description: 'Contact Agon Mustafaj about a website. AgoDev is his freelance studio in Pristina. Reach him by the form, email, phone, LinkedIn or Facebook.',
+    title: 'Contact | Agon Mustafaj Freelance Studio',
+    description: 'Start a website project in Pristina. AgoDev is the freelance studio. Reach out by the form, email, phone, LinkedIn or Facebook and get a reply.',
     path: '/contact/'
   },
   cv: {
-    title: 'CV | Agon Mustafaj - Freelance Web Developer',
-    description: 'The CV of Agon Mustafaj, freelance web developer behind AgoDev, with client websites, SEO work at thenovalab, studies and certificates.',
+    title: 'CV | Agon Mustafaj, Freelance Web Developer',
+    description: 'A CV covering freelance web work through AgoDev, client websites, SEO at thenovalab, Computer Science studies and course certificates.',
     path: '/cv/'
   },
   '404': {
-    title: 'Page Not Found | Agon Mustafaj',
-    description: 'The page you are looking for could not be found. Go back to the Agon Mustafaj homepage, or open AgoDev for freelance services, projects and contact.',
+    title: 'Page Not Found | Agon Mustafaj Portfolio',
+    description: 'This page could not be found. Go back to the homepage, or open AgoDev for freelance websites, client projects, the build process and contact.',
     path: '/404.html'
   }
 };
