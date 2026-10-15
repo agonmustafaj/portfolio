@@ -189,8 +189,8 @@
           url: url,
           image: {
             '@type': 'ImageObject',
-            url: 'https://agonmustafaj.com/assets/images/banner.png',
-            contentUrl: 'https://agonmustafaj.com/assets/images/banner.png',
+            url: 'https://agonmustafaj.com/assets/images/banner.png?v=20261015og',
+            contentUrl: 'https://agonmustafaj.com/assets/images/banner.png?v=20261015og',
             creditText: 'Agon Mustafaj',
             copyrightNotice: '© Agon Mustafaj. All rights reserved.',
             license: 'https://agonmustafaj.com/license/',
@@ -230,7 +230,7 @@
       '  <meta property="og:title" data-i18n-content="' + key + '.pageTitle" content="' + esc(post.seoTitle) + '">\n' +
       '  <meta property="og:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta property="og:url" content="' + url + '">\n' +
-      '  <meta property="og:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
+      '  <meta property="og:image" content="https://agonmustafaj.com/assets/images/banner.png?v=20261015og">\n' +
       '  <meta property="og:image:width" content="1200">\n' +
       '  <meta property="og:image:height" content="630">\n' +
       '  <meta property="og:image:type" content="image/png">\n' +
@@ -242,7 +242,7 @@
       '  <meta name="twitter:card" content="summary_large_image">\n' +
       '  <meta name="twitter:title" data-i18n-content="' + key + '.pageTitle" content="' + esc(post.seoTitle) + '">\n' +
       '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
-      '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
+      '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png?v=20261015og">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261015p">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261015p">\n' +
