@@ -1370,6 +1370,12 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   transition: transform var(--transition);
 }
 
+.cert-preview-contain img {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+
 .cert-preview:hover img {
   transform: scale(1.03);
 }

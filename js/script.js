@@ -726,8 +726,9 @@
       if (cert.credentialId) metaParts.push('ID: ' + cert.credentialId);
 
       const previewLink = cert.pdf || cert.image || '#';
+      const previewClass = 'cert-preview' + (cert.imageFit === 'contain' ? ' cert-preview-contain' : '');
       const preview = cert.image
-        ? '<a class="cert-preview" href="' + previewLink + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
+        ? '<a class="' + previewClass + '" href="' + previewLink + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
             '<img src="' + cert.image + '" alt="' + titleDisplay + ' certificate issued by ' + (cert.issuer || cert.platform) + '" loading="lazy" decoding="async" width="900" height="650">' +
           '</a>'
         : (cert.pdf

@@ -212,6 +212,19 @@ const projects = [
 
 const certifications = [
   {
+    id: 'cert-018',
+    platform: 'Yoast',
+    title: 'WordPress for Beginners',
+    issuer: 'Yoast Academy',
+    date: '',
+    validUntil: '',
+    credentialId: '',
+    pdf: 'https://academy.yoast.com/certificate/8218/1996528/c775593dbf282deda099d0dd37900681/1/',
+    image: 'https://academy.yoast.com/badge/8218/1996528/c775593dbf282deda099d0dd37900681/1/',
+    imageFit: 'contain',
+    verificationUrl: ''
+  },
+  {
     id: 'cert-017',
     platform: 'Semrush',
     title: 'Technical SEO and AI Search Essentials with Semrush',
