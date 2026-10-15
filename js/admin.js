@@ -74,12 +74,15 @@
   }
 
   function formatInline(text) {
-    return esc(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    return esc(text)
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>');
   }
 
   function bodyToHtml(text) {
     var html = [];
     var paragraph = [];
+    var list = [];
 
     function flushParagraph() {
       if (!paragraph.length) return;
@@ -87,21 +90,45 @@
       paragraph = [];
     }
 
+    function flushList() {
+      if (!list.length) return;
+      html.push('<ul>' + list.map(function (item) {
+        return '<li>' + formatInline(item) + '</li>';
+      }).join('') + '</ul>');
+      list = [];
+    }
+
     String(text).replace(/\r\n/g, '\n').split('\n').forEach(function (line) {
       var trimmed = line.trim();
       if (!trimmed) {
         flushParagraph();
+        flushList();
+        return;
+      }
+      if (trimmed.indexOf('###') === 0 || trimmed.indexOf('## #') === 0) {
+        flushParagraph();
+        flushList();
+        var sub = trimmed.replace(/^##\s*/, '').replace(/^#+\s*/, '');
+        if (sub) html.push('<h3>' + formatInline(sub) + '</h3>');
         return;
       }
       if (trimmed.indexOf('##') === 0) {
         flushParagraph();
+        flushList();
         var heading = trimmed.replace(/^##\s*/, '');
         if (heading) html.push('<h2>' + formatInline(heading) + '</h2>');
         return;
       }
+      if (trimmed.indexOf('- ') === 0 || trimmed.indexOf('* ') === 0) {
+        flushParagraph();
+        list.push(trimmed.replace(/^[-*]\s+/, ''));
+        return;
+      }
+      flushList();
       paragraph.push(trimmed);
     });
     flushParagraph();
+    flushList();
     return html.join('\n          ');
   }
 
@@ -209,7 +236,7 @@
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261015c">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261015m">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -233,9 +260,9 @@
       '    </article>\n' +
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
-      '  <script src="/js/data.js?v=20261015f"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261015f"></script>\n' +
-      '  <script src="/js/script.js?v=20261015c"></script>\n' +
+      '  <script src="/js/data.js?v=20261015n"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261015n"></script>\n' +
+      '  <script src="/js/script.js?v=20261015m"></script>\n' +
       '</body>\n' +
       '</html>\n';
   }
@@ -282,6 +309,20 @@
     var mark = '<!-- managed-post -->';
     if (source.indexOf(mark) === -1) throw new Error('Mungon pika e futjes te një faqe.');
     return source.replace(mark, mark + '\n' + block);
+  }
+
+  function keepLatestHomeCards(html, limit) {
+    var gridStart = html.indexOf('class="articles-grid');
+    if (gridStart === -1) return html;
+    var gridOpen = html.lastIndexOf('<div', gridStart);
+    var gridEnd = html.indexOf('</div>', gridStart);
+    if (gridOpen === -1 || gridEnd === -1) return html;
+    var count = 0;
+    var grid = html.slice(gridOpen, gridEnd).replace(/<article class="article-card[\s\S]*?<\/article>\n?/g, function (block) {
+      count += 1;
+      return count <= limit ? block : '';
+    });
+    return html.slice(0, gridOpen) + grid + html.slice(gridEnd);
   }
 
   function publish(post, token) {
@@ -369,7 +410,7 @@
       var files = [
         { path: 'blog/' + post.slug + '/index.html', content: postHtml },
         { path: 'blog/index.html', content: insertAtMark(state.blogIndex, listingCard) },
-        { path: 'index.html', content: insertAtMark(state.home, homeCard) },
+        { path: 'index.html', content: keepLatestHomeCards(insertAtMark(state.home, homeCard), 3) },
         { path: 'sitemap.xml', content: insertAtMark(state.sitemap, sitemapBlock) },
         { path: 'js/i18n.js', content: state.i18n }
       ];

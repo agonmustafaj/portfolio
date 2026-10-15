@@ -15,12 +15,12 @@ const profile = {
   headline: 'SEO Expert and Web Developer',
   tagline: 'I work as an SEO expert and web developer. AgoDev is where that work lives: search visibility, websites, and the projects I have shipped.',
   identity: 'SEO EXPERT × WEB DEV',
-  description: 'Agon Mustafaj is an SEO expert and web developer in Pristina, Kosovo. Through AgoDev he improves search visibility and builds websites for businesses. He also studies Computer Science at the University of Prishtina and works as an SEO Expert at thenovalab.',
-  location: 'Pristina, Kosovo',
+  description: 'Agon Mustafaj is an SEO expert and web developer in Prishtina, Kosovo. Through AgoDev he improves search visibility and builds websites for businesses. He also studies Computer Science at the University of Prishtina and works as an SEO Expert at Novalab SEO Agency.',
+  location: 'Prishtina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
   role: 'SEO Expert and Web Developer',
-  company: 'thenovalab',
+  company: 'Novalab SEO Agency',
   companyUrl: 'https://thenovalab.com/',
   image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
   imageId: SITE_URL + '/#agon-mustafaj-image',
@@ -59,8 +59,8 @@ const experience = [
   {
     id: 'exp-001',
     title: 'SEO Expert',
-    company: 'thenovalab',
-    location: 'Pristina, Kosovo',
+    company: 'Novalab SEO Agency',
+    location: 'Prishtina, Kosovo',
     startDate: 'September',
     endDate: 'Present',
     responsibilities: [
@@ -76,8 +76,8 @@ const experience = [
   {
     id: 'exp-002',
     title: 'Junior SEO - Intern',
-    company: 'thenovalab',
-    location: 'Pristina, Kosovo',
+    company: 'Novalab SEO Agency',
+    location: 'Prishtina, Kosovo',
     startDate: 'July',
     endDate: 'September',
     responsibilities: [
@@ -93,7 +93,7 @@ const education = [
     id: 'edu-001',
     degree: 'Computer Science',
     institution: 'University of Prishtina',
-    location: 'Pristina, Kosovo',
+    location: 'Prishtina, Kosovo',
     startDate: '',
     endDate: 'Current',
     details: ['Undergraduate studies in Computer Science, the foundation for my work as an SEO expert and web developer.']
@@ -490,7 +490,7 @@ function getProfileSameAs() {
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | SEO Expert and Web Developer',
-    description: 'SEO expert and web developer in Pristina. AgoDev covers search visibility and business websites, with technical SEO and the client projects shown.',
+    description: 'SEO expert and web developer in Prishtina, Kosovo. AgoDev covers search visibility and business websites, with technical SEO and the client projects shown.',
     path: '/'
   },
   agodev: {
@@ -500,7 +500,7 @@ const pageSEO = {
   },
   about: {
     title: 'About Agon Mustafaj | SEO and Web Developer',
-    description: 'SEO expert and web developer in Pristina. AgoDev is the practice for search visibility and client websites, with studies and thenovalab SEO work.',
+    description: 'SEO expert and web developer in Prishtina, Kosovo. AgoDev is the practice for search visibility and client websites, with studies and SEO work.',
     path: '/about/'
   },
   projects: {
@@ -520,7 +520,7 @@ const pageSEO = {
   },
   experience: {
     title: 'Experience | Agon Mustafaj as SEO Expert',
-    description: 'SEO expert work and web development through AgoDev, plus the SEO Expert role at thenovalab: technical SEO, on-page work, links and site structure.',
+    description: 'SEO expert work and web development through AgoDev, plus the SEO Expert role at Novalab SEO Agency: technical SEO, on-page work, links and site structure.',
     path: '/experience/'
   },
   certifications: {
@@ -540,12 +540,12 @@ const pageSEO = {
   },
   contact: {
     title: 'Contact | Agon Mustafaj, SEO and Web Dev',
-    description: 'Start an SEO or website project in Pristina. AgoDev is the practice. Reach out by the form, email, phone, LinkedIn or Facebook and get a reply.',
+    description: 'Start an SEO or website project in Prishtina, Kosovo. Reach AgoDev by the form, email, phone, LinkedIn or Facebook and get a reply.',
     path: '/contact/'
   },
   cv: {
     title: 'CV | Agon Mustafaj, SEO Expert and Web Dev',
-    description: 'A CV for an SEO expert and web developer: AgoDev websites, technical SEO at thenovalab, Computer Science studies and course certificates.',
+    description: 'A CV for an SEO expert and web developer: AgoDev websites, technical SEO at Novalab SEO Agency, Computer Science studies and course certificates.',
     path: '/cv/'
   },
   '404': {
@@ -565,7 +565,7 @@ const whatIDo = [
 
 const journeySteps = [
   { title: 'University of Prishtina', subtitle: 'Computer Science', status: 'Current' },
-  { title: 'SEO Expert', subtitle: 'thenovalab', status: 'Current' },
+  { title: 'SEO Expert', subtitle: 'Novalab SEO Agency', status: 'Current' },
   { title: 'Web Projects', subtitle: 'Building real websites', status: 'Current' },
   { title: 'Data Analytics', subtitle: 'Coursework and self-study', status: 'Learning' },
   { title: 'Continuous Learning', subtitle: 'Always growing', status: 'Current' }

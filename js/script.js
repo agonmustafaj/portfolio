@@ -853,8 +853,23 @@
       sameAs: getProfileSameAs(),
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Pristina',
+        addressLocality: 'Prishtinë',
         addressCountry: 'XK'
+      },
+      homeLocation: {
+        '@type': 'Place',
+        name: 'Prishtinë, Kosovo',
+        alternateName: ['Pristina, Kosovo', 'Prishtina, Kosovo', 'Prishtinë, Kosovë'],
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 42.6629,
+          longitude: 21.1655
+        }
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Kosovo',
+        alternateName: 'Kosovë'
       },
       email: profile.email,
       telephone: profile.telephone,
