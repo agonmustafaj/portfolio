@@ -205,7 +205,7 @@
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261012e">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261015a">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -229,9 +229,9 @@
       '    </article>\n' +
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
-      '  <script src="/js/data.js?v=20261008a"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261012f"></script>\n' +
-      '  <script src="/js/script.js?v=20261012c"></script>\n' +
+      '  <script src="/js/data.js?v=20261015a"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261015a"></script>\n' +
+      '  <script src="/js/script.js?v=20261015a"></script>\n' +
       '</body>\n' +
       '</html>\n';
   }

@@ -12,9 +12,9 @@ const profile = {
   givenName: 'Agon',
   familyName: 'Mustafaj',
   initials: 'AM',
-  headline: 'Computer Science Student | Web Development | SEO Expert | AI & Technology',
-  tagline: 'Computer Science student focused on web development, working as an SEO Expert, and exploring where AI fits into both.',
-  identity: 'COMPUTER SCIENCE × WEB × SEO × AI',
+  headline: 'Freelance Web Developer | Websites & SEO for businesses',
+  tagline: 'I design and build websites for businesses. AgoDev is where that work lives: the services I offer and the projects I have shipped.',
+  identity: 'FREELANCE WEB × SEO',
   description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert at thenovalab in Pristina, Kosovo. He focuses on web development and technical SEO, and explores artificial intelligence and emerging technology.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
@@ -476,9 +476,14 @@ function getProfileSameAs() {
 
 const pageSEO = {
   home: {
-    title: 'Agon Mustafaj | Computer Science, Web Development & SEO',
-    description: 'Agon Mustafaj is a Computer Science student at the University of Prishtina and an SEO Expert focused on web development, SEO and AI. See his projects.',
+    title: 'Agon Mustafaj | Freelance Web Developer',
+    description: 'Freelance web developer in Pristina. AgoDev is where Agon Mustafaj designs and builds websites for businesses, with SEO included and client projects on the same page.',
     path: '/'
+  },
+  agodev: {
+    title: 'AgoDev | Freelance Websites, SEO & Projects',
+    description: 'AgoDev is the freelance studio of Agon Mustafaj: websites for businesses, a clear build process, and the projects already live.',
+    path: '/agodev/'
   },
   about: {
     title: 'About Agon Mustafaj | Computer Science & Web Development',
@@ -573,9 +578,8 @@ const devPipeline = [
 
 const navLinks = [
   { label: 'Home', href: '/', page: 'home' },
+  { label: 'AgoDev', href: '/agodev/', page: 'agodev' },
   { label: 'About', href: '/about/', page: 'about' },
-  { label: 'Projects', href: '/projects/', page: 'projects' },
-  { label: 'Services', href: '/services/', page: 'services' },
   { label: 'Skills', href: '/skills/', page: 'skills' },
   { label: 'Experience', href: '/experience/', page: 'experience' },
   { label: 'Certifications', href: '/certifications/', page: 'certifications' },
