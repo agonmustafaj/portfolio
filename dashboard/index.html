@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Panel privat për publikimin dhe fshirjen e postimeve në blog. Kjo faqe është vetëm për përdorim të brendshëm dhe nuk indeksohet nga kërkimi.">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link rel="stylesheet" href="/css/style.css?v=20261015a">
+  <link rel="stylesheet" href="/css/style.css?v=20261015k">
 </head>
 <body data-page="admin">
   <div id="site-header"></div>
@@ -75,8 +75,18 @@
                 <input id="post-description-en" maxlength="160">
               </div>
               <div class="form-group">
+                <label for="post-seo-title-en">SEO title <span class="seo-count" data-for="post-seo-title-en">0/60</span></label>
+                <input id="post-seo-title-en" maxlength="60" placeholder="Three Checks Before I Publish | Agon Mustafaj">
+                <p class="field-hint">Titulli në Google dhe kur ndahet linku. Nëse e lë bosh, përdoret titulli i postimit plus “| Agon Mustafaj”.</p>
+              </div>
+              <div class="form-group">
+                <label for="post-seo-desc-en">Meta description <span class="seo-count" data-for="post-seo-desc-en">0/160</span></label>
+                <textarea id="post-seo-desc-en" maxlength="160" rows="3"></textarea>
+                <p class="field-hint">Përshkrimi në rezultatet e kërkimit, deri në 160 karaktere. Nëse e lë bosh, përdoret përshkrimi i shkurtër.</p>
+              </div>
+              <div class="form-group">
                 <label for="post-body-en">Teksti</label>
-                <textarea id="post-body-en" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull."></textarea>
+                <textarea id="post-body-en" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull. **tekst** bëhet bold."></textarea>
               </div>
               <h2 style="font-size:1.4rem;margin:1.5rem 0 1rem">Shqip</h2>
               <div class="form-group">
@@ -92,8 +102,16 @@
                 <input id="post-description-sq" maxlength="160">
               </div>
               <div class="form-group">
+                <label for="post-seo-title-sq">SEO title <span class="seo-count" data-for="post-seo-title-sq">0/60</span></label>
+                <input id="post-seo-title-sq" maxlength="60" placeholder="Tre kontrolle para publikimit | Agon Mustafaj">
+              </div>
+              <div class="form-group">
+                <label for="post-seo-desc-sq">Meta description <span class="seo-count" data-for="post-seo-desc-sq">0/160</span></label>
+                <textarea id="post-seo-desc-sq" maxlength="160" rows="3"></textarea>
+              </div>
+              <div class="form-group">
                 <label for="post-body-sq">Teksti</label>
-                <textarea id="post-body-sq" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull."></textarea>
+                <textarea id="post-body-sq" required style="min-height:220px" placeholder="Një rresht që nis me ## bëhet titull. **tekst** bëhet bold."></textarea>
               </div>
               <div class="admin-actions">
                 <button class="btn btn-primary" id="publish-post" type="submit">Publiko</button>
@@ -118,10 +136,10 @@
     </div>
   </main>
   <div id="site-footer"></div>
-  <script src="/js/data.js?v=20261015f"></script>
-  <script src="/js/i18n.js?v=20261015f"></script>
-  <script src="/js/script.js?v=20261015c"></script>
+  <script src="/js/data.js?v=20261015j"></script>
+  <script src="/js/i18n.js?v=20261015j"></script>
+  <script src="/js/script.js?v=20261015j"></script>
   <script src="/js/admin-gate.js?v=20261011h"></script>
-  <script src="/js/admin.js?v=20261012d"></script>
+  <script src="/js/admin.js?v=20261015h"></script>
 </body>
 </html>

@@ -12,14 +12,14 @@ const profile = {
   givenName: 'Agon',
   familyName: 'Mustafaj',
   initials: 'AM',
-  headline: 'Freelance Web Developer | Websites & SEO for businesses',
-  tagline: 'I design and build websites for businesses. AgoDev is where that work lives: the services I offer and the projects I have shipped.',
-  identity: 'FREELANCE WEB × SEO',
-  description: 'Agon Mustafaj is a freelance web developer in Pristina, Kosovo. Through AgoDev he designs and builds websites for businesses, with technical SEO included. He also studies Computer Science at the University of Prishtina and works as an SEO Expert at thenovalab.',
+  headline: 'SEO Expert and Web Developer',
+  tagline: 'I work as an SEO expert and web developer. AgoDev is where that work lives: search visibility, websites, and the projects I have shipped.',
+  identity: 'SEO EXPERT × WEB DEV',
+  description: 'Agon Mustafaj is an SEO expert and web developer in Pristina, Kosovo. Through AgoDev he improves search visibility and builds websites for businesses. He also studies Computer Science at the University of Prishtina and works as an SEO Expert at thenovalab.',
   location: 'Pristina, Kosovo',
   university: 'University of Prishtina',
   degree: 'Computer Science',
-  role: 'Freelance Web Developer',
+  role: 'SEO Expert and Web Developer',
   company: 'thenovalab',
   companyUrl: 'https://thenovalab.com/',
   image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
@@ -96,7 +96,7 @@ const education = [
     location: 'Pristina, Kosovo',
     startDate: '',
     endDate: 'Current',
-    details: ['Undergraduate studies in Computer Science, the foundation for my work in web development and SEO.']
+    details: ['Undergraduate studies in Computer Science, the foundation for my work as an SEO expert and web developer.']
   }
 ];
 
@@ -489,38 +489,38 @@ function getProfileSameAs() {
 
 const pageSEO = {
   home: {
-    title: 'Agon Mustafaj | A Freelance Web Developer',
-    description: 'Freelance web developer in Pristina. AgoDev is where websites for businesses are designed and built, with SEO included and client projects shown.',
+    title: 'Agon Mustafaj | SEO Expert and Web Developer',
+    description: 'SEO expert and web developer in Pristina. AgoDev covers search visibility and business websites, with technical SEO and the client projects shown.',
     path: '/'
   },
   agodev: {
-    title: 'AgoDev | Freelance Websites, SEO and Projects',
-    description: 'AgoDev is the freelance studio for business websites: a clear build process, search-ready structure, and the client projects already live.',
+    title: 'AgoDev | SEO Services and Web Development',
+    description: 'AgoDev is the practice for SEO and web development: technical search work, business websites, a clear build process, and client projects already live.',
     path: '/agodev/'
   },
   about: {
-    title: 'About Agon Mustafaj | Web Developer in Pristina',
-    description: 'Freelance web developer in Pristina. AgoDev is the studio for client websites, with Computer Science studies and SEO work at thenovalab behind it.',
+    title: 'About Agon Mustafaj | SEO and Web Developer',
+    description: 'SEO expert and web developer in Pristina. AgoDev is the practice for search visibility and client websites, with studies and thenovalab SEO work.',
     path: '/about/'
   },
   projects: {
-    title: 'Projects | Agon Mustafaj Website Portfolio',
-    description: 'Websites designed and built for real use, including Banesë për Ty and Hoxha Handwerk, each with a case study on the role, tools and result.',
+    title: 'Projects | Agon Mustafaj SEO and Web Work',
+    description: 'Websites designed and built with search structure included, including Banesë për Ty and Hoxha Handwerk, each with a case study on the work.',
     path: '/projects/'
   },
   skills: {
-    title: 'Web Skills and Technologies | Agon Mustafaj',
-    description: 'Technologies used to build client websites through AgoDev, plus technical SEO and coursework in Python, Power BI, Excel and data work.',
+    title: 'SEO and Web Developer Skills | Agon Mustafaj',
+    description: 'SEO skills and the technologies used to build client websites through AgoDev, plus coursework in Python, Power BI, Excel and data work.',
     path: '/skills/'
   },
   education: {
     title: 'Education | Agon Mustafaj, Computer Science',
-    description: 'Computer Science studies at the University of Prishtina in Kosovo, the academic base behind AgoDev and the websites built for client businesses.',
+    description: 'Computer Science studies at the University of Prishtina, the academic base behind the SEO and web development work done through AgoDev.',
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj, AgoDev and SEO',
-    description: 'Freelance web development through AgoDev, plus SEO work at thenovalab in Pristina: technical SEO, on-page work, internal links and site structure.',
+    title: 'Experience | Agon Mustafaj as SEO Expert',
+    description: 'SEO expert work and web development through AgoDev, plus the SEO Expert role at thenovalab: technical SEO, on-page work, links and site structure.',
     path: '/experience/'
   },
   certifications: {
@@ -534,23 +534,23 @@ const pageSEO = {
     path: '/blog/'
   },
   services: {
-    title: 'Websites for Local Businesses | Agon Mustafaj',
-    description: 'Websites for businesses, with a clear company presentation, mobile-ready layouts and simple contact paths, built in clean HTML, CSS and JavaScript.',
+    title: 'SEO and Websites for Businesses | Agon Mustafaj',
+    description: 'SEO and websites for businesses: technical search work, a clear company site, mobile-ready layouts and contact paths, in HTML, CSS and JavaScript.',
     path: '/services/'
   },
   contact: {
-    title: 'Contact | Agon Mustafaj Freelance Studio',
-    description: 'Start a website project in Pristina. AgoDev is the freelance studio. Reach out by the form, email, phone, LinkedIn or Facebook and get a reply.',
+    title: 'Contact | Agon Mustafaj, SEO and Web Dev',
+    description: 'Start an SEO or website project in Pristina. AgoDev is the practice. Reach out by the form, email, phone, LinkedIn or Facebook and get a reply.',
     path: '/contact/'
   },
   cv: {
-    title: 'CV | Agon Mustafaj, Freelance Web Developer',
-    description: 'A CV covering freelance web work through AgoDev, client websites, SEO at thenovalab, Computer Science studies and course certificates.',
+    title: 'CV | Agon Mustafaj, SEO Expert and Web Dev',
+    description: 'A CV for an SEO expert and web developer: AgoDev websites, technical SEO at thenovalab, Computer Science studies and course certificates.',
     path: '/cv/'
   },
   '404': {
     title: 'Page Not Found | Agon Mustafaj Portfolio',
-    description: 'This page could not be found. Go back to the homepage, or open AgoDev for freelance websites, client projects, the build process and contact.',
+    description: 'This page could not be found. Go back to the homepage, or open AgoDev for SEO, web development, client projects, the build process and contact.',
     path: '/404.html'
   }
 };
@@ -602,32 +602,32 @@ const navLinks = [
 
 const businessServices = [
   {
-    title: 'Business Website',
-    description: 'A professional site that presents your company, services, and how customers can reach you.'
+    title: 'Technical SEO',
+    description: 'Crawlability, indexing, site structure and audits so the business can be found.'
   },
   {
-    title: 'Mobile & Fast',
-    description: 'Responsive layouts that work on phones, with clean structure and solid performance.'
+    title: 'Web development',
+    description: 'A business website built in clean HTML, CSS and JavaScript, from the brief to a live site.'
   },
   {
-    title: 'Inquiries That Convert',
-    description: 'Contact forms, WhatsApp, and clear calls to action that turn visitors into clients.'
+    title: 'On-page SEO',
+    description: 'Titles, meta descriptions, headings and content structured for search.'
   },
   {
-    title: 'Multilingual',
-    description: 'Sites that speak your customers\' language - useful for local and international businesses.'
+    title: 'Search structure',
+    description: 'Internal links and page architecture so people and search engines can move through the site.'
   },
   {
-    title: 'Launch & Support',
-    description: 'From first brief to a live website, with a process you can follow at every step.'
+    title: 'Launch and indexing',
+    description: 'The site goes live with contact paths, a sitemap check and indexing in place.'
   }
 ];
 
 const serviceProcess = [
-  { step: '01', title: 'Brief', description: 'We clarify what the business does, who it serves, and what the website needs to achieve.' },
-  { step: '02', title: 'Structure', description: 'Pages, content, and user paths are mapped before design starts.' },
-  { step: '03', title: 'Design & Build', description: 'A custom layout, not a generic template, built in clean HTML, CSS, and JavaScript.' },
-  { step: '04', title: 'Launch', description: 'Contact paths in place, and a live site your customers can use.' }
+  { step: '01', title: 'Brief', description: 'We clarify what the business does, who it serves, and what search and the website need to achieve.' },
+  { step: '02', title: 'Search structure', description: 'Keywords, pages, headings and internal links are mapped before the build.' },
+  { step: '03', title: 'Design & Build', description: 'A custom website, not a generic template, built in clean HTML, CSS and JavaScript, with on-page SEO.' },
+  { step: '04', title: 'Launch', description: 'The site goes live with contact paths, a sitemap and indexing checks.' }
 ];
 
 const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/' + profile.email;

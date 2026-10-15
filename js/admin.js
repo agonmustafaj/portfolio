@@ -73,13 +73,17 @@
     return JSON.stringify(value).replace(/</g, '\\u003c');
   }
 
+  function formatInline(text) {
+    return esc(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+
   function bodyToHtml(text) {
     var html = [];
     var paragraph = [];
 
     function flushParagraph() {
       if (!paragraph.length) return;
-      html.push('<p>' + paragraph.map(esc).join(' ') + '</p>');
+      html.push('<p>' + formatInline(paragraph.join(' ')) + '</p>');
       paragraph = [];
     }
 
@@ -92,7 +96,7 @@
       if (trimmed.indexOf('##') === 0) {
         flushParagraph();
         var heading = trimmed.replace(/^##\s*/, '');
-        if (heading) html.push('<h2>' + esc(heading) + '</h2>');
+        if (heading) html.push('<h2>' + formatInline(heading) + '</h2>');
         return;
       }
       paragraph.push(trimmed);
@@ -154,7 +158,7 @@
           publisher: { '@id': 'https://agonmustafaj.com/#agon-mustafaj' },
           datePublished: post.date,
           dateModified: post.date,
-          description: post.description,
+          description: post.seoDesc,
           url: url,
           image: 'https://agonmustafaj.com/assets/images/banner.png',
           inLanguage: 'en',
@@ -180,14 +184,14 @@
       '<head>\n' +
       '  <meta charset="UTF-8">\n' +
       '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-      '  <title data-i18n="' + key + '.pageTitle">' + esc(post.title) + ' | Agon Mustafaj</title>\n' +
-      '  <meta name="description" data-i18n-content="' + key + '.desc" content="' + esc(post.description) + '">\n' +
+      '  <title data-i18n="' + key + '.pageTitle">' + esc(post.seoTitle) + '</title>\n' +
+      '  <meta name="description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <link rel="canonical" href="' + url + '">\n' +
       '  <link rel="author" href="https://agonmustafaj.com/about/">\n' +
       '  <meta property="og:type" content="article">\n' +
       '  <meta property="og:site_name" content="Agon Mustafaj">\n' +
-      '  <meta property="og:title" content="' + esc(post.title) + '">\n' +
-      '  <meta property="og:description" content="' + esc(post.description) + '">\n' +
+      '  <meta property="og:title" data-i18n-content="' + key + '.pageTitle" content="' + esc(post.seoTitle) + '">\n' +
+      '  <meta property="og:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta property="og:url" content="' + url + '">\n' +
       '  <meta property="og:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
       '  <meta property="og:image:width" content="1200">\n' +
@@ -199,13 +203,13 @@
       '  <meta property="article:published_time" content="' + esc(post.date) + '">\n' +
       '  <meta property="article:section" content="' + esc(post.category) + '">\n' +
       '  <meta name="twitter:card" content="summary_large_image">\n' +
-      '  <meta name="twitter:title" content="' + esc(post.title) + '">\n' +
-      '  <meta name="twitter:description" content="' + esc(post.description) + '">\n' +
+      '  <meta name="twitter:title" data-i18n-content="' + key + '.pageTitle" content="' + esc(post.seoTitle) + '">\n' +
+      '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261015a">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261015c">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -335,12 +339,14 @@
       var sqPack = {};
       enPack[prefix + '.title'] = post.title;
       sqPack[prefix + '.title'] = post.titleSq;
-      enPack[prefix + '.pageTitle'] = post.title + ' | Agon Mustafaj';
-      sqPack[prefix + '.pageTitle'] = post.titleSq + ' | Agon Mustafaj';
+      enPack[prefix + '.pageTitle'] = post.seoTitle;
+      sqPack[prefix + '.pageTitle'] = post.seoTitleSq;
       enPack[prefix + '.cat'] = post.category;
       sqPack[prefix + '.cat'] = post.categorySq;
       enPack[prefix + '.desc'] = post.description;
       sqPack[prefix + '.desc'] = post.descriptionSq;
+      enPack[prefix + '.seoDesc'] = post.seoDesc;
+      sqPack[prefix + '.seoDesc'] = post.seoDescSq;
       enPack[prefix + '.short'] = post.shortText;
       sqPack[prefix + '.short'] = post.shortSq;
       enPack[prefix + '.meta'] = 'By Agon Mustafaj · ' + formatDate(post.date);
@@ -628,6 +634,26 @@
     });
   });
 
+  function bindSeoCount(id, max) {
+    var input = document.getElementById(id);
+    var count = document.querySelector('[data-for="' + id + '"]');
+    function update() {
+      var length = input.value.length;
+      count.textContent = length + '/' + max;
+      count.classList.toggle('warn', length >= max);
+    }
+    input.addEventListener('input', update);
+    update();
+    return update;
+  }
+
+  var refreshSeoCounts = [
+    bindSeoCount('post-seo-title-en', 60),
+    bindSeoCount('post-seo-desc-en', 160),
+    bindSeoCount('post-seo-title-sq', 60),
+    bindSeoCount('post-seo-desc-sq', 160)
+  ];
+
   titleInput.addEventListener('input', function () {
     if (!slugTouched) slugInput.value = slugify(titleInput.value);
   });
@@ -723,6 +749,10 @@
     var categorySq = document.getElementById('post-category-sq').value.trim() || category;
     var description = document.getElementById('post-description-en').value.trim();
     var descriptionSq = document.getElementById('post-description-sq').value.trim();
+    var seoTitle = document.getElementById('post-seo-title-en').value.trim();
+    var seoTitleSq = document.getElementById('post-seo-title-sq').value.trim();
+    var seoDesc = document.getElementById('post-seo-desc-en').value.trim();
+    var seoDescSq = document.getElementById('post-seo-desc-sq').value.trim();
 
     if (!token) {
       setStatus('Vendos tokenin e GitHub-it. Pa të, faqja statike nuk mund të publikojë.', true);
@@ -734,6 +764,10 @@
     }
     if (!description) description = body.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
     if (!descriptionSq) descriptionSq = bodySq.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
+    if (!seoTitle) seoTitle = (title + ' | Agon Mustafaj').slice(0, 60);
+    if (!seoTitleSq) seoTitleSq = (titleSq + ' | Agon Mustafaj').slice(0, 60);
+    if (!seoDesc) seoDesc = description.slice(0, 160);
+    if (!seoDescSq) seoDescSq = descriptionSq.slice(0, 160);
 
     var post = {
       title: title,
@@ -745,6 +779,10 @@
       categorySq: categorySq,
       description: description,
       descriptionSq: descriptionSq,
+      seoTitle: seoTitle,
+      seoTitleSq: seoTitleSq,
+      seoDesc: seoDesc,
+      seoDescSq: seoDescSq,
       shortText: description.slice(0, 110),
       shortSq: descriptionSq.slice(0, 110),
       crumb: title,
@@ -760,6 +798,7 @@
       setStatus('U publikua: https://agonmustafaj.com/blog/' + slug + '/');
       postForm.reset();
       slugTouched = false;
+      refreshSeoCounts.forEach(function (update) { update(); });
       tokenInput.value = token;
     }).catch(function (error) {
       setStatus(error.message || 'Publikimi dështoi.', true);

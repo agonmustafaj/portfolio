@@ -147,7 +147,7 @@
             '<div class="footer-brand">' +
               '<h3>' + profile.name + '</h3>' +
               '<p>' + tx('profile.headline', profile.headline) + '</p>' +
-              '<p style="margin-top:0.75rem;font-style:italic">' + tx('footer.tagline', 'Websites and SEO for businesses, through AgoDev.') + '</p>' +
+              '<p style="margin-top:0.75rem;font-style:italic">' + tx('footer.tagline', 'SEO and web development for businesses, through AgoDev.') + '</p>' +
             '</div>' +
             '<div class="footer-links">' +
               '<h4>' + tx('footer.navigation', 'Navigation') + '</h4>' +
@@ -374,7 +374,7 @@
       { prompt: true, text: ' whoami' },
       { output: true, text: profile.name },
       { prompt: true, text: ' focus' },
-      { output: true, text: tx('terminal.focus', 'Freelance web development\nWebsites for businesses\nSEO\nAgoDev') },
+      { output: true, text: tx('terminal.focus', 'SEO and web development\nWebsites for businesses\nSEO\nAgoDev') },
       { prompt: true, text: ' status' },
       { output: true, text: tx('terminal.status', 'Taking projects...\nBuilding sites...\nShipping...') }
     ];
@@ -426,7 +426,7 @@
     return '<div class="terminal-line"><span class="terminal-prompt">$</span> whoami</div>' +
       '<div class="terminal-line terminal-output">' + profile.name + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> focus</div>' +
-      '<div class="terminal-line terminal-output">' + tx('terminal.focus', 'Freelance web development\nWebsites for businesses\nSEO\nAgoDev').replace(/\n/g, '<br>') + '</div>' +
+      '<div class="terminal-line terminal-output">' + tx('terminal.focus', 'SEO and web development\nWebsites for businesses\nSEO\nAgoDev').replace(/\n/g, '<br>') + '</div>' +
       '<div class="terminal-line"><span class="terminal-prompt">$</span> status</div>' +
       '<div class="terminal-line terminal-output">' + tx('terminal.status', 'Taking projects...\nBuilding sites...\nShipping...').replace(/\n/g, '<br>') + '</div>';
   }
@@ -653,7 +653,7 @@
             '</div>' +
             '<div class="wallet-info">' +
               '<h3>' + profile.name + '</h3>' +
-              '<p>' + tx('wallet.role', 'Freelance Web Developer') + '<br><a class="company-link" href="/agodev/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
+              '<p>' + tx('wallet.role', 'SEO Expert and Web Developer') + '<br><a class="company-link" href="/agodev/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +

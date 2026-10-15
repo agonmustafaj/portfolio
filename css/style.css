@@ -1856,6 +1856,11 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   margin-bottom: 1.15rem;
 }
 
+.blog-content strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 .company-link {
   color: var(--accent-lime);
   font-weight: 600;
@@ -2664,6 +2669,17 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 .admin-card h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.4rem 0 0.75rem; }
 .admin-note { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.field-hint { color: var(--text-secondary); font-size: 0.8rem; margin: 0.4rem 0 0; line-height: 1.45; }
+.form-group label .seo-count {
+  float: right;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-secondary);
+}
+.form-group label .seo-count.warn { color: #f0b4b4; }
+.admin-page .form-group textarea[maxlength] { min-height: 0; }
 .admin-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 .admin-status { margin-top: 1rem; color: var(--text-secondary); }
 .admin-status.error { color: #f0b4b4; }
