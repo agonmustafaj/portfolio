@@ -590,12 +590,12 @@
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: who,
-          email: email.value.trim(),
-          message: message.value.trim(),
+          Name: who,
+          Email: email.value.trim(),
+          Message: message.value.trim(),
           _subject: 'AgoDev: ' + who + ', ' + stamp,
           _replyto: email.value.trim(),
-          _template: 'table',
+          _template: 'basic',
           _captcha: 'false'
         })
       }).then(function (res) {
