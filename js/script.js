@@ -578,6 +578,11 @@
         submitBtn.textContent = tx('agodev.formSending', 'Sending...');
       }
 
+      var who = name.value.trim();
+      var sent = new Date();
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      var stamp = pad(sent.getDate()) + '.' + pad(sent.getMonth() + 1) + ' ' + pad(sent.getHours()) + ':' + pad(sent.getMinutes());
+
       fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -585,10 +590,11 @@
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: name.value.trim(),
+          name: who,
           email: email.value.trim(),
           message: message.value.trim(),
-          _subject: tx('agodev.mailSubject', 'AgoDev project inquiry'),
+          _subject: 'AgoDev: ' + who + ', ' + stamp,
+          _replyto: email.value.trim(),
           _template: 'table',
           _captcha: 'false'
         })
