@@ -2,13 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://agonmustafaj.com/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://agonmustafaj.com/assets/images/banner.png</image:loc>
-      <image:title>Agon Mustafaj</image:title>
-      <image:caption>Agon Mustafaj, Computer Science student, web developer and SEO Expert</image:caption>
+      <image:title>Agon Mustafaj, SEO expert and web developer</image:title>
+      <image:caption>Homepage banner for Agon Mustafaj, SEO expert and web developer in Prishtina.</image:caption>
+      <image:license>https://agonmustafaj.com/license/</image:license>
     </image:image>
   </url>
   <url>

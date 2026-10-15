@@ -187,7 +187,17 @@
           dateModified: post.date,
           description: post.seoDesc,
           url: url,
-          image: 'https://agonmustafaj.com/assets/images/banner.png',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://agonmustafaj.com/assets/images/banner.png',
+            contentUrl: 'https://agonmustafaj.com/assets/images/banner.png',
+            creditText: 'Agon Mustafaj',
+            copyrightNotice: '© Agon Mustafaj. All rights reserved.',
+            license: 'https://agonmustafaj.com/license/',
+            acquireLicensePage: 'https://agonmustafaj.com/contact/',
+            creator: { '@id': 'https://agonmustafaj.com/#agon-mustafaj' },
+            copyrightHolder: { '@id': 'https://agonmustafaj.com/#agon-mustafaj' }
+          },
           inLanguage: 'en',
           articleSection: post.category,
           isPartOf: { '@id': 'https://agonmustafaj.com/blog/#blog' },
@@ -234,8 +244,8 @@
       '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
-      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png">\n' +
-      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png">\n' +
+      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261015p">\n' +
+      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261015p">\n' +
       '  <link rel="stylesheet" href="/css/style.css?v=20261015m">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +

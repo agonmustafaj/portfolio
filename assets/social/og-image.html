@@ -22,6 +22,12 @@
       font-weight: 500 600;
       font-style: normal;
     }
+    @font-face {
+      font-family: "JetBrains Mono";
+      src: url("fonts/jetbrains-mono-500.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -206,6 +212,24 @@
       color: rgba(243, 239, 230, 0.58);
     }
 
+    .agodev {
+      position: absolute;
+      left: 56px;
+      top: 368px;
+      width: 600px;
+      height: 144px;
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-weight: 500;
+      font-size: 72px;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      color: #ffffff;
+    }
+    .agodev span { color: #8eb6ef; }
+
     .bottom {
       position: absolute;
       left: 56px;
@@ -307,6 +331,8 @@
     </h1>
 
     <p class="dek">Explore the work, experience &amp; ideas behind Agon Mustafaj.</p>
+
+    <p class="agodev">Ago<span>Dev</span></p>
 
     <div class="lockup">
       <img src="logo-mark.png" alt="">

@@ -23,9 +23,9 @@
   <meta name="twitter:description" content="How the Hoxha Handwerk website was built: a multilingual interface, a before and after gallery, WhatsApp and form contact, and a responsive layout.">
   <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/hoxha-handwerk.png">
   <meta name="twitter:image:alt" content="Homepage of the Hoxha Handwerk business website">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
-  <link rel="stylesheet" href="/css/style.css?v=20261015m">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261015p">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261015p">
+  <link rel="stylesheet" href="/css/style.css?v=20261015p">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +37,17 @@
         "url": "https://agonmustafaj.com/projects/hoxha-handwerk/",
         "sameAs": "https://hoxhahandwerk.netlify.app/",
         "description": "A multilingual website for a craft and trade business, built to present the work and make it easy for customers to get in touch.",
-        "image": "https://agonmustafaj.com/assets/images/hoxha-handwerk.png",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://agonmustafaj.com/assets/images/hoxha-handwerk.png",
+          "contentUrl": "https://agonmustafaj.com/assets/images/hoxha-handwerk.png",
+          "creditText": "Agon Mustafaj",
+          "copyrightNotice": "© Agon Mustafaj. All rights reserved.",
+          "license": "https://agonmustafaj.com/license/",
+          "acquireLicensePage": "https://agonmustafaj.com/contact/",
+          "creator": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
+          "copyrightHolder": { "@id": "https://agonmustafaj.com/#agon-mustafaj" }
+        },
         "creator": { "@type": "Person", "@id": "https://agonmustafaj.com/#agon-mustafaj", "name": "Agon Mustafaj" },
         "author": { "@id": "https://agonmustafaj.com/#agon-mustafaj" },
         "keywords": "web development, HTML, CSS, JavaScript, responsive design, business website, multilingual website"
@@ -94,7 +104,7 @@
           <div class="browser-url">hoxhahandwerk.netlify.app</div>
         </div>
         <div class="browser-preview">
-          <img src="/assets/images/hoxha-handwerk.png" alt="Homepage of the Hoxha Handwerk business website showing the hero section and services" loading="lazy" decoding="async" width="1440" height="900">
+          <img src="/assets/images/hoxha-handwerk.webp" alt="Homepage of the Hoxha Handwerk business website showing the hero section and services" loading="lazy" decoding="async" width="1440" height="900">
           <svg class="browser-cursor" viewBox="0 0 24 24" fill="white"><path d="M5.5 3.21l10.8 4.9c.48.22.48.94 0 1.16L5.5 14.16V3.21z"/></svg>
         </div>
       </div>
@@ -165,8 +175,8 @@
 
   <div id="site-footer"></div>
 
-  <script src="/js/data.js?v=20261015n"></script>
-  <script src="/js/i18n.js?v=20261015n"></script>
-  <script src="/js/script.js?v=20261015m"></script>
+  <script src="/js/data.js?v=20261015p" defer></script>
+  <script src="/js/i18n.js?v=20261015p" defer></script>
+  <script src="/js/script.js?v=20261015p" defer></script>
 </body>
 </html>

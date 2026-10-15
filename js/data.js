@@ -181,7 +181,7 @@ const projects = [
     role: 'Web Developer',
     featured: true,
     number: '01',
-    image: '/assets/images/banese-per-ty.png'
+    image: '/assets/images/banese-per-ty.webp'
   },
   {
     id: 'proj-002',
@@ -206,7 +206,7 @@ const projects = [
     role: 'Web Developer',
     featured: true,
     number: '02',
-    image: '/assets/images/hoxha-handwerk.png'
+    image: '/assets/images/hoxha-handwerk.webp'
   }
 ];
 

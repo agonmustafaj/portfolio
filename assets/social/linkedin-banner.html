@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AGON MUSTAFAJ - LinkedIn banner</title>
+  <style>
+    @font-face {
+      font-family: "Satoshi";
+      src: url("fonts/satoshi-700.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Satoshi";
+      src: url("fonts/satoshi-900.woff2") format("woff2");
+      font-weight: 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Manrope";
+      src: url("fonts/manrope.woff2") format("woff2");
+      font-weight: 500 600;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1584px;
+      height: 396px;
+      overflow: hidden;
+      background: #0a0a0b;
+    }
+
+    .banner {
+      width: 1584px;
+      height: 396px;
+      position: relative;
+      background: #0a0a0b;
+      color: #f3efe6;
+      overflow: hidden;
+    }
+
+    .vguide, .hguide {
+      position: absolute;
+      background: rgba(243, 239, 230, 0.08);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .vguide { top: 22px; bottom: 22px; width: 1px; }
+    .vguide.l { left: 28px; }
+    .vguide.m { left: 1088px; }
+    .hguide { left: 28px; right: 28px; height: 1px; }
+    .hguide.t { top: 22px; }
+    .hguide.b { bottom: 22px; }
+
+    .mark {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      z-index: 8;
+    }
+    .mark::before, .mark::after {
+      content: "";
+      position: absolute;
+      background: rgba(243, 239, 230, 0.4);
+    }
+    .mark::before { width: 12px; height: 1px; top: 6px; left: 0; }
+    .mark::after { width: 1px; height: 12px; top: 0; left: 6px; }
+    .mark.tl { top: 12px; left: 12px; }
+    .mark.tr { top: 12px; right: 12px; }
+    .mark.bl { bottom: 12px; left: 12px; }
+    .mark.br { bottom: 12px; right: 12px; }
+
+    .top {
+      position: absolute;
+      top: 36px;
+      left: 48px;
+      width: 1000px;
+      z-index: 6;
+      display: flex;
+      justify-content: space-between;
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(243, 239, 230, 0.55);
+    }
+    .top .num { color: #2b59ff; letter-spacing: 0.18em; }
+
+    .headline {
+      position: absolute;
+      left: 48px;
+      top: 118px;
+      z-index: 6;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 900;
+      font-size: 78px;
+      line-height: 0.9;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+
+    .roles {
+      position: absolute;
+      top: 168px;
+      right: 536px;
+      z-index: 6;
+      width: 430px;
+      text-align: right;
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+      color: rgba(243, 239, 230, 0.72);
+    }
+
+    .bottom {
+      position: absolute;
+      left: 48px;
+      bottom: 32px;
+      width: 1000px;
+      z-index: 6;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-family: "Manrope", sans-serif;
+    }
+    .url {
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.16em;
+      color: rgba(243, 239, 230, 0.48);
+    }
+    .seq {
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: rgba(243, 239, 230, 0.32);
+    }
+    .seq .on { color: #2b59ff; }
+
+    .logo-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 496px;
+      height: 396px;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-panel svg { width: 340px; height: auto; display: block; }
+    .accent {
+      position: absolute;
+      top: 36px;
+      right: 48px;
+      width: 36px;
+      height: 2px;
+      background: #2b59ff;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="vguide l"></div>
+    <div class="vguide m"></div>
+    <div class="hguide t"></div>
+    <div class="hguide b"></div>
+    <div class="mark tl"></div>
+    <div class="mark tr"></div>
+    <div class="mark bl"></div>
+    <div class="mark br"></div>
+
+    <header class="top">
+      <span>Agon Mustafaj</span>
+      <span class="num">01</span>
+    </header>
+
+    <h1 class="headline">Agon Mustafaj</h1>
+
+    <p class="roles">Computer Science student<br>Web development · SEO · AI</p>
+
+    <footer class="bottom">
+      <div class="url">agonmustafaj.com</div>
+      <div class="seq"><span class="on">01</span> / 02 / 03</div>
+    </footer>
+
+    <div class="logo-panel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 116" role="img" aria-label="AM">
+        <path fill="#ffffff" fill-rule="evenodd" d="M 94 0.847 C 94 2.547, 172.135 115.510, 173.525 115.819 C 174.416 116.018, 182.328 106.234, 194.390 90.020 C 205.077 75.655, 214.031 64.261, 214.288 64.701 C 214.545 65.140, 217.314 74.500, 220.440 85.500 C 223.567 96.500, 226.804 107.862, 227.633 110.750 L 229.142 116 246.012 116 C 257.311 116, 263.109 115.633, 263.569 114.888 C 263.947 114.277, 263.806 113.489, 263.255 113.138 C 262.704 112.787, 252.459 87.525, 240.487 57 C 228.516 26.475, 218.446 1.193, 218.111 0.819 C 217.775 0.444, 207.429 16.081, 195.119 35.569 C 182.810 55.056, 172.622 71, 172.481 71 C 172.339 71, 160.810 55.039, 146.861 35.531 L 121.500 0.061 107.750 0.031 C 100.188 0.014, 94 0.381, 94 0.847 M 75.536 11.250 C 29.162 74.472, 1 113.538, 1 114.648 C 1 115.723, 4.039 116, 15.858 116 L 30.716 116 39.608 102.304 C 44.499 94.771, 48.819 87.806, 49.210 86.825 C 50.010 84.816, 61.798 67.084, 63.437 65.424 C 64.022 64.832, 68.276 58.644, 72.890 51.674 C 77.505 44.703, 81.555 39.014, 81.890 39.031 C 82.226 39.049, 86.130 45.011, 90.566 52.281 L 98.632 65.500 113.908 65.777 C 122.658 65.935, 129.038 65.669, 128.842 65.154 C 128.069 63.123, 84.443 1.034, 83.778 1.018 C 83.380 1.008, 79.672 5.612, 75.536 11.250 M 122.433 74.750 C 118.686 79.013, 114.752 83.486, 113.691 84.691 L 111.762 86.882 120.631 101.397 L 129.500 115.913 146.800 115.956 C 161.176 115.993, 163.964 115.769, 163.300 114.630 C 160.836 110.411, 130.397 67.077, 129.873 67.042 C 129.527 67.019, 126.180 70.487, 122.433 74.750"/>
+        <path fill="#3C81B4" d="M 56.802 74.766 C 53.668 79.570, 50.807 84.287, 50.445 85.250 L 49.786 87 80.337 87 L 110.888 87 113.293 84.750 C 116.760 81.505, 129 67.390, 129 66.637 C 129 66.287, 114.037 66.007, 95.750 66.016 L 62.500 66.031 56.802 74.766"/>
+      </svg>
+    </div>
+    <span class="accent"></span>
+  </div>
+</body>
+</html>

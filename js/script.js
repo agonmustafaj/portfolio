@@ -74,8 +74,8 @@
       '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
           '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '">' +
-            '<img class="logo-dark" src="/assets/images/logo-nav-dark.png" alt="" width="536" height="116">' +
-            '<img class="logo-light" src="/assets/images/logo-nav-light.png" alt="" width="536" height="116">' +
+            '<img class="logo-dark" src="/assets/images/logo-nav-dark.webp" alt="" width="277" height="60">' +
+            '<img class="logo-light" src="/assets/images/logo-nav-light.webp" alt="" width="277" height="60">' +
           '</a>' +
           '<div class="nav-links">' + links + '</div>' +
           '<div class="nav-actions">' +
@@ -636,7 +636,7 @@
 
   /* --- Render Wallet Card --- */
   function renderWalletCard(container) {
-    if (!container) return;
+    if (!container || container.querySelector('.wallet-card')) return;
 
     const emailLink = profile.email
       ? '<a href="mailto:' + profile.email + '" aria-label="Email">' + icons.email + '</a>'
@@ -652,7 +652,7 @@
               '</div>' +
             '</div>' +
             '<div class="wallet-info">' +
-              '<h3>' + profile.name + '</h3>' +
+              '<p class="wallet-name">' + profile.name + '</p>' +
               '<p>' + tx('wallet.role', 'SEO Expert and Web Developer') + '<br><a class="company-link" href="/agodev/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
@@ -672,8 +672,10 @@
     const avatar = document.getElementById('wallet-avatar');
     if (avatar) {
       const img = new Image();
-      img.src = '/assets/images/agon-mustafaj.jpg';
+      img.src = '/assets/images/agon-mustafaj-160.webp';
       img.alt = profile.name;
+      img.width = 160;
+      img.height = 160;
       img.decoding = 'async';
       img.onload = function () {
         avatar.innerHTML = '';
@@ -799,18 +801,18 @@
       }).join('');
 
       const liveBtn = proj.url
-        ? '<a href="' + proj.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">' + tx('ui.liveDemo', 'Live Demo') + '</a>'
+        ? '<a href="' + proj.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">' + tx('ui.liveDemo', 'Live Demo') + '<span class="visually-hidden">, ' + proj.title + '</span></a>'
         : '';
 
       const previewContent = proj.image
-        ? '<img src="' + proj.image + '" alt="Homepage preview of the ' + proj.title + ' website" loading="lazy" decoding="async" width="1440" height="900">'
+        ? '<img src="' + proj.image + '" alt="Homepage preview of the ' + proj.title + ' website" loading="lazy" decoding="async" width="1000" height="625">'
         : (proj.url
           ? '<div class="preview-placeholder">' + proj.title + '</div>'
           : '<div class="preview-placeholder">' + tx('ui.dataAnalysis', 'Data Analysis') + '</div>');
 
       return '<div class="project-showcase' + reverse + ' reveal">' +
-        '<div class="browser-mockup" data-url="' + (proj.url || '') + '" tabindex="0" role="link" aria-label="View ' + proj.title + '">' +
-          '<div class="browser-toolbar">' +
+        '<div class="browser-mockup" data-url="' + (proj.url || '') + '" tabindex="0" role="link" aria-label="View ' + proj.title + ' ' + (proj.url || '') + '">' +
+          '<div class="browser-toolbar" aria-hidden="true">' +
             '<div class="browser-dots"><span></span><span></span><span></span></div>' +
             '<div class="browser-url">' + (proj.url || tx('ui.localProject', 'Local Project')) + '</div>' +
           '</div>' +
@@ -820,7 +822,7 @@
         '</div>' +
         '<div>' +
           '<div class="project-number">' + tx('ui.project', 'PROJECT') + ' ' + proj.number + '</div>' +
-          '<h2>' + proj.title + '</h2>' +
+          '<h3>' + proj.title + '</h3>' +
           '<p class="text-secondary" style="margin-top:0.75rem">' + (tx('projects.' + proj.slug, proj.description) || proj.description) + '</p>' +
           '<div class="project-tags">' + tags + '</div>' +
           '<div class="project-links">' +

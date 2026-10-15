@@ -798,19 +798,19 @@
     var scope = root || document;
     scope.querySelectorAll('[data-i18n]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n'));
-      if (val) el.textContent = val;
+      if (val && el.textContent !== val) el.textContent = val;
     });
     scope.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n-html'));
-      if (val) el.innerHTML = val;
+      if (val && el.innerHTML !== val) el.innerHTML = val;
     });
     scope.querySelectorAll('[data-i18n-content]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n-content'));
-      if (val) el.setAttribute('content', val);
+      if (val && el.getAttribute('content') !== val) el.setAttribute('content', val);
     });
     scope.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n-aria'));
-      if (val) el.setAttribute('aria-label', val);
+      if (val && el.getAttribute('aria-label') !== val) el.setAttribute('aria-label', val);
     });
     scope.querySelectorAll('[data-i18n-subject]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n-subject'));
