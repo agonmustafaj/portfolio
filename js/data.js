@@ -75,7 +75,7 @@ const experience = [
   },
   {
     id: 'exp-002',
-    title: 'Junior SEO — Intern',
+    title: 'Junior SEO - Intern',
     company: 'thenovalab',
     location: 'Pristina, Kosovo',
     startDate: 'July',
@@ -491,7 +491,7 @@ const pageSEO = {
     path: '/about/'
   },
   projects: {
-    title: 'Projects | Agon Mustafaj — Web Development & Technology',
+    title: 'Projects | Agon Mustafaj - Web Development & Technology',
     description: 'Web development projects I designed and built, including Banesë për Ty and Hoxha Handwerk, each with a case study on my role, the tools and what I learned.',
     path: '/projects/'
   },
@@ -501,22 +501,22 @@ const pageSEO = {
     path: '/skills/'
   },
   education: {
-    title: 'Education | Agon Mustafaj — Computer Science, University of Prishtina',
+    title: 'Education | Agon Mustafaj - Computer Science, University of Prishtina',
     description: 'Computer Science studies at the University of Prishtina in Pristina, Kosovo, the academic foundation behind AgoDev and the websites Agon Mustafaj builds.',
     path: '/education/'
   },
   experience: {
-    title: 'Experience | Agon Mustafaj — AgoDev & SEO',
+    title: 'Experience | Agon Mustafaj - AgoDev & SEO',
     description: 'Freelance web development through AgoDev, plus SEO work at thenovalab in Pristina: technical SEO, on-page optimization, internal linking and site structure.',
     path: '/experience/'
   },
   certifications: {
-    title: 'Certifications | Agon Mustafaj — Semrush, HubSpot, Ahrefs, Python & SEO',
+    title: 'Certifications | Agon Mustafaj - Semrush, HubSpot, Ahrefs, Python & SEO',
     description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel, networking and security.',
     path: '/certifications/'
   },
   articles: {
-    title: 'Blog | Agon Mustafaj — AI, Web Development & Technology',
+    title: 'Blog | Agon Mustafaj - AI, Web Development & Technology',
     description: 'Articles on artificial intelligence, web development and technology, written by Agon Mustafaj, a freelance web developer who learns by building sites.',
     path: '/blog/'
   },
@@ -531,7 +531,7 @@ const pageSEO = {
     path: '/contact/'
   },
   cv: {
-    title: 'CV | Agon Mustafaj — Freelance Web Developer',
+    title: 'CV | Agon Mustafaj - Freelance Web Developer',
     description: 'The CV of Agon Mustafaj, freelance web developer behind AgoDev, with client websites, SEO work at thenovalab, studies and certificates.',
     path: '/cv/'
   },
@@ -617,4 +617,4 @@ const serviceProcess = [
   { step: '04', title: 'Launch', description: 'Contact paths in place, and a live site your customers can use.' }
 ];
 
-const CONTACT_ENDPOINT = '';
+const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/' + profile.email;

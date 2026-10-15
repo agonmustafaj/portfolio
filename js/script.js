@@ -560,31 +560,52 @@
 
       if (!valid) return;
 
-      if (!CONTACT_ENDPOINT) {
-        var subject = tx('agodev.mailSubject', 'AgoDev project inquiry');
-        var body = tx('agodev.formName', 'Name') + ': ' + name.value.trim() + '\n'
-          + tx('agodev.formEmail', 'Email') + ': ' + email.value.trim() + '\n\n'
-          + message.value.trim();
-        window.location.href = 'mailto:' + (profile.email || '')
-          + '?subject=' + encodeURIComponent(subject)
-          + '&body=' + encodeURIComponent(body);
-        const demo = form.querySelector('.form-demo');
-        if (demo) demo.classList.add('visible');
+      var honey = form.querySelector('[name="_honey"]');
+      var submitBtn = form.querySelector('[type="submit"]');
+      var success = form.querySelector('.form-success');
+      var fail = form.querySelector('.form-status');
+      if (success) success.classList.remove('visible');
+      if (fail) fail.classList.remove('visible');
+
+      if (honey && honey.value.trim()) {
+        if (success) success.classList.add('visible');
+        form.reset();
         return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = tx('agodev.formSending', 'Sending...');
       }
 
       fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
-          name: name.value,
-          email: email.value,
-          message: message.value
+          name: name.value.trim(),
+          email: email.value.trim(),
+          message: message.value.trim(),
+          _subject: tx('agodev.mailSubject', 'AgoDev project inquiry'),
+          _template: 'table',
+          _captcha: 'false'
         })
+      }).then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok || !data || String(data.success) !== 'true') throw new Error('send failed');
+        });
       }).then(function () {
-        const success = form.querySelector('.form-success');
         if (success) success.classList.add('visible');
         form.reset();
+      }).catch(function () {
+        if (fail) fail.classList.add('visible');
+      }).finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = tx('agodev.formSend', 'Send message');
+        }
       });
     });
   }
