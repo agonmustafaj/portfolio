@@ -2406,6 +2406,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 
 .case-study-section h2 { margin-bottom: 1.5rem; }
 
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 .case-study-section p {
   color: var(--text-secondary);
   line-height: 1.8;
