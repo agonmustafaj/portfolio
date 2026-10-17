@@ -740,7 +740,7 @@
       'malaj.learned': 'Ndërtimi i dizajnit të dikujt tjetër është disiplinë tjetër nga dizajnimi i të tëndit. Kur një detaj ishte i vështirë për t\'u ndërtuar, përgjigjja e lehtë ishte ta ndryshoja; përgjigjja e duhur zakonisht ishte ta pyesja Andin pse ishte aty dhe të gjeja mënyrë ta ruaja. Puna me një dizajner ma ndryshoi edhe mënyrën si mendoj për performancën: në një portfolio, një imazh i ngadaltë nuk është problem teknik, është përshtypje e parë më e dobët për punën.',
       'malaj.n8': '08. Rreth dizajnerit',
       'malaj.designerTitle': 'Andi Malaj',
-      'malaj.designer': 'Andi Malaj është dizajner grafik nga Prishtina, i diplomuar në Dizajn të Integruar në UBT. Punon me identitet brendi, logo, postera, tipografi, paketim, maskota dhe kopertina, nga identiteti i Komunës së Kamenicës deri te brende streetwear, udhëtimesh dhe teknologjie. Nëse të duhet një logo, një identitet i plotë vizual ose dizajn për print e digjital, shiko punët e tij dhe kontaktoje direkt.',
+      'malaj.designer': 'Andi Malaj është <a href="https://malaj-design.com/" target="_blank" rel="noopener" class="company-link">dizajner grafik nga Prishtina</a>, i diplomuar në Dizajn të Integruar në UBT. Punon me identitet brendi, logo, postera, tipografi, paketim, maskota dhe kopertina, nga identiteti i Komunës së Kamenicës deri te brende streetwear, udhëtimesh dhe teknologjie. Nëse të duhet një logo, një identitet i plotë vizual ose dizajn për print e digjital, shiko punët e tij dhe kontaktoje direkt.',
       'malaj.visitDesigner': 'Vizito Malaj Design',
       'malaj.f1': 'Punë të zgjedhura në faqen kryesore',
       'malaj.f2': 'Indeks punësh me dymbëdhjetë projekte',

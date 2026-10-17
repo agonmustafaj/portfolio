@@ -2404,6 +2404,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 
 .case-study-section .label { margin-bottom: 0.75rem; display: block; }
 
+.case-study-section h2 { margin-bottom: 1.5rem; }
+
 .case-study-section p {
   color: var(--text-secondary);
   line-height: 1.8;
