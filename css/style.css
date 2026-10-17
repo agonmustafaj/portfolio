@@ -48,6 +48,7 @@
   --text-secondary: #52525b;
   --text-muted: #595962;
   --accent-text: #1e4a8c;
+  --accent-lime: #1e4a8c;
   --border-color: rgba(0, 0, 0, 0.08);
   --border-hover: rgba(0, 0, 0, 0.15);
   --glow-blue: rgba(59, 130, 246, 0.1);
@@ -1437,6 +1438,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   color: #93c5fd;
 }
 
+[data-theme="light"] .cert-preview-title { color: #f5f5f7; }
+[data-theme="light"] .cert-preview-cta { color: #a1a1aa; }
+
 .cert-platform-coursera {
   background:
     radial-gradient(circle at 15% 20%, rgba(0, 86, 210, 0.35), transparent 45%),
@@ -1916,6 +1920,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   text-decoration-color: #c5dbf8;
 }
 
+[data-theme="light"] .company-link { text-decoration-color: rgba(30, 74, 140, 0.45); }
+
+[data-theme="light"] .company-link:hover {
+  color: #16325c;
+  text-decoration-color: #16325c;
+}
+
 .wallet-info a {
   color: var(--accent-lime);
 }
@@ -2151,27 +2162,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 }
 
 [data-theme="light"] .footer {
-  background: #0a0a0b;
-  color: #f5f5f7;
-}
-
-[data-theme="light"] .footer-brand p,
-[data-theme="light"] .footer-links a,
-[data-theme="light"] .footer-bottom {
-  color: #a1a1aa;
-}
-
-[data-theme="light"] .footer-links h4,
-[data-theme="light"] .footer-socials a {
-  color: #d4d4d8;
-}
-
-[data-theme="light"] .footer-links a:hover {
-  color: #f5f5f7;
-}
-
-[data-theme="light"] .footer-socials a {
-  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--bg-secondary);
 }
 
 .footer-grid {

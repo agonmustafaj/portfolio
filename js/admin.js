@@ -244,9 +244,10 @@
       '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png?v=20261015og">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
-      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017b">\n' +
-      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017b">\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261015m">\n' +
+      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017c">\n' +
+      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017c">\n' +
+      '  <script>try{document.documentElement.setAttribute(\'data-theme\',localStorage.getItem(\'theme\')||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'light\':\'dark\'))}catch(e){}</script>\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261017c">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -270,9 +271,9 @@
       '    </article>\n' +
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
-      '  <script src="/js/data.js?v=20261015n"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261015n"></script>\n' +
-      '  <script src="/js/script.js?v=20261015m"></script>\n' +
+      '  <script src="/js/data.js?v=20261017c"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261017c"></script>\n' +
+      '  <script src="/js/script.js?v=20261017c"></script>\n' +
       '</body>\n' +
       '</html>\n';
   }
