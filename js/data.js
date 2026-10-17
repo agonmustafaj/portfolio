@@ -535,7 +535,7 @@ function getProfileSameAs() {
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | SEO Expert and Web Developer',
-    description: 'SEO expert and web developer in Prishtina, Kosovo. AgoDev covers search visibility and business websites, with technical SEO and the client projects shown.',
+    description: 'SEO expert and web developer in Prishtina, Kosovo. AgoDev covers search visibility and business websites, with technical SEO and client work.',
     path: '/'
   },
   agodev: {
@@ -550,7 +550,7 @@ const pageSEO = {
   },
   projects: {
     title: 'Projects | Agon Mustafaj SEO and Web Work',
-    description: 'Websites designed and built with search structure included, including Banesë për Ty, Hoxha Handwerk, VisitAlbania and Malaj Design, each with a case study on the work.',
+    description: 'Websites built with search structure included: Banesë për Ty, Hoxha Handwerk, VisitAlbania and Malaj Design, each with a case study on the work.',
     path: '/projects/'
   },
   skills: {
@@ -565,7 +565,7 @@ const pageSEO = {
   },
   experience: {
     title: 'Experience | Agon Mustafaj as SEO Expert',
-    description: 'SEO expert work and web development through AgoDev, plus the SEO Expert role at Novalab SEO Agency: technical SEO, on-page work, links and site structure.',
+    description: 'SEO and web development through AgoDev, plus the SEO Expert role at Novalab SEO Agency: technical SEO, on-page work, links and site structure.',
     path: '/experience/'
   },
   certifications: {
