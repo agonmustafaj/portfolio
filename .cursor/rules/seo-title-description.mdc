@@ -1,0 +1,35 @@
+---
+description: Length and wording rules for title tags and meta descriptions, in English and Albanian
+alwaysApply: true
+---
+
+# Title tags and meta descriptions
+
+Every public page must follow these rules in both English and Albanian.
+
+- **Title tag**: 40–50 characters.
+- **Meta description**: 120–150 characters.
+- If the title starts with "Agon", the description must not start with "Agon".
+
+Count characters exactly (with `node -e "console.log('...'.length)"`), never estimate.
+
+## Where they live
+
+Keep every copy in sync when adding or changing a page:
+
+- `<title>`, `meta name="description"`, `og:title`, `og:description`, `twitter:title`, `twitter:description` in the page HTML
+- `meta.*.title` / `meta.*.desc` in `js/i18n.js` (EN and SQ blocks)
+- `description` entries in `js/data.js`
+- Blog posts: `dyn.<slug>.pageTitle` / `dyn.<slug>.seoDesc` in `js/i18n.js` and the post HTML; the visible headline (`dyn.<slug>.title`) is not the title tag
+
+Check all pages before finishing, including new project and blog pages.
+
+## Examples
+
+```text
+❌ Malaj Design Case Study | Agon Mustafaj                 (39)
+✅ Malaj Design Website Case Study | Agon Mustafaj         (47)
+
+❌ Agon Mustafaj | SEO Expert...  +  "Agon Mustafaj is an SEO expert..."
+✅ Agon Mustafaj | SEO Expert...  +  "SEO expert and web developer in Prishtina..."
+```
