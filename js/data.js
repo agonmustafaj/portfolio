@@ -163,6 +163,28 @@ const skills = [
 
 const projects = [
   {
+    id: 'proj-004',
+    title: 'Malaj Design',
+    slug: 'malaj-design',
+    url: 'https://malaj-design.com/',
+    description: 'The portfolio website of graphic designer Andi Malaj. Web design by Andi, development, performance and SEO by me, built with Next.js and Tailwind CSS.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Technical SEO', 'Responsive Design'],
+    features: [
+      'Selected work on the homepage',
+      'Work index with twelve projects',
+      'Individual project pages',
+      'Downloadable PDF brand book',
+      'One-tap email and phone contact',
+      'Smooth page transitions',
+      'JSON-LD structured data',
+      'XML image sitemap'
+    ],
+    role: 'Web Developer, web design by Andi Malaj',
+    featured: true,
+    number: '01',
+    image: '/assets/images/malaj-design.webp'
+  },
+  {
     id: 'proj-001',
     title: 'Banesë për Ty',
     slug: 'banese-per-ty',
@@ -180,7 +202,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '01',
+    number: '02',
     image: '/assets/images/banese-per-ty.webp'
   },
   {
@@ -205,7 +227,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '02',
+    number: '03',
     image: '/assets/images/hoxha-handwerk.webp'
   },
   {
@@ -228,30 +250,8 @@ const projects = [
     ],
     role: 'Web Developer, in collaboration with Drin Kozhani',
     featured: true,
-    number: '03',
-    image: '/assets/images/visit-albania.webp'
-  },
-  {
-    id: 'proj-004',
-    title: 'Malaj Design',
-    slug: 'malaj-design',
-    url: 'https://malaj-design.com/',
-    description: 'The portfolio website of graphic designer Andi Malaj. Web design by Andi, development, performance and SEO by me, built with Next.js and Tailwind CSS.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Technical SEO', 'Responsive Design'],
-    features: [
-      'Selected work on the homepage',
-      'Work index with twelve projects',
-      'Individual project pages',
-      'Downloadable PDF brand book',
-      'One-tap email and phone contact',
-      'Smooth page transitions',
-      'JSON-LD structured data',
-      'XML image sitemap'
-    ],
-    role: 'Web Developer, web design by Andi Malaj',
-    featured: true,
     number: '04',
-    image: '/assets/images/malaj-design.webp'
+    image: '/assets/images/visit-albania.webp'
   }
 ];
 

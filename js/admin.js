@@ -244,8 +244,8 @@
       '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png?v=20261015og">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
-      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017a">\n' +
-      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017a">\n' +
+      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017b">\n' +
+      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017b">\n' +
       '  <link rel="stylesheet" href="/css/style.css?v=20261015m">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
