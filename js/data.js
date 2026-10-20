@@ -583,6 +583,11 @@ const pageSEO = {
     description: 'SEO and websites for businesses: technical search work, a clear company site, mobile-ready layouts and contact paths, in HTML, CSS and JavaScript.',
     path: '/services/'
   },
+  freelancer: {
+    title: 'Freelance Web Developer and SEO Expert in Kosovo',
+    description: 'Freelance web developer and SEO expert in Kosovo. Websites and technical SEO for businesses in Prishtina, Prizren, Peja, Gjilan and Ferizaj.',
+    path: '/freelancer-kosove/'
+  },
   contact: {
     title: 'Contact | Agon Mustafaj, SEO and Web Dev',
     description: 'Start an SEO or website project in Prishtina, Kosovo. Reach AgoDev by the form, email, phone, LinkedIn or Facebook and get a reply.',

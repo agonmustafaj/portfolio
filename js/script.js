@@ -176,6 +176,7 @@
               '<a href="/certifications/">' + tx('nav.certifications', 'Certifications') + '</a>' +
               '<a href="/blog/">' + tx('nav.blog', 'Blog') + '</a>' +
               '<a href="/cv/">' + tx('footer.resume', 'Resume') + '</a>' +
+              '<a href="/freelancer-kosove/">' + tx('footer.freelancer', 'Freelancer in Kosovo') + '</a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
