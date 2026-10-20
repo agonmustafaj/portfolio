@@ -169,7 +169,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
 .section-header p {
   color: var(--text-secondary);
   max-width: 600px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 1.1rem;
 }
 
@@ -2234,7 +2234,9 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   text-align: center;
 }
 
-.page-header h1 { margin-bottom: 1rem; }
+.page-header .label { display: block; margin-bottom: 1.25rem; }
+.page-header h1 { margin-bottom: 1.75rem; }
+.page-header .btn-group { justify-content: center; margin-top: 2rem; }
 .page-header p {
   color: var(--text-secondary);
   max-width: 600px;
@@ -2462,6 +2464,36 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   content: '→';
   color: var(--accent-text);
   margin-right: 0.5rem;
+}
+
+.region-block {
+  margin-top: 2.5rem;
+}
+
+.region-block h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.region-block .feature-list {
+  margin-top: 1rem;
+}
+
+.region-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--accent-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
 }
 
 /* --- CV Page --- */
