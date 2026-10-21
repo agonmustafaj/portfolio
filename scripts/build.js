@@ -4,6 +4,7 @@
  * - writes the header, footer, project and certificate markup into the HTML,
  *   so crawlers without JavaScript see the same links and text as visitors
  * - adds "More from the blog" links to every post
+ * - adds the shared Person, AgoDev and WebSite schema (scripts/schema-entities.js) to every page
  * - strips indentation and comments from the HTML and compacts JSON-LD
  * - minifies js/*.js and css/*.css in place (same file names, so the ?v= cache keys still work)
  *
@@ -14,6 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const esbuild = require('esbuild');
+const ENTITIES = require('./schema-entities');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, '_site');
@@ -135,6 +137,33 @@ function addMorePosts(html, slug, cards) {
   return html.replace(/(<\/article>)(\s*<\/main>)/, '$1' + section + '$2');
 }
 
+/* Puts the shared Person, AgoDev and WebSite entities into the page's JSON-LD.
+   Inline copies of those entities are reduced to @id references so each page has one definition. */
+function addSchemaEntities(html) {
+  const ids = new Set(ENTITIES.map(e => e['@id']));
+  const reduce = node => {
+    if (Array.isArray(node)) return node.map(reduce);
+    if (!node || typeof node !== 'object') return node;
+    if (ids.has(node['@id']) && Object.keys(node).length > 2) return { '@id': node['@id'] };
+    for (const key of Object.keys(node)) node[key] = reduce(node[key]);
+    return node;
+  };
+  let injected = false;
+  const out = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (match, json) => {
+    let data;
+    try { data = JSON.parse(json); } catch (e) { return match; }
+    const context = data['@context'] || 'https://schema.org';
+    let graph = Array.isArray(data['@graph']) ? data['@graph'] : [data];
+    graph = graph.map(node => { const copy = Object.assign({}, node); delete copy['@context']; return copy; });
+    graph = graph.map(reduce).filter(node => !(Object.keys(node).length === 1 && ids.has(node['@id'])));
+    if (!injected) { graph = graph.concat(ENTITIES); injected = true; }
+    return '<script type="application/ld+json">' + JSON.stringify({ '@context': context, '@graph': graph }) + '</script>';
+  });
+  if (injected) return out;
+  return out.replace('</head>', '<script type="application/ld+json">' +
+    JSON.stringify({ '@context': 'https://schema.org', '@graph': ENTITIES }) + '</script>\n</head>');
+}
+
 function compactHtml(html) {
   const kept = [];
   const keep = block => '\u0000' + (kept.push(block) - 1) + '\u0000';
@@ -181,6 +210,7 @@ async function main() {
     html = fillContainers(html, render(page));
     const postSlug = (path.relative(OUT, file).replace(/\\/g, '/').match(/^blog\/([a-z0-9-]+)\/index\.html$/) || [])[1];
     if (postSlug) html = addMorePosts(html, postSlug, cards);
+    if (page !== 'admin') html = addSchemaEntities(html);
     fs.writeFileSync(file, compactHtml(html));
   }
 
