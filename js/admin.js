@@ -219,6 +219,14 @@
     return '<!DOCTYPE html>\n' +
       '<html lang="en">\n' +
       '<head>\n' +
+      '  <!-- Google tag (gtag.js) -->\n' +
+      '  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M50ZWX5KMQ"></script>\n' +
+      '  <script>\n' +
+      '    window.dataLayer = window.dataLayer || [];\n' +
+      '    function gtag(){dataLayer.push(arguments);}\n' +
+      '    gtag(\'js\', new Date());\n' +
+      '    gtag(\'config\', \'G-M50ZWX5KMQ\');\n' +
+      '  </script>\n' +
       '  <meta charset="UTF-8">\n' +
       '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
       '  <title data-i18n="' + key + '.pageTitle">' + esc(post.seoTitle) + '</title>\n' +
