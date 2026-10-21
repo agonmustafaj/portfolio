@@ -64,7 +64,7 @@ function createRenderer() {
     };
   }
 
-  const RENDERED = ['site-header', 'site-footer', 'project-showcase', 'cert-featured', 'cert-grid', 'verification-links'];
+  const RENDERED = ['site-header', 'site-footer', 'project-showcase', 'cert-featured', 'cert-grid', 'verification-links', 'skill-list'];
   const body = { dataset: {}, classList: { add() {} }, style: {}, appendChild() {} };
   const document = {
     body,
@@ -122,7 +122,7 @@ function addMorePosts(html, slug, cards) {
   const index = cards.findIndex(c => c.slug === slug);
   if (index === -1 || cards.length < 2) return html;
   const picks = [];
-  for (let i = 1; i < cards.length && picks.length < 2; i++) {
+  for (let i = 1; i < cards.length && picks.length < 3; i++) {
     picks.push(cards[(index + i) % cards.length].html);
   }
   const section =

@@ -485,6 +485,27 @@
     }
   }
 
+  function renderSkillList(container) {
+    if (!container) return;
+    const esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+    const groups = [];
+    skills.forEach(function (skill) {
+      let group = groups.find(function (g) { return g.category === skill.category; });
+      if (!group) {
+        group = { category: skill.category, items: [] };
+        groups.push(group);
+      }
+      group.items.push(skill);
+    });
+
+    container.innerHTML = groups.map(function (group) {
+      return '<h3 data-i18n="skillcat.' + esc(group.category) + '">' + esc(tx('skillcat.' + group.category, group.category)) + '</h3>' +
+        '<ul>' + group.items.map(function (skill) {
+          return '<li><strong>' + esc(skill.name) + '</strong>: <span data-i18n="skill.' + esc(skill.name) + '">' + esc(tx('skill.' + skill.name, skill.description)) + '</span></li>';
+        }).join('') + '</ul>';
+    }).join('');
+  }
+
   /* --- SEO Flow --- */
   function initSeoFlow() {
     const steps = document.querySelectorAll('.seo-flow-step');
@@ -944,6 +965,7 @@
     renderCertCards(document.getElementById('cert-grid'));
     renderVerificationLinks(document.getElementById('verification-links'));
     renderProjectShowcase(document.getElementById('project-showcase'));
+    renderSkillList(document.getElementById('skill-list'));
 
     initCustomCursor();
     initWallet();

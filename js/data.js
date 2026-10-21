@@ -264,7 +264,7 @@ const certifications = [
     date: '',
     validUntil: '',
     credentialId: '',
-    pdf: 'https://academy.yoast.com/certificate/8218/1996528/c775593dbf282deda099d0dd37900681/1/',
+    pdf: '',
     image: 'https://academy.yoast.com/badge/8218/1996528/c775593dbf282deda099d0dd37900681/1/',
     imageFit: 'contain',
     verificationUrl: ''
