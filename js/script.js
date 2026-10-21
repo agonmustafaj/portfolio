@@ -165,6 +165,7 @@
               '<h4>' + tx('footer.navigation', 'Navigation') + '</h4>' +
               '<a href="/agodev/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
               '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
+              '<a href="/improve-seo/">' + tx('footer.improveSeo', 'Improve your SEO') + '</a>' +
               '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
               '<a href="/projects/">' + tx('nav.projects', 'Projects') + '</a>' +
               '<a href="/skills/">' + tx('nav.skills', 'Skills') + '</a>' +
