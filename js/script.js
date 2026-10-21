@@ -164,6 +164,7 @@
             '<div class="footer-links">' +
               '<h4>' + tx('footer.navigation', 'Navigation') + '</h4>' +
               '<a href="/agodev/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
+              '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
               '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
               '<a href="/projects/">' + tx('nav.projects', 'Projects') + '</a>' +
               '<a href="/skills/">' + tx('nav.skills', 'Skills') + '</a>' +
@@ -177,6 +178,7 @@
               '<a href="/blog/">' + tx('nav.blog', 'Blog') + '</a>' +
               '<a href="/cv/">' + tx('footer.resume', 'Resume') + '</a>' +
               '<a href="/freelancer-kosove/">' + tx('footer.freelancer', 'Freelancer in Kosovo') + '</a>' +
+              '<a href="/license/">' + tx('footer.license', 'Image license') + '</a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +

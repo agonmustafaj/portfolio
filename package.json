@@ -4,6 +4,7 @@
   "description": "Official portfolio website for **Agon Mustafaj**, Computer Science student, Junior SEO professional, web developer, and technology enthusiast.",
   "main": "index.js",
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/agonmustafaj/portfolio/issues"
   },
-  "homepage": "https://github.com/agonmustafaj/portfolio#readme"
+  "homepage": "https://github.com/agonmustafaj/portfolio#readme",
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
 }

@@ -278,7 +278,7 @@ const certifications = [
     validUntil: '29 September 2027',
     credentialId: '5f752fb9b9',
     pdf: '/assets/certificates/technical-seo-ai-search-semrush.pdf',
-    image: '/assets/certificates/previews/technical-seo-ai-search-semrush.png',
+    image: '/assets/certificates/previews/technical-seo-ai-search-semrush.webp',
     verificationUrl: 'https://static.semrush.com/academy/certificates/5f752fb9b9/agon-mustafaj_25.pdf'
   },
   {
@@ -290,7 +290,7 @@ const certifications = [
     validUntil: '27 October 2028',
     credentialId: 'b8b30649120c4e779d2f7874e70639f4',
     pdf: '',
-    image: '/assets/certificates/previews/aeo-fundamentals.png',
+    image: '/assets/certificates/previews/aeo-fundamentals.webp',
     verificationUrl: 'https://app.hubspot.com/academy/achievements/b8b30649120c4e779d2f7874e70639f4'
   },
   {
@@ -302,7 +302,7 @@ const certifications = [
     validUntil: '',
     credentialId: '',
     pdf: '/assets/certificates/local-seo-brightlocal.pdf',
-    image: '/assets/certificates/previews/local-seo-brightlocal.png',
+    image: '/assets/certificates/previews/local-seo-brightlocal.webp',
     verificationUrl: ''
   },
   {
@@ -314,7 +314,7 @@ const certifications = [
     validUntil: '25 September 2027',
     credentialId: '66f139a89b',
     pdf: '/assets/certificates/on-page-seo-ai-search-semrush.pdf',
-    image: '/assets/certificates/previews/on-page-seo-ai-search-semrush.png',
+    image: '/assets/certificates/previews/on-page-seo-ai-search-semrush.webp',
     verificationUrl: 'https://static.semrush.com/academy/certificates/66f139a89b/agon-mustafaj_25.pdf'
   },
   {
@@ -326,7 +326,7 @@ const certifications = [
     validUntil: '25 September 2027',
     credentialId: '5fbd360e57',
     pdf: '/assets/certificates/seo-toolkit-crash-course.pdf',
-    image: '/assets/certificates/previews/seo-toolkit-crash-course.png',
+    image: '/assets/certificates/previews/seo-toolkit-crash-course.webp',
     verificationUrl: 'https://static.semrush.com/academy/certificates/5fbd360e57/agon-mustafaj_25.pdf'
   },
   {
@@ -338,7 +338,7 @@ const certifications = [
     validUntil: '25 September 2027',
     credentialId: '571513bdb0',
     pdf: '/assets/certificates/ai-search-operating-system.pdf',
-    image: '/assets/certificates/previews/ai-search-operating-system.png',
+    image: '/assets/certificates/previews/ai-search-operating-system.webp',
     verificationUrl: 'https://static.semrush.com/academy/certificates/571513bdb0/agon-mustafaj_37.pdf'
   },
   {
@@ -350,7 +350,7 @@ const certifications = [
     validUntil: '25 September 2027',
     credentialId: '384351bc27',
     pdf: '/assets/certificates/seo-essentials-semrush.pdf',
-    image: '/assets/certificates/previews/seo-essentials-semrush.png',
+    image: '/assets/certificates/previews/seo-essentials-semrush.webp',
     verificationUrl: 'https://static.semrush.com/academy/certificates/384351bc27/agon-mustafaj_25.pdf'
   },
   {
@@ -361,7 +361,7 @@ const certifications = [
     date: 'August 2026',
     credentialId: 'ff3531083a3a4eaba3174a423614440a',
     pdf: '/assets/certificates/ahrefs-marketing-platform.pdf',
-    image: '/assets/certificates/previews/ahrefs-marketing-platform.png',
+    image: '/assets/certificates/previews/ahrefs-marketing-platform.webp',
     verificationUrl: 'https://ahrefs.com/academy/certificate/ff3531083a3a4eaba3174a423614440a'
   },
   {
@@ -372,7 +372,7 @@ const certifications = [
     date: '8 July 2026',
     credentialId: 'G1X8E26TPLD1',
     pdf: '/assets/certificates/seo-content.pdf',
-    image: '/assets/certificates/previews/seo-content.png',
+    image: '/assets/certificates/previews/seo-content.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/G1X8E26TPLD1'
   },
   {
@@ -383,7 +383,7 @@ const certifications = [
     date: '1 July 2026',
     credentialId: 'CJKIXKGKMLSR',
     pdf: '/assets/certificates/devops-prerequisite.pdf',
-    image: '/assets/certificates/previews/devops-prerequisite.png',
+    image: '/assets/certificates/previews/devops-prerequisite.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/CJKIXKGKMLSR'
   },
   {
@@ -394,7 +394,7 @@ const certifications = [
     date: '30 June 2026',
     credentialId: 'DHJ8PUFMXBCR',
     pdf: '/assets/certificates/python-data-science.pdf',
-    image: '/assets/certificates/previews/python-data-science.png',
+    image: '/assets/certificates/previews/python-data-science.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/DHJ8PUFMXBCR'
   },
   {
@@ -405,7 +405,7 @@ const certifications = [
     date: '30 June 2026',
     credentialId: 'WEKSDPR7Q473',
     pdf: '/assets/certificates/palo-alto-cybersecurity.pdf',
-    image: '/assets/certificates/previews/palo-alto-cybersecurity.png',
+    image: '/assets/certificates/previews/palo-alto-cybersecurity.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/WEKSDPR7Q473'
   },
   {
@@ -416,7 +416,7 @@ const certifications = [
     date: '30 June 2026',
     credentialId: 'OBAQU4EVUCZO',
     pdf: '/assets/certificates/networking-basics.pdf',
-    image: '/assets/certificates/previews/networking-basics.png',
+    image: '/assets/certificates/previews/networking-basics.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/OBAQU4EVUCZO'
   },
   {
@@ -427,7 +427,7 @@ const certifications = [
     date: '30 June 2026',
     credentialId: '77HGFUFSKXUZ',
     pdf: '/assets/certificates/wireless-networking.pdf',
-    image: '/assets/certificates/previews/wireless-networking.png',
+    image: '/assets/certificates/previews/wireless-networking.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/77HGFUFSKXUZ'
   },
   {
@@ -438,7 +438,7 @@ const certifications = [
     date: '30 June 2026',
     credentialId: '',
     pdf: '/assets/certificates/kren-world-bank.pdf',
-    image: '/assets/certificates/previews/kren-world-bank.png',
+    image: '/assets/certificates/previews/kren-world-bank.webp',
     verificationUrl: ''
   },
   {
@@ -449,7 +449,7 @@ const certifications = [
     date: '1 May 2026',
     credentialId: 'P46JI89DQH0G',
     pdf: '/assets/certificates/power-bi-etl.pdf',
-    image: '/assets/certificates/previews/power-bi-etl.png',
+    image: '/assets/certificates/previews/power-bi-etl.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/P46JI89DQH0G'
   },
   {
@@ -460,7 +460,7 @@ const certifications = [
     date: '1 May 2026',
     credentialId: 'F89YPV04R699',
     pdf: '/assets/certificates/excel-data-analysis.pdf',
-    image: '/assets/certificates/previews/excel-data-analysis.png',
+    image: '/assets/certificates/previews/excel-data-analysis.webp',
     verificationUrl: 'https://www.coursera.org/account/accomplishments/verify/F89YPV04R699'
   }
 ];

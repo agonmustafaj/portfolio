@@ -1,0 +1,41 @@
+# Agon Mustafaj
+
+> SEO expert and web developer in Prishtina, Kosovo. Through AgoDev he improves search visibility and builds websites for businesses. He studies Computer Science at the University of Prishtina and works as an SEO Expert at Novalab SEO Agency.
+
+The site is available in English and Albanian (the language switch is on every page). For a project, use the contact page or email agonmustafaj01@gmail.com.
+
+## Services and work
+
+- [AgoDev](https://agonmustafaj.com/agodev/): SEO services and web development, the build process, and client projects already live
+- [Services](https://agonmustafaj.com/services/): technical SEO, on-page SEO and business websites in HTML, CSS and JavaScript
+- [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): websites and technical SEO for businesses across Kosovo
+- [Projects](https://agonmustafaj.com/projects/): overview of the websites built, each with a case study
+- [Malaj Design case study](https://agonmustafaj.com/projects/malaj-design/): designer portfolio built in Next.js, React and Tailwind CSS
+- [Banesë për Ty case study](https://agonmustafaj.com/projects/banese-per-ty/): rental platform with listings, digital contracts and payment verification
+- [Hoxha Handwerk case study](https://agonmustafaj.com/projects/hoxha-handwerk/): multilingual website for a craft and trade business
+- [VisitAlbania case study](https://agonmustafaj.com/projects/visit-albania/): tourism website in five languages, built with Drin Kozhani
+
+## About
+
+- [About](https://agonmustafaj.com/about/): background, studies and current work
+- [Experience](https://agonmustafaj.com/experience/): AgoDev and the SEO Expert role at Novalab SEO Agency
+- [Skills](https://agonmustafaj.com/skills/): SEO skills and the technologies used to build client websites
+- [Education](https://agonmustafaj.com/education/): Computer Science at the University of Prishtina
+- [Certifications](https://agonmustafaj.com/certifications/): course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN
+- [Resume](https://agonmustafaj.com/cv/): CV covering AgoDev, Novalab SEO Agency, studies and certificates
+- [Contact](https://agonmustafaj.com/contact/): email, phone, LinkedIn and Facebook
+
+## Blog
+
+- [How to Improve Your Website's SEO: A Practical Guide](https://agonmustafaj.com/blog/how-to-improve-website-seo/)
+- [Three things I check before I publish a site](https://agonmustafaj.com/blog/three-things-i-check-before-i-publish-a-site/)
+- [Think Outside the Box: Adapt Faster, Work Smarter](https://agonmustafaj.com/blog/think-outside-the-box/)
+- [AI Today: What Actually Matters Right Now](https://agonmustafaj.com/blog/ai-today-what-matters/)
+- [How AI Is Changing Web Development](https://agonmustafaj.com/blog/ai-changing-web-development/)
+- [AI and Technology: Building With Intelligence](https://agonmustafaj.com/blog/ai-and-technology-building/)
+- [Learning AI as a Computer Science Student](https://agonmustafaj.com/blog/learning-ai-as-cs-student/)
+
+## Optional
+
+- [Image license](https://agonmustafaj.com/license/): terms for reusing images from this site
+- [Sitemap](https://agonmustafaj.com/sitemap.xml)
