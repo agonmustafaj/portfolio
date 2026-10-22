@@ -220,7 +220,7 @@
       'skillcat.Design': 'Design',
       'skillcat.Professional': 'Professional',
       'meta.home.title': 'Agon Mustafaj | SEO Expert and Web Developer',
-      'meta.home.desc': 'SEO expert and web developer in Prishtina, Kosovo. AgoDev covers search visibility and business websites, with technical SEO and client work.',
+      'meta.home.desc': 'SEO expert and web developer in Prishtina, Kosovo. Through AgoDev I handle technical SEO and build websites that bring in clients.',
       'meta.about.title': 'About Agon Mustafaj | SEO and Web Developer',
       'meta.about.desc': 'SEO expert and web developer in Prishtina, Kosovo. AgoDev is the practice for search visibility and client websites, with studies and SEO work.',
       'meta.projects.title': 'Projects | Agon Mustafaj SEO and Web Work',

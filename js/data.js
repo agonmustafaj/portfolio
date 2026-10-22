@@ -535,7 +535,7 @@ function getProfileSameAs() {
 const pageSEO = {
   home: {
     title: 'Agon Mustafaj | SEO Expert and Web Developer',
-    description: 'SEO expert and web developer in Prishtina, Kosovo. AgoDev covers search visibility and business websites, with technical SEO and client work.',
+    description: 'SEO expert and web developer in Prishtina, Kosovo. Through AgoDev I handle technical SEO and build websites that bring in clients.',
     path: '/'
   },
   agodev: {

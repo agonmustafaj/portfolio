@@ -80,15 +80,7 @@ module.exports = [
     alternateName: 'AgoDev SEO and Web Development',
     description: 'SEO and web development agency in Prishtina, Kosovo, founded by Agon Mustafaj. Technical SEO, on-page SEO, SEO audits and business websites for companies in Kosovo and abroad.',
     url: SITE + '/agodev/',
-    logo: {
-      '@type': 'ImageObject',
-      '@id': SITE + '/#agodev-logo',
-      url: SITE + '/assets/images/favicon.png',
-      contentUrl: SITE + '/assets/images/favicon.png',
-      width: 512,
-      height: 512,
-      caption: 'AgoDev'
-    },
+    logo: SITE + '/assets/images/favicon.png',
     image: SITE + '/assets/images/banner.png',
     founder: { '@id': PERSON_ID },
     employee: { '@id': PERSON_ID },

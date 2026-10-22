@@ -86,8 +86,8 @@
       '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
           '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '">' +
-            '<img class="logo-dark" src="/assets/images/logo-nav-dark.webp" alt="" width="277" height="60">' +
-            '<img class="logo-light" src="/assets/images/logo-nav-light.webp" alt="" width="277" height="60">' +
+            '<img class="logo-dark" src="/assets/images/logo-nav-dark.webp" alt="Agon Mustafaj logo" width="277" height="60">' +
+            '<img class="logo-light" src="/assets/images/logo-nav-light.webp" alt="Agon Mustafaj logo" width="277" height="60">' +
           '</a>' +
           '<div class="nav-links">' + links + '</div>' +
           '<div class="nav-actions">' +
@@ -162,7 +162,7 @@
               '<p style="margin-top:0.75rem;font-style:italic">' + tx('footer.tagline', 'SEO and web development for businesses, through AgoDev.') + '</p>' +
             '</div>' +
             '<div class="footer-links">' +
-              '<h4>' + tx('footer.navigation', 'Navigation') + '</h4>' +
+              '<h3>' + tx('footer.navigation', 'Navigation') + '</h3>' +
               '<a href="/agodev/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
               '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
               '<a href="/improve-seo/">' + tx('footer.improveSeo', 'Improve your SEO') + '</a>' +
@@ -172,7 +172,7 @@
               '<a href="/contact/">' + tx('nav.contact', 'Contact') + '</a>' +
             '</div>' +
             '<div class="footer-links">' +
-              '<h4>' + tx('footer.more', 'More') + '</h4>' +
+              '<h3>' + tx('footer.more', 'More') + '</h3>' +
               '<a href="/experience/">' + tx('nav.experience', 'Experience') + '</a>' +
               '<a href="/education/">' + tx('nav.education', 'Education') + '</a>' +
               '<a href="/certifications/">' + tx('nav.certifications', 'Certifications') + '</a>' +
@@ -797,7 +797,7 @@
       const lockup = brand.slug === 'kren';
       const icon = brand.logo
         ? '<div class="cert-platform-icon cert-logo-' + brand.slug + '">' +
-            '<img src="' + brand.logo + '" alt="' + (lockup ? brand.label : '') + '" width="80" height="40">' +
+            '<img src="' + brand.logo + '" alt="' + brand.label + ' logo" width="80" height="40">' +
           '</div>'
         : '<div class="cert-platform-icon">' + (cert.platform || '').substring(0, 2).toUpperCase() + '</div>';
 
