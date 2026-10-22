@@ -279,9 +279,9 @@
       '    </article>\n' +
       '  </main>\n' +
       '  <div id="site-footer"></div>\n' +
-      '  <script src="/js/data.js?v=20261022a"></script>\n' +
-      '  <script src="/js/i18n.js?v=20261022a"></script>\n' +
-      '  <script src="/js/script.js?v=20261022a"></script>\n' +
+      '  <script src="/js/data.js?v=20261022b"></script>\n' +
+      '  <script src="/js/i18n.js?v=20261022b"></script>\n' +
+      '  <script src="/js/script.js?v=20261022b"></script>\n' +
       '</body>\n' +
       '</html>\n';
   }

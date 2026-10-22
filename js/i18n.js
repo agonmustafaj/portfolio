@@ -678,6 +678,7 @@
       'improve.diyLead': 'Kam shkruar një udhëzues hap pas hapi për qëllimin e kërkimit, fjalët kyçe, SEO on-page dhe teknike, backlinks dhe matjen.',
       'improve.diyLink': 'Lexo udhëzuesin si ta përmirësosh SEO-n',
       'improve.proofLead': 'Për të parë si ndërtohet SEO-ja në webfaqe reale klientësh, shikoni studimet e rastit, ose certifikatat SEO nga Semrush, Ahrefs dhe HubSpot.',
+      'improve.proofMalaj': 'Studimi i rastit SEO për Malaj Design',
       'improve.proofProjects': 'Shiko projektet',
       'improve.proofCerts': 'Shiko certifikatat',
       'improve.faqLabel': 'Pyetje',
