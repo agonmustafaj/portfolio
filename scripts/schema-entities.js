@@ -6,6 +6,7 @@
 const SITE = 'https://agonmustafaj.com';
 const PERSON_ID = SITE + '/#agon-mustafaj';
 const AGODEV_ID = SITE + '/#agodev';
+const NOVALAB_ID = 'https://thenovalab.com/#organization';
 
 const address = {
   '@type': 'PostalAddress',
@@ -15,6 +16,15 @@ const address = {
 };
 
 const geo = { '@type': 'GeoCoordinates', latitude: 42.6629, longitude: 21.1655 };
+
+const profiles = [
+  'https://www.linkedin.com/in/agon-mustafaj/',
+  'https://www.facebook.com/agon.mustafaj.03/',
+  'https://www.instagram.com/agonmustafaj_/',
+  'https://github.com/agonmustafaj/',
+  'https://peerlist.io/agonmustafaj',
+  'https://startupbase.io/@agonmustafaj'
+];
 
 module.exports = [
   {
@@ -36,7 +46,7 @@ module.exports = [
     },
     worksFor: [
       { '@id': AGODEV_ID },
-      { '@type': 'Organization', name: 'Novalab SEO Agency', url: 'https://thenovalab.com/' }
+      { '@id': NOVALAB_ID }
     ],
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Prishtina', url: 'https://uni-pr.edu/' },
     knowsAbout: [
@@ -52,14 +62,7 @@ module.exports = [
     workLocation: { '@type': 'Country', name: 'Kosovo', alternateName: 'Kosovë' },
     email: 'agonmustafaj01@gmail.com',
     telephone: '+38349622017',
-    sameAs: [
-      'https://www.linkedin.com/in/agon-mustafaj/',
-      'https://www.facebook.com/agon.mustafaj.03/',
-      'https://www.instagram.com/agonmustafaj_/',
-      'https://github.com/agonmustafaj/',
-      'https://peerlist.io/agonmustafaj',
-      'https://startupbase.io/@agonmustafaj'
-    ]
+    sameAs: profiles
   },
   {
     '@type': 'ImageObject',
@@ -80,13 +83,24 @@ module.exports = [
     alternateName: 'AgoDev SEO and Web Development',
     description: 'SEO and web development agency in Prishtina, Kosovo, founded by Agon Mustafaj. Technical SEO, on-page SEO, SEO audits and business websites for companies in Kosovo and abroad.',
     url: SITE + '/agodev/',
-    logo: SITE + '/assets/images/favicon.png',
+    logo: {
+      '@type': 'ImageObject',
+      '@id': SITE + '/#agodev-logo',
+      url: SITE + '/assets/images/favicon.png',
+      contentUrl: SITE + '/assets/images/favicon.png',
+      width: 512,
+      height: 512,
+      caption: 'AgoDev'
+    },
     image: SITE + '/assets/images/banner.png',
     founder: { '@id': PERSON_ID },
     employee: { '@id': PERSON_ID },
+    address,
+    location: { '@type': 'Place', name: 'Prishtinë, Kosovo', address, geo },
     foundingLocation: { '@type': 'Place', name: 'Prishtinë, Kosovo' },
     email: 'agonmustafaj01@gmail.com',
     telephone: '+38349622017',
+    sameAs: profiles,
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
@@ -111,6 +125,29 @@ module.exports = [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Freelance web and SEO work in Kosovo', url: SITE + '/freelancer-kosove/' } }
       ]
     }
+  },
+  {
+    '@type': 'Organization',
+    '@id': NOVALAB_ID,
+    name: 'Novalab SEO Agency',
+    url: 'https://thenovalab.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://thenovalab.com/wp-content/uploads/2025/09/novalab_v_logo.jpg',
+      contentUrl: 'https://thenovalab.com/wp-content/uploads/2025/09/novalab_v_logo.jpg',
+      width: 2048,
+      height: 2048,
+      caption: 'Novalab SEO Agency'
+    },
+    sameAs: [
+      'https://www.wikidata.org/wiki/Q141163386',
+      'https://www.linkedin.com/company/novalabseoagency/',
+      'https://www.facebook.com/NovalabSEOAgency/',
+      'https://www.instagram.com/novalab_seo_agency/',
+      'https://x.com/Novalab_seo',
+      'https://www.tiktok.com/@novalabseoagency',
+      'https://www.youtube.com/@TheSEOLabPodcast'
+    ]
   },
   {
     '@type': 'WebSite',
