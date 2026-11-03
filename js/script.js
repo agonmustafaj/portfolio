@@ -735,7 +735,8 @@
       'KREN': '/assets/icons/platforms/kren.png?v=20260827e',
       'Coursera': '/assets/icons/platforms/coursera.svg',
       'HubSpot Academy': '/assets/icons/platforms/hubspot.svg',
-      'BrightLocal': '/assets/icons/platforms/brightlocal.svg'
+      'BrightLocal': '/assets/icons/platforms/brightlocal.svg',
+      'Science of Apps': '/assets/icons/platforms/scienceofapps.png'
     };
     const slugs = {
       'IBM': 'ibm',
@@ -748,7 +749,8 @@
       'KREN': 'kren',
       'Coursera': 'coursera',
       'HubSpot Academy': 'hubspot',
-      'BrightLocal': 'brightlocal'
+      'BrightLocal': 'brightlocal',
+      'Science of Apps': 'scienceofapps'
     };
     return {
       label: issuer,
@@ -767,6 +769,7 @@
       const metaParts = [];
       if (cert.platform && cert.platform !== brand.label) metaParts.push(cert.platform);
       if (cert.date) metaParts.push(cert.date);
+      if (cert.score) metaParts.push(cert.score);
       if (cert.validUntil) metaParts.push('Valid until ' + cert.validUntil);
       if (cert.credentialId) metaParts.push('ID: ' + cert.credentialId);
 

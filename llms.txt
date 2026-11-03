@@ -22,7 +22,7 @@ The site is available in English and Albanian (the language switch is on every p
 - [Experience](https://agonmustafaj.com/experience/): AgoDev and the SEO Expert role at Novalab SEO Agency
 - [Skills](https://agonmustafaj.com/skills/): SEO skills and the technologies used to build client websites
 - [Education](https://agonmustafaj.com/education/): Computer Science at the University of Prishtina
-- [Certifications](https://agonmustafaj.com/certifications/): course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN
+- [Certifications](https://agonmustafaj.com/certifications/): course certificates from Science of Apps (Technical SEO, 100%), Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN
 - [Resume](https://agonmustafaj.com/cv/): CV covering AgoDev, Novalab SEO Agency, studies and certificates
 - [Contact](https://agonmustafaj.com/contact/): email, phone, LinkedIn and Facebook
 

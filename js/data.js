@@ -257,6 +257,19 @@ const projects = [
 
 const certifications = [
   {
+    id: 'cert-019',
+    platform: 'Science of Apps',
+    title: 'Technical SEO Certification',
+    issuer: 'Science of Apps',
+    date: '3 November 2026',
+    validUntil: '',
+    credentialId: 'SOA-TSEO-WHTE-ZDES',
+    score: '100%, passed with distinction',
+    pdf: '',
+    image: '/assets/certificates/previews/technical-seo-science-of-apps.webp',
+    verificationUrl: 'https://scienceofapps.com/certification/verify/?id=SOA-TSEO-WHTE-ZDES'
+  },
+  {
     id: 'cert-018',
     platform: 'Yoast',
     title: 'WordPress for Beginners',

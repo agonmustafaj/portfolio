@@ -1778,6 +1778,19 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   max-width: none;
 }
 
+.cert-platform-icon.cert-logo-scienceofapps {
+  width: 36px;
+  padding: 0;
+  border-color: transparent;
+  overflow: hidden;
+}
+
+.cert-platform-icon.cert-logo-scienceofapps img {
+  width: 36px;
+  height: 36px;
+  max-width: none;
+}
+
 .cert-platform-icon.cert-logo-hubspot,
 .cert-platform-icon.cert-logo-brightlocal {
   width: 36px;
