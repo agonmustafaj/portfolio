@@ -163,7 +163,7 @@
             '</div>' +
             '<div class="footer-links">' +
               '<h3>' + tx('footer.navigation', 'Navigation') + '</h3>' +
-              '<a href="/agodev/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
+              '<a href="https://agodev.agonmustafaj.com/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
               '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
               '<a href="/improve-seo/">' + tx('footer.improveSeo', 'Improve your SEO') + '</a>' +
               '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
@@ -690,7 +690,7 @@
             '</div>' +
             '<div class="wallet-info">' +
               '<p class="wallet-name">' + profile.name + '</p>' +
-              '<p>' + tx('wallet.role', 'SEO Expert and Web Developer') + '<br><a class="company-link" href="/agodev/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
+              '<p>' + tx('wallet.role', 'SEO Expert and Web Developer') + '<br><a class="company-link" href="https://agodev.agonmustafaj.com/">AgoDev</a><br>' + tx('profile.location', profile.location) + '</p>' +
               '<div class="wallet-socials">' +
                 '<a href="' + profile.linkedin + '" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
                 '<a href="' + profile.facebook + '" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +

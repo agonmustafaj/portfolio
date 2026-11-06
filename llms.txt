@@ -6,7 +6,7 @@ The site is available in English and Albanian (the language switch is on every p
 
 ## Services and work
 
-- [AgoDev](https://agonmustafaj.com/agodev/): SEO services and web development, the build process, and client projects already live
+- [AgoDev](https://agodev.agonmustafaj.com/): SEO services and web development, the build process, and client projects already live
 - [Services](https://agonmustafaj.com/services/): technical SEO, on-page SEO and business websites in HTML, CSS and JavaScript
 - [Improve your SEO](https://agonmustafaj.com/improve-seo/): SEO audit and fixes for existing websites, with indexing, speed, on-page work and reporting
 - [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): websites and technical SEO for businesses across Kosovo

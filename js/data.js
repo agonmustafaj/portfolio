@@ -554,7 +554,7 @@ const pageSEO = {
   agodev: {
     title: 'AgoDev | SEO Services and Web Development',
     description: 'AgoDev is the practice for SEO and web development: technical search work, business websites, a clear build process, and client projects already live.',
-    path: '/agodev/'
+    path: 'https://agodev.agonmustafaj.com/'
   },
   about: {
     title: 'About Agon Mustafaj | SEO and Web Developer',
@@ -654,7 +654,7 @@ const devPipeline = [
 
 const navLinks = [
   { label: 'Home', href: '/', page: 'home' },
-  { label: 'AgoDev', href: '/agodev/', page: 'agodev' },
+  { label: 'AgoDev', href: 'https://agodev.agonmustafaj.com/', page: 'agodev' },
   { label: 'About', href: '/about/', page: 'about' },
   { label: 'Skills', href: '/skills/', page: 'skills' },
   { label: 'Experience', href: '/experience/', page: 'experience' },

@@ -82,7 +82,7 @@ module.exports = [
     name: 'AgoDev',
     alternateName: 'AgoDev SEO and Web Development',
     description: 'SEO and web development agency in Prishtina, Kosovo, founded by Agon Mustafaj. Technical SEO, on-page SEO, SEO audits and business websites for companies in Kosovo and abroad.',
-    url: SITE + '/agodev/',
+    url: 'https://agodev.agonmustafaj.com/',
     logo: {
       '@type': 'ImageObject',
       '@id': SITE + '/#agodev-logo',
