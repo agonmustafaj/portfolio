@@ -270,6 +270,18 @@ const certifications = [
     verificationUrl: 'https://www.kwtdigital.com/learning/on-page-seo/verify/?id=KWT-OP-883DAA02'
   },
   {
+    id: 'cert-022',
+    platform: 'Semrush',
+    title: 'Keyword Research Essentials with Semrush',
+    issuer: 'Semrush Academy',
+    date: '16 November 2026',
+    validUntil: '16 November 2027',
+    credentialId: '2a3bb75595',
+    pdf: '/assets/certificates/keyword-research-essentials-semrush.pdf',
+    image: '/assets/certificates/previews/keyword-research-essentials-semrush.webp',
+    verificationUrl: 'https://static.semrush.com/academy/certificates/2a3bb75595/agon-mustafaj_25.pdf'
+  },
+  {
     id: 'cert-021',
     platform: 'Semrush',
     title: 'AI Visibility Essentials with Semrush',
