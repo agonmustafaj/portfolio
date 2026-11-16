@@ -41,7 +41,8 @@ No frameworks. No unnecessary dependencies.
 │   ├── data.js             # Editable content data
 │   └── script.js           # Functionality
 ├── robots.txt
-├── sitemap.xml
+├── sitemap-index.xml       # Points at portfolio + AgoDev host sitemaps
+├── sitemap.xml             # Portfolio page URLs (blog dashboard edits this)
 ├── CNAME                   # Custom domain for GitHub Pages
 └── .nojekyll               # Serve files as-is on GitHub Pages
 ```

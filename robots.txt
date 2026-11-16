@@ -48,5 +48,7 @@ Disallow: /dashboard/
 User-Agent: *
 Disallow: /dashboard/
 
-# Sitemap location
+# Sitemap locations: apex pages + AgoDev subdomain (own host sitemap)
+Sitemap: https://agonmustafaj.com/sitemap-index.xml
 Sitemap: https://agonmustafaj.com/sitemap.xml
+Sitemap: https://agodev.agonmustafaj.com/sitemap.xml
