@@ -599,9 +599,19 @@ const pageSEO = {
     path: '/services/'
   },
   freelancer: {
-    title: 'Freelance Web Developer and SEO Expert in Kosovo',
-    description: 'Freelance web developer and SEO expert in Kosovo. Websites and technical SEO for businesses in Prishtina, Prizren, Peja, Gjilan and Ferizaj.',
+    title: 'SEO Freelancer in Kosovo | Agon Mustafaj',
+    description: 'SEO freelancer in Kosovo for technical SEO, on-page work and local search. Based in Prishtina, serving businesses nationwide.',
     path: '/freelancer-kosove/'
+  },
+  improve: {
+    title: 'SEO Audit & Fixes Service | Agon Mustafaj',
+    description: 'Paid SEO audit and fixes for your site: indexing, speed, titles, structure, and Search Console tracking by a Kosovo specialist.',
+    path: '/improve-seo/'
+  },
+  seoKosovo: {
+    title: 'SEO Freelancer Kosovo | Hire in Prishtina',
+    description: 'Hire an SEO freelancer in Kosovo for audits, ranking fixes and local search. Direct work with Agon Mustafaj in Prishtina.',
+    path: '/seo-freelancer-kosovo/'
   },
   contact: {
     title: 'Contact | Agon Mustafaj, SEO and Web Dev',
