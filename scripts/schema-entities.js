@@ -19,6 +19,7 @@ const geo = { '@type': 'GeoCoordinates', latitude: 42.6629, longitude: 21.1655 }
 
 const profiles = [
   'https://www.linkedin.com/in/agon-mustafaj/',
+  'https://www.xing.com/profile/Agon_Mustafaj',
   'https://www.facebook.com/agon.mustafaj.03/',
   'https://www.instagram.com/agonmustafaj_/',
   'https://github.com/agonmustafaj/',
