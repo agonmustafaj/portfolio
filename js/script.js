@@ -165,7 +165,8 @@
               '<h3>' + tx('footer.navigation', 'Navigation') + '</h3>' +
               '<a href="https://agodev.agonmustafaj.com/">' + tx('nav.agodev', 'AgoDev') + '</a>' +
               '<a href="/services/">' + tx('nav.services', 'Services') + '</a>' +
-              '<a href="/improve-seo/">' + tx('footer.improveSeo', 'Improve your SEO') + '</a>' +
+              '<a href="/improve-seo/">' + tx('footer.improveSeo', 'SEO audit & fixes') + '</a>' +
+              '<a href="/seo-freelancer-kosovo/">' + tx('footer.seoKosovo', 'SEO freelancer Kosovo') + '</a>' +
               '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
               '<a href="/projects/">' + tx('nav.projects', 'Projects') + '</a>' +
               '<a href="/skills/">' + tx('nav.skills', 'Skills') + '</a>' +

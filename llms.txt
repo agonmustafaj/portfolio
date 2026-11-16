@@ -8,8 +8,9 @@ The site is available in English and Albanian (the language switch is on every p
 
 - [AgoDev](https://agodev.agonmustafaj.com/): SEO services and web development, the build process, and client projects already live
 - [Services](https://agonmustafaj.com/services/): technical SEO, on-page SEO and business websites in HTML, CSS and JavaScript
-- [Improve your SEO](https://agonmustafaj.com/improve-seo/): SEO audit and fixes for existing websites, with indexing, speed, on-page work and reporting
-- [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): websites and technical SEO for businesses across Kosovo
+- [Improve your SEO](https://agonmustafaj.com/improve-seo/): paid SEO audit and fixes for existing websites, with indexing, speed, on-page work and reporting
+- [SEO freelancer Kosovo](https://agonmustafaj.com/seo-freelancer-kosovo/): hire an SEO freelancer in Kosovo for audits, ranking fixes and local search
+- [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): SEO freelancer and websites for businesses across Kosovo
 - [Projects](https://agonmustafaj.com/projects/): overview of the websites built, each with a case study
 - [Malaj Design case study](https://agonmustafaj.com/projects/malaj-design/): designer portfolio built in Next.js, React and Tailwind CSS
 - [Banesë për Ty case study](https://agonmustafaj.com/projects/banese-per-ty/): rental platform with listings, digital contracts and payment verification
@@ -28,7 +29,7 @@ The site is available in English and Albanian (the language switch is on every p
 
 ## Blog
 
-- [How to Improve Your Website's SEO: A Practical Guide](https://agonmustafaj.com/blog/how-to-improve-website-seo/)
+- [How to Improve SEO: Checklist + When to Hire](https://agonmustafaj.com/blog/how-to-improve-website-seo/)
 - [Three things I check before I publish a site](https://agonmustafaj.com/blog/three-things-i-check-before-i-publish-a-site/)
 - [Think Outside the Box: Adapt Faster, Work Smarter](https://agonmustafaj.com/blog/think-outside-the-box/)
 - [AI Today: What Actually Matters Right Now](https://agonmustafaj.com/blog/ai-today-what-matters/)

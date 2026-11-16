@@ -121,6 +121,7 @@ module.exports = [
       name: 'AgoDev services',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO audit and fixes', url: SITE + '/improve-seo/' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO freelancer in Kosovo', url: SITE + '/seo-freelancer-kosovo/' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Technical SEO', url: SITE + '/services/' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business website development', url: SITE + '/services/' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Freelance web and SEO work in Kosovo', url: SITE + '/freelancer-kosove/' } }
