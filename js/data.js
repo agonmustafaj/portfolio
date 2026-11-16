@@ -258,6 +258,42 @@ const projects = [
 
 const certifications = [
   {
+    id: 'cert-020',
+    platform: 'KWT Digital',
+    title: 'On-Page SEO Certification',
+    issuer: 'KWT Digital',
+    date: '16 November 2026',
+    validUntil: '',
+    credentialId: 'KWT-OP-883DAA02',
+    score: '90%',
+    pdf: '',
+    verificationUrl: 'https://www.kwtdigital.com/learning/on-page-seo/verify/?id=KWT-OP-883DAA02'
+  },
+  {
+    id: 'cert-022',
+    platform: 'Semrush',
+    title: 'Keyword Research Essentials with Semrush',
+    issuer: 'Semrush Academy',
+    date: '16 November 2026',
+    validUntil: '16 November 2027',
+    credentialId: '2a3bb75595',
+    pdf: '/assets/certificates/keyword-research-essentials-semrush.pdf',
+    image: '/assets/certificates/previews/keyword-research-essentials-semrush.webp',
+    verificationUrl: 'https://static.semrush.com/academy/certificates/2a3bb75595/agon-mustafaj_25.pdf'
+  },
+  {
+    id: 'cert-021',
+    platform: 'Semrush',
+    title: 'AI Visibility Essentials with Semrush',
+    issuer: 'Semrush Academy',
+    date: '16 November 2026',
+    validUntil: '16 November 2027',
+    credentialId: 'f6f4f33a3d',
+    pdf: '/assets/certificates/ai-visibility-essentials-semrush.pdf',
+    image: '/assets/certificates/previews/ai-visibility-essentials-semrush.webp',
+    verificationUrl: 'https://static.semrush.com/academy/certificates/f6f4f33a3d/agon-mustafaj_25.pdf'
+  },
+  {
     id: 'cert-019',
     platform: 'Science of Apps',
     title: 'Technical SEO Certification',
@@ -585,7 +621,7 @@ const pageSEO = {
   },
   certifications: {
     title: 'Certifications | Agon Mustafaj SEO Courses',
-    description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, Coursera and KREN, covering SEO, AI search, Python, Power BI, Excel and security.',
+    description: 'Course certificates from Semrush, HubSpot, Ahrefs, BrightLocal, KWT Digital, Coursera and KREN, covering SEO, AI search, Python, Power BI and Excel.',
     path: '/certifications/'
   },
   articles: {
