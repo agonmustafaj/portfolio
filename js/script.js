@@ -731,13 +731,15 @@
       'Palo Alto Networks': '/assets/icons/platforms/paloaltonetworks.svg',
       'Ahrefs': '/assets/icons/platforms/ahrefs.png',
       'Semrush': '/assets/icons/platforms/semrush.svg',
+      'Semrush Academy': '/assets/icons/platforms/semrush.svg',
       'Logical Operations': '/assets/icons/platforms/logicaloperations.svg',
       'KodeKloud': '/assets/icons/platforms/kodekloud.svg',
       'KREN': '/assets/icons/platforms/kren.png?v=20260827e',
       'Coursera': '/assets/icons/platforms/coursera.svg',
       'HubSpot Academy': '/assets/icons/platforms/hubspot.svg',
       'BrightLocal': '/assets/icons/platforms/brightlocal.svg',
-      'Science of Apps': '/assets/icons/platforms/scienceofapps.png'
+      'Science of Apps': '/assets/icons/platforms/scienceofapps.png',
+      'KWT Digital': '/assets/icons/platforms/kwtdigital.png'
     };
     const slugs = {
       'IBM': 'ibm',
@@ -745,13 +747,15 @@
       'Palo Alto Networks': 'palo-alto',
       'Ahrefs': 'ahrefs',
       'Semrush': 'semrush',
+      'Semrush Academy': 'semrush',
       'Logical Operations': 'logical-operations',
       'KodeKloud': 'kodekloud',
       'KREN': 'kren',
       'Coursera': 'coursera',
       'HubSpot Academy': 'hubspot',
       'BrightLocal': 'brightlocal',
-      'Science of Apps': 'scienceofapps'
+      'Science of Apps': 'scienceofapps',
+      'KWT Digital': 'kwtdigital'
     };
     return {
       label: issuer,

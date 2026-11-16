@@ -1791,6 +1791,19 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   max-width: none;
 }
 
+.cert-platform-icon.cert-logo-kwtdigital {
+  height: 36px;
+  padding: 4px 6px;
+  background: #ffffff;
+  border-color: transparent;
+}
+
+.cert-platform-icon.cert-logo-kwtdigital img {
+  height: 28px;
+  width: auto;
+  max-width: 88px;
+}
+
 .cert-platform-icon.cert-logo-hubspot,
 .cert-platform-icon.cert-logo-brightlocal {
   width: 36px;
