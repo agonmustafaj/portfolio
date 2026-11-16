@@ -267,6 +267,8 @@ const certifications = [
     credentialId: 'KWT-OP-883DAA02',
     score: '90%',
     pdf: '',
+    image: '/assets/certificates/previews/kwt-on-page-seo.webp',
+    imageFit: 'contain',
     verificationUrl: 'https://www.kwtdigital.com/learning/on-page-seo/verify/?id=KWT-OP-883DAA02'
   },
   {
@@ -305,19 +307,6 @@ const certifications = [
     pdf: '',
     image: '/assets/certificates/previews/technical-seo-science-of-apps.webp',
     verificationUrl: 'https://scienceofapps.com/certification/verify/?id=SOA-TSEO-WHTE-ZDES'
-  },
-  {
-    id: 'cert-018',
-    platform: 'Yoast',
-    title: 'WordPress for Beginners',
-    issuer: 'Yoast Academy',
-    date: '',
-    validUntil: '',
-    credentialId: '',
-    pdf: '',
-    image: 'https://academy.yoast.com/badge/8218/1996528/c775593dbf282deda099d0dd37900681/1/',
-    imageFit: 'contain',
-    verificationUrl: ''
   },
   {
     id: 'cert-017',
