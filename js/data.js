@@ -26,6 +26,7 @@ const profile = {
   imageId: SITE_URL + '/#agon-mustafaj-image',
   alternateName: ['Agon B. Mustafaj'],
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
+  xing: 'https://www.xing.com/profile/Agon_Mustafaj',
   facebook: 'https://www.facebook.com/agon.mustafaj.03/',
   github: 'https://github.com/agonmustafaj/',
   peerlist: 'https://peerlist.io/agonmustafaj',
@@ -529,12 +530,14 @@ const articles = [
 
 const socialLinks = [
   { name: 'LinkedIn', url: profile.linkedin, icon: 'linkedin', active: !!profile.linkedin },
+  { name: 'Xing', url: profile.xing, icon: 'xing', active: !!profile.xing },
   { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: !!profile.facebook }
 ];
 
 function getProfileSameAs() {
   return [
     profile.linkedin,
+    profile.xing,
     profile.facebook,
     profile.instagram,
     profile.github,
