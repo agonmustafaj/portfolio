@@ -530,7 +530,6 @@ const articles = [
 
 const socialLinks = [
   { name: 'LinkedIn', url: profile.linkedin, icon: 'linkedin', active: !!profile.linkedin },
-  { name: 'Xing', url: profile.xing, icon: 'xing', active: !!profile.xing },
   { name: 'Facebook', url: profile.facebook, icon: 'facebook', active: !!profile.facebook }
 ];
 
