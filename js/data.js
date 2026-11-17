@@ -229,7 +229,7 @@ const projects = [
     id: 'proj-001',
     title: 'Banesë për Ty',
     slug: 'banese-per-ty',
-    url: 'https://banese-per-ty.netlify.app/',
+    url: 'https://banese-per-ty.agonmustafaj01.workers.dev/',
     description: 'A rental platform concept where tenants search listings and landlords manage them, with digital contracts, signatures, and payment verification.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
     features: [
