@@ -13,6 +13,8 @@ The site is available in English and Albanian (the language switch is on every p
 - [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): SEO freelancer and websites for businesses across Kosovo
 - [Projects](https://agonmustafaj.com/projects/): overview of the websites built, each with a case study
 - [Malaj Design case study](https://agonmustafaj.com/projects/malaj-design/): designer portfolio built in Next.js, React and Tailwind CSS
+- [Roofman case study](https://agonmustafaj.com/projects/roofman/): scroll-driven roof restoration product demo
+- [Mathematics Textbook case study](https://agonmustafaj.com/projects/mathematics-textbook/): digital textbook for integration with worked examples
 - [Banesë për Ty case study](https://agonmustafaj.com/projects/banese-per-ty/): rental platform with listings, digital contracts and payment verification
 - [Hoxha Handwerk case study](https://agonmustafaj.com/projects/hoxha-handwerk/): multilingual website for a craft and trade business
 - [VisitAlbania case study](https://agonmustafaj.com/projects/visit-albania/): tourism website in five languages, built with Drin Kozhani
