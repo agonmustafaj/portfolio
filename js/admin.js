@@ -172,8 +172,15 @@
     return now.getFullYear() + '-' + month + '-' + day;
   }
 
+  function estimateReadMinutes(body) {
+    var words = String(body || '').trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200));
+  }
+
   function buildPostHtml(post) {
     var url = 'https://agonmustafaj.com/blog/' + post.slug + '/';
+    var minutes = estimateReadMinutes(post.body);
+    var tldr = post.seoDesc || post.short || post.title;
     var schema = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -186,6 +193,7 @@
           datePublished: post.date,
           dateModified: post.date,
           description: post.seoDesc,
+          abstract: tldr,
           url: url,
           image: {
             '@type': 'ImageObject',
@@ -200,6 +208,8 @@
           },
           inLanguage: 'en',
           articleSection: post.category,
+          timeRequired: 'PT' + minutes + 'M',
+          speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#tldr'] },
           isPartOf: { '@id': 'https://agonmustafaj.com/blog/#blog' },
           mainEntityOfPage: { '@id': url }
         },
@@ -216,6 +226,7 @@
     };
 
     var key = 'dyn.' + post.slug;
+    var metaLine = 'By Agon Mustafaj · ' + formatDate(post.date) + ' · ' + minutes + ' min read';
     return '<!DOCTYPE html>\n' +
       '<html lang="en">\n' +
       '<head>\n' +
@@ -255,7 +266,7 @@
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017c">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017c">\n' +
       '  <script>try{document.documentElement.setAttribute(\'data-theme\',localStorage.getItem(\'theme\')||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'light\':\'dark\'))}catch(e){}</script>\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261022a">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261117a">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
@@ -270,7 +281,11 @@
       '        </nav>\n' +
       '        <span class="label" data-i18n="' + key + '.cat">' + esc(post.category) + '</span>\n' +
       '        <h1 data-i18n="' + key + '.title">' + esc(post.title) + '</h1>\n' +
-      '        <p class="blog-meta" data-i18n="' + key + '.meta">By Agon Mustafaj · ' + esc(formatDate(post.date)) + '</p>\n' +
+      '        <p class="blog-meta" data-i18n="' + key + '.meta">' + esc(metaLine) + '</p>\n' +
+      '        <aside class="blog-tldr" id="tldr">\n' +
+      '          <span class="label" data-i18n="ui.tldr">TLDR</span>\n' +
+      '          <p data-i18n="' + key + '.tldr">' + esc(tldr) + '</p>\n' +
+      '        </aside>\n' +
       '        <div class="blog-content" data-i18n-html="' + key + '.body">\n          ' +
       bodyToHtml(post.body) +
       '\n        </div>\n' +
@@ -409,8 +424,11 @@
       sqPack[prefix + '.seoDesc'] = post.seoDescSq;
       enPack[prefix + '.short'] = post.shortText;
       sqPack[prefix + '.short'] = post.shortSq;
-      enPack[prefix + '.meta'] = 'By Agon Mustafaj · ' + formatDate(post.date);
-      sqPack[prefix + '.meta'] = 'Nga Agon Mustafaj · ' + formatDateSq(post.date);
+      enPack[prefix + '.tldr'] = post.seoDesc || post.shortText || post.title;
+      sqPack[prefix + '.tldr'] = post.seoDescSq || post.shortSq || post.titleSq;
+      var mins = estimateReadMinutes(post.body);
+      enPack[prefix + '.meta'] = 'By Agon Mustafaj · ' + formatDate(post.date) + ' · ' + mins + ' min read';
+      sqPack[prefix + '.meta'] = 'Nga Agon Mustafaj · ' + formatDateSq(post.date) + ' · ' + mins + ' min lexim';
       enPack[prefix + '.crumb'] = post.crumb;
       sqPack[prefix + '.crumb'] = post.crumbSq;
       enPack[prefix + '.body'] = bodyToHtml(post.body).replace(/\n\s+/g, '');
