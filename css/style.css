@@ -1880,6 +1880,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   padding: calc(var(--nav-height) + 3rem) 0 4rem;
 }
 
+.blog-post h1 {
+  font-size: clamp(2.15rem, 4.8vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin: 0.35rem 0 0;
+}
+
 .blog-meta {
   color: var(--text-muted);
   margin: 1rem 0 1.25rem;
