@@ -20,9 +20,21 @@
   </url>
   <url>
     <loc>https://agonmustafaj.com/projects/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agonmustafaj.com/projects/roofman/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agonmustafaj.com/projects/mathematics-textbook/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agonmustafaj.com/projects/banese-per-ty/</loc>
@@ -32,7 +44,7 @@
   </url>
   <url>
     <loc>https://agonmustafaj.com/projects/hoxha-handwerk/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
