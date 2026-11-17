@@ -163,47 +163,7 @@ const skills = [
 ];
 
 const projects = [
-  {
-    id: 'proj-005',
-    title: 'Roofman',
-    slug: 'roofman',
-    url: 'https://roofman.pages.dev/',
-    description: 'A scroll-driven roof restoration experience where damage heals as you move down the page, built as a cinematic product demo.',
-    technologies: ['React', 'Vite', 'CSS', 'Scroll Animation', 'Responsive Design'],
-    features: [
-      'Scroll-driven restoration sequence',
-      'Frame-based roof heal animation',
-      'Cinematic product storytelling',
-      'Timelapse video support',
-      'Responsive layout',
-      'Cloudflare Pages deployment'
-    ],
-    role: 'Web Developer',
-    featured: true,
-    number: '01',
-    image: '/assets/images/roofman.webp'
-  },
-  {
-    id: 'proj-006',
-    title: 'Mathematics Textbook',
-    slug: 'mathematics-textbook',
-    url: 'https://mathematics-textbook.pages.dev/',
-    description: 'A calm, step-by-step digital mathematics textbook focused on integration, with worked examples and clear chapter navigation.',
-    technologies: ['React', 'Vite', 'CSS', 'Math Content', 'Responsive Design'],
-    features: [
-      'Chapter and section navigation',
-      'Step-by-step worked examples',
-      'Integration-focused chapters',
-      'Calm reading layout',
-      'Responsive study interface',
-      'Cloudflare Pages deployment'
-    ],
-    role: 'Web Developer',
-    featured: true,
-    number: '02',
-    image: '/assets/images/mathematics-textbook.webp'
-  },
-  {
+{
     id: 'proj-004',
     title: 'Malaj Design',
     slug: 'malaj-design',
@@ -222,10 +182,50 @@ const projects = [
     ],
     role: 'Web Developer, web design by Andi Malaj',
     featured: true,
-    number: '03',
+    number: '01',
     image: '/assets/images/malaj-design.webp'
   },
-  {
+{
+    id: 'proj-005',
+    title: 'Roofman',
+    slug: 'roofman',
+    url: 'https://roofman.pages.dev/',
+    description: 'A scroll-driven roof restoration experience where damage heals as you move down the page, built as a cinematic product demo.',
+    technologies: ['React', 'Vite', 'CSS', 'Scroll Animation', 'Responsive Design'],
+    features: [
+      'Scroll-driven restoration sequence',
+      'Frame-based roof heal animation',
+      'Cinematic product storytelling',
+      'Timelapse video support',
+      'Responsive layout',
+      'Cloudflare Pages deployment'
+    ],
+    role: 'Web Developer',
+    featured: true,
+    number: '02',
+    image: '/assets/images/roofman.webp'
+  },
+{
+    id: 'proj-006',
+    title: 'Mathematics Textbook',
+    slug: 'mathematics-textbook',
+    url: 'https://mathematics-textbook.pages.dev/',
+    description: 'A calm, step-by-step digital mathematics textbook focused on integration, with worked examples and clear chapter navigation.',
+    technologies: ['React', 'Vite', 'CSS', 'Math Content', 'Responsive Design'],
+    features: [
+      'Chapter and section navigation',
+      'Step-by-step worked examples',
+      'Integration-focused chapters',
+      'Calm reading layout',
+      'Responsive study interface',
+      'Cloudflare Pages deployment'
+    ],
+    role: 'Web Developer',
+    featured: true,
+    number: '03',
+    image: '/assets/images/mathematics-textbook.webp'
+  },
+{
     id: 'proj-001',
     title: 'Banesë për Ty',
     slug: 'banese-per-ty',
@@ -246,7 +246,7 @@ const projects = [
     number: '04',
     image: '/assets/images/banese-per-ty.webp'
   },
-  {
+{
     id: 'proj-002',
     title: 'Hoxha Handwerk',
     slug: 'hoxha-handwerk',
@@ -271,7 +271,7 @@ const projects = [
     number: '05',
     image: '/assets/images/hoxha-handwerk.webp'
   },
-  {
+{
     id: 'proj-003',
     title: 'VisitAlbania',
     slug: 'visit-albania',
@@ -294,7 +294,7 @@ const projects = [
     number: '06',
     image: '/assets/images/visit-albania.webp'
   }
-];
+]
 
 const certifications = [
   {
@@ -630,7 +630,7 @@ const pageSEO = {
   },
   projects: {
     title: 'Projects | Agon Mustafaj SEO and Web Work',
-    description: 'Selected web projects with live demos: Roofman, Mathematics Textbook, Hoxha Handwerk, Malaj Design and VisitAlbania, each with a case study.',
+    description: 'Selected web projects with live demos: Malaj Design, Roofman, Mathematics Textbook, Hoxha Handwerk and VisitAlbania, each with a case study.',
     path: '/projects/'
   },
   skills: {
