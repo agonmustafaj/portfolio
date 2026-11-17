@@ -4,7 +4,8 @@
  * - writes the header, footer, project and certificate markup into the HTML,
  *   so crawlers without JavaScript see the same links and text as visitors
  * - adds "More from the blog" links to every post
- * - adds the shared Person, AgoDev and WebSite schema (scripts/schema-entities.js) to every page
+ * - adds the shared Person, AgoDev ProfessionalService, Novalab and WebSite schema
+ *   (scripts/schema-entities.js) to every page
  * - strips indentation and comments from the HTML and compacts JSON-LD
  * - minifies js/*.js and css/*.css in place (same file names, so the ?v= cache keys still work)
  *
@@ -137,7 +138,7 @@ function addMorePosts(html, slug, cards) {
   return html.replace(/(<\/article>)(\s*<\/main>)/, '$1' + section + '$2');
 }
 
-/* Puts the shared Person, AgoDev and WebSite entities into the page's JSON-LD.
+/* Puts the shared Person / AgoDev / Novalab / WebSite entities into the page's JSON-LD.
    Inline copies of those entities are reduced to @id references so each page has one definition. */
 function addSchemaEntities(html) {
   const ids = new Set(ENTITIES.map(e => e['@id']));
