@@ -4,7 +4,7 @@
  * - writes the header, footer, project and certificate markup into the HTML,
  *   so crawlers without JavaScript see the same links and text as visitors
  * - adds "More from the blog" links to every post
- * - adds the shared Person, AgoDev ProfessionalService, Novalab and WebSite schema
+ * - adds the shared Person, AgoDev Organization, Novalab and WebSite schema
  *   (scripts/schema-entities.js) to every page
  * - strips indentation and comments from the HTML and compacts JSON-LD
  * - minifies js/*.js and css/*.css in place (same file names, so the ?v= cache keys still work)
