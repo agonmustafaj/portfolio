@@ -567,45 +567,61 @@
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    function setFieldError(field, show, message) {
+      if (!field) return;
+      var error = field.parentElement && field.parentElement.querySelector('.form-error');
+      if (!field.value || !String(field.value).trim()) {
+        if (show !== false) {
+          if (error) {
+            if (message) error.textContent = message;
+            error.classList.add('visible');
+          }
+          field.setAttribute('aria-invalid', 'true');
+          return false;
+        }
+      }
+      if (error) error.classList.remove('visible');
+      field.removeAttribute('aria-invalid');
+      return true;
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      let valid = true;
+      var valid = true;
 
-      const name = form.querySelector('#name');
-      const email = form.querySelector('#email');
-      const message = form.querySelector('#message');
+      var name = form.querySelector('#name');
+      var email = form.querySelector('#email');
+      var phone = form.querySelector('#phone');
+      var projectType = form.querySelector('#projectType');
+      var budget = form.querySelector('#budget');
+      var timeline = form.querySelector('#timeline');
+      var message = form.querySelector('#message');
 
-      [name, email, message].forEach(function (field) {
-        const error = field.parentElement.querySelector('.form-error');
-        if (!field.value.trim()) {
-          valid = false;
-          if (error) error.classList.add('visible');
-          field.setAttribute('aria-invalid', 'true');
-        } else {
-          if (error) error.classList.remove('visible');
-          field.removeAttribute('aria-invalid');
-        }
+      [projectType, name, email, phone, message].forEach(function (field) {
+        if (!field) return;
+        if (!setFieldError(field, true)) valid = false;
       });
 
-      if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
         valid = false;
-        const error = email.parentElement.querySelector('.form-error');
-        if (error) {
-          error.textContent = tx('contact.invalidEmail', 'Please enter a valid email address.');
-          error.classList.add('visible');
+        var emailError = email.parentElement.querySelector('.form-error');
+        if (emailError) {
+          emailError.textContent = tx('contact.invalidEmail', 'Please enter a valid email address.');
+          emailError.classList.add('visible');
         }
+        email.setAttribute('aria-invalid', 'true');
       }
 
       if (!valid) return;
 
-      var honey = form.querySelector('[name="_honey"]');
+      var honey = form.querySelector('[name="botcheck"]');
       var submitBtn = form.querySelector('[type="submit"]');
       var success = form.querySelector('.form-success');
       var fail = form.querySelector('.form-status');
       if (success) success.classList.remove('visible');
       if (fail) fail.classList.remove('visible');
 
-      if (honey && honey.value.trim()) {
+      if (honey && honey.checked) {
         if (success) success.classList.add('visible');
         form.reset();
         return;
@@ -616,26 +632,25 @@
         submitBtn.textContent = tx('agodev.formSending', 'Sending...');
       }
 
-      var who = name.value.trim();
-      var sent = new Date();
-      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-      var stamp = pad(sent.getDate()) + '.' + pad(sent.getMonth() + 1) + ' ' + pad(sent.getHours()) + ':' + pad(sent.getMinutes());
+      var endpoint = form.getAttribute('data-endpoint') || CONTACT_ENDPOINT;
+      var payload = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: phone ? phone.value.trim() : '',
+        projectType: projectType ? projectType.value.trim() : '',
+        budget: budget ? budget.value.trim() : '',
+        timeline: timeline ? timeline.value.trim() : '',
+        message: message.value.trim(),
+        botcheck: false
+      };
 
-      fetch(CONTACT_ENDPOINT, {
+      fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          Name: who,
-          Email: email.value.trim(),
-          Message: message.value.trim(),
-          _subject: 'AgoDev: ' + who + ', ' + stamp,
-          _replyto: email.value.trim(),
-          _template: 'basic',
-          _captcha: 'false'
-        })
+        body: JSON.stringify(payload)
       }).then(function (res) {
         return res.json().then(function (data) {
           if (!res.ok || !data || String(data.success) !== 'true') throw new Error('send failed');

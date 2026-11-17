@@ -730,4 +730,5 @@ const serviceProcess = [
   { step: '04', title: 'Launch', description: 'The site goes live with contact paths, a sitemap and indexing checks.' }
 ];
 
-const CONTACT_ENDPOINT = 'https://formsubmit.co/ajax/' + profile.email;
+/* AgoDev Cloudflare Pages Function. Override per-form with data-endpoint if needed. */
+const CONTACT_ENDPOINT = 'https://agodev.agonmustafaj.com/api/contact';
