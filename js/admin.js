@@ -266,7 +266,7 @@
       '  <link rel="manifest" href="/site.webmanifest?v=20261128f">\n' +
       '  <meta name="apple-mobile-web-app-title" content="Agon Mustafaj">\n' +
       '  <script>try{document.documentElement.setAttribute(\'data-theme\',localStorage.getItem(\'theme\')||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'light\':\'dark\'))}catch(e){}</script>\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261117a">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261128h1">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
