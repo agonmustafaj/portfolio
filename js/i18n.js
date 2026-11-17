@@ -155,6 +155,9 @@
       'agodev.formSent': 'Message sent. I will reply by email.',
       'agodev.formFailed': 'The message did not send. Try again, or email me directly.',
       'agodev.mailSubject': 'AgoDev project inquiry',
+      'contact.label': 'Contact',
+      'contact.title': "Let's Connect",
+      'contact.lead': 'For SEO or a website, send a short project brief below, or reach me by email, phone or LinkedIn.',
       'contact.invalidEmail': 'Please enter a valid email address.',
       'contact.helpTitle': 'What I can help with',
       'contact.helpLead': 'Most messages are about one of these three. If yours is something else, write anyway.',
@@ -837,7 +840,7 @@
 
       'contact.label': 'Kontakt',
       'contact.title': 'Të lidhemi',
-      'contact.lead': 'Për SEO ose një webfaqe, përdor formën te AgoDev, ose më shkruaj me email, më telefono ose më gjej në LinkedIn.',
+      'contact.lead': 'Për SEO ose një webfaqe, dërgo më poshtë një brief të shkurtër projekti, ose më shkruaj me email, më telefono ose më gjej në LinkedIn.',
       'contact.invalidEmail': 'Shkruaj një email të vlefshëm.',
       'contact.helpTitle': 'Me çfarë mund të ndihmoj',
       'contact.helpLead': 'Shumica e mesazheve kanë të bëjnë me njërën nga këto tri. Nëse e jotja është diçka tjetër, shkruaj gjithsesi.',
