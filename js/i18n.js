@@ -1270,11 +1270,11 @@
       /* only replace generic page titles, not long case-study titles */
       var path = location.pathname.replace(/\/+$/, '') || '/';
       var isGeneric = path === '/' || path === '' ||
-        path === '/about' || path === '/projects' || path === '/services' || path === '/agodev' ||
+        path === '/about' || path === '/projects' || path === '/services' ||
         path === '/skills' || path === '/education' || path === '/experience' ||
         path === '/certifications' || path === '/blog' || path === '/contact' ||
         path === '/cv' || path === '/404.html' || path.indexOf('/blog/') === -1 && path.indexOf('/projects/') === -1;
-        if (page === 'home' || page === 'about' || page === 'services' || page === 'freelancer' || page === 'improve' || page === 'agodev' || page === 'skills' ||
+        if (page === 'home' || page === 'about' || page === 'services' || page === 'freelancer' || page === 'improve' || page === 'skills' ||
           page === 'education' || page === 'experience' || page === 'certifications' ||
           page === 'contact' || page === 'cv' || page === '404' ||
           (page === 'projects' && (path === '/projects' || path === '/projects/')) ||
