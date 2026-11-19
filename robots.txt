@@ -2,51 +2,75 @@
 User-Agent: Googlebot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: Bingbot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: DuckDuckBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 # Allow major LLM and AI crawlers
 User-Agent: GPTBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: OAI-SearchBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: PerplexityBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: YouBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: AndiBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: Anthropic-Bot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: Claude-Web
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 User-Agent: CCBot
 Allow: /
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 # General rules for all other bots
 User-Agent: *
 Disallow: /dashboard/
+Disallow: /assets/social/
+Disallow: /assets/brand/
 
 # Sitemap locations: apex pages + AgoDev subdomain (own host sitemap)
 Sitemap: https://agonmustafaj.com/sitemap-index.xml
