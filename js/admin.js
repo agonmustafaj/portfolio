@@ -266,7 +266,7 @@
       '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017c">\n' +
       '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017c">\n' +
       '  <script>try{document.documentElement.setAttribute(\'data-theme\',localStorage.getItem(\'theme\')||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'light\':\'dark\'))}catch(e){}</script>\n' +
-      '  <link rel="stylesheet" href="/css/style.css?v=20261117a">\n' +
+      '  <link rel="stylesheet" href="/css/style.css?v=20261117b">\n' +
       '  <script type="application/ld+json">\n  ' +
       jsonForScript(schema) +
       '\n  </script>\n' +
