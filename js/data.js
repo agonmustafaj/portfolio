@@ -619,8 +619,8 @@ const pageSEO = {
     path: '/'
   },
   agodev: {
-    title: 'AgoDev | SEO Services and Web Development',
-    description: 'AgoDev is the practice for SEO and web development: technical search work, business websites, a clear build process, and client projects already live.',
+    title: 'AgoDev | SEO and Websites for Local Businesses',
+    description: 'AgoDev is Agon Mustafaj\'s practice in Prishtina: technical SEO, custom business websites, a clear build process, and client projects already live.',
     path: 'https://agodev.agonmustafaj.com/'
   },
   about: {
@@ -660,7 +660,7 @@ const pageSEO = {
   },
   services: {
     title: 'SEO and Websites for Businesses | Agon Mustafaj',
-    description: 'SEO and websites for businesses: technical search work, a clear company site, mobile-ready layouts and contact paths, in HTML, CSS and JavaScript.',
+    description: 'Portfolio overview of SEO and website work for businesses. Full services, projects, process, and the project brief live on AgoDev.',
     path: '/services/'
   },
   freelancer: {
