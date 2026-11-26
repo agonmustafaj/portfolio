@@ -149,7 +149,7 @@ module.exports = [
           itemOffered: {
             '@type': 'Service',
             name: 'Web development',
-            url: SITE + '/services/#web-development'
+            url: 'https://agodev.agonmustafaj.com/#services'
           }
         },
         {
@@ -165,7 +165,7 @@ module.exports = [
           itemOffered: {
             '@type': 'Service',
             name: 'On-page SEO',
-            url: SITE + '/services/#on-page-seo'
+            url: 'https://agodev.agonmustafaj.com/#services'
           }
         },
         {
@@ -173,7 +173,7 @@ module.exports = [
           itemOffered: {
             '@type': 'Service',
             name: 'Launch and indexing',
-            url: SITE + '/services/#launch-and-indexing'
+            url: 'https://agodev.agonmustafaj.com/#process'
           }
         },
         {
@@ -181,7 +181,7 @@ module.exports = [
           itemOffered: {
             '@type': 'Service',
             name: 'Search structure',
-            url: SITE + '/services/#search-structure'
+            url: 'https://agodev.agonmustafaj.com/#services'
           }
         }
       ]
@@ -224,7 +224,7 @@ module.exports = [
     '@id': WEBSITE_ID,
     url: SITE + '/',
     name: 'Agon Mustafaj',
-    alternateName: ['Agon Mustafaj Portfolio', 'AgoDev'],
+    alternateName: ['Agon Mustafaj Portfolio'],
     inLanguage: ['en', 'sq'],
     publisher: { '@id': PERSON_ID },
     about: { '@id': PERSON_ID },
