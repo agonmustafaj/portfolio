@@ -405,20 +405,26 @@ body.home-redesign *:focus-visible {
   transform-style: preserve-3d;
 }
 
-.hr-sculpture-core {
+.hr-sculpture-face {
   position: absolute;
-  inset: 18%;
-  border-radius: 28% 42% 36% 48% / 40% 32% 48% 36%;
-  background:
-    radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--hr-cyan) 55%, transparent), transparent 45%),
-    radial-gradient(circle at 70% 60%, color-mix(in srgb, var(--hr-violet) 50%, transparent), transparent 50%),
-    linear-gradient(145deg, color-mix(in srgb, var(--hr-blue) 70%, #101626), #101626);
+  inset: 16%;
+  border-radius: 50%;
+  overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--hr-cyan) 35%, var(--hr-border));
   box-shadow:
     0 0 80px var(--hr-glow),
-    inset 0 0 40px rgba(73, 217, 255, 0.12);
-  transform: rotateX(18deg) rotateY(-24deg);
+    0 0 40px var(--hr-glow-v);
+  transform: rotateX(8deg) rotateY(-12deg);
   animation: hr-float 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+.hr-sculpture-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .hr-sculpture-ring {
@@ -461,8 +467,8 @@ body.home-redesign *:focus-visible {
 }
 
 @keyframes hr-float {
-  0%, 100% { transform: rotateX(18deg) rotateY(-24deg) translateY(0); }
-  50% { transform: rotateX(22deg) rotateY(-18deg) translateY(-12px); }
+  0%, 100% { transform: rotateX(8deg) rotateY(-12deg) translateY(0); }
+  50% { transform: rotateX(12deg) rotateY(-6deg) translateY(-10px); }
 }
 
 @keyframes hr-spin {
@@ -522,42 +528,90 @@ body.home-redesign *:focus-visible {
 }
 
 /* ---------- About ---------- */
-.hr-about-grid {
+.hr-about-split {
   display: grid;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 2rem;
+  align-items: start;
 }
 
 @media (min-width: 880px) {
-  .hr-about-grid {
-    grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
-    gap: 4rem;
+  .hr-about-split {
+    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+    gap: 3rem;
   }
 }
 
-.hr-about-photo {
-  position: relative;
-}
-
-.hr-about-photo::before {
-  content: "";
-  position: absolute;
-  inset: -12px;
-  border-radius: 28px;
-  background: var(--hr-gradient);
-  opacity: 0.35;
-  filter: blur(18px);
-  z-index: 0;
-}
-
-.hr-about-photo img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 24px;
+.hr-wallet {
   border: 1px solid var(--hr-border);
+  border-radius: 18px;
+  background: var(--hr-surface);
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hr-wallet-top {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.hr-wallet-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--hr-blue);
+  background: var(--hr-bg);
+}
+
+.hr-wallet-name {
+  margin: 0;
+  font-family: var(--hr-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hr-wallet-role,
+.hr-wallet-loc {
+  margin: 0.15rem 0 0;
+  color: var(--hr-text-2);
+  font-size: 0.88rem;
+}
+
+.hr-wallet-link {
+  color: var(--hr-blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hr-wallet-socials {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.hr-wallet-socials a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--hr-border);
+  border-radius: 8px;
+  color: var(--hr-text);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.hr-wallet-socials a:hover {
+  border-color: var(--hr-blue);
+  color: var(--hr-cyan);
+}
+
+.hr-wallet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
 }
 
 .hr-about-copy p {

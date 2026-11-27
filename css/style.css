@@ -1543,6 +1543,16 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.15; letter-spacing: 
   display: block;
 }
 
+.about-photo-34 {
+  width: min(100%, 320px);
+}
+
+.about-photo-34 img {
+  aspect-ratio: 3 / 4;
+  border-radius: 18px;
+  object-position: center top;
+}
+
 .cv-sheet {
   max-width: 900px;
   margin: 0 auto;
