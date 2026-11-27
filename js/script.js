@@ -982,29 +982,35 @@
     if (typeof I18N !== 'undefined') I18N.applyI18n();
 
     const page = document.body.dataset.page;
-    renderNavbar(page);
-    renderFooter();
+    const isHomeRedesign = document.body.classList.contains('home-redesign');
+
+    if (!isHomeRedesign) {
+      renderNavbar(page);
+      renderFooter();
+    }
     initTheme();
 
-    renderWalletCard(document.getElementById('wallet-card'));
-    renderCertCards(document.getElementById('cert-featured'), 3);
-    renderCertCards(document.getElementById('cert-grid'));
-    renderVerificationLinks(document.getElementById('verification-links'));
-    renderProjectShowcase(document.getElementById('project-showcase'));
-    renderSkillList(document.getElementById('skill-list'));
+    if (!isHomeRedesign) {
+      renderWalletCard(document.getElementById('wallet-card'));
+      renderCertCards(document.getElementById('cert-featured'), 3);
+      renderCertCards(document.getElementById('cert-grid'));
+      renderVerificationLinks(document.getElementById('verification-links'));
+      renderProjectShowcase(document.getElementById('project-showcase'));
+      renderSkillList(document.getElementById('skill-list'));
 
-    initCustomCursor();
-    initWallet();
-    initShareModal();
-    initScrollReveal();
-    initMagneticButtons();
-    initCardTilt();
-    initTerminal();
-    initSkills();
-    initSeoFlow();
-    initDevPipeline();
-    initCertFilter();
-    initContactForm();
-    initBrowserMockups();
+      initCustomCursor();
+      initWallet();
+      initShareModal();
+      initScrollReveal();
+      initMagneticButtons();
+      initCardTilt();
+      initTerminal();
+      initSkills();
+      initSeoFlow();
+      initDevPipeline();
+      initCertFilter();
+      initContactForm();
+      initBrowserMockups();
+    }
   });
 })();
