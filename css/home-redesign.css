@@ -414,8 +414,6 @@ body.home-redesign *:focus-visible {
   box-shadow:
     0 0 80px var(--hr-glow),
     0 0 40px var(--hr-glow-v);
-  transform: rotateX(8deg) rotateY(-12deg);
-  animation: hr-float 8s ease-in-out infinite;
   z-index: 2;
 }
 
@@ -433,15 +431,12 @@ body.home-redesign *:focus-visible {
   border: 1px solid color-mix(in srgb, var(--hr-blue) 45%, transparent);
   border-radius: 42% 58% 48% 52% / 48% 42% 58% 52%;
   transform: rotateX(62deg) rotateZ(18deg);
-  animation: hr-spin 22s linear infinite;
 }
 
 .hr-sculpture-ring-2 {
   inset: 2%;
   border-color: color-mix(in srgb, var(--hr-violet) 40%, transparent);
   transform: rotateX(70deg) rotateZ(-28deg);
-  animation-duration: 30s;
-  animation-direction: reverse;
 }
 
 .hr-sculpture-orb {
@@ -451,34 +446,12 @@ body.home-redesign *:focus-visible {
   border-radius: 50%;
   background: var(--hr-cyan);
   box-shadow: 0 0 24px var(--hr-cyan);
-  animation: hr-orb 6s ease-in-out infinite;
+  opacity: 0.85;
 }
 
-.hr-sculpture-orb:nth-child(4) { top: 12%; left: 22%; animation-delay: -1s; }
-.hr-sculpture-orb:nth-child(5) { top: 58%; right: 10%; background: var(--hr-violet); animation-delay: -2.5s; }
-.hr-sculpture-orb:nth-child(6) { bottom: 16%; left: 18%; background: var(--hr-blue); animation-delay: -4s; }
-
-.hr-particles {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-@keyframes hr-float {
-  0%, 100% { transform: rotateX(8deg) rotateY(-12deg) translateY(0); }
-  50% { transform: rotateX(12deg) rotateY(-6deg) translateY(-10px); }
-}
-
-@keyframes hr-spin {
-  to { transform: rotateX(62deg) rotateZ(378deg); }
-}
-
-@keyframes hr-orb {
-  0%, 100% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(-14px); opacity: 1; }
-}
+.hr-sculpture-orb:nth-child(4) { top: 12%; left: 22%; }
+.hr-sculpture-orb:nth-child(5) { top: 58%; right: 10%; background: var(--hr-violet); }
+.hr-sculpture-orb:nth-child(6) { bottom: 16%; left: 18%; background: var(--hr-blue); }
 
 /* ---------- Sections shared ---------- */
 .hr-section {
