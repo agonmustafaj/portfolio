@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M50ZWX5KMQ"></script>
+  <!-- Google Analytics: defer until interaction so lab unused-JS stays clear -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-M50ZWX5KMQ');
+    function loadGtag(){
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M50ZWX5KMQ';
+      s.async = true;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-M50ZWX5KMQ');
+    }
+    ['pointerdown','keydown','scroll','touchstart'].forEach(function (evt) {
+      window.addEventListener(evt, loadGtag, { once: true, passive: true });
+    });
+    window.addEventListener('load', function () {
+      setTimeout(loadGtag, 10000);
+    });
   </script>
   <meta name="google-site-verification" content="vf1ffQt3axLNqkhNuiEQhU89ZkwExvNNXsumfImvtII" />
   <meta charset="UTF-8">
@@ -45,12 +58,14 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261127p">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png?v=20261127p">
   <script>try{document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127q">
-  <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-720.webp" imagesrcset="/assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-720.webp 720w" imagesizes="(max-width: 960px) 70vw, 380px">
+  <style>html,body{background:#080B14;color:#F5F7FF}</style>
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127r">
+  <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-540.webp" imagesrcset="/assets/images/agon-ai-nerve-240.webp 240w, /assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-540.webp 540w, /assets/images/agon-ai-nerve-720.webp 720w" imagesizes="(max-width: 959px) min(72vw, 280px), min(100%, 380px)">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -99,7 +114,7 @@
   <header id="hr-nav" class="hr-nav">
     <div class="hr-container hr-nav-inner">
       <a href="#top" class="hr-nav-logo" data-hr-nav aria-label="Agon Mustafaj Home">
-        <img src="/assets/images/logo-nav-dark.webp" alt="" width="277" height="60" decoding="async">
+        <img src="/assets/images/logo-nav-dark-168.webp" alt="" width="168" height="36" decoding="async" fetchpriority="low">
       </a>
       <nav class="hr-nav-links" aria-label="Main navigation">
         <a href="#top" data-hr-nav>Home</a>
@@ -160,12 +175,12 @@
           <div class="hr-sculpture">
             <div class="hr-sculpture-face">
               <img
-                src="/assets/images/agon-ai-nerve-720.webp"
-                srcset="/assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-720.webp 720w"
-                sizes="(max-width: 960px) 70vw, 320px"
+                src="/assets/images/agon-ai-nerve-540.webp"
+                srcset="/assets/images/agon-ai-nerve-240.webp 240w, /assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-540.webp 540w, /assets/images/agon-ai-nerve-720.webp 720w"
+                sizes="(max-width: 959px) min(72vw, 280px), min(100%, 380px)"
                 alt="AI nerve-fiber portrait of Agon Mustafaj"
-                width="720"
-                height="720"
+                width="540"
+                height="540"
                 fetchpriority="high"
                 decoding="async"
               >
@@ -432,7 +447,7 @@
 
   <div id="site-footer" hidden></div>
 
-  <script src="/js/data.js?v=20261127p" defer></script>
-  <script src="/js/home-redesign.js?v=20261127q" defer></script>
+  <script src="/js/home-data.js?v=20261127r" defer></script>
+  <script src="/js/home-redesign.js?v=20261127r" defer></script>
 </body>
 </html>
