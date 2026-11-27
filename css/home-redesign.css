@@ -31,19 +31,6 @@ body.home-redesign {
   overflow-x: hidden;
 }
 
-html[data-theme="light"] body.home-redesign {
-  --hr-bg: #F4F6FB;
-  --hr-bg-2: #E8ECF6;
-  --hr-surface: #FFFFFF;
-  --hr-text: #0E1424;
-  --hr-text-2: #3E4A5F;
-  --hr-muted: #44506A;
-  --hr-border: #D5DCEC;
-  --hr-glow: rgba(85, 119, 255, 0.12);
-  --hr-glow-v: rgba(155, 109, 255, 0.10);
-  --hr-blue: #3F5FE8;
-}
-
 body.home-redesign *,
 body.home-redesign *::before,
 body.home-redesign *::after {
@@ -153,28 +140,6 @@ body.home-redesign *:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-}
-
-.hr-theme-toggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid var(--hr-border);
-  background: var(--hr-surface);
-  color: var(--hr-text);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: border-color 0.2s, background 0.2s;
-}
-
-.hr-theme-toggle:hover {
-  border-color: var(--hr-blue);
-}
-
-.hr-theme-toggle svg {
-  width: 18px;
-  height: 18px;
 }
 
 .hr-btn {
@@ -429,34 +394,44 @@ body.home-redesign *:focus-visible {
   position: relative;
   display: grid;
   place-items: center;
+  justify-self: center;
 }
 
-.hr-hero-photo {
+.hr-hero-orb {
   position: relative;
   margin: 0;
-  width: min(100%, 420px);
+  width: min(58vw, 280px);
 }
 
-.hr-hero-photo::before {
+.hr-hero-orb::before {
   content: "";
   position: absolute;
-  inset: 8% -6% -6% 8%;
-  border-radius: 28px;
-  background: var(--hr-gradient);
-  opacity: 0.45;
-  filter: blur(28px);
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(73, 217, 255, 0.28), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(155, 109, 255, 0.3), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(85, 119, 255, 0.22), transparent 60%);
+  filter: blur(18px);
   z-index: 0;
 }
 
-.hr-hero-photo img {
+.hr-hero-orb img {
   position: relative;
   z-index: 1;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 24px;
-  border: 1px solid var(--hr-border);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  object-position: center top;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--hr-cyan) 25%, transparent),
+    0 18px 50px rgba(85, 119, 255, 0.22);
+}
+
+@media (min-width: 960px) {
+  .hr-hero-orb {
+    width: min(100%, 300px);
+  }
 }
 
 /* ---------- Sections shared ---------- */

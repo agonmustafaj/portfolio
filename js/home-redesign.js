@@ -18,7 +18,6 @@
     var nav = document.getElementById('hr-nav');
     var hamburger = document.getElementById('hr-hamburger');
     var mobile = document.getElementById('hr-mobile-menu');
-    var themeBtn = document.getElementById('hr-theme-toggle');
     var links = document.querySelectorAll('[data-hr-nav]');
 
     function onScroll() {
@@ -42,15 +41,6 @@
           hamburger.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
         });
-      });
-    }
-
-    if (themeBtn) {
-      themeBtn.addEventListener('click', function () {
-        var root = document.documentElement;
-        var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) {}
       });
     }
 

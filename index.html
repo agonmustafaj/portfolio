@@ -44,13 +44,13 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017c">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017c">
-  <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'))}catch(e){}</script>
+  <script>try{document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127d">
-  <link rel="preload" as="image" href="/assets/images/agon-hero-ai-840.webp" imagesrcset="/assets/images/agon-hero-ai-420.webp 420w, /assets/images/agon-hero-ai-840.webp 840w" imagesizes="(max-width: 960px) 72vw, 420px">
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127e">
+  <link rel="preload" as="image" href="/assets/images/agon-hero-ai-face-720.webp" imagesrcset="/assets/images/agon-hero-ai-face-420.webp 420w, /assets/images/agon-hero-ai-face-720.webp 720w" imagesizes="(max-width: 960px) 220px, 280px">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,9 +110,6 @@
         <a href="#blog" data-hr-nav>Blog</a>
       </nav>
       <div class="hr-nav-actions">
-        <button type="button" class="hr-theme-toggle" id="hr-theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
         <a href="#contact" class="hr-btn hr-btn-primary hr-btn-sm" data-hr-nav>Contact</a>
         <button type="button" class="hr-hamburger" id="hr-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hr-mobile-menu">
           <span></span><span></span><span></span>
@@ -158,14 +155,14 @@
           </div>
         </div>
         <div class="hr-hero-visual">
-          <figure class="hr-hero-photo">
+          <figure class="hr-hero-orb">
             <img
-              src="/assets/images/agon-hero-ai-840.webp"
-              srcset="/assets/images/agon-hero-ai-420.webp 420w, /assets/images/agon-hero-ai-840.webp 840w"
-              sizes="(max-width: 960px) 72vw, 420px"
-              alt="AI-styled portrait of Agon Mustafaj in brand colors"
-              width="840"
-              height="840"
+              src="/assets/images/agon-hero-ai-face-720.webp"
+              srcset="/assets/images/agon-hero-ai-face-420.webp 420w, /assets/images/agon-hero-ai-face-720.webp 720w"
+              sizes="(max-width: 960px) 220px, 280px"
+              alt="AI face portrait of Agon Mustafaj"
+              width="720"
+              height="720"
               fetchpriority="high"
               decoding="async"
             >
@@ -180,12 +177,12 @@
         <div class="hr-about-grid">
           <div class="hr-about-photo hr-reveal">
             <img
-              src="/assets/images/agon-mustafaj-420.webp"
-              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w"
+              src="/assets/images/agon-mustafaj-840.webp"
+              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
               sizes="(max-width: 880px) 80vw, 360px"
               alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
-              width="420"
-              height="420"
+              width="840"
+              height="840"
               loading="lazy"
               decoding="async"
             >
@@ -414,6 +411,6 @@
   <div id="site-footer" hidden></div>
 
   <script src="/js/data.js?v=20261120a" defer></script>
-  <script src="/js/home-redesign.js?v=20261127b" defer></script>
+  <script src="/js/home-redesign.js?v=20261127e" defer></script>
 </body>
 </html>
