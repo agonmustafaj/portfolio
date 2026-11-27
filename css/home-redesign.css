@@ -947,44 +947,8 @@ body.home-redesign *:focus-visible {
   max-width: 14ch;
 }
 
-.hr-agodev-projects {
-  display: grid;
-  gap: 0.85rem;
-  margin: 1.75rem 0 2rem;
-}
-
-@media (min-width: 720px) {
-  .hr-agodev-projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.hr-agodev-mini {
-  display: block;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--hr-border);
-  background: var(--hr-bg);
-  transition: transform 0.3s var(--hr-ease), border-color 0.3s;
-}
-
-.hr-agodev-mini:hover {
-  transform: translateY(-3px);
-  border-color: var(--hr-cyan);
-}
-
-.hr-agodev-mini img {
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  width: 100%;
-}
-
-.hr-agodev-mini span {
-  display: block;
-  padding: 0.75rem 0.9rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-family: var(--hr-font-display);
+.hr-agodev-panel .hr-btn {
+  margin-top: 1.75rem;
 }
 
 /* ---------- Blog ---------- */
