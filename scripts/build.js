@@ -62,13 +62,13 @@ function createRenderer() {
       querySelectorAll() { return []; },
       addEventListener() {},
       setAttribute() {},
-      classList: { add() {}, remove() {}, toggle() {} },
+      classList: { add() {}, remove() {}, toggle() {}, contains() { return false; } },
       dataset: {}
     };
   }
 
   const RENDERED = ['site-header', 'site-footer', 'project-showcase', 'cert-featured', 'cert-grid', 'verification-links', 'skill-list'];
-  const body = { dataset: {}, classList: { add() {} }, style: {}, appendChild() {} };
+  const body = { dataset: {}, classList: { add() {}, remove() {}, contains() { return false; } }, style: {}, appendChild() {} };
   const document = {
     body,
     documentElement: { setAttribute() {}, getAttribute() { return 'dark'; } },
