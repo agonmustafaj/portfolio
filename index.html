@@ -44,8 +44,13 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261017c">
   <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261017c">
-  <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'))}catch(e){}</script>
-  <link rel="stylesheet" href="/css/style.css?v=20261120a">
+  <script>try{document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127k">
+  <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-720.webp" imagesrcset="/assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-720.webp 720w" imagesizes="(max-width: 960px) 70vw, 380px">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -86,236 +91,346 @@
   }
   </script>
 </head>
-<body data-page="home">
+<body data-page="home" class="home-redesign" id="top">
 
-  <div id="site-header"></div>
+  <div id="hr-progress" class="hr-progress" aria-hidden="true"></div>
+
+  <!-- 01 Navigation -->
+  <header id="hr-nav" class="hr-nav">
+    <div class="hr-container hr-nav-inner">
+      <a href="#top" class="hr-wordmark" data-hr-nav aria-label="Agon Mustafaj Home">AGON<span>.</span></a>
+      <nav class="hr-nav-links" aria-label="Main navigation">
+        <a href="#top" data-hr-nav>Home</a>
+        <a href="#about" data-hr-nav>About</a>
+        <a href="#expertise" data-hr-nav>Expertise</a>
+        <a href="#projects" data-hr-nav>Projects</a>
+        <a href="#experience" data-hr-nav>Experience</a>
+        <a href="#certifications" data-hr-nav>Certifications</a>
+        <a href="#agodev" data-hr-nav>AgonDev</a>
+        <a href="#blog" data-hr-nav>Blog</a>
+      </nav>
+      <div class="hr-nav-actions">
+        <a href="#contact" class="hr-btn hr-btn-primary hr-btn-sm" data-hr-nav>Contact</a>
+        <button type="button" class="hr-hamburger" id="hr-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hr-mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hr-mobile-menu" id="hr-mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#top" data-hr-nav>Home</a>
+    <a href="#about" data-hr-nav>About</a>
+    <a href="#expertise" data-hr-nav>Expertise</a>
+    <a href="#projects" data-hr-nav>Projects</a>
+    <a href="#experience" data-hr-nav>Experience</a>
+    <a href="#certifications" data-hr-nav>Certifications</a>
+    <a href="#agodev" data-hr-nav>AgonDev</a>
+    <a href="#blog" data-hr-nav>Blog</a>
+    <a href="#contact" data-hr-nav>Contact</a>
+  </div>
+
+  <!-- Shared mounts kept for script.js compatibility; hidden by CSS -->
+  <div id="site-header" hidden></div>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-name">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1 class="hero-name" id="hero-name">AGON MUSTAFAJ</h1>
-          <p class="hero-available" data-i18n="home.available">Available for SEO and web projects</p>
-          <p class="hero-identity" data-i18n="profile.identity">SEO EXPERT × WEB DEV</p>
-          <p class="hero-statement" data-i18n="home.statement">I work as an SEO expert and web developer. AgoDev is where that work lives: search visibility, websites, and the projects I have shipped.</p>
-          <p class="hero-subtitle" data-i18n="profile.headline">SEO Expert and Web Developer</p>
-          <p class="hero-location" data-i18n="profile.location">Prishtina, Kosovo</p>
-          <div class="btn-group">
-            <a href="https://agodev.agonmustafaj.com/" class="btn btn-primary" data-i18n="home.openAgodev">Open AgoDev</a>
-            <a href="https://agodev.agonmustafaj.com/#start" class="btn btn-secondary" data-i18n="home.startProject">Start a project</a>
-            <a href="/about/" class="btn btn-ghost" data-i18n="ui.aboutMe">About Me</a>
+    <!-- 02 Hero -->
+    <section class="hr-hero" aria-labelledby="hero-name">
+      <div class="hr-hero-grid-bg" aria-hidden="true"></div>
+      <div class="hr-hero-glow hr-hero-glow-a" aria-hidden="true"></div>
+      <div class="hr-hero-glow hr-hero-glow-b" aria-hidden="true"></div>
+      <div class="hr-container hr-hero-layout">
+        <div class="hr-hero-copy">
+          <div class="hr-hero-kicker">
+            <span><i aria-hidden="true"></i> Available for SEO and web projects</span>
+            <span>Prishtina, Kosovo</span>
+          </div>
+          <p class="hr-hero-display">Building for the web.<br><em>Optimizing for search.</em></p>
+          <h1 class="hero-name" id="hero-name">Agon Mustafaj.</h1>
+          <p class="hr-hero-role">Computer Science Student · SEO Expert · Web Developer</p>
+          <p class="hr-hero-lead">I work at the intersection of web development and search engine optimization, building digital experiences while exploring emerging technologies.</p>
+          <div class="hr-hero-cta">
+            <a href="#projects" class="hr-btn hr-btn-primary">Explore My Work</a>
+            <a href="#contact" class="hr-btn hr-btn-ghost">Let's Connect</a>
           </div>
         </div>
-        <div id="wallet-card">
-          <div class="wallet-container">
-            <div class="wallet-card" role="img" data-i18n-aria="wallet.aria" aria-label="Digital identity card for Agon Mustafaj">
-              <div class="wallet-card-inner">
-                <div class="wallet-top">
-                  <div class="wallet-avatar" id="wallet-avatar">
-                    <img
-                      src="/assets/images/agon-mustafaj-160.webp"
-                      srcset="/assets/images/agon-mustafaj-160.webp 160w, /assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
-                      sizes="56px"
-                      alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
-                      width="160"
-                      height="160"
-                      decoding="async"
-                    >
-                  </div>
-                </div>
-                <div class="wallet-info">
-                  <p class="wallet-name">Agon Mustafaj</p>
-                  <p><span data-i18n="wallet.role">SEO Expert and Web Developer</span><br><a class="company-link" href="https://agodev.agonmustafaj.com/">AgoDev</a><br><span data-i18n="profile.location">Prishtina, Kosovo</span></p>
-                  <div class="wallet-socials">
-                    <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                    <a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                    <a href="mailto:agonmustafaj01@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-                  </div>
-                </div>
-                <div class="wallet-actions">
-                  <button class="btn btn-secondary btn-sm" data-share data-i18n="wallet.share">Share Profile</button>
-                  <a href="/cv/" class="btn btn-secondary btn-sm" data-i18n="ui.downloadCv">Resume</a>
-                  <a href="/contact/" class="btn btn-primary btn-sm" data-i18n="ui.contact">Contact</a>
-                </div>
-              </div>
+        <div class="hr-hero-visual">
+          <div class="hr-sculpture">
+            <div class="hr-sculpture-face">
+              <img
+                src="/assets/images/agon-ai-nerve-720.webp"
+                srcset="/assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-720.webp 720w"
+                sizes="(max-width: 960px) 70vw, 320px"
+                alt="AI nerve-fiber portrait of Agon Mustafaj"
+                width="720"
+                height="720"
+                fetchpriority="high"
+                decoding="async"
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What I Do -->
-    <section class="home-section" aria-labelledby="what-i-do-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label" data-i18n="home.labelWhat">For clients</span>
-          <h2 id="what-i-do-heading" data-i18n="home.whatTitle">SEO and websites that bring in work</h2>
-          <p data-i18n="home.whatLead">SEO and web development for businesses that need to be found in search, and a site customers can actually use.</p>
-        </div>
-        <div class="what-i-do-grid">
-          <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" data-icon="build" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-build" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-build)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="9" y="12" width="30" height="24" rx="5" fill="#0c1020"/><rect x="9" y="12" width="30" height="8" rx="5" fill="#1a2238"/><rect x="9" y="17" width="30" height="3" fill="#1a2238"/><circle cx="14" cy="16" r="1.35" fill="#fb7185"/><circle cx="18.2" cy="16" r="1.35" fill="#fbbf24"/><circle cx="22.4" cy="16" r="1.35" fill="#34d399"/><rect x="13" y="22.5" width="13" height="10" rx="2" fill="#3b82f6"/><rect x="28" y="22.5" width="8" height="4" rx="1.2" fill="#64748b"/><rect x="28" y="28" width="8" height="4.5" rx="1.2" fill="#a78bfa"/></g></svg></div>
-            <h3 data-i18n="home.build">Build</h3>
-            <p data-i18n="home.buildP">Websites for businesses, from the first brief through to a live site.</p>
-          </div>
-          <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" data-icon="optimize" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-opt" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-opt)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect class="i-bar" x="10" y="13" width="28" height="9" rx="3" fill="#f8fafc"/><circle cx="16.5" cy="17.5" r="2.4" fill="#22c55e"/><rect x="21" y="16" width="13" height="2.2" rx="1" fill="#94a3b8"/><rect x="10" y="24.5" width="22" height="6" rx="2" fill="#0c1020" opacity=".45"/><rect x="10" y="32.5" width="16" height="6" rx="2" fill="#0c1020" opacity=".28"/></g></svg></div>
-            <h3 data-i18n="home.optimize">SEO</h3>
-            <p data-i18n="home.optimizeP">Technical SEO, on-page work, audits and site structure so a business can be found.</p>
-          </div>
-          <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" data-icon="explore" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-ex" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-ex)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-orb"><line x1="24" y1="24" x2="13" y2="14" stroke="#c7d2fe" stroke-width="1.6"/><line x1="24" y1="24" x2="37" y2="16" stroke="#c7d2fe" stroke-width="1.6"/><line x1="24" y1="24" x2="18" y2="36" stroke="#c7d2fe" stroke-width="1.6"/><circle cx="13" cy="14" r="3.2" fill="#93c5fd"/><circle cx="37" cy="16" r="2.6" fill="#c4b5fd"/><circle cx="18" cy="36" r="2.8" fill="#67e8f9"/><circle cx="24" cy="24" r="6.2" fill="#0c1020"/><circle cx="24" cy="24" r="3.4" fill="#f8fafc"/></g></svg></div>
-            <h3 data-i18n="home.explore">Use AI</h3>
-            <p data-i18n="home.exploreP">AI tools where they speed the build. The site stays yours.</p>
-          </div>
-          <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" data-icon="design" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-de" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-de)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="11" y="13" width="22" height="16" rx="3" fill="#0c1020"/><rect x="14" y="16" width="12" height="3" rx="1" fill="#64748b"/><rect x="14" y="21" width="16" height="5" rx="1.2" fill="#3b82f6"/><rect x="22" y="21" width="13" height="18" rx="3.5" fill="#1e1b4b"/><rect x="25" y="25" width="7" height="2.2" rx="1" fill="#a78bfa"/><rect x="25" y="29" width="7" height="6" rx="1.2" fill="#f8fafc"/></g></svg></div>
-            <h3 data-i18n="home.design">Design</h3>
-            <p data-i18n="home.designP">Layouts that stay clear on a phone and on a desktop.</p>
-          </div>
-          <div class="what-i-do-card card-tilt reveal">
-            <div class="icon" data-icon="analyze" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-an" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-an)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><path d="M12 31l6.5-9 5.5 4 6.5-12 6 4" fill="none" stroke="#e2e8f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="31" r="2.1" fill="#93c5fd"/><circle cx="18.5" cy="22" r="2.1" fill="#93c5fd"/><circle cx="24" cy="26" r="2.1" fill="#c4b5fd"/><circle cx="30.5" cy="14" r="3.1" fill="#fbbf24"/><circle cx="36.5" cy="18" r="2.1" fill="#93c5fd"/></g></svg></div>
-            <h3 data-i18n="home.analyze">Support</h3>
-            <p data-i18n="home.analyzeP">A process you can follow, and help after the site is live.</p>
+    <!-- 03 About -->
+    <section class="hr-section" id="about" aria-labelledby="about-heading">
+      <div class="hr-container">
+        <div class="hr-about-split">
+          <aside class="hr-wallet hr-reveal" aria-label="Profile card">
+            <div class="hr-wallet-top">
+              <img
+                class="hr-wallet-avatar"
+                src="/assets/images/agon-mustafaj-240.webp"
+                srcset="/assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w"
+                sizes="64px"
+                alt="Agon Mustafaj"
+                width="240"
+                height="240"
+                loading="lazy"
+                decoding="async"
+              >
+              <div>
+                <p class="hr-wallet-name">Agon Mustafaj</p>
+                <p class="hr-wallet-role">SEO Expert and Web Developer</p>
+                <p><a class="hr-wallet-link" href="https://agodev.agonmustafaj.com/">AgoDev</a></p>
+                <p class="hr-wallet-loc">Prishtina, Kosovo</p>
+              </div>
+            </div>
+            <div class="hr-wallet-socials">
+              <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="mailto:agonmustafaj01@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            </div>
+            <div class="hr-wallet-actions">
+              <a href="/cv/" class="hr-btn hr-btn-ghost hr-btn-sm">Resume</a>
+              <a href="/contact/" class="hr-btn hr-btn-primary hr-btn-sm">Contact</a>
+            </div>
+          </aside>
+          <div class="hr-about-copy hr-reveal">
+            <span class="hr-label">About</span>
+            <h2 id="about-heading">Curious by nature. Technical by mindset.</h2>
+            <p>I'm <strong>Agon Mustafaj</strong>, an SEO Expert and Web Developer based in Prishtina, Kosovo. I work at the intersection of search visibility, web development, and AI, helping businesses build a stronger and more effective online presence through <strong><a href="https://agodev.agonmustafaj.com/">AgoDev</a></strong>.</p>
+            <p>As an SEO Expert at <a href="https://thenovalab.com/" target="_blank" rel="noopener noreferrer">Novalab SEO Agency</a> and a Computer Science student at the <strong>University of Prishtina</strong>, I combine practical industry experience with a technical understanding of how websites are built, structured, crawled, and discovered.</p>
+            <p>Through AgoDev, I bring SEO and web development together. I also integrate AI tools into my workflow to improve efficiency, accelerate development, and explore better ways to solve technical and creative challenges.</p>
+            <div class="hr-section-cta">
+              <a href="/about/" class="hr-btn hr-btn-ghost">More about me</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="home-section" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label" data-i18n="home.servicesTitle">SEO and web development</span>
-          <h2 id="services-heading"><a href="https://agodev.agonmustafaj.com/" data-i18n="nav.agodev">AgoDev</a></h2>
-          <p data-i18n="home.servicesLead">AgoDev is the page for the SEO and website work I take on: the services, the process, and the sites already live.</p>
+    <!-- 04 Expertise -->
+    <section class="hr-section hr-section-alt" id="expertise" aria-labelledby="expertise-heading">
+      <div class="hr-container">
+        <div class="hr-reveal">
+          <span class="hr-label">Expertise</span>
+          <h2 id="expertise-heading">What I Focus On.</h2>
+          <p class="hr-section-lead">Three areas that shape my work: search visibility, building for the web, and exploring technology and AI.</p>
         </div>
-        <div class="what-i-do-grid">
-          <div class="what-i-do-card reveal">
-            <div class="icon" data-icon="site" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-site" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-site)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="10" y="12" width="28" height="24" rx="5" fill="#0c1020"/><rect x="13" y="15.5" width="8" height="3" rx="1.5" fill="#3b82f6"/><rect x="23" y="16" width="12" height="2" rx="1" fill="#475569"/><rect x="13" y="21" width="22" height="2.4" rx="1" fill="#e2e8f0"/><rect x="13" y="25" width="16" height="2" rx="1" fill="#64748b"/><rect x="13" y="29.5" width="11" height="4" rx="2" fill="#22c55e"/></g></svg></div>
-            <h3 data-i18n="home.svcSite">Technical SEO</h3>
-            <p data-i18n="home.svcSiteP">Crawlability, indexing, site structure and audits so the business can be found.</p>
-          </div>
-          <div class="what-i-do-card reveal">
-            <div class="icon" data-icon="mobile" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-mob" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-mob)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="16" y="9" width="16" height="30" rx="4.5" fill="#0c1020"/><rect x="18.5" y="12" width="11" height="2" rx="1" fill="#3b82f6"/><rect x="18.5" y="16" width="11" height="8" rx="1.5" fill="#1e293b"/><rect x="18.5" y="26" width="11" height="2" rx="1" fill="#64748b"/><rect x="18.5" y="30" width="7" height="2.4" rx="1.2" fill="#22c55e"/><rect x="21.5" y="35.2" width="5" height="1.4" rx=".7" fill="#475569"/></g></svg></div>
-            <h3 data-i18n="home.svcMobile">Web development</h3>
-            <p data-i18n="home.svcMobileP">A business website in clean HTML, CSS and JavaScript, from the brief to a live site.</p>
-          </div>
-          <div class="what-i-do-card reveal">
-            <div class="icon" data-icon="chat" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="ig-chat" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1a3358"/><stop offset="1" stop-color="#0c1828"/></linearGradient></defs><rect width="48" height="48" rx="16" fill="url(#ig-chat)"/><path d="M8 8h32a8 8 0 018 8v6H0v-6a8 8 0 018-8z" fill="#fff" opacity=".16"/><g class="i-lift"><rect x="10" y="14" width="20" height="10" rx="4" fill="#0c1020"/><rect x="13" y="17.5" width="12" height="2" rx="1" fill="#64748b"/><path d="M18 24l-4 5 8-3z" fill="#0c1020"/><rect x="18" y="26" width="20" height="10" rx="4" fill="#22c55e"/><path d="M23.2 30.2l2.1 2.1 4.4-4.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
-            <h3 data-i18n="home.svcInquiries">On-page SEO</h3>
-            <p data-i18n="home.svcInquiriesP">Titles, meta descriptions, headings and content structured for search.</p>
-          </div>
-        </div>
-        <div style="text-align:center;margin-top:2rem" class="reveal">
-          <a href="https://agodev.agonmustafaj.com/" class="btn btn-primary" data-i18n="nav.agodev">AgoDev</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Preview -->
-    <section class="home-section" aria-labelledby="projects-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label" data-i18n="home.labelProjects">Selected Projects</span>
-          <h2 id="projects-heading" data-i18n="home.projectsTitle">Things I've Built</h2>
-          <p data-i18n="home.projectsLead">Websites I designed and built end to end, each with a case study.</p>
-        </div>
-        <div id="project-showcase"></div>
-        <div style="text-align:center;margin-top:2rem" class="reveal">
-          <a href="https://agodev.agonmustafaj.com/#work" class="btn btn-secondary" data-i18n="home.seeOnAgodev">See this work on AgoDev</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Terminal -->
-    <section class="home-section" aria-label="Terminal">
-      <div class="container" style="max-width:700px">
-        <div class="terminal reveal">
-          <div class="terminal-header" aria-hidden="true">
-            <span style="background:#ff5f57"></span>
-            <span style="background:#febc2e"></span>
-            <span style="background:#28c840"></span>
-          </div>
-          <div class="terminal-body" id="terminal-output" aria-live="polite"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Preview -->
-    <section class="home-section" aria-labelledby="certs-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label" data-i18n="home.labelLearn">Learning</span>
-          <h2 id="certs-heading" data-i18n="home.learnTitle">Continuous Learning</h2>
-          <p data-i18n="home.learnLead">Course certificates in Semrush, HubSpot, Ahrefs, BrightLocal, KWT Digital, Python, Power BI, SEO, networking and cybersecurity fundamentals, earned alongside my studies.</p>
-        </div>
-        <div class="cert-featured-grid" id="cert-featured"></div>
-        <div style="text-align:center;margin-top:1.5rem" class="reveal">
-          <a href="/certifications/" class="btn btn-secondary" data-i18n="home.viewCerts">View All Certifications →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social -->
-    <section class="home-section" aria-labelledby="social-heading">
-      <div class="container">
-        <div class="section-header reveal" style="text-align:center">
-          <span class="label" data-i18n="home.labelConnect">Connect</span>
-          <h2 id="social-heading" data-i18n="home.connectTitle">Find Me Online</h2>
-        </div>
-        <div class="social-grid reveal" style="justify-content:center">
-          <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog -->
-    <section class="home-section" aria-labelledby="blog-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label" data-i18n="home.labelBlog">Blog</span>
-          <h2 id="blog-heading" data-i18n="home.blogTitle">AI &amp; Technology</h2>
-          <p data-i18n="home.blogLead">Thoughts on artificial intelligence today and how technology is changing the way we build.</p>
-        </div>
-        <div class="articles-grid reveal">
-          <!-- managed-post -->
-          <article class="article-card">
-            <span class="label" data-i18n="dyn.how-to-improve-website-seo.cat">WEB &amp; SEO</span>
-            <h3><a href="/blog/how-to-improve-website-seo/" data-i18n="dyn.how-to-improve-website-seo.title">How to Improve Your Website’s SEO: Checklist and When to Hire</a></h3>
-            <p data-i18n="dyn.how-to-improve-website-seo.short">Practical steps for keywords, on-page SEO, technical SEO, links, and measuring results.</p>
+        <div class="hr-expertise-grid">
+          <article class="hr-expertise-card hr-reveal">
+            <div class="hr-expertise-index">01</div>
+            <h3>Search Engine Optimization</h3>
+            <ul class="hr-chip-list">
+              <li>Technical SEO</li>
+              <li>On-Page SEO</li>
+              <li>Keyword Research</li>
+              <li>Website Audits</li>
+              <li>Internal Linking</li>
+              <li>Search Visibility</li>
+              <li>AI Search</li>
+            </ul>
           </article>
-          <article class="article-card">
-            <span class="label" data-i18n="dyn.three-things-i-check-before-i-publish-a-site.cat">Web</span>
-            <h3><a href="/blog/three-things-i-check-before-i-publish-a-site/" data-i18n="dyn.three-things-i-check-before-i-publish-a-site.title">Three things I check before I publish a site</a></h3>
-            <p data-i18n="dyn.three-things-i-check-before-i-publish-a-site.short">Before a site goes live, I check the title, how it reads on a phone, and how easily a visitor can get in touch</p>
+          <article class="hr-expertise-card hr-reveal">
+            <div class="hr-expertise-index">02</div>
+            <h3>Web Development</h3>
+            <ul class="hr-chip-list">
+              <li>Front-End Development</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Web Design</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </article>
-          <article class="article-card">
-            <span class="label" data-i18n="blog.catCareer">Career &amp; AI</span>
-            <h3><a href="/blog/think-outside-the-box/" data-i18n="blog.t5">Think Outside the Box: Adapt Faster, Work Smarter</a></h3>
-            <p data-i18n="blog.short5">Why the biggest advantage goes to those who adapt the fastest.</p>
+          <article class="hr-expertise-card hr-reveal">
+            <div class="hr-expertise-index">03</div>
+            <h3>Technology &amp; AI</h3>
+            <ul class="hr-chip-list">
+              <li>Artificial Intelligence</li>
+              <li>Computer Science</li>
+              <li>Modern Web Technologies</li>
+              <li>Programming</li>
+              <li>Software Development</li>
+            </ul>
           </article>
         </div>
-        <div style="text-align:center;margin-top:1.5rem" class="reveal">
-          <a href="/blog/" class="btn btn-secondary" data-i18n="home.viewPosts">View All Posts →</a>
+      </div>
+    </section>
+
+    <!-- 05 Projects -->
+    <section class="hr-section" id="projects" aria-labelledby="projects-heading">
+      <div class="hr-container">
+        <div class="hr-reveal">
+          <span class="hr-label">Selected Projects</span>
+          <h2 id="projects-heading">Things I've Built.</h2>
+          <p class="hr-section-lead">Websites I designed and built end to end, each with a case study.</p>
+        </div>
+        <div class="hr-projects" id="hr-projects"></div>
+        <div class="hr-section-cta hr-reveal">
+          <a href="https://agodev.agonmustafaj.com/#work" class="hr-btn hr-btn-ghost">See this work on AgoDev</a>
         </div>
       </div>
     </section>
 
+    <!-- 06 Experience -->
+    <section class="hr-section hr-section-alt" id="experience" aria-labelledby="experience-heading">
+      <div class="hr-container">
+        <div class="hr-reveal">
+          <span class="hr-label">Experience</span>
+          <h2 id="experience-heading">My Professional Journey.</h2>
+          <p class="hr-section-lead">SEO work at Novalab SEO Agency, from internship to SEO Expert.</p>
+        </div>
+        <div class="hr-timeline" id="hr-experience"></div>
+        <div class="hr-section-cta hr-reveal">
+          <a href="/experience/" class="hr-btn hr-btn-ghost">Full experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Certifications -->
+    <section class="hr-section" id="certifications" aria-labelledby="certs-heading">
+      <div class="hr-container">
+        <div class="hr-reveal">
+          <span class="hr-label">Learning</span>
+          <h2 id="certs-heading">Continuous Learning.</h2>
+          <p class="hr-section-lead">Course certificates in Semrush, HubSpot, Ahrefs, BrightLocal, KWT Digital, Python, Power BI, SEO, networking and cybersecurity fundamentals, earned alongside my studies.</p>
+        </div>
+        <div class="hr-cert-grid" id="hr-certs"></div>
+        <div class="hr-section-cta hr-reveal">
+          <a href="/certifications/" class="hr-btn hr-btn-ghost">View all certifications</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 AgonDev -->
+    <section class="hr-section hr-agodev" id="agodev" aria-labelledby="agodev-heading">
+      <div class="hr-container">
+        <div class="hr-agodev-panel hr-reveal">
+          <span class="hr-label">AgoDev</span>
+          <h2 id="agodev-heading">Designing and Building for the Web.</h2>
+          <p class="hr-section-lead">AgoDev is where SEO and website work live together: services, process, and client projects already live.</p>
+          <div class="hr-agodev-projects" id="hr-agodev-projects"></div>
+          <a href="https://agodev.agonmustafaj.com/" class="hr-btn hr-btn-primary">Explore AgonDev</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Blog -->
+    <section class="hr-section hr-section-alt" id="blog" aria-labelledby="blog-heading">
+      <div class="hr-container">
+        <div class="hr-reveal">
+          <span class="hr-label">Insights</span>
+          <h2 id="blog-heading">Thoughts, Ideas &amp; Insights.</h2>
+          <p class="hr-section-lead">Notes on SEO, web development, search technologies, and AI.</p>
+        </div>
+        <div class="hr-blog-grid">
+          <article class="hr-article hr-reveal">
+            <span class="hr-label">WEB &amp; SEO</span>
+            <h3><a href="/blog/how-to-improve-website-seo/">How to Improve Your Website’s SEO: Checklist and When to Hire</a></h3>
+            <p>Practical steps for keywords, on-page SEO, technical SEO, links, and measuring results.</p>
+            <div class="hr-article-meta"><a href="/blog/how-to-improve-website-seo/">Read article →</a></div>
+          </article>
+          <article class="hr-article hr-reveal">
+            <span class="hr-label">Web</span>
+            <h3><a href="/blog/three-things-i-check-before-i-publish-a-site/">Three things I check before I publish a site</a></h3>
+            <p>Before a site goes live, I check the title, how it reads on a phone, and how easily a visitor can get in touch</p>
+            <div class="hr-article-meta"><a href="/blog/three-things-i-check-before-i-publish-a-site/">Read article →</a></div>
+          </article>
+          <article class="hr-article hr-reveal">
+            <span class="hr-label">Career &amp; AI</span>
+            <h3><a href="/blog/think-outside-the-box/">Think Outside the Box: Adapt Faster, Work Smarter</a></h3>
+            <p>Why the biggest advantage goes to those who adapt the fastest.</p>
+            <div class="hr-article-meta"><a href="/blog/think-outside-the-box/">Read article →</a></div>
+          </article>
+        </div>
+        <div class="hr-section-cta hr-reveal">
+          <a href="/blog/" class="hr-btn hr-btn-ghost">View all posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Contact -->
+    <section class="hr-section hr-contact" id="contact" aria-labelledby="contact-heading">
+      <div class="hr-contact-bg" aria-hidden="true"></div>
+      <div class="hr-container">
+        <div class="hr-contact-inner hr-reveal">
+          <span class="hr-label">Contact</span>
+          <h2 id="contact-heading">Let's Build Something Meaningful.</h2>
+          <p class="hr-section-lead">Reach out for SEO, web development, or a conversation about a project.</p>
+          <div class="hr-contact-channels">
+            <a href="mailto:agonmustafaj01@gmail.com" aria-label="Email Agon Mustafaj">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+            <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/agonmustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </div>
+          <a href="/contact/" class="hr-btn hr-btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <div id="site-footer"></div>
+  <!-- 11 Footer -->
+  <footer class="hr-footer" id="site-footer-redesign">
+    <div class="hr-container">
+      <div class="hr-footer-top">
+        <div class="hr-footer-brand">
+          <a href="#top" class="hr-wordmark">AGON<span>.</span></a>
+          <p>SEO Expert and Web Developer. Search visibility and websites through AgoDev.</p>
+        </div>
+        <nav class="hr-footer-nav" aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="https://agodev.agonmustafaj.com/">AgonDev</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="/cv/">Resume</a>
+        </nav>
+      </div>
+      <div class="hr-footer-bottom">
+        <span>&copy; 2026 Agon Mustafaj</span>
+        <div class="hr-footer-socials">
+          <a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://github.com/agonmustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+        <button type="button" class="hr-back-top" id="hr-back-top">Back to top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <div id="site-footer" hidden></div>
 
   <script src="/js/data.js?v=20261120a" defer></script>
-  <script src="/js/i18n.js?v=20261120a" defer></script>
-  <script src="/js/script.js?v=20261120a" defer></script>
+  <script src="/js/home-redesign.js?v=20261127k" defer></script>
 </body>
 </html>
