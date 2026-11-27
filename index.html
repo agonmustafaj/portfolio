@@ -47,9 +47,10 @@
   <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'))}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261120a">
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127a">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127c">
+  <link rel="preload" as="image" href="/assets/images/agon-mustafaj-840.webp" imagesrcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w" imagesizes="(max-width: 960px) 72vw, 420px">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -142,7 +143,7 @@
       <div class="hr-hero-glow hr-hero-glow-a" aria-hidden="true"></div>
       <div class="hr-hero-glow hr-hero-glow-b" aria-hidden="true"></div>
       <div class="hr-container hr-hero-layout">
-        <div class="hr-hero-copy hr-reveal">
+        <div class="hr-hero-copy">
           <div class="hr-hero-kicker">
             <span><i aria-hidden="true"></i> Available for SEO and web projects</span>
             <span>Prishtina, Kosovo</span>
@@ -156,16 +157,19 @@
             <a href="#contact" class="hr-btn hr-btn-ghost">Let's Connect</a>
           </div>
         </div>
-        <div class="hr-hero-visual" aria-hidden="true">
-          <div class="hr-sculpture" id="hr-sculpture">
-            <canvas class="hr-particles" id="hr-particles"></canvas>
-            <div class="hr-sculpture-ring"></div>
-            <div class="hr-sculpture-ring hr-sculpture-ring-2"></div>
-            <div class="hr-sculpture-core"></div>
-            <span class="hr-sculpture-orb"></span>
-            <span class="hr-sculpture-orb"></span>
-            <span class="hr-sculpture-orb"></span>
-          </div>
+        <div class="hr-hero-visual">
+          <figure class="hr-hero-photo">
+            <img
+              src="/assets/images/agon-mustafaj-840.webp"
+              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
+              sizes="(max-width: 960px) 72vw, 420px"
+              alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
+              width="840"
+              height="840"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </figure>
         </div>
       </div>
     </section>
@@ -176,12 +180,12 @@
         <div class="hr-about-grid">
           <div class="hr-about-photo hr-reveal">
             <img
-              src="/assets/images/agon-mustafaj-840.webp"
-              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
+              src="/assets/images/agon-mustafaj-420.webp"
+              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w"
               sizes="(max-width: 880px) 80vw, 360px"
               alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
-              width="840"
-              height="840"
+              width="420"
+              height="420"
               loading="lazy"
               decoding="async"
             >
@@ -289,7 +293,6 @@
           <h2 id="certs-heading">Continuous Learning.</h2>
           <p class="hr-section-lead">Course certificates in Semrush, HubSpot, Ahrefs, BrightLocal, KWT Digital, Python, Power BI, SEO, networking and cybersecurity fundamentals, earned alongside my studies.</p>
         </div>
-        <div class="hr-cert-filters hr-reveal" id="hr-cert-filters" role="group" aria-label="Filter certifications"></div>
         <div class="hr-cert-grid" id="hr-certs"></div>
         <div class="hr-section-cta hr-reveal">
           <a href="/certifications/" class="hr-btn hr-btn-ghost">View all certifications</a>
@@ -411,8 +414,6 @@
   <div id="site-footer" hidden></div>
 
   <script src="/js/data.js?v=20261120a" defer></script>
-  <script src="/js/i18n.js?v=20261120a" defer></script>
-  <script src="/js/script.js?v=20261127a" defer></script>
-  <script src="/js/home-redesign.js?v=20261127a" defer></script>
+  <script src="/js/home-redesign.js?v=20261127b" defer></script>
 </body>
 </html>
