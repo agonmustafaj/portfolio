@@ -115,6 +115,20 @@ body.home-redesign *:focus-visible {
   color: transparent;
 }
 
+.hr-nav-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.hr-nav-logo img {
+  height: 36px;
+  width: auto;
+  max-width: min(168px, 42vw);
+  display: block;
+}
+
 .hr-nav-links {
   display: none;
   align-items: center;
@@ -782,8 +796,9 @@ body.home-redesign *:focus-visible {
 .hr-timeline {
   position: relative;
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 760px;
+  padding-left: 2.75rem;
 }
 
 .hr-timeline::before {
@@ -798,14 +813,17 @@ body.home-redesign *:focus-visible {
 
 .hr-timeline-item {
   position: relative;
-  padding-left: 2.75rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--hr-surface);
+  border: 1px solid var(--hr-border);
+  border-radius: 18px;
 }
 
 .hr-timeline-item::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 8px;
+  left: calc(-2.75rem + 5px);
+  top: 1.45rem;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -817,7 +835,8 @@ body.home-redesign *:focus-visible {
 .hr-timeline-item h3 {
   font-family: var(--hr-font-display);
   font-size: 1.25rem;
-  margin: 0 0 0.25rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.35rem;
 }
 
 .hr-timeline-meta {

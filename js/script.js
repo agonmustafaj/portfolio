@@ -109,7 +109,9 @@
         '<div id="hr-progress" class="hr-progress" aria-hidden="true"></div>' +
         '<header id="hr-nav" class="hr-nav">' +
           '<div class="hr-container hr-nav-inner">' +
-            '<a href="/" class="hr-wordmark" aria-label="Agon Mustafaj Home">AGON<span>.</span></a>' +
+            '<a href="/" class="hr-nav-logo" aria-label="Agon Mustafaj Home">' +
+              '<img src="/assets/images/logo-nav-dark.webp" alt="" width="277" height="60" decoding="async">' +
+            '</a>' +
             '<nav class="hr-nav-links" aria-label="Main navigation">' + links + '</nav>' +
             '<div class="hr-nav-actions">' +
               '<a href="/contact/" class="hr-btn hr-btn-primary hr-btn-sm"' + (activePage === 'contact' ? ' aria-current="page"' : '') + '>Contact</a>' +

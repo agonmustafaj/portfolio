@@ -706,9 +706,9 @@ const whatIDo = [
 const journeySteps = [
   { title: 'University of Prishtina', subtitle: 'Computer Science', status: 'Current' },
   { title: 'SEO Expert', subtitle: 'Novalab SEO Agency', status: 'Current' },
-  { title: 'Web Projects', subtitle: 'Building real websites', status: 'Current' },
+  { title: 'Web Projects', subtitle: 'Building real websites', status: '' },
   { title: 'Data Analytics', subtitle: 'Coursework and self-study', status: 'Learning' },
-  { title: 'Continuous Learning', subtitle: 'Always growing', status: 'Current' }
+  { title: 'Continuous Learning', subtitle: 'Always growing', status: '' }
 ];
 
 const seoFlow = [
