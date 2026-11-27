@@ -11,7 +11,7 @@ The site is available in English and Albanian (the language switch is on every p
 - [Improve your SEO](https://agonmustafaj.com/improve-seo/): paid SEO audit and fixes for existing websites, with indexing, speed, on-page work and reporting
 - [SEO freelancer Kosovo](https://agonmustafaj.com/seo-freelancer-kosovo/): hire an SEO freelancer in Kosovo for audits, ranking fixes and local search
 - [Freelancer in Kosovo](https://agonmustafaj.com/freelancer-kosove/): SEO freelancer and websites for businesses across Kosovo
-- [Projects](https://agonmustafaj.com/projects/): overview of the websites built, each with a case study
+- [Projects](https://agodev.agonmustafaj.com/#projects): overview of the websites built, each with a case study
 - [Malaj Design case study](https://agonmustafaj.com/projects/malaj-design/): designer portfolio built in Next.js, React and Tailwind CSS
 - [Roofman case study](https://agonmustafaj.com/projects/roofman/): scroll-driven roof restoration product demo
 - [Mathematics Textbook case study](https://agonmustafaj.com/projects/mathematics-textbook/): digital textbook for integration with worked examples
