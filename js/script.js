@@ -104,6 +104,7 @@
         var active = navPageActive(link.page, activePage);
         return '<a href="' + link.href + '"' + (active ? ' class="is-active" aria-current="page"' : '') + '>' + link.label + '</a>';
       }).join('');
+      var langSwitch = typeof I18N !== 'undefined' ? I18N.langSwitcherMarkup() : '';
 
       header.innerHTML =
         '<div id="hr-progress" class="hr-progress" aria-hidden="true"></div>' +
@@ -114,6 +115,7 @@
             '</a>' +
             '<nav class="hr-nav-links" aria-label="Main navigation">' + links + '</nav>' +
             '<div class="hr-nav-actions">' +
+              langSwitch +
               '<a href="/contact/" class="hr-btn hr-btn-primary hr-btn-sm"' + (activePage === 'contact' ? ' aria-current="page"' : '') + '>Contact</a>' +
               '<button type="button" class="hr-hamburger" id="hr-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hr-mobile-menu">' +
                 '<span></span><span></span><span></span>' +
@@ -124,9 +126,11 @@
         '<div class="hr-mobile-menu" id="hr-mobile-menu" role="navigation" aria-label="Mobile navigation">' +
           links +
           '<a href="/contact/"' + (activePage === 'contact' ? ' class="is-active"' : '') + '>Contact</a>' +
+          langSwitch +
         '</div>';
 
       initRedesignNav();
+      if (typeof I18N !== 'undefined') I18N.bindLangSwitcher(header);
       return;
     }
 
@@ -243,6 +247,9 @@
     btn.setAttribute('data-hr-back-bound', '1');
     btn.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      if (location.hash && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
     });
     function onScroll() {
       btn.classList.toggle('is-visible', window.scrollY > 480);

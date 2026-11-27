@@ -156,6 +156,52 @@ body.home-redesign *:focus-visible {
   gap: 0.6rem;
 }
 
+.hr-nav .lang-switch,
+.hr-mobile-menu .lang-switch,
+#hr-lang-switch .lang-switch,
+#hr-lang-switch-mobile .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.hr-nav .lang-switch button,
+.hr-mobile-menu .lang-switch button,
+#hr-lang-switch .lang-switch button,
+#hr-lang-switch-mobile .lang-switch button {
+  padding: 0.35rem 0.55rem;
+  font-family: var(--hr-font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--hr-text-2);
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.hr-nav .lang-switch button:hover,
+.hr-mobile-menu .lang-switch button:hover,
+#hr-lang-switch .lang-switch button:hover,
+#hr-lang-switch-mobile .lang-switch button:hover {
+  color: var(--hr-text);
+}
+
+.hr-nav .lang-switch button.active,
+.hr-mobile-menu .lang-switch button.active,
+#hr-lang-switch .lang-switch button.active,
+#hr-lang-switch-mobile .lang-switch button.active {
+  color: var(--hr-text);
+  background: color-mix(in srgb, var(--hr-blue) 14%, transparent);
+}
+
+.hr-mobile-menu .lang-switch,
+#hr-lang-switch-mobile {
+  margin-top: 0.85rem;
+}
+
 .hr-btn {
   display: inline-flex;
   align-items: center;
