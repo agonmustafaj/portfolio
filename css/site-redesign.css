@@ -196,7 +196,7 @@ body.site-redesign .contact-form--card,
 body.site-redesign .social-link,
 body.site-redesign .cert-card,
 body.site-redesign .skill-item,
-body.site-redesign .timeline-item {
+body.site-redesign .info-card {
   background: var(--hr-surface);
   border: 1px solid var(--hr-border);
   border-radius: var(--radius-lg);
@@ -221,14 +221,57 @@ body.site-redesign .company-link {
   color: var(--hr-cyan);
 }
 
-body.site-redesign .status {
-  color: var(--hr-success);
-}
-
 body.site-redesign .text-muted,
 body.site-redesign .text-secondary,
 body.site-redesign .subtitle {
   color: var(--hr-text-2);
+}
+
+/* Experience / education cards */
+body.site-redesign .info-card {
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+body.site-redesign .info-card h3 {
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.site-redesign .info-card .meta {
+  color: var(--hr-text-2);
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+}
+
+body.site-redesign .info-card ul li {
+  color: var(--hr-text-2);
+  border-bottom-color: var(--hr-border);
+}
+
+body.site-redesign .info-card .current-badge,
+body.site-redesign .timeline-item .status {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hr-success);
+  background: color-mix(in srgb, var(--hr-success) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--hr-success) 32%, transparent);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+}
+
+body.site-redesign .timeline-item .status {
+  margin-top: 0.75rem;
 }
 
 /* Forms */
@@ -286,12 +329,67 @@ body.site-redesign .article-body h3 {
   margin-top: 2rem;
 }
 
-/* Timeline */
-body.site-redesign .timeline::before {
-  background: var(--hr-border);
+/* Journey / experience timeline */
+body.site-redesign .timeline {
+  position: relative;
+  max-width: 760px;
+  padding-left: 2.75rem;
+  display: grid;
+  gap: 1rem;
 }
 
-body.site-redesign .timeline-item::before,
+body.site-redesign .timeline::before {
+  content: "";
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  opacity: 1;
+  background: linear-gradient(var(--hr-blue), var(--hr-violet), transparent);
+}
+
+body.site-redesign .timeline-item {
+  position: relative;
+  padding: 1.25rem 1.35rem;
+  margin: 0;
+  background: var(--hr-surface);
+  border: 1px solid var(--hr-border);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  opacity: 1;
+  transform: none;
+}
+
+body.site-redesign .timeline-item.visible {
+  opacity: 1;
+  transform: none;
+}
+
+body.site-redesign .timeline-item::before {
+  content: "";
+  left: calc(-2.75rem + 5px);
+  top: 1.45rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--hr-bg);
+  border: 2px solid var(--hr-blue);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--hr-blue) 18%, transparent);
+  z-index: 1;
+}
+
+body.site-redesign .timeline-item h3 {
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.35rem;
+}
+
+body.site-redesign .timeline-item .subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 body.site-redesign .i-orb {
   background: var(--hr-blue);
   box-shadow: 0 0 16px var(--hr-glow);

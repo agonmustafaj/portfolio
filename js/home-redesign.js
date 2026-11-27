@@ -198,10 +198,16 @@
 
   function initBackTop() {
     var btn = document.getElementById('hr-back-top');
-    if (!btn) return;
+    if (!btn || btn.getAttribute('data-hr-back-bound') === '1') return;
+    btn.setAttribute('data-hr-back-bound', '1');
     btn.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     });
+    function onScroll() {
+      btn.classList.toggle('is-visible', window.scrollY > 480);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   ready(function () {
