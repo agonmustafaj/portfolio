@@ -68,7 +68,17 @@ function createRenderer() {
   }
 
   const RENDERED = ['site-header', 'site-footer', 'project-showcase', 'cert-featured', 'cert-grid', 'verification-links', 'skill-list'];
-  const body = { dataset: {}, classList: { add() {}, remove() {}, contains() { return false; } }, style: {}, appendChild() {} };
+  // Treat pages as site-redesign so prerendered chrome matches the live AGON. shell.
+  const body = {
+    dataset: {},
+    classList: {
+      add() {},
+      remove() {},
+      contains(name) { return name === 'site-redesign'; }
+    },
+    style: {},
+    appendChild() {}
+  };
   const document = {
     body,
     documentElement: { setAttribute() {}, getAttribute() { return 'dark'; } },
@@ -88,6 +98,8 @@ function createRenderer() {
     IntersectionObserver: function () { return { observe() {}, unobserve() {} }; },
     Image: function () { return {}; },
     setTimeout() {},
+    addEventListener() {},
+    scrollTo() {},
     console
   };
   sandbox.window = sandbox;

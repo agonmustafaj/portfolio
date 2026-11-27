@@ -47,6 +47,10 @@
   }
 
   function initTheme() {
+    if (document.body.classList.contains('site-redesign') || document.body.classList.contains('home-redesign')) {
+      applyTheme('dark');
+      return;
+    }
     applyTheme(savedTheme() || (systemLight.matches ? 'light' : 'dark'));
     systemLight.addEventListener('change', function (e) {
       if (!savedTheme()) applyTheme(e.matches ? 'light' : 'dark');
@@ -67,10 +71,62 @@
     applyTheme(next);
   }
 
+  /* Redesign chrome — matches homepage AGON. system (real page URLs) */
+  var redesignNavLinks = [
+    { label: 'Home', href: '/', page: 'home' },
+    { label: 'About', href: '/about/', page: 'about' },
+    { label: 'Expertise', href: '/skills/', page: 'skills' },
+    { label: 'Projects', href: '/projects/', page: 'projects' },
+    { label: 'Experience', href: '/experience/', page: 'experience' },
+    { label: 'Certifications', href: '/certifications/', page: 'certifications' },
+    { label: 'AgonDev', href: 'https://agodev.agonmustafaj.com/', page: 'agodev' },
+    { label: 'Blog', href: '/blog/', page: 'blog' }
+  ];
+
+  function isRedesignPage() {
+    return document.body.classList.contains('site-redesign') || document.body.classList.contains('home-redesign');
+  }
+
+  function navPageActive(linkPage, activePage) {
+    if (linkPage === activePage) return true;
+    if (activePage === 'services' && linkPage === 'skills') return true;
+    if ((activePage === 'improve' || activePage === 'seo-kosovo') && linkPage === 'skills') return true;
+    return false;
+  }
+
   /* --- Navbar --- */
   function renderNavbar(activePage) {
     const header = document.getElementById('site-header');
     if (!header) return;
+
+    if (isRedesignPage()) {
+      const links = redesignNavLinks.map(function (link) {
+        var active = navPageActive(link.page, activePage);
+        return '<a href="' + link.href + '"' + (active ? ' class="is-active" aria-current="page"' : '') + '>' + link.label + '</a>';
+      }).join('');
+
+      header.innerHTML =
+        '<div id="hr-progress" class="hr-progress" aria-hidden="true"></div>' +
+        '<header id="hr-nav" class="hr-nav">' +
+          '<div class="hr-container hr-nav-inner">' +
+            '<a href="/" class="hr-wordmark" aria-label="Agon Mustafaj Home">AGON<span>.</span></a>' +
+            '<nav class="hr-nav-links" aria-label="Main navigation">' + links + '</nav>' +
+            '<div class="hr-nav-actions">' +
+              '<a href="/contact/" class="hr-btn hr-btn-primary hr-btn-sm"' + (activePage === 'contact' ? ' aria-current="page"' : '') + '>Contact</a>' +
+              '<button type="button" class="hr-hamburger" id="hr-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hr-mobile-menu">' +
+                '<span></span><span></span><span></span>' +
+              '</button>' +
+            '</div>' +
+          '</div>' +
+        '</header>' +
+        '<div class="hr-mobile-menu" id="hr-mobile-menu" role="navigation" aria-label="Mobile navigation">' +
+          links +
+          '<a href="/contact/"' + (activePage === 'contact' ? ' class="is-active"' : '') + '>Contact</a>' +
+        '</div>';
+
+      initRedesignNav();
+      return;
+    }
 
     const links = navLinks.map(function (link) {
       return '<a href="' + link.href + '"' + (link.page === activePage ? ' class="active" aria-current="page"' : '') + '>' + tx('nav.' + link.page, link.label) + '</a>';
@@ -132,6 +188,42 @@
     if (typeof I18N !== 'undefined') I18N.bindLangSwitcher(header);
   }
 
+  function initRedesignNav() {
+    var nav = document.getElementById('hr-nav');
+    var hamburger = document.getElementById('hr-hamburger');
+    var mobile = document.getElementById('hr-mobile-menu');
+    var bar = document.getElementById('hr-progress');
+    if (typeof window.addEventListener !== 'function') return;
+
+    function onScroll() {
+      if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 40);
+      if (bar) {
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (hamburger && mobile) {
+      hamburger.addEventListener('click', function () {
+        var open = mobile.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      mobile.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mobile.classList.remove('is-open');
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  }
+
   function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     if (!navbar) return;
@@ -147,6 +239,50 @@
   function renderFooter() {
     const footer = document.getElementById('site-footer');
     if (!footer) return;
+
+    if (isRedesignPage()) {
+      footer.innerHTML =
+        '<footer class="hr-footer">' +
+          '<div class="hr-container">' +
+            '<div class="hr-footer-top">' +
+              '<div class="hr-footer-brand">' +
+                '<a href="/" class="hr-wordmark">AGON<span>.</span></a>' +
+                '<p>SEO Expert and Web Developer. Search visibility and websites through AgoDev.</p>' +
+              '</div>' +
+              '<nav class="hr-footer-nav" aria-label="Footer">' +
+                '<a href="/about/">About</a>' +
+                '<a href="/skills/">Expertise</a>' +
+                '<a href="/projects/">Projects</a>' +
+                '<a href="/experience/">Experience</a>' +
+                '<a href="/certifications/">Certifications</a>' +
+                '<a href="https://agodev.agonmustafaj.com/">AgonDev</a>' +
+                '<a href="/services/">Services</a>' +
+                '<a href="/blog/">Blog</a>' +
+                '<a href="/contact/">Contact</a>' +
+                '<a href="/cv/">Resume</a>' +
+                '<a href="/license/">License</a>' +
+              '</nav>' +
+            '</div>' +
+            '<div class="hr-footer-bottom">' +
+              '<span>&copy; 2026 Agon Mustafaj</span>' +
+              '<div class="hr-footer-socials">' +
+                '<a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
+                '<a href="https://github.com/agonmustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">' + icons.github + '</a>' +
+                '<a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +
+              '</div>' +
+              '<button type="button" class="hr-back-top" id="hr-back-top">Back to top ↑</button>' +
+            '</div>' +
+          '</div>' +
+        '</footer>';
+
+      var back = document.getElementById('hr-back-top');
+      if (back) {
+        back.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        });
+      }
+      return;
+    }
 
     const socials = socialLinks.filter(function (s) { return s.active && s.url; }).map(function (s) {
       return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer me" aria-label="' + s.name + '">' + icons[s.icon] + '</a>';
