@@ -144,26 +144,18 @@
     }).join('');
   }
 
-  function renderAgodevMinis() {
-    var mount = document.getElementById('hr-agodev-projects');
-    if (!mount || typeof projects === 'undefined') return;
-    var picks = projects.filter(function (p) { return p.featured; }).slice(0, 3);
-    mount.innerHTML = picks.map(function (proj) {
-      var href = proj.url || ('/projects/' + proj.slug + '/');
-      return (
-        '<a class="hr-agodev-mini" href="' + escapeHtml(href) + '"' + (proj.url ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' +
-          (proj.image ? '<img src="' + escapeHtml(proj.image) + '" alt="" loading="lazy" decoding="async" width="640" height="400">' : '') +
-          '<span>' + escapeHtml(proj.title) + '</span>' +
-        '</a>'
-      );
-    }).join('');
-  }
-
   function renderCerts() {
     var mount = document.getElementById('hr-certs');
     if (!mount || typeof certifications === 'undefined') return;
 
-    var featured = certifications.slice(0, 3);
+    // Strongest existing SEO credentials for the homepage (real data/links only).
+    var homeCertIds = ['cert-019', 'cert-010', 'cert-017'];
+    var byId = {};
+    certifications.forEach(function (cert) { byId[cert.id] = cert; });
+    var featured = homeCertIds.map(function (id) { return byId[id]; }).filter(Boolean);
+    if (featured.length < 3) {
+      featured = certifications.slice(0, 3);
+    }
     mount.innerHTML = featured.map(function (cert) {
       var verify = cert.verificationUrl
         ? '<a href="' + escapeHtml(cert.verificationUrl) + '" target="_blank" rel="noopener noreferrer">Verify certificate</a>'
@@ -214,7 +206,6 @@
 
   ready(function () {
     renderProjects();
-    renderAgodevMinis();
     renderCerts();
     renderExperience();
     initNav();
