@@ -399,22 +399,19 @@ body.home-redesign *:focus-visible {
 
 .hr-sculpture {
   position: relative;
-  width: min(100%, 420px);
+  width: min(100%, 380px);
   aspect-ratio: 1;
-  perspective: 900px;
-  transform-style: preserve-3d;
 }
 
 .hr-sculpture-face {
   position: absolute;
-  inset: 16%;
+  inset: 0;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--hr-cyan) 35%, var(--hr-border));
   box-shadow:
     0 0 80px var(--hr-glow),
     0 0 40px var(--hr-glow-v);
-  z-index: 2;
 }
 
 .hr-sculpture-face img {
@@ -424,34 +421,6 @@ body.home-redesign *:focus-visible {
   object-position: center top;
   display: block;
 }
-
-.hr-sculpture-ring {
-  position: absolute;
-  inset: 8%;
-  border: 1px solid color-mix(in srgb, var(--hr-blue) 45%, transparent);
-  border-radius: 42% 58% 48% 52% / 48% 42% 58% 52%;
-  transform: rotateX(62deg) rotateZ(18deg);
-}
-
-.hr-sculpture-ring-2 {
-  inset: 2%;
-  border-color: color-mix(in srgb, var(--hr-violet) 40%, transparent);
-  transform: rotateX(70deg) rotateZ(-28deg);
-}
-
-.hr-sculpture-orb {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--hr-cyan);
-  box-shadow: 0 0 24px var(--hr-cyan);
-  opacity: 0.85;
-}
-
-.hr-sculpture-orb:nth-child(4) { top: 12%; left: 22%; }
-.hr-sculpture-orb:nth-child(5) { top: 58%; right: 10%; background: var(--hr-violet); }
-.hr-sculpture-orb:nth-child(6) { bottom: 16%; left: 18%; background: var(--hr-blue); }
 
 /* ---------- Sections shared ---------- */
 .hr-section {
