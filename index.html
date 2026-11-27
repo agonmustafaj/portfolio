@@ -49,8 +49,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127f">
-  <link rel="preload" as="image" href="/assets/images/agon-mustafaj-840.webp" imagesrcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w" imagesizes="(max-width: 960px) 220px, 300px">
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127g">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -154,19 +153,16 @@
             <a href="#contact" class="hr-btn hr-btn-ghost">Let's Connect</a>
           </div>
         </div>
-        <div class="hr-hero-visual">
-          <figure class="hr-hero-orb">
-            <img
-              src="/assets/images/agon-mustafaj-840.webp"
-              srcset="/assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
-              sizes="(max-width: 960px) 220px, 300px"
-              alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
-              width="840"
-              height="840"
-              fetchpriority="high"
-              decoding="async"
-            >
-          </figure>
+        <div class="hr-hero-visual" aria-hidden="true">
+          <div class="hr-sculpture" id="hr-sculpture">
+            <canvas class="hr-particles" id="hr-particles"></canvas>
+            <div class="hr-sculpture-ring"></div>
+            <div class="hr-sculpture-ring hr-sculpture-ring-2"></div>
+            <div class="hr-sculpture-core"></div>
+            <span class="hr-sculpture-orb"></span>
+            <span class="hr-sculpture-orb"></span>
+            <span class="hr-sculpture-orb"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -411,6 +407,6 @@
   <div id="site-footer" hidden></div>
 
   <script src="/js/data.js?v=20261120a" defer></script>
-  <script src="/js/home-redesign.js?v=20261127e" defer></script>
+  <script src="/js/home-redesign.js?v=20261127g" defer></script>
 </body>
 </html>

@@ -105,6 +105,94 @@
     nodes.forEach(function (n) { io.observe(n); });
   }
 
+  function initSculpture() {
+    var sculpture = document.getElementById('hr-sculpture');
+    if (!sculpture || prefersReducedMotion) return;
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    var mx = 0;
+    var my = 0;
+    var cx = 0;
+    var cy = 0;
+
+    window.addEventListener('pointermove', function (e) {
+      var rect = sculpture.getBoundingClientRect();
+      var px = (e.clientX - rect.left) / rect.width - 0.5;
+      var py = (e.clientY - rect.top) / rect.height - 0.5;
+      mx = px * 16;
+      my = py * -12;
+    }, { passive: true });
+
+    function tick() {
+      cx += (mx - cx) * 0.08;
+      cy += (my - cy) * 0.08;
+      sculpture.style.transform = 'rotateY(' + cx + 'deg) rotateX(' + cy + 'deg)';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function initParticles() {
+    var canvas = document.getElementById('hr-particles');
+    if (!canvas || prefersReducedMotion) return;
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    var particles = [];
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var running = true;
+
+    function resize() {
+      var parent = canvas.parentElement;
+      if (!parent) return;
+      var w = parent.clientWidth;
+      var h = parent.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      particles = [];
+      var count = Math.min(36, Math.floor((w * h) / 14000));
+      for (var i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.6 + 0.4,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+          a: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+
+    function frame() {
+      if (!running) return;
+      var w = canvas.clientWidth;
+      var h = canvas.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(function (p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(73, 217, 255,' + p.a + ')';
+        ctx.fill();
+      });
+      requestAnimationFrame(frame);
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', function () {
+      running = !document.hidden;
+      if (running) requestAnimationFrame(frame);
+    });
+    requestAnimationFrame(frame);
+  }
+
   function escapeHtml(str) {
     return String(str)
       .replace(/&/g, '&amp;')
@@ -220,6 +308,8 @@
     initNav();
     initProgress();
     initReveal();
+    initSculpture();
+    initParticles();
     initBackTop();
   });
 })();
