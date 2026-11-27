@@ -76,7 +76,7 @@
     { label: 'Home', href: '/', page: 'home' },
     { label: 'About', href: '/about/', page: 'about' },
     { label: 'Expertise', href: '/skills/', page: 'skills' },
-    { label: 'Projects', href: '/projects/', page: 'projects' },
+    { label: 'Projects', href: 'https://agodev.agonmustafaj.com/#projects', page: 'projects' },
     { label: 'Experience', href: '/experience/', page: 'experience' },
     { label: 'Certifications', href: '/certifications/', page: 'certifications' },
     { label: 'AgonDev', href: 'https://agodev.agonmustafaj.com/', page: 'agodev' },
@@ -275,7 +275,7 @@
               '<nav class="hr-footer-nav" aria-label="Footer">' +
                 '<a href="/about/">About</a>' +
                 '<a href="/skills/">Expertise</a>' +
-                '<a href="/projects/">Projects</a>' +
+                '<a href="https://agodev.agonmustafaj.com/#projects">Projects</a>' +
                 '<a href="/experience/">Experience</a>' +
                 '<a href="/certifications/">Certifications</a>' +
                 '<a href="https://agodev.agonmustafaj.com/">AgonDev</a>' +
@@ -322,7 +322,7 @@
               '<a href="/improve-seo/">' + tx('footer.improveSeo', 'SEO audit & fixes') + '</a>' +
               '<a href="/seo-freelancer-kosovo/">' + tx('footer.seoKosovo', 'SEO freelancer Kosovo') + '</a>' +
               '<a href="/about/">' + tx('nav.about', 'About') + '</a>' +
-              '<a href="/projects/">' + tx('nav.projects', 'Projects') + '</a>' +
+              '<a href="https://agodev.agonmustafaj.com/#projects">' + tx('nav.projects', 'Projects') + '</a>' +
               '<a href="/skills/">' + tx('nav.skills', 'Skills') + '</a>' +
               '<a href="/contact/">' + tx('nav.contact', 'Contact') + '</a>' +
             '</div>' +

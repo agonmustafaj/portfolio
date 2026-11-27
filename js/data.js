@@ -673,7 +673,7 @@ const pageSEO = {
   projects: {
     title: 'Projects | Agon Mustafaj SEO and Web Work',
     description: 'Selected web projects with live demos: Malaj Design, Roofman, Mathematics Textbook, Hoxha Handwerk and VisitAlbania, each with a case study.',
-    path: '/projects/'
+    path: 'https://agodev.agonmustafaj.com/#projects'
   },
   skills: {
     title: 'SEO and Web Developer Skills | Agon Mustafaj',
