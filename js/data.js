@@ -186,6 +186,48 @@ const projects = [
     image: '/assets/images/malaj-design.webp'
   },
 {
+    id: 'proj-007',
+    title: 'Pulse',
+    slug: 'pulse',
+    url: 'https://pulse-bw6.pages.dev/',
+    description: 'The cosmos in motion: NASA Astronomy Picture of the Day browsing, planets in orbit, and a cinematic window into deep space.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'NASA APOD', 'Responsive Design'],
+    features: [
+      'Astronomy Picture of the Day browser',
+      'Browse any day since June 16, 1995',
+      'NASA imagery with title and explanation',
+      'Planets in orbit view',
+      'Heliocentric positions from JPL SSD mean elements',
+      'Cinematic cosmos presentation',
+      'Cloudflare Pages deployment'
+    ],
+    role: 'Web Developer',
+    featured: true,
+    number: '02',
+    image: '/assets/images/pulse.webp'
+  },
+{
+    id: 'proj-008',
+    title: 'Orbit',
+    slug: 'orbit',
+    url: 'https://orbit-83j.pages.dev/',
+    description: 'An immersive digital experience where ideas, experiments, and craft share one orbit, with interactive 3D playgrounds and cinematic motion.',
+    technologies: ['FastAPI', 'Three.js', 'GSAP', 'WebGL', 'JavaScript'],
+    features: [
+      'Particle field experiment',
+      'Gravity system playground',
+      '3D object explorer',
+      'Three.js and WebGL scenes',
+      'GSAP section motion',
+      'Technology constellation UI',
+      'Cloudflare Pages deployment'
+    ],
+    role: 'Web Developer',
+    featured: true,
+    number: '03',
+    image: '/assets/images/orbit.webp'
+  },
+{
     id: 'proj-005',
     title: 'Roofman',
     slug: 'roofman',
@@ -202,7 +244,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '02',
+    number: '04',
     image: '/assets/images/roofman.webp'
   },
 {
@@ -222,7 +264,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '03',
+    number: '05',
     image: '/assets/images/mathematics-textbook.webp'
   },
 {
@@ -243,7 +285,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '04',
+    number: '06',
     image: '/assets/images/banese-per-ty.webp'
   },
 {
@@ -268,7 +310,7 @@ const projects = [
     ],
     role: 'Web Developer',
     featured: true,
-    number: '05',
+    number: '07',
     image: '/assets/images/hoxha-handwerk.webp'
   },
 {
@@ -291,7 +333,7 @@ const projects = [
     ],
     role: 'Web Developer, in collaboration with Drin Kozhani',
     featured: true,
-    number: '06',
+    number: '08',
     image: '/assets/images/visit-albania.webp'
   }
 ]

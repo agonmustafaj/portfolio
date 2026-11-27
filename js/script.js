@@ -237,6 +237,20 @@
     onScroll();
   }
 
+  function initBackToTop() {
+    var btn = document.getElementById('hr-back-top');
+    if (!btn || btn.getAttribute('data-hr-back-bound') === '1') return;
+    btn.setAttribute('data-hr-back-bound', '1');
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    });
+    function onScroll() {
+      btn.classList.toggle('is-visible', window.scrollY > 480);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   /* --- Footer --- */
   function renderFooter() {
     const footer = document.getElementById('site-footer');
@@ -272,17 +286,12 @@
                 '<a href="https://github.com/agonmustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">' + icons.github + '</a>' +
                 '<a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +
               '</div>' +
-              '<button type="button" class="hr-back-top" id="hr-back-top">Back to top ↑</button>' +
             '</div>' +
           '</div>' +
-        '</footer>';
+        '</footer>' +
+        '<button type="button" class="hr-back-top" id="hr-back-top" aria-label="Back to top">↑</button>';
 
-      var back = document.getElementById('hr-back-top');
-      if (back) {
-        back.addEventListener('click', function () {
-          window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-        });
-      }
+      initBackToTop();
       return;
     }
 
