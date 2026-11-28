@@ -1,11 +1,11 @@
 ---
-description: Length and wording rules for title tags and meta descriptions, in English and Albanian
+description: Length and wording rules for title tags and meta descriptions (English only)
 alwaysApply: true
 ---
 
 # Title tags and meta descriptions
 
-Every public page must follow these rules in both English and Albanian.
+Every public page must follow these rules in English.
 
 - **Title tag**: 40–50 characters.
 - **Meta description**: 120–150 characters.
@@ -18,7 +18,7 @@ Count characters exactly (with `node -e "console.log('...'.length)"`), never est
 Keep every copy in sync when adding or changing a page:
 
 - `<title>`, `meta name="description"`, `og:title`, `og:description`, `twitter:title`, `twitter:description` in the page HTML
-- `meta.*.title` / `meta.*.desc` in `js/i18n.js` (EN and SQ blocks)
+- `meta.*.title` / `meta.*.desc` in `js/i18n.js` (English)
 - `description` entries in `js/data.js`
 - Blog posts: `dyn.<slug>.pageTitle` / `dyn.<slug>.seoDesc` in `js/i18n.js` and the post HTML; the visible headline (`dyn.<slug>.title`) is not the title tag
 

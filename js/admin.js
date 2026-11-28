@@ -138,11 +138,6 @@
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   }
 
-  function formatDateSq(iso) {
-    var months = ['janar', 'shkurt', 'mars', 'prill', 'maj', 'qershor', 'korrik', 'gusht', 'shtator', 'tetor', 'nëntor', 'dhjetor'];
-    var parts = iso.split('-');
-    return Number(parts[2]) + ' ' + months[Number(parts[1]) - 1] + ' ' + parts[0];
-  }
 
   function jsString(value) {
     return "'" + String(value)
@@ -255,7 +250,7 @@
       '  <meta property="og:image:type" content="image/png">\n' +
       '  <meta property="og:image:alt" content="Agon Mustafaj. Explore the work at agonmustafaj.com">\n' +
       '  <meta property="og:locale" content="en_US">\n' +
-      '  <meta property="og:locale:alternate" content="sq_AL">\n' +
+      '' +
       '  <meta property="article:published_time" content="' + esc(post.date) + '">\n' +
       '  <meta property="article:section" content="' + esc(post.category) + '">\n' +
       '  <meta name="twitter:card" content="summary_large_image">\n' +
@@ -416,30 +411,18 @@
       blogIndex = blogIndex.replace(needle, needle + '\n          ' + schemaItem + ',');
       var prefix = 'dyn.' + post.slug;
       var enPack = {};
-      var sqPack = {};
       enPack[prefix + '.title'] = post.title;
-      sqPack[prefix + '.title'] = post.titleSq;
       enPack[prefix + '.pageTitle'] = post.seoTitle;
-      sqPack[prefix + '.pageTitle'] = post.seoTitleSq;
       enPack[prefix + '.cat'] = post.category;
-      sqPack[prefix + '.cat'] = post.categorySq;
       enPack[prefix + '.desc'] = post.description;
-      sqPack[prefix + '.desc'] = post.descriptionSq;
       enPack[prefix + '.seoDesc'] = post.seoDesc;
-      sqPack[prefix + '.seoDesc'] = post.seoDescSq;
       enPack[prefix + '.short'] = post.shortText;
-      sqPack[prefix + '.short'] = post.shortSq;
       enPack[prefix + '.tldr'] = post.seoDesc || post.shortText || post.title;
-      sqPack[prefix + '.tldr'] = post.seoDescSq || post.shortSq || post.titleSq;
       var mins = estimateReadMinutes(post.body);
       enPack[prefix + '.meta'] = 'By Agon Mustafaj · ' + formatDate(post.date) + ' · ' + mins + ' min read';
-      sqPack[prefix + '.meta'] = 'Nga Agon Mustafaj · ' + formatDateSq(post.date) + ' · ' + mins + ' min lexim';
       enPack[prefix + '.crumb'] = post.crumb;
-      sqPack[prefix + '.crumb'] = post.crumbSq;
       enPack[prefix + '.body'] = bodyToHtml(post.body).replace(/\n\s+/g, '');
-      sqPack[prefix + '.body'] = bodyToHtml(post.bodySq).replace(/\n\s+/g, '');
       i18n = insertI18n(i18n, 'managed-post-i18n:en', enPack);
-      i18n = insertI18n(i18n, 'managed-post-i18n:sq', sqPack);
       var i18nVersion = 'i18n.js?v=' + Date.now().toString(36);
       function bust(html) {
         return html.replace(/i18n\.js\?v=[^"']+/g, i18nVersion);
@@ -557,7 +540,7 @@
     var prefix = "'dyn." + slug + ".";
     return source.split('\n').map(function (line) {
       if (line.indexOf(prefix) === -1) return line;
-      var marker = line.match(/\/\* managed-post-i18n:(?:en|sq) \*\//);
+      var marker = line.match(/\/\* managed-post-i18n:en \*\//);
       return marker ? '      ' + marker[0] : null;
     }).filter(function (line) { return line !== null; }).join('\n');
   }
@@ -732,9 +715,7 @@
 
   var refreshSeoCounts = [
     bindSeoCount('post-seo-title-en', 60),
-    bindSeoCount('post-seo-desc-en', 160),
-    bindSeoCount('post-seo-title-sq', 60),
-    bindSeoCount('post-seo-desc-sq', 160)
+    bindSeoCount('post-seo-desc-en', 160)
   ];
 
   titleInput.addEventListener('input', function () {
@@ -824,52 +805,35 @@
     event.preventDefault();
     var token = (tokenInput.value || '').trim();
     var title = titleInput.value.trim();
-    var titleSq = document.getElementById('post-title-sq').value.trim();
     var slug = slugify(slugInput.value);
     var body = document.getElementById('post-body-en').value.trim();
-    var bodySq = document.getElementById('post-body-sq').value.trim();
     var category = document.getElementById('post-category-en').value.trim() || 'Blog';
-    var categorySq = document.getElementById('post-category-sq').value.trim() || category;
     var description = document.getElementById('post-description-en').value.trim();
-    var descriptionSq = document.getElementById('post-description-sq').value.trim();
     var seoTitle = document.getElementById('post-seo-title-en').value.trim();
-    var seoTitleSq = document.getElementById('post-seo-title-sq').value.trim();
     var seoDesc = document.getElementById('post-seo-desc-en').value.trim();
-    var seoDescSq = document.getElementById('post-seo-desc-sq').value.trim();
 
     if (!token) {
       setStatus('Vendos tokenin e GitHub-it. Pa të, faqja statike nuk mund të publikojë.', true);
       return;
     }
-    if (!title || !titleSq || !slug || !body || !bodySq) {
-      setStatus('Duhen titulli dhe teksti në anglisht dhe në shqip.', true);
+    if (!title || !slug || !body) {
+      setStatus('Title and body are required.', true);
       return;
     }
     if (!description) description = body.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
-    if (!descriptionSq) descriptionSq = bodySq.replace(/^##\s*/gm, '').replace(/\s+/g, ' ').trim().slice(0, 155);
     if (!seoTitle) seoTitle = (title + ' | Agon Mustafaj').slice(0, 60);
-    if (!seoTitleSq) seoTitleSq = (titleSq + ' | Agon Mustafaj').slice(0, 60);
     if (!seoDesc) seoDesc = description.slice(0, 160);
-    if (!seoDescSq) seoDescSq = descriptionSq.slice(0, 160);
 
     var post = {
       title: title,
-      titleSq: titleSq,
       slug: slug,
       body: body,
-      bodySq: bodySq,
       category: category,
-      categorySq: categorySq,
       description: description,
-      descriptionSq: descriptionSq,
       seoTitle: seoTitle,
-      seoTitleSq: seoTitleSq,
       seoDesc: seoDesc,
-      seoDescSq: seoDescSq,
       shortText: description.slice(0, 110),
-      shortSq: descriptionSq.slice(0, 110),
       crumb: title,
-      crumbSq: titleSq,
       date: todayIso()
     };
 
