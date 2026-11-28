@@ -83,10 +83,11 @@ body.site-redesign main {
 
 /* Page headers */
 body.site-redesign .page-header {
+  text-align: center;
   padding: clamp(3rem, 8vw, 5.5rem) 0 2.5rem;
   border-bottom: 1px solid var(--hr-border);
   background:
-    radial-gradient(ellipse 70% 80% at 80% 0%, rgba(85, 119, 255, 0.14), transparent 60%),
+    radial-gradient(ellipse 70% 80% at 50% 0%, rgba(85, 119, 255, 0.14), transparent 60%),
     transparent;
 }
 
@@ -118,8 +119,11 @@ body.site-redesign h3 {
 body.site-redesign .page-header h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 700;
-  line-height: 1.1;
-  max-width: 18ch;
+  line-height: 1.15;
+  /* Was 18ch: orphaned “Certifications &” / “Continuous Learning” */
+  max-width: min(38ch, 100%);
+  margin-inline: auto;
+  text-wrap: pretty;
 }
 
 body.site-redesign .page-header p,
@@ -127,6 +131,14 @@ body.site-redesign .section-header p {
   color: var(--hr-text-2);
   max-width: 54ch;
   font-size: 1.05rem;
+}
+
+body.site-redesign .page-header p {
+  margin-inline: auto;
+}
+
+body.site-redesign .page-header .btn-group {
+  justify-content: center;
 }
 
 body.site-redesign .container {
