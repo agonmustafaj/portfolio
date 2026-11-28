@@ -1,0 +1,29 @@
+{
+  "name": "Agon Mustafaj",
+  "short_name": "Agon",
+  "description": "SEO expert and web developer in Prishtina, Kosovo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080B14",
+  "theme_color": "#080B14",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-96.png?v=20261128f",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/favicon.png?v=20261128f",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.png?v=20261128f",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

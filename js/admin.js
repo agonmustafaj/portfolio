@@ -263,8 +263,13 @@
       '  <meta name="twitter:description" data-i18n-content="' + key + '.seoDesc" content="' + esc(post.seoDesc) + '">\n' +
       '  <meta name="twitter:image" content="https://agonmustafaj.com/assets/images/banner.png?v=20261128og">\n' +
       '  <meta name="author" content="Agon Mustafaj">\n' +
-      '  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=20261127q">\n' +
-      '  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=20261127q">\n' +
+      '  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg?v=20261128f">\n' +
+      '  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png?v=20261128f">\n' +
+      '  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png?v=20261128f">\n' +
+      '  <link rel="icon" href="/favicon.ico?v=20261128f" sizes="any">\n' +
+      '  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png?v=20261128f">\n' +
+      '  <link rel="manifest" href="/site.webmanifest?v=20261128f">\n' +
+      '  <meta name="apple-mobile-web-app-title" content="Agon Mustafaj">\n' +
       '  <script>try{document.documentElement.setAttribute(\'data-theme\',localStorage.getItem(\'theme\')||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'light\':\'dark\'))}catch(e){}</script>\n' +
       '  <link rel="stylesheet" href="/css/style.css?v=20261117a">\n' +
       '  <script type="application/ld+json">\n  ' +
