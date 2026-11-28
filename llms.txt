@@ -42,6 +42,6 @@ The site is available in English and Albanian (the language switch is on every p
 ## Optional
 
 - [Image license](https://agonmustafaj.com/license/): terms for reusing images from this site
-- [Sitemap index](https://agonmustafaj.com/sitemap-index.xml) (portfolio pages only; AgoDev uses its own host sitemap)
+- [Sitemap index](https://agonmustafaj.com/sitemap-index.xml) (lists portfolio and AgoDev host sitemaps)
 - [Portfolio sitemap](https://agonmustafaj.com/sitemap.xml)
 - [AgoDev sitemap](https://agodev.agonmustafaj.com/sitemap.xml)

@@ -95,8 +95,8 @@
     .hr-hero-display{font:700 clamp(2rem,8vw,3.25rem)/1.05 "Segoe UI",system-ui,sans-serif;
       letter-spacing:-.04em;margin:0 0 1rem;color:#F5F7FF;max-width:14ch}
     .hr-hero-display em{font-style:normal;color:#5577FF}
-    .hr-hero h1,.hero-name{font:600 1.25rem/1.2 "Segoe UI",system-ui,sans-serif;margin:0 0 .65rem;color:#F5F7FF}
-    .hr-hero-role,.hr-hero-lead{color:#929DB3;margin:0 0 1.25rem}
+    .hr-hero .hero-name{font:600 1.25rem/1.2 "Segoe UI",system-ui,sans-serif;margin:0 0 .65rem;color:#F5F7FF}
+    .hr-hero-role,.hr-hero h1.hr-hero-role,.hr-hero-lead{color:#929DB3;margin:0 0 1.25rem;font:500 .98rem/1.4 "Segoe UI",system-ui,sans-serif}
     .hr-hero-cta{display:flex;flex-wrap:wrap;gap:.75rem}
     .hr-btn{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.25rem;
       border-radius:999px;font-weight:600;border:1px solid #202B40}
@@ -110,7 +110,7 @@
     .hr-wallet-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover}
     body.home-redesign #site-header,body.home-redesign #site-footer{display:none!important}
   </style>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128sq">
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128ahrefs">
   <link rel="preload" as="image" type="image/png" href="/assets/images/logo-nav-dark-336.png" imagesrcset="/assets/images/logo-nav-dark-168.png 166w, /assets/images/logo-nav-dark-336.png 333w, /assets/images/logo-nav-dark-536.png 536w" imagesizes="(max-width: 1099px) min(168px, 46vw), 168px">
   <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-540.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="/assets/images/agon-mustafaj.jpg" type="image/jpeg">
@@ -221,8 +221,8 @@
             <span>Prishtina, Kosovo</span>
           </div>
           <p class="hr-hero-display">Building for the web.<br><em>Optimizing for search.</em></p>
-          <h1 class="hero-name" id="hero-name">Agon Mustafaj.</h1>
-          <p class="hr-hero-role" data-i18n="home.heroRole">SEO Expert · Web Developer · Computer Science Student</p>
+          <p class="hero-name">Agon Mustafaj.</p>
+          <h1 class="hr-hero-role" id="hero-name" data-i18n="home.heroRole">SEO Expert x Web Developer</h1>
           <p class="hr-hero-lead">I work at the intersection of web development and search engine optimization, building digital experiences while exploring emerging technologies.</p>
           <div class="hr-hero-cta">
             <a href="#projects" class="hr-btn hr-btn-primary">Explore My Work</a>
@@ -284,7 +284,7 @@
             <span class="hr-label">About</span>
             <h2 id="about-heading">Curious by nature. Technical by mindset.</h2>
             <p>I'm <strong>Agon Mustafaj</strong>, an SEO Expert and Web Developer based in Prishtina, Kosovo. I work at the intersection of search visibility, web development, and AI, helping businesses build a stronger and more effective online presence through <strong><a href="https://agodev.agonmustafaj.com/">AgoDev</a></strong>.</p>
-            <p>As an SEO Expert at <a href="https://thenovalab.com/" target="_blank" rel="noopener noreferrer">Novalab SEO Agency</a> and a Computer Science student at the <strong>University of Prishtina</strong>, I combine practical industry experience with a technical understanding of how websites are built, structured, crawled, and discovered.</p>
+            <p>As an SEO Expert at <a href="https://thenovalab.com/" target="_blank" rel="noopener noreferrer">Novalab SEO Agency</a> and a Computer Science student at the <strong><a href="/education/">University of Prishtina</a></strong>, I combine practical industry experience with a technical understanding of how websites are built, structured, crawled, and discovered.</p>
             <p>Through AgoDev, I bring SEO and web development together. I also integrate AI tools into my workflow to improve efficiency, accelerate development, and explore better ways to solve technical and creative challenges.</p>
             <div class="hr-section-cta">
               <a href="/about/" class="hr-btn hr-btn-ghost">More about me</a>
@@ -370,6 +370,42 @@
               <h3>Pulse</h3>
               <p>The cosmos in motion: NASA Astronomy Picture of the Day browsing, planets in orbit, and a cinematic window into deep space.</p>
               <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://pulse-bw6.pages.dev/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/pulse/">Case study</a></div>
+            </div>
+          </article>
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/orbit-640.webp" srcset="/assets/images/orbit-640.webp 640w, /assets/images/orbit.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of Orbit" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 03 · Web Developer</div>
+              <h3>Orbit</h3>
+              <p>An immersive digital experience where ideas, experiments, and craft share one orbit, with interactive 3D playgrounds and cinematic motion.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://orbit-83j.pages.dev/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/orbit/">Case study</a></div>
+            </div>
+          </article>
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/roofman-640.webp" srcset="/assets/images/roofman-640.webp 640w, /assets/images/roofman.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of Roofman" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 04 · Web Developer</div>
+              <h3>Roofman</h3>
+              <p>A scroll-driven roof restoration experience where damage heals as you move down the page, built as a cinematic product demo.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://roofman.pages.dev/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/roofman/">Case study</a></div>
+            </div>
+          </article>
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/mathematics-textbook-640.webp" srcset="/assets/images/mathematics-textbook-640.webp 640w, /assets/images/mathematics-textbook.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of Mathematics Textbook" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 05 · Web Developer</div>
+              <h3>Mathematics Textbook</h3>
+              <p>A calm, step-by-step digital mathematics textbook focused on integration, with worked examples and clear chapter navigation.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://mathematics-textbook.pages.dev/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/mathematics-textbook/">Case study</a></div>
+            </div>
+          </article>
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/visit-albania-640.webp" srcset="/assets/images/visit-albania-640.webp 640w, /assets/images/visit-albania.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of VisitAlbania" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 08 · Web Developer, in collaboration with Drin Kozhani</div>
+              <h3>VisitAlbania</h3>
+              <p>A multilingual tourism website for Albania, built together with Drin Kozhani, covering destinations, activities, food and culture, and events in five languages.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://visitalbaniatoday.netlify.app/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/visit-albania/">Case study</a></div>
             </div>
           </article>
         </div>
@@ -533,6 +569,7 @@
           <a href="#expertise">Expertise</a>
           <a href="https://agodev.agonmustafaj.com/#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="/education/">Education</a>
           <a href="#certifications">Certifications</a>
           <a href="https://agodev.agonmustafaj.com/">AgonDev</a>
           <a href="#blog">Blog</a>
@@ -554,7 +591,7 @@
 
   <div id="site-footer" hidden></div>
 
-  <script src="/js/i18n.js?v=20261128sq" defer></script>
+  <script src="/js/i18n.js?v=20261128ahrefs" defer></script>
   <script src="/js/home-data.js?v=20261128g" defer></script>
   <script src="/js/home-redesign.js?v=20261128sq" defer></script>
 </body>

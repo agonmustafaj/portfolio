@@ -84,6 +84,7 @@ Disallow: /assets/social/
 Disallow: /assets/brand/
 Disallow: /assets/certificates/
 
-# Sitemap locations (apex host only). AgoDev has its own robots.txt + sitemap on agodev.agonmustafaj.com.
+# Sitemap locations: apex index lists both host sitemaps so Ahrefs/GSC apex crawls can discover AgoDev.
 Sitemap: https://agonmustafaj.com/sitemap-index.xml
 Sitemap: https://agonmustafaj.com/sitemap.xml
+Sitemap: https://agodev.agonmustafaj.com/sitemap.xml
