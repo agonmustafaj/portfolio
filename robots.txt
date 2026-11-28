@@ -4,18 +4,21 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: Bingbot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: DuckDuckBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 # Allow major LLM and AI crawlers
 User-Agent: GPTBot
@@ -23,54 +26,63 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: OAI-SearchBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: PerplexityBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: YouBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: AndiBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: Anthropic-Bot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: Claude-Web
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 User-Agent: CCBot
 Allow: /
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 # General rules for all other bots
 User-Agent: *
 Disallow: /dashboard/
 Disallow: /assets/social/
 Disallow: /assets/brand/
+Disallow: /assets/certificates/
 
 # Sitemap locations (apex host only). AgoDev has its own robots.txt + sitemap on agodev.agonmustafaj.com.
 Sitemap: https://agonmustafaj.com/sitemap-index.xml
