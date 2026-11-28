@@ -950,14 +950,20 @@
       if (cert.validUntil) metaParts.push('Valid until ' + cert.validUntil);
       if (cert.credentialId) metaParts.push('ID: ' + cert.credentialId);
 
-      const previewLink = cert.pdf || cert.image || '#';
+      // Prefer official verification URLs over local PDF mirrors so Google does not
+      // treat /assets/certificates/*.pdf as duplicates without a user canonical.
+      const certViewUrl = cert.verificationUrl || cert.pdf || '';
+      const previewLink = certViewUrl || cert.image || '#';
+      const previewRel = cert.verificationUrl
+        ? 'noopener noreferrer'
+        : (cert.pdf ? 'noopener noreferrer nofollow' : 'noopener noreferrer');
       const previewClass = 'cert-preview' + (cert.imageFit === 'contain' ? ' cert-preview-contain' : '');
       const preview = cert.image
-        ? '<a class="' + previewClass + '" href="' + previewLink + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
+        ? '<a class="' + previewClass + '" href="' + previewLink + '" target="_blank" rel="' + previewRel + '" aria-label="Open ' + titleDisplay + '">' +
             '<img src="' + cert.image + '" alt="' + titleDisplay + ' certificate issued by ' + (cert.issuer || cert.platform) + '" loading="lazy" decoding="async" width="900" height="650">' +
           '</a>'
-        : (cert.pdf
-          ? '<a class="cert-preview cert-platform-' + (cert.platform || 'default').toLowerCase().replace(/\s+/g, '-') + '" href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + titleDisplay + '">' +
+        : (certViewUrl
+          ? '<a class="cert-preview cert-platform-' + (cert.platform || 'default').toLowerCase().replace(/\s+/g, '-') + '" href="' + certViewUrl + '" target="_blank" rel="' + previewRel + '" aria-label="Open ' + titleDisplay + '">' +
               '<div class="cert-preview-inner">' +
                 '<span class="cert-preview-badge">' + cert.platform + '</span>' +
                 '<span class="cert-preview-title">' + titleDisplay + '</span>' +
@@ -967,11 +973,12 @@
           : '');
 
       const buttons = [];
-      if (cert.pdf) {
-        buttons.push('<a href="' + cert.pdf + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewCertificate', 'View Certificate') + '</a>');
-      }
-      if (cert.verificationUrl) {
-        buttons.push('<a href="' + cert.verificationUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">' + tx('ui.viewVerification', 'View Verification') + '</a>');
+      if (certViewUrl) {
+        const viewRel = cert.verificationUrl ? 'noopener noreferrer' : 'noopener noreferrer nofollow';
+        const viewLabel = cert.verificationUrl
+          ? tx('ui.viewVerification', 'View Verification')
+          : tx('ui.viewCertificate', 'View Certificate');
+        buttons.push('<a href="' + certViewUrl + '" target="_blank" rel="' + viewRel + '" class="btn btn-secondary btn-sm">' + viewLabel + '</a>');
       }
 
       const lockup = brand.slug === 'kren';

@@ -35,7 +35,7 @@ No frameworks. No unnecessary dependencies.
 ├── cv/index.html                 # Resume page
 ├── 404.html                # Custom 404
 ├── projects/               # Case studies
-├── assets/                 # Images, icons, CV PDF
+├── assets/                 # Images, icons, certificate files
 ├── css/style.css           # Design system
 ├── js/
 │   ├── data.js             # Editable content data
