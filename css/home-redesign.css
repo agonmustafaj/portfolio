@@ -401,10 +401,13 @@ body.home-redesign *:focus-visible {
 /* ---------- Hero ---------- */
 .hr-hero {
   position: relative;
+  /* Keep full-viewport atmosphere, but top-align content.
+     GSC/WRS often lays out with a very tall viewport then crops the top;
+     align-items:center pushed hero copy/photo below that crop (blank glow). */
   min-height: 100vh;
   min-height: 100dvh;
   display: grid;
-  align-items: center;
+  align-items: start;
   padding: calc(var(--hr-nav-h) + 2.5rem) 0 4rem;
   overflow: hidden;
 }
@@ -423,6 +426,7 @@ body.home-redesign *:focus-visible {
 
 .hr-hero-glow {
   position: absolute;
+  z-index: 0;
   width: 48vw;
   height: 48vw;
   max-width: 720px;
@@ -448,6 +452,7 @@ body.home-redesign *:focus-visible {
 
 .hr-hero-layout {
   position: relative;
+  z-index: 1;
   display: grid;
   gap: 3rem;
   align-items: center;
@@ -496,10 +501,17 @@ body.home-redesign *:focus-visible {
 
 .hr-hero-display em {
   font-style: normal;
-  background: var(--hr-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  /* Solid color first so crawlers never see transparent text if clip fails */
+  color: var(--hr-blue);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hr-hero-display em {
+    background: var(--hr-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .hr-hero h1 {
