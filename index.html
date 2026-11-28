@@ -82,7 +82,9 @@
     .hr-nav-logo{display:inline-flex;align-items:center;gap:.5rem;flex-shrink:0;line-height:0;color:#F5F7FF}
     .hr-nav-logo img{height:36px;width:auto;max-width:min(168px,46vw);display:block;image-rendering:auto}
     .hr-nav-links{display:none}
-    .hr-mobile-menu{display:none!important}
+    /* Closed drawer only: never display:none!important (blocks .is-open after redesign CSS) */
+    .hr-mobile-menu{position:fixed;inset:72px 0 0;z-index:880;opacity:0;visibility:hidden;pointer-events:none}
+    .hr-mobile-menu.is-open{opacity:1;visibility:visible;pointer-events:auto}
     .hr-nav-actions{display:flex;align-items:center;gap:.4rem}
     .hr-nav-actions>.hr-btn{display:none}
     .hr-hamburger{width:42px;height:42px;border-radius:999px;border:1px solid #202B40;background:#151D30}
@@ -109,7 +111,7 @@
     .hr-wallet-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover}
     body.home-redesign #site-header,body.home-redesign #site-footer{display:none!important}
   </style>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128j">
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128k">
   <link rel="preload" as="image" type="image/png" href="/assets/images/logo-nav-dark-336.png" imagesrcset="/assets/images/logo-nav-dark-168.png 166w, /assets/images/logo-nav-dark-336.png 333w, /assets/images/logo-nav-dark-536.png 536w" imagesizes="(max-width: 1099px) min(168px, 46vw), 168px">
   <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-540.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="/assets/images/agon-mustafaj.jpg" type="image/jpeg">
@@ -562,6 +564,6 @@
 
   <script src="/js/i18n.js?v=20261128g" defer></script>
   <script src="/js/home-data.js?v=20261128g" defer></script>
-  <script src="/js/home-redesign.js?v=20261128g" defer></script>
+  <script src="/js/home-redesign.js?v=20261128h" defer></script>
 </body>
 </html>
