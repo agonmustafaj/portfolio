@@ -49,13 +49,11 @@
   }
 
   function initLangSwitcher() {
-    if (typeof I18N === 'undefined' || !I18N.langSwitcherMarkup) return;
-    var markup = I18N.langSwitcherMarkup();
+    /* English-only: language switcher removed */
     ['hr-lang-switch', 'hr-lang-switch-mobile'].forEach(function (id) {
       var mount = document.getElementById(id);
-      if (mount) mount.innerHTML = markup;
+      if (mount) mount.remove();
     });
-    I18N.bindLangSwitcher(document);
   }
 
   function initNav() {

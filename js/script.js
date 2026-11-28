@@ -1112,7 +1112,7 @@
       '@id': WEBSITE_ID,
       url: SITE_URL + '/',
       name: profile.name,
-      inLanguage: ['en', 'sq'],
+      inLanguage: 'en',
       publisher: { '@id': PERSON_ID }
     };
   };
