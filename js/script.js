@@ -880,7 +880,7 @@
     if (avatar) {
       const img = new Image();
       img.src = '/assets/images/agon-mustafaj-160.webp';
-      img.srcset = '/assets/images/agon-mustafaj-160.webp 160w, /assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w';
+      img.srcset = '/assets/images/agon-mustafaj-160.webp 160w, /assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 940w';
       img.sizes = '56px';
       img.alt = 'Agon Mustafaj, SEO expert and web developer in Prishtina';
       img.width = 160;
