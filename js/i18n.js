@@ -91,7 +91,7 @@
       'cv.contactFull': 'Contact me for the full CV',
       'cv.mailSubject': 'Request for full CV',
       'home.statement': 'I work as an SEO expert and web developer. AgoDev is where that work lives: search visibility, websites, and the projects I have shipped.',
-      'home.heroRole': 'SEO Expert · Web Developer · Computer Science Student',
+      'home.heroRole': 'SEO Expert x Web Developer',
       'home.available': 'Available for SEO and web projects',
       'home.openAgodev': 'Open AgoDev',
       'home.startProject': 'Start a project',
@@ -345,7 +345,7 @@
       'dyn.three-things-i-check-before-i-publish-a-site.body': '<p>A site can look finished on my computer and still not be ready for a visitor. Before I publish it, I run through three short checks. They do not take long, and they have saved me from mistakes that show up immediately.</p><h2>The title should say what the site is</h2><p>The browser title is the first line someone sees in Google. If it is only a business name, the visitor cannot tell whether they will find the service they need. I write it so it reads clearly: who you are and what you offer.</p><h2>It has to be readable on a phone without zooming</h2><p>I open the site on a narrow screen. If the text is cut off, a button slips under the menu, or a photo covers the call to action, I fix that before publishing. Most visitors arrive on a phone.</p><h2>Contact should be one step, not a search</h2><p>At the end I ask myself: if I wanted to call or write today, would I find the way immediately? The form, WhatsApp, or phone number needs to be visible. A good-looking site that never leads to contact leaves the visitor halfway there. These three points are my short list. The design can change. These checks stay.</p>',
       
       'dyn.how-to-improve-website-seo.title': 'How to Improve Your Website’s SEO: Checklist and When to Hire',
-      'dyn.how-to-improve-website-seo.pageTitle': 'How to Improve SEO: Checklist + When to Hire',
+      'dyn.how-to-improve-website-seo.pageTitle': 'How to Improve Website SEO: Full Checklist',
       'dyn.how-to-improve-website-seo.cat': 'WEB & SEO',
       'dyn.how-to-improve-website-seo.desc': 'Practical checklist to improve website SEO: on-page, technical SEO, Search Console, and when to hire help instead of DIY.',
       'dyn.how-to-improve-website-seo.seoDesc': 'Practical SEO checklist from a Kosovo specialist: on-page work, technical SEO, Search Console, and when DIY stops working.',

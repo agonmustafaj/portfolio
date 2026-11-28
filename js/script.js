@@ -278,6 +278,7 @@
                 '<a href="/skills/">Expertise</a>' +
                 '<a href="https://agodev.agonmustafaj.com/#projects">Projects</a>' +
                 '<a href="/experience/">Experience</a>' +
+                '<a href="/education/">Education</a>' +
                 '<a href="/certifications/">Certifications</a>' +
                 '<a href="https://agodev.agonmustafaj.com/">AgonDev</a>' +
                 '<a href="/services/">Services</a>' +
