@@ -74,6 +74,7 @@
       mobile.classList.toggle('is-open', open);
       hamburger.classList.toggle('is-open', open);
       hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('hr-menu-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     }
 
