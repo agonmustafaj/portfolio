@@ -213,18 +213,19 @@
     onScroll();
 
     if (hamburger && mobile) {
-      hamburger.addEventListener('click', function () {
-        var open = mobile.classList.toggle('is-open');
+      function setMenuOpen(open) {
+        mobile.classList.toggle('is-open', open);
         hamburger.classList.toggle('is-open', open);
         hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('hr-menu-open', open);
         document.body.style.overflow = open ? 'hidden' : '';
+      }
+      hamburger.addEventListener('click', function () {
+        setMenuOpen(!mobile.classList.contains('is-open'));
       });
       mobile.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () {
-          mobile.classList.remove('is-open');
-          hamburger.classList.remove('is-open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+          setMenuOpen(false);
         });
       });
     }

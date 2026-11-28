@@ -314,6 +314,7 @@ body.home-redesign *:focus-visible {
 }
 
 .hr-mobile-menu.is-open {
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
