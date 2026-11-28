@@ -59,14 +59,23 @@
   }
 
   function initNav() {
-    var nav = document.getElementById('hr-nav');
-    var hamburger = document.getElementById('hr-hamburger');
-    var mobile = document.getElementById('hr-mobile-menu');
-    var links = document.querySelectorAll('[data-hr-nav]');
+    // Prefer the real homepage chrome, never the build-injected #site-header clone.
+    var nav = document.querySelector('body.home-redesign > #hr-nav') || document.getElementById('hr-nav');
+    var hamburger = (nav && nav.querySelector('#hr-hamburger')) || document.getElementById('hr-hamburger');
+    var mobile = document.querySelector('body.home-redesign > #hr-mobile-menu') || document.getElementById('hr-mobile-menu');
+    var links = document.querySelectorAll('body.home-redesign > #hr-nav [data-hr-nav], body.home-redesign > #hr-mobile-menu [data-hr-nav]');
 
     clearUglyHash();
     initHomeLinks();
     initLangSwitcher();
+
+    function setMenuOpen(open) {
+      if (!hamburger || !mobile) return;
+      mobile.classList.toggle('is-open', open);
+      hamburger.classList.toggle('is-open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
 
     function onScroll() {
       if (!nav) return;
@@ -77,18 +86,15 @@
 
     if (hamburger && mobile) {
       hamburger.addEventListener('click', function () {
-        var open = mobile.classList.toggle('is-open');
-        hamburger.classList.toggle('is-open', open);
-        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
-        document.body.style.overflow = open ? 'hidden' : '';
+        setMenuOpen(!mobile.classList.contains('is-open'));
       });
       mobile.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () {
-          mobile.classList.remove('is-open');
-          hamburger.classList.remove('is-open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
+          setMenuOpen(false);
         });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenuOpen(false);
       });
     }
 

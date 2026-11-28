@@ -117,7 +117,16 @@ function createRenderer() {
 }
 
 function fillContainers(html, rendered) {
+  // Homepage already ships static #hr-nav / #hr-mobile-menu / footer.
+  // Injecting script.js chrome into #site-header duplicates those IDs and
+  // makes getElementById / hamburger wiring unreliable after deploy.
+  var skip = new Set();
+  if (/\bhome-redesign\b/.test(html) && /\bid="hr-nav"/.test(html)) {
+    skip.add('site-header');
+    skip.add('site-footer');
+  }
   return html.replace(/(<div\b[^>]*\bid="([a-z-]+)"[^>]*>)\s*(<\/div>)/g, function (match, open, id, close) {
+    if (skip.has(id)) return match;
     return rendered[id] ? open + rendered[id] + close : match;
   });
 }
