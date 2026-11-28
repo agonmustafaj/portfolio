@@ -291,7 +291,6 @@
               '<span>&copy; 2026 Agon Mustafaj</span>' +
               '<div class="hr-footer-socials">' +
                 '<a href="https://www.linkedin.com/in/agon-mustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">' + icons.linkedin + '</a>' +
-                '<a href="https://github.com/agonmustafaj/" target="_blank" rel="noopener noreferrer me" aria-label="GitHub">' + icons.github + '</a>' +
                 '<a href="https://www.facebook.com/agon.mustafaj.03/" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">' + icons.facebook + '</a>' +
               '</div>' +
             '</div>' +
