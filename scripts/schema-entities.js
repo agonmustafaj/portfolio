@@ -225,7 +225,7 @@ module.exports = [
     url: SITE + '/',
     name: 'Agon Mustafaj',
     alternateName: ['Agon Mustafaj Portfolio'],
-    inLanguage: ['en', 'sq'],
+    inLanguage: 'en',
     publisher: { '@id': PERSON_ID },
     about: { '@id': PERSON_ID },
     creator: { '@id': PERSON_ID }
