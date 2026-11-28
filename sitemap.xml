@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://agonmustafaj.com/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://agonmustafaj.com/assets/images/agon-mustafaj.jpg</image:loc>
+      <image:loc>https://agonmustafaj.com/assets/images/agon-mustafaj-3x4.jpg</image:loc>
       <image:title>Agon Mustafaj, SEO expert and web developer in Prishtina</image:title>
       <image:caption>Portrait of Agon Mustafaj, SEO expert and web developer in Prishtina, Kosovo.</image:caption>
+      <image:license>https://agonmustafaj.com/license/</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://agonmustafaj.com/assets/images/agon-mustafaj.jpg</image:loc>
+      <image:title>Agon Mustafaj headshot</image:title>
+      <image:caption>Square headshot of Agon Mustafaj used on the homepage profile card.</image:caption>
       <image:license>https://agonmustafaj.com/license/</image:license>
     </image:image>
     <image:image>
@@ -20,11 +26,11 @@
   </url>
   <url>
     <loc>https://agonmustafaj.com/about/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://agonmustafaj.com/assets/images/agon-mustafaj.jpg</image:loc>
+      <image:loc>https://agonmustafaj.com/assets/images/agon-mustafaj-3x4.jpg</image:loc>
       <image:title>Agon Mustafaj, SEO expert and web developer in Prishtina</image:title>
       <image:caption>Portrait of Agon Mustafaj, SEO expert and web developer in Prishtina, Kosovo.</image:caption>
       <image:license>https://agonmustafaj.com/license/</image:license>

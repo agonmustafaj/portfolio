@@ -61,11 +61,19 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
-  <style>html,body{background:#080B14;color:#F5F7FF}</style>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261127r">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <style>
+    html,body{background:#080B14;color:#F5F7FF}
+    /* Critical first paint: hero + photo readable if CSS file is slow or partial for crawlers */
+    body.home-redesign{background:#080B14;color:#F5F7FF}
+    .hr-hero,.hr-hero h1,.hr-hero-display,.hr-hero-role,.hr-hero-lead,.hr-wallet-name{color:#F5F7FF}
+    .hr-hero-role,.hr-hero-lead,.hr-wallet-role,.hr-wallet-loc{color:#929DB3}
+    .hr-reveal{opacity:1;transform:none}
+    .hr-wallet-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover}
+  </style>
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128b">
   <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-540.webp" imagesrcset="/assets/images/agon-ai-nerve-240.webp 240w, /assets/images/agon-ai-nerve-420.webp 420w, /assets/images/agon-ai-nerve-540.webp 540w, /assets/images/agon-ai-nerve-720.webp 720w" imagesizes="(max-width: 959px) min(72vw, 280px), min(100%, 380px)">
+  <link rel="preload" as="image" href="/assets/images/agon-mustafaj-240.webp" imagesrcset="/assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj.jpg 1254w" imagesizes="64px">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -196,18 +204,19 @@
     <section class="hr-section" id="about" aria-labelledby="about-heading">
       <div class="hr-container">
         <div class="hr-about-split">
-          <aside class="hr-wallet hr-reveal" aria-label="Profile card">
+          <aside class="hr-wallet" aria-label="Profile card">
             <div class="hr-wallet-top">
               <img
                 class="hr-wallet-avatar"
-                src="/assets/images/agon-mustafaj-240.webp"
-                srcset="/assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w"
+                src="/assets/images/agon-mustafaj.jpg"
+                srcset="/assets/images/agon-mustafaj-240.webp 240w, /assets/images/agon-mustafaj-420.webp 420w, /assets/images/agon-mustafaj-840.webp 840w, /assets/images/agon-mustafaj.jpg 1254w"
                 sizes="64px"
-                alt="Agon Mustafaj"
+                alt="Agon Mustafaj, SEO expert and web developer in Prishtina"
                 width="240"
                 height="240"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
+                fetchpriority="low"
               >
               <div>
                 <p class="hr-wallet-name">Agon Mustafaj</p>
@@ -299,7 +308,26 @@
           <h2 id="projects-heading">Things I've Built.</h2>
           <p class="hr-section-lead">Websites I designed and built end to end, each with a case study.</p>
         </div>
-        <div class="hr-projects" id="hr-projects"></div>
+        <div class="hr-projects" id="hr-projects">
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/malaj-design-640.webp" srcset="/assets/images/malaj-design-640.webp 640w, /assets/images/malaj-design.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of Malaj Design" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 01 · Web Developer, web design by Andi Malaj</div>
+              <h3>Malaj Design</h3>
+              <p>The portfolio website of graphic designer Andi Malaj. Web design by Andi, development, performance and SEO by me, built with Next.js and Tailwind CSS.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://malaj-design.com/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/malaj-design/">Case study</a></div>
+            </div>
+          </article>
+          <article class="hr-project">
+            <div class="hr-project-media"><img src="/assets/images/pulse-640.webp" srcset="/assets/images/pulse-640.webp 640w, /assets/images/pulse.webp 1440w" sizes="(max-width: 719px) 100vw, (max-width: 1180px) 46vw, 560px" alt="Preview of Pulse" loading="lazy" decoding="async" width="640" height="400"></div>
+            <div class="hr-project-body">
+              <div class="hr-project-meta">Project 02 · Web Developer</div>
+              <h3>Pulse</h3>
+              <p>The cosmos in motion: NASA Astronomy Picture of the Day browsing, planets in orbit, and a cinematic window into deep space.</p>
+              <div class="hr-project-links"><a class="hr-btn hr-btn-primary hr-btn-sm" href="https://pulse-bw6.pages.dev/" target="_blank" rel="noopener noreferrer">Live site</a><a class="hr-btn hr-btn-ghost hr-btn-sm" href="/projects/pulse/">Case study</a></div>
+            </div>
+          </article>
+        </div>
         <div class="hr-section-cta hr-reveal">
           <a href="https://agodev.agonmustafaj.com/#work" class="hr-btn hr-btn-ghost">See this work on AgoDev</a>
         </div>
@@ -314,7 +342,25 @@
           <h2 id="experience-heading">My Professional Journey.</h2>
           <p class="hr-section-lead">SEO work at Novalab SEO Agency, from internship to SEO Expert.</p>
         </div>
-        <div class="hr-timeline" id="hr-experience"></div>
+        <div class="hr-timeline" id="hr-experience">
+          <article class="hr-timeline-item">
+            <h3>SEO Expert</h3>
+            <div class="hr-timeline-meta"><a href="https://thenovalab.com/" target="_blank" rel="noopener noreferrer">Novalab SEO Agency</a> · Prishtina, Kosovo · September – Present</div>
+            <ul>
+              <li>Technical SEO: crawlability, indexing and site structure</li>
+              <li>On-page SEO: titles, meta descriptions, headings and content optimization</li>
+              <li>SEO audits and website optimization</li>
+            </ul>
+          </article>
+          <article class="hr-timeline-item">
+            <h3>Junior SEO - Intern</h3>
+            <div class="hr-timeline-meta">Novalab SEO Agency · Prishtina, Kosovo · July – September</div>
+            <ul>
+              <li>Supported technical and on-page SEO work</li>
+              <li>Assisted with audits, keyword research and site structure tasks</li>
+            </ul>
+          </article>
+        </div>
         <div class="hr-section-cta hr-reveal">
           <a href="/experience/" class="hr-btn hr-btn-ghost">Full experience</a>
         </div>
@@ -329,7 +375,26 @@
           <h2 id="certs-heading">Continuous Learning.</h2>
           <p class="hr-section-lead">Course certificates in Semrush, HubSpot, Ahrefs, BrightLocal, KWT Digital, Python, Power BI, SEO, networking and cybersecurity fundamentals, earned alongside my studies.</p>
         </div>
-        <div class="hr-cert-grid" id="hr-certs"></div>
+        <div class="hr-cert-grid" id="hr-certs">
+          <article class="hr-cert">
+            <img src="/assets/certificates/previews/technical-seo-science-of-apps.webp" alt="Technical SEO Certification certificate" loading="lazy" decoding="async" width="480" height="300">
+            <h3>Technical SEO Certification</h3>
+            <p>Science of Apps · 3 November 2026</p>
+            <a href="https://scienceofapps.com/certification/verify/?id=SOA-TSEO-WHTE-ZDES" target="_blank" rel="noopener noreferrer">Verify certificate</a>
+          </article>
+          <article class="hr-cert">
+            <img src="/assets/certificates/previews/ahrefs-marketing-platform.webp" alt="Ahrefs Marketing Platform Certification certificate" loading="lazy" decoding="async" width="480" height="300">
+            <h3>Ahrefs Marketing Platform Certification</h3>
+            <p>Ahrefs · August 2026</p>
+            <a href="https://ahrefs.com/academy/certificate/ff3531083a3a4eaba3174a423614440a" target="_blank" rel="noopener noreferrer">Verify certificate</a>
+          </article>
+          <article class="hr-cert">
+            <img src="/assets/certificates/previews/technical-seo-ai-search-semrush.webp" alt="Technical SEO and AI Search Essentials with Semrush certificate" loading="lazy" decoding="async" width="480" height="300">
+            <h3>Technical SEO and AI Search Essentials with Semrush</h3>
+            <p>Semrush · 29 September 2026</p>
+            <a href="https://static.semrush.com/academy/certificates/5f752fb9b9/agon-mustafaj_25.pdf" target="_blank" rel="noopener noreferrer">Verify certificate</a>
+          </article>
+        </div>
         <div class="hr-section-cta hr-reveal">
           <a href="/certifications/" class="hr-btn hr-btn-ghost">View all certifications</a>
         </div>
@@ -449,8 +514,8 @@
 
   <div id="site-footer" hidden></div>
 
-  <script src="/js/i18n.js?v=20261127r" defer></script>
-  <script src="/js/home-data.js?v=20261127r" defer></script>
-  <script src="/js/home-redesign.js?v=20261127r" defer></script>
+  <script src="/js/i18n.js?v=20261128a" defer></script>
+  <script src="/js/home-data.js?v=20261128a" defer></script>
+  <script src="/js/home-redesign.js?v=20261128a" defer></script>
 </body>
 </html>
