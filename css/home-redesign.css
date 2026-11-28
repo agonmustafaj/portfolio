@@ -28,7 +28,8 @@ body.home-redesign {
   background: var(--hr-bg);
   color: var(--hr-text);
   line-height: 1.65;
-  overflow-x: hidden;
+  /* clip (not hidden): overflow-x:hidden on ancestors disables backdrop-filter in Chromium */
+  overflow-x: clip;
 }
 
 body.home-redesign *,
@@ -291,18 +292,19 @@ body.home-redesign *:focus-visible {
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  /* Opaque enough to keep hero text from bleeding through; blur still frosts the panel */
+  /* Frosted panel: high fill so labels stay readable; blur frosts what shows through */
   background:
     linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--hr-bg) 82%, transparent) 0%,
-      color-mix(in srgb, var(--hr-bg) 90%, transparent) 100%
+      165deg,
+      color-mix(in srgb, var(--hr-surface) 55%, transparent) 0%,
+      color-mix(in srgb, var(--hr-bg) 88%, transparent) 42%,
+      color-mix(in srgb, var(--hr-bg) 94%, transparent) 100%
     );
-  backdrop-filter: blur(28px) saturate(1.35);
-  -webkit-backdrop-filter: blur(28px) saturate(1.35);
-  border-top: 1px solid color-mix(in srgb, #fff 10%, var(--hr-border));
+  backdrop-filter: blur(28px) saturate(1.45);
+  -webkit-backdrop-filter: blur(28px) saturate(1.45);
+  border-top: 1px solid color-mix(in srgb, #fff 12%, var(--hr-border));
   box-shadow:
-    inset 0 1px 0 color-mix(in srgb, #fff 8%, transparent),
+    inset 0 1px 0 color-mix(in srgb, #fff 10%, transparent),
     0 24px 60px rgba(0, 0, 0, 0.45);
   opacity: 0;
   visibility: hidden;
@@ -328,15 +330,15 @@ body.home-redesign *:focus-visible {
   color: var(--hr-text);
   border: 1px solid color-mix(in srgb, var(--hr-border) 80%, transparent);
   border-radius: 14px;
-  background: color-mix(in srgb, var(--hr-surface) 72%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--hr-surface) 82%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .hr-mobile-menu {
-    background: var(--hr-bg);
+    background: color-mix(in srgb, var(--hr-bg) 97%, var(--hr-surface));
   }
 
   .hr-mobile-menu a {
@@ -383,8 +385,8 @@ body.home-redesign *:focus-visible {
     max-width: min(148px, 46vw);
   }
 
-  /* Avoid double EN/SQ while the glass drawer is open */
-  body:has(#hr-mobile-menu.is-open) #hr-lang-switch {
+  /* Avoid double EN/SQ while the glass drawer is open (class set by JS; avoid :has for minify) */
+  body.hr-menu-open #hr-lang-switch {
     visibility: hidden;
     pointer-events: none;
   }
