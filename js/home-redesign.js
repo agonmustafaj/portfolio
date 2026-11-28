@@ -142,6 +142,8 @@
       nodes.forEach(function (n) { n.classList.add('is-in'); });
       return;
     }
+    // Reveal above-the-fold nodes first, then enable hide-until-scroll animation.
+    // Content stays opacity:1 in CSS until html.hr-reveal-js is set (crawler-safe).
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -150,7 +152,17 @@
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    nodes.forEach(function (n) { io.observe(n); });
+    nodes.forEach(function (n) {
+      var rect = n.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+        n.classList.add('is-in');
+      } else {
+        io.observe(n);
+      }
+    });
+    requestAnimationFrame(function () {
+      document.documentElement.classList.add('hr-reveal-js');
+    });
   }
 
   function escapeHtml(str) {

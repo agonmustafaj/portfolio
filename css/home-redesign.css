@@ -348,22 +348,22 @@ body.home-redesign *:focus-visible {
   max-width: 720px;
   max-height: 720px;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.35;
+  /* Soft radial glow without filter:blur (blur on large layers can blank headless/GSC paints). */
+  opacity: 1;
   pointer-events: none;
 }
 
 .hr-hero-glow-a {
   top: 8%;
   right: 5%;
-  background: var(--hr-blue);
+  background: radial-gradient(circle, color-mix(in srgb, var(--hr-blue) 45%, transparent) 0%, transparent 70%);
 }
 
 .hr-hero-glow-b {
   bottom: 5%;
   right: 22%;
-  background: var(--hr-violet);
-  opacity: 0.28;
+  background: radial-gradient(circle, color-mix(in srgb, var(--hr-violet) 38%, transparent) 0%, transparent 70%);
+  opacity: 0.9;
 }
 
 .hr-hero-layout {
@@ -595,15 +595,24 @@ body.home-redesign *:focus-visible {
   margin: 0 0 2.5rem;
 }
 
+/* Always opaque for crawlers / GSC. JS may only ease transform, never hide content. */
 .hr-reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.8s var(--hr-ease), transform 0.8s var(--hr-ease);
-}
-
-.hr-reveal.is-in {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.hr-reveal-js .hr-reveal:not(.is-in) {
+    transform: translateY(20px);
+  }
+
+  html.hr-reveal-js .hr-reveal {
+    transition: transform 0.8s var(--hr-ease);
+  }
+
+  html.hr-reveal-js .hr-reveal.is-in {
+    transform: none;
+  }
 }
 
 /* ---------- About ---------- */
@@ -1162,7 +1171,6 @@ body.home-redesign *:focus-visible {
   background:
     radial-gradient(circle at 30% 40%, rgba(85, 119, 255, 0.22), transparent 55%),
     radial-gradient(circle at 70% 50%, rgba(155, 109, 255, 0.18), transparent 50%);
-  filter: blur(40px);
   animation: hr-contact-pulse 10s ease-in-out infinite;
   pointer-events: none;
 }
@@ -1353,8 +1361,10 @@ body.home-redesign #site-footer {
     scroll-behavior: auto !important;
   }
 
-  .hr-reveal {
+  html.hr-reveal-js .hr-reveal,
+  html.hr-reveal-js .hr-reveal:not(.is-in) {
     opacity: 1;
     transform: none;
+    transition: none;
   }
 }

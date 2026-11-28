@@ -85,9 +85,9 @@ module.exports = [
   {
     '@type': 'ImageObject',
     '@id': PERSON_IMAGE_ID,
-    url: SITE + '/assets/images/agon-mustafaj.jpg',
-    contentUrl: SITE + '/assets/images/agon-mustafaj.jpg',
-    width: 1254,
+    url: SITE + '/assets/images/agon-mustafaj-3x4.jpg',
+    contentUrl: SITE + '/assets/images/agon-mustafaj-3x4.jpg',
+    width: 940,
     height: 1254,
     encodingFormat: 'image/jpeg',
     name: 'Agon Mustafaj, SEO expert and web developer in Prishtina',

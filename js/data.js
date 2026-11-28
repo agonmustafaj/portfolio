@@ -22,7 +22,7 @@ const profile = {
   role: 'SEO Expert and Web Developer',
   company: 'Novalab SEO Agency',
   companyUrl: 'https://thenovalab.com/',
-  image: SITE_URL + '/assets/images/agon-mustafaj.jpg',
+  image: SITE_URL + '/assets/images/agon-mustafaj-3x4.jpg',
   imageId: SITE_URL + '/#agon-mustafaj-image',
   alternateName: ['Agon B. Mustafaj'],
   linkedin: 'https://www.linkedin.com/in/agon-mustafaj/',
