@@ -190,10 +190,12 @@ module.exports = [
   {
     '@type': 'ImageObject',
     '@id': AGODEV_LOGO_ID,
-    url: SITE + '/assets/images/favicon.png',
-    contentUrl: SITE + '/assets/images/favicon.png',
+    url: SITE + '/assets/images/favicon-square.png',
+    contentUrl: SITE + '/assets/images/favicon-square.png',
     width: 512,
     height: 512,
+    encodingFormat: 'image/png',
+    name: 'AgoDev logo',
     caption: 'AgoDev'
   },
   {
