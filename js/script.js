@@ -111,7 +111,7 @@
         '<header id="hr-nav" class="hr-nav">' +
           '<div class="hr-container hr-nav-inner">' +
             '<a href="/" class="hr-nav-logo" aria-label="Agon Mustafaj Home">' +
-              '<img src="/assets/images/logo-nav-dark.webp" alt="" width="277" height="60" decoding="async">' +
+              '<img src="/assets/images/logo-nav-dark.png" alt="Agon Mustafaj" width="277" height="60" decoding="async">' +
             '</a>' +
             '<nav class="hr-nav-links" aria-label="Main navigation">' + links + '</nav>' +
             '<div class="hr-nav-actions">' +
@@ -148,7 +148,7 @@
       '<nav class="navbar" role="navigation" aria-label="' + tx('nav.aria', 'Main navigation') + '">' +
         '<div class="container navbar-inner">' +
           '<a href="/" class="nav-logo" aria-label="' + tx('nav.homeAria', 'Agon Mustafaj Home') + '">' +
-            '<img class="logo-dark" src="/assets/images/logo-nav-dark.webp" alt="Agon Mustafaj logo" width="277" height="60">' +
+            '<img class="logo-dark" src="/assets/images/logo-nav-dark.png" alt="Agon Mustafaj logo" width="277" height="60">' +
             '<img class="logo-light" src="/assets/images/logo-nav-light.webp" alt="Agon Mustafaj logo" width="277" height="60">' +
           '</a>' +
           '<div class="nav-links">' + links + '</div>' +
