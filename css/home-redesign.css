@@ -126,7 +126,7 @@ body.home-redesign *:focus-visible {
 .hr-nav-logo img {
   height: 36px;
   width: auto;
-  max-width: min(168px, 42vw);
+  max-width: min(168px, 46vw);
   display: block;
 }
 

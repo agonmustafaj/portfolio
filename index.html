@@ -80,7 +80,7 @@
     .hr-nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;
       width:min(100% - 2rem,1180px);margin:0 auto;gap:1rem}
     .hr-nav-logo{display:inline-flex;align-items:center;gap:.5rem;flex-shrink:0;line-height:0;color:#F5F7FF}
-    .hr-nav-logo img{height:36px;width:auto;max-width:min(168px,46vw);display:block}
+    .hr-nav-logo img{height:36px;width:auto;max-width:min(168px,46vw);display:block;image-rendering:auto}
     .hr-nav-links{display:none}
     .hr-mobile-menu{display:none!important}
     .hr-nav-actions{display:flex;align-items:center;gap:.4rem}
@@ -109,8 +109,8 @@
     .hr-wallet-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover}
     body.home-redesign #site-header,body.home-redesign #site-footer{display:none!important}
   </style>
-  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128h">
-  <link rel="preload" as="image" href="/assets/images/logo-nav-dark-168.png" type="image/png">
+  <link rel="stylesheet" href="/css/home-redesign.css?v=20261128j">
+  <link rel="preload" as="image" type="image/png" href="/assets/images/logo-nav-dark-336.png" imagesrcset="/assets/images/logo-nav-dark-168.png 166w, /assets/images/logo-nav-dark-336.png 333w, /assets/images/logo-nav-dark-536.png 536w" imagesizes="(max-width: 1099px) min(168px, 46vw), 168px">
   <link rel="preload" as="image" href="/assets/images/agon-ai-nerve-540.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="/assets/images/agon-mustafaj.jpg" type="image/jpeg">
   <script type="application/ld+json">
@@ -161,8 +161,17 @@
   <header id="hr-nav" class="hr-nav">
     <div class="hr-container hr-nav-inner">
       <a href="/" class="hr-nav-logo" data-hr-nav data-hr-home aria-label="Agon Mustafaj Home">
-        <!-- PNG only above the fold: GSC/WRS can select WebP in &lt;picture&gt; then fail decode with no fallback -->
-        <img src="/assets/images/logo-nav-dark-168.png" alt="Agon Mustafaj" width="168" height="36" decoding="async" fetchpriority="high">
+        <!-- PNG src + denser PNG srcset (no WebP): crisp on 2x/3x, GSC-safe raster fallback -->
+        <img
+          src="/assets/images/logo-nav-dark-168.png"
+          srcset="/assets/images/logo-nav-dark-168.png 166w, /assets/images/logo-nav-dark-336.png 333w, /assets/images/logo-nav-dark-536.png 536w"
+          sizes="(max-width: 1099px) min(168px, 46vw), 168px"
+          alt="Agon Mustafaj"
+          width="168"
+          height="36"
+          decoding="async"
+          fetchpriority="high"
+        >
       </a>
       <nav class="hr-nav-links" aria-label="Main navigation">
         <a href="/" data-hr-nav data-hr-home>Home</a>
